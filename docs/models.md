@@ -89,7 +89,10 @@ world!
 |SellerId|`Guid`|Identifier of the seller, which is a [CRM account](#crmaccount).|
 |ShipToId|`Guid`|Identifier for the shipping address, which is a [CRM account](#crmaccount).|
 |Margin|`decimal`|The margin that is used on this quotation in percentages. Example: for 10% the value is `10`.|
-
+|Lines|`QuotationLine[]`|[Quotation lines](#quotationline) for the quotation.|
+|CurrencyIso|`string`| Two letter ISO (639-1) code of the currency. |
+|LanguageIso|`string`| Two letter ISO (639-1) code of the language. |
+|Files|`QuotationFile[]`| List of [quotation files](#quotationfile) that are attached. |
 
 ### QuotationStatus
 
@@ -104,6 +107,14 @@ A quotation can have the following states:
 |4|Revised|
 |5|Pending|
 |6|Order|
+
+### QuotationLine
+
+Quotation lines...
+
+### QuotationFile
+
+Attachment for a quotation.
 
 ## UnitOfMeasurement
 
