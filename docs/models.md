@@ -45,7 +45,15 @@ This page shows an overview of the available models.
 | CocNumber      | `string`             | Chamber of Commerce number.                                  |
 | VatNumber      | `string`             |                                                              |
 | Iban           | `string`             |                                                              |
-| Type           | `integer`            |                                                              |
+| Type           | `integer`            | [Type](#relationship-type) of the CRM account.               |
+
+### Relationship type
+
+| Key  | Description      |
+| ---- | ---------------- |
+| 0    | Customer         |
+| 1    | Delivery address |
+| 2    | Employee         |
 
 
 
