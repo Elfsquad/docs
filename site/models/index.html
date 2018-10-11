@@ -65,11 +65,11 @@
     
         <ul>
         
+            <li><a class="toctree-l4" href="#category">Category</a></li>
+        
             <li><a class="toctree-l4" href="#crmaccount">CrmAccount</a></li>
         
             <li><a class="toctree-l4" href="#feature">Feature</a></li>
-        
-            <li><a class="toctree-l4" href="#featureproperty">FeatureProperty</a></li>
         
             <li><a class="toctree-l4" href="#vat">VAT</a></li>
         
@@ -95,19 +95,23 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../api/authorization.md">Authorization</a>
+    <a class="" href="../api/endpoints.md">Endpoints</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../api/crm.md">CrmAccounts</a>
+    <a class="" href="../api/tutorial/features.md">Tutorial: Features</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../api/features.md">Features</a>
+    <a class="" href="../api/tutorial/features-properties.md">Tutorial: Feature properties</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../api/quotations.md">Quotations</a>
+    <a class="" href="../api/tutorial/crm-accounts.md">Tutorial: CRM accounts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api/tutorial/quotations.md">Tutorial: Quotations</a>
                 </li>
     </ul>
 	    </li>
@@ -119,6 +123,22 @@
                 <li class="">
                     
     <a class="" href="../sdk/start.md">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sdk/tutorial/features.md">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sdk/tutorial/features-properties.md">Tutorial: Feature properties</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sdk/tutorial/crm-accounts.md">Tutorial: CRM accounts</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../sdk/tutorial/quotations.md">Tutorial: Quotations</a>
                 </li>
     </ul>
 	    </li>
@@ -161,8 +181,207 @@
               
                 <h1 id="models">Models</h1>
 <p>This page shows an overview of the available models.</p>
+<h2 id="category">Category</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category.</td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>CategoryText[]</code></td>
+<td>Translated titles of the category.</td>
+</tr>
+<tr>
+<td>Subcategories</td>
+<td><code>Category[]</code></td>
+<td>Array of subcategories.</td>
+</tr>
+<tr>
+<td>ParentId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the parent category.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td><code>integer</code></td>
+<td>Order in which the category should be displayed in the different product selection pages.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="categorytext">CategoryText</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Value of the text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the text language.</td>
+</tr>
+<tr>
+<td>CategoryId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="crmaccount">CrmAccount</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the CRM account.</td>
+</tr>
+<tr>
+<td>Salutation</td>
+<td><code>string</code></td>
+<td>The salutation e.g. 'Dear sir/madam,'</td>
+</tr>
+<tr>
+<td>FullName</td>
+<td><code>string</code> (Read-only)</td>
+<td>Full name of the account.</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>LastNamePrefix</td>
+<td><code>string</code></td>
+<td>The prefix of the lastName e.g. [FirstName] van der [LastName]</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CompanyName</td>
+<td><code>string</code></td>
+<td>Name of the company.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Phone1</td>
+<td><code>string</code></td>
+<td>Primary phone number.</td>
+</tr>
+<tr>
+<td>Phone2</td>
+<td><code>string</code></td>
+<td>Secondary phone number.</td>
+</tr>
+<tr>
+<td>StreetName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>HouseNumber</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>PostalCode</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>City</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryIso</td>
+<td><code>string</code></td>
+<td>Two-letter ISO 3166-1 code of the country, e.g. 'NL'.</td>
+</tr>
+<tr>
+<td>CocNumber</td>
+<td><code>string</code></td>
+<td>Chamber of Commerce number.</td>
+</tr>
+<tr>
+<td>VatNumber</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Iban</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td><a href="#relationship-type">Type</a> of the CRM account.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationship-type">Relationship type</h3>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Customer</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Delivery address</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Employee</td>
+</tr>
+</tbody>
+</table>
 <h2 id="feature">Feature</h2>
+<p>Every configuration model is based on features. Features are used to capture rich product information (texts, images, pricing). Once created, features can be categorized and implemented in product structures.</p>
 <table>
 <thead>
 <tr>
@@ -185,7 +404,7 @@
 <tr>
 <td>ArticleCode</td>
 <td><code>string</code></td>
-<td>If a feature corresponds to an article (in ERP), this field is used as a reference.</td>
+<td>For reference purposes; e.g. the ERP item code.</td>
 </tr>
 <tr>
 <td>Type</td>
@@ -197,12 +416,707 @@
 <td><code>decimal</code></td>
 <td>The sales price of the feature.</td>
 </tr>
+<tr>
+<td>MinValue</td>
+<td><code>decimal</code></td>
+<td>Minimal amount. Example: minimal width of a bed has to be 110 cm. A user cannot enter quantities below this minimal value.</td>
+</tr>
+<tr>
+<td>MaxValue</td>
+<td><code>decimal</code></td>
+<td>Maximum amount. Example: maximum width of a bed is 210 cm. A user cannot enter quantities higher than this maximum value.</td>
+</tr>
+<tr>
+<td>StepValue</td>
+<td><code>decimal</code></td>
+<td>The step amount that is taken into consideration (between min/ max values). Example: with a step value of 10 cm a user cannot select a width of 115cm. This will be rounded off to 120cm.</td>
+</tr>
+<tr>
+<td>PackingUnit</td>
+<td><code>decimal</code></td>
+<td>The amount that has to be taken into account when rounding up on the material list. Example: several lines of the same nuts are generated from the configurator to the quotation. This function sums-up all these lines and rounds it up to the packing unit quantity.</td>
+</tr>
+<tr>
+<td>CategoryId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the <a href="#category">category</a> to which this feature is attached.</td>
+</tr>
+<tr>
+<td>SubcategoryIds</td>
+<td><code>Guid[]</code></td>
+<td>List of identifiers for sub-categories.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td><code>string[]</code></td>
+<td>List of tags. A tag can be used to give a feature a certain label.</td>
+</tr>
+<tr>
+<td>MarginPct</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><code>FeatureHasFeatureProperty[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>FeatureText[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CardImageUrl</td>
+<td><code>string</code></td>
+<td>URL for the image of the feature. This image is displayed in the cards.</td>
+</tr>
+<tr>
+<td>OrganizationSellsFeature</td>
+<td><code>OrganizationSellsFeature[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>VATId</td>
+<td><code>Guid</code></td>
+<td><a href="#vat">VAT</a> that is used as default for this feature.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurementId</td>
+<td><code>Guid</code></td>
+<td><a href="#unitofmeasurement">Unit of measurement</a> for this feature.</td>
+</tr>
 </tbody>
 </table>
-<h2 id="featureproperty">FeatureProperty</h2>
+<h3 id="featuretext">FeatureText</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the text language.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td><a href="#feature-text-type">Type</a> of the feature text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Text value.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="feature-text-type">Feature text type</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Descriptions</strong>: If used; the description will be shown instead of ‘name’. If left blank; the feature ‘name’ will be shown in the configurator.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Extended descriptions:</strong> If used; this text will be shown under the description/name in the configurator.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>More info:</strong> If used; more info can be opened in the configurator. This information is showed in a screen-wide pop-up.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Quotation text:</strong> Optionally, this info can be generated on the quotation template (PDF).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="featureproperty">FeatureProperty</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the property.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the property.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td>Type of the property</td>
+</tr>
+<tr>
+<td>AssociatedFeatures</td>
+<td><code>AssociatedFeatureProperty[]</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="featurepropertytype">FeaturePropertyType</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Input</strong>:</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>AssociatedFeatures</strong>:</td>
+</tr>
+</tbody>
+</table>
+<h4 id="associatedfeatureproperty">AssociatedFeatureProperty</h4>
+<h4 id="featurehasfeatureproperty">FeatureHasFeatureProperty</h4>
 <h2 id="vat">VAT</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the VAT.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Describes the VAT.</td>
+</tr>
+<tr>
+<td>Pct</td>
+<td><code>decimal</code></td>
+<td>Percentage value of the VAT e.g. 21.</td>
+</tr>
+<tr>
+<td>IncludesVAT</td>
+<td><code>boolean</code></td>
+<td>Defines whether the price already includes VAT.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="quotation">Quotation</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the quotation.</td>
+</tr>
+<tr>
+<td>QuotationNumber</td>
+<td><code>int</code></td>
+<td>Unique quotation number that is used as a reference.</td>
+</tr>
+<tr>
+<td>VersionNumber</td>
+<td><code>int</code></td>
+<td>Version number of the quotation. Default is <code>1</code>.</td>
+</tr>
+<tr>
+<td>RevisionOfId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation on which this revision is based.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>integer</code></td>
+<td>The <a href="#quotationstatus">status</a> of the quotation.</td>
+</tr>
+<tr>
+<td>IsExpired</td>
+<td><code>bool</code> (Read-only)</td>
+<td>Returns <code>true</code> if the quotation is expired.</td>
+</tr>
+<tr>
+<td>StatusDescription</td>
+<td><code>string</code> (Read-only)</td>
+<td>Returns the status of the quotation as a text. Example: <code>Concept</code> or <code>Accepted</code></td>
+</tr>
+<tr>
+<td>Remarks</td>
+<td><code>string</code></td>
+<td>A field for remarks. Used to add notes to the quotation.</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td><code>string</code></td>
+<td>The subject of the quotation.</td>
+</tr>
+<tr>
+<td>ExpiresDate</td>
+<td><code>DateTime</code></td>
+<td>Date when the state of the quotation is set to expired.</td>
+</tr>
+<tr>
+<td>DeliveryDate</td>
+<td><code>DateTime</code></td>
+<td>Date when the quotation is delivered.</td>
+</tr>
+<tr>
+<td>DebtorId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the debtor, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>SellerId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the seller, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>ShipToId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the shipping address, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td><code>decimal</code></td>
+<td>The margin that is used on this quotation in percentages. Example: for 10% the value is <code>10</code>.</td>
+</tr>
+<tr>
+<td>Lines</td>
+<td><code>QuotationLine[]</code></td>
+<td><a href="#quotationline">Quotation lines</a> for the quotation.</td>
+</tr>
+<tr>
+<td>CurrencyIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the currency.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the language.</td>
+</tr>
+<tr>
+<td>Files</td>
+<td><code>QuotationFile[]</code></td>
+<td>List of <a href="#quotationfile">quotation files</a> that are attached.</td>
+</tr>
+<tr>
+<td>TotalDiscountAmt</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total amount of discount on the total price.</td>
+</tr>
+<tr>
+<td>TotalDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Total percentage of discount, e.g. <code>10</code> for 10%.</td>
+</tr>
+<tr>
+<td>SubTotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal price excluding VAT.</td>
+</tr>
+<tr>
+<td>SubTotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal including VAT.</td>
+</tr>
+<tr>
+<td>TotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>SubTotalMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal margin.</td>
+</tr>
+<tr>
+<td>TotalMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total margin.</td>
+</tr>
+<tr>
+<td>TotalMarginDiscount</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total margin discount.</td>
+</tr>
+<tr>
+<td>SubTotalPurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal purchase price.</td>
+</tr>
+<tr>
+<td>WholeSaleDiscountAmt</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Wholesale discount amount.</td>
+</tr>
+<tr>
+<td>WholeSaleDiscountPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Wholesale discount percentage.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotationstatus">QuotationStatus</h3>
+<p>A quotation can have the following states:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Concept</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Declined</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Expired</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Revised</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Order</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotationline">QuotationLine</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation to which this line belongs.</td>
+</tr>
+<tr>
+<td>LineNumber</td>
+<td><code>int</code></td>
+<td>Indicates the sequence of the lines within one quotation.</td>
+</tr>
+<tr>
+<td>ArticleCode</td>
+<td><code>string</code></td>
+<td>For reference purposes, e.g. an ERP item code.</td>
+</tr>
+<tr>
+<td>CardImageUrl</td>
+<td><code>string</code></td>
+<td>URL to the image for the feature.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code> (Read-only)</td>
+<td>Description of the feature.</td>
+</tr>
+<tr>
+<td>ExtendedDescription</td>
+<td><code>string</code> (Read-only)</td>
+<td>Extended description of the feature.</td>
+</tr>
+<tr>
+<td>MoreInfo</td>
+<td><code>string</code> (Read-only)</td>
+<td>More info of the feature.</td>
+</tr>
+<tr>
+<td>QuotationText</td>
+<td><code>string</code> (Read-only)</td>
+<td>Quotation text of the feature.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature.</td>
+</tr>
+<tr>
+<td>QuantityAmount</td>
+<td><code>decimal</code></td>
+<td>Quantity of the feature on this line.</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td><code>string</code> (Read-only)</td>
+<td>Number formatted quantity, e.g. <code>100.14</code>.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurement</td>
+<td><code>string</code> (Read-only)</td>
+<td>Unit of measurement of the feature.</td>
+</tr>
+<tr>
+<td>Hidden</td>
+<td><code>bool</code></td>
+<td>Indicates if the line is visible in EMS.</td>
+</tr>
+<tr>
+<td>ParentLineId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the parent line (QuotationLine).</td>
+</tr>
+<tr>
+<td>GroupedRootLine</td>
+<td><code>bool</code></td>
+<td>Indicates if the quotation line is the root of a group of lines.</td>
+</tr>
+<tr>
+<td>GroupId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the group to which this line belongs.</td>
+</tr>
+<tr>
+<td>GroupOrder</td>
+<td><code>int</code></td>
+<td>Indicates the order in which the groups are displayed.</td>
+</tr>
+<tr>
+<td>AddedFromConfiguration</td>
+<td><code>bool</code></td>
+<td>Indicates that the line has been added from a configuration.</td>
+</tr>
+<tr>
+<td>DiscountPct</td>
+<td><code>decimal</code></td>
+<td>Discount percentage, e.g. <code>10</code>.</td>
+</tr>
+<tr>
+<td>MarginPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Margin percentage.</td>
+</tr>
+<tr>
+<td>GroupDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Discount percentage on the group, e.g. <code>10</code>.</td>
+</tr>
+<tr>
+<td>TotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price of the quotation line excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalExclPriceExclDiscount</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price of the quotation excluding VAT and discount.</td>
+</tr>
+<tr>
+<td>TotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>GroupBaseExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupBaseInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupAdditionalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupAdditionalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupTotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupTotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>DefaultPurchasePriceDiscountPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>PurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+<td><code>decimal</code></td>
+<td>Unit price of the feature.</td>
+</tr>
+<tr>
+<td>TotalExclMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>TotalInclMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupPurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotationfile">QuotationFile</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation.</td>
+</tr>
+<tr>
+<td>FileId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#fileentity">FileEntity</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fileentity">FileEntity</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the file entity.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the file.</td>
+</tr>
+<tr>
+<td>Url</td>
+<td><code>string</code></td>
+<td>URL of the file.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="unitofmeasurement">UnitOfMeasurement</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the unit of measurement.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>The code for the unit of measurement. Example: <code>kg</code>.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>The description for the unit of measurement. Example: <code>Kilogram</code>.</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
