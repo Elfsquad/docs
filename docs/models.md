@@ -25,6 +25,38 @@ This page shows an overview of the available models.
 
 ## CrmAccount
 
+| Name           | Type                 | Description                                                  |
+| -------------- | -------------------- | ------------------------------------------------------------ |
+| Id             | `Guid`               | Identifier of the CRM account.                               |
+| Salutation     | `string`             | The salutation e.g. 'Dear sir/madam,'                        |
+| FullName       | `string` (Read-only) | Full name of the account.                                    |
+| FirstName      | `string`             |                                                              |
+| LastNamePrefix | `string`             | The prefix of the lastName e.g. [FirstName] van der [LastName] |
+| LastName       | `string`             |                                                              |
+| CompanyName    | `string`             | Name of the company.                                         |
+| Email          | `string`             |                                                              |
+| Phone1         | `string`             | Primary phone number.                                        |
+| Phone2         | `string`             | Secondary phone number.                                      |
+| StreetName     | `string`             |                                                              |
+| HouseNumber    | `string`             |                                                              |
+| PostalCode     | `string`             |                                                              |
+| City           | `string`             |                                                              |
+| CountryIso     | `string`             | Two-letter ISO 3166-1 code of the country, e.g. 'NL'.        |
+| CocNumber      | `string`             | Chamber of Commerce number.                                  |
+| VatNumber      | `string`             |                                                              |
+| Iban           | `string`             |                                                              |
+| Type           | `integer`            | [Type](#relationship-type) of the CRM account.               |
+
+### Relationship type
+
+| Key  | Description      |
+| ---- | ---------------- |
+| 0    | Customer         |
+| 1    | Delivery address |
+| 2    | Employee         |
+
+
+
 
 ## Feature
 
@@ -48,7 +80,7 @@ Every configuration model is based on features. Features are used to capture ric
 | Properties | `FeatureHasFeatureProperty[]` | |
 | Texts | `FeatureText[]` ||
 | CardImageUrl | `string` | URL for the image of the feature. This image is displayed in the cards. |
-| OrganizationSellsFeature | `List<OrganizationSellsFeature>` | |
+| OrganizationSellsFeature | `OrganizationSellsFeature[]` | |
 | VATId | `Guid` | [VAT](#vat) that is used as default for this feature. |
 | UnitOfMeasurementId | `Guid` | [Unit of measurement](#unitofmeasurement) for this feature. |
 
@@ -117,4 +149,8 @@ Quotation lines...
 Attachment for a quotation.
 
 ## UnitOfMeasurement
-
+|Name|Type|Description|
+ |--|--|--|
+ |Id|`Guid`|Identifier for the unit of measurement. |
+ |Code | `string` | The code for the unit of measurement. Example: `kg`. |
+|Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
