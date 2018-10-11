@@ -1,0 +1,11 @@
+site_name: Elfskot Docs
+theme: readthedocs
+nav:
+  - 'REST API':
+    - 'Getting started': api/start.md
+    - Authorization: api/authorization.md
+    - CrmAccounts: api/crm.md
+    - Features: api/features.md
+    - Quotations: api/quotations.md
+  - SDK:
+    - 'Getting started': sdk/start.md
