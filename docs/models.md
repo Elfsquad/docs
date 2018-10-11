@@ -94,13 +94,22 @@ Every configuration model is based on features. Features are used to capture ric
 
 #### AssociatedFeatureProperty
 
-Hello
+
 
 #### FeatureHasFeatureProperty
 
-world!
+
 
 ## VAT
+
+| Name        | Type      | Description                                     |
+| ----------- | --------- | ----------------------------------------------- |
+| Id          | `Guid`    | Identifier of the VAT.                          |
+| Name        | `string`  | Describes the VAT.                              |
+| Pct         | `decimal` | Percentage value of the VAT e.g. 21.            |
+| IncludesVAT | `boolean` | Defines whether the price already includes VAT. |
+
+
 
 ## Quotation
 
@@ -139,7 +148,7 @@ A quotation can have the following states:
 
 ## UnitOfMeasurement
 |Name|Type|Description|
- |--|--|--|
- |Id|`Guid`|Identifier for the unit of measurement. |
- |Code | `string` | The code for the unit of measurement. Example: `kg`. |
+|--|--|--|
+|Id|`Guid`|Identifier for the unit of measurement. |
+|Code | `string` | The code for the unit of measurement. Example: `kg`. |
 |Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
