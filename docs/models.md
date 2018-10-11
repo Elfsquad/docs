@@ -107,25 +107,41 @@ Every configuration model is based on features. Features are used to capture ric
 
 ### FeatureProperty
 
-| Name               | Type                          | Description                 |
-| ------------------ | ----------------------------- | --------------------------- |
-| Id                 | `Guid`                        | Identifier of the property. |
-| Name               | `string`                      | Name of the property.       |
-| Type               | `integer`                     | Type of the property        |
-| AssociatedFeatures | `AssociatedFeatureProperty[]` |                             |
+| Name               | Type                          | Description                                                  |
+| ------------------ | ----------------------------- | ------------------------------------------------------------ |
+| Id                 | `Guid`                        | Identifier of the property.                                  |
+| Name               | `string`                      | Name of the property.                                        |
+| Type               | `integer`                     | Type of the property                                         |
+| AssociatedFeatures | `AssociatedFeatureProperty[]` | If the type of this property is set to `1` (AssociatedFeatures) this property is filled with the relationships with features that can be associated with this property. |
 
 #### FeaturePropertyType
 
-| Key  | Description             |
-| ---- | ----------------------- |
-| 0    | **Input**:              |
-| 1    | **AssociatedFeatures**: |
+| Key  | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | **Input**: If the feature property is marked as a Input type; a decimal value can be associated with this property. |
+| 1    | **AssociatedFeatures**: If the feature property is marked as a AssociatedFeatures type; a selection of defined features can be associated with this property. |
 
 #### AssociatedFeatureProperty
 
+The AssociatedFeatureProperty is a relationship between a feature property's AssociatedFeatures list and a Feature.
 
+| Name              | Type   | Description                                             |
+| ----------------- | ------ | ------------------------------------------------------- |
+| Id                | `Guid` | Identifier of the associated feature property.          |
+| FeaturePropertyId | `Guid` | Identifier of the [feature property](#featureproperty). |
+| FeatureId         | `Guid` | Identifier of the [feature](#feature).                  |
 
 #### FeatureHasFeatureProperty
+
+Relationship between a feature and a feature property.
+
+| Name                | Type      | Description                                                  |
+| ------------------- | --------- | ------------------------------------------------------------ |
+| Id                  | `Guid`    | Identifier of the FeatureHasFeatureProperty relationship.    |
+| FeaturePropertyId   | `Guid`    | Identifier of the [feature property](#featureproperty).      |
+| FeatureId           | `Guid`    | Identifier of the [feature](#feature).                       |
+| Value               | `decimal` | If the type of the FeaturePropery is set to `0`(Input); this property holds the input value. |
+| AssociatedFeatureId | `Guid`    | If the type of the FeatureProperty is set to `1`(AssociatedFeature); this property holds the [feature](#feature) identifier that is associated with this property. |
 
 
 
