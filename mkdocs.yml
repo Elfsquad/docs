@@ -1,6 +1,9 @@
 site_name: Elfskot Docs
 theme: readthedocs
 nav:
+  - Overview:
+    - 'Getting started': index.md
+    - Models: models.md
   - 'REST API':
     - 'Getting started': api/start.md
     - Authorization: api/authorization.md

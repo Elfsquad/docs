@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# Welcome to Elfskot Docs
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+Elfskot provides two methods to integrate with our services. To get an impression of which data is available, [see the models page](models).
 
-## Commands
+## REST API
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+Integrate or build your own application directly on our REST API. Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up. If the integration is simple, e.g. syncing article data, it is recommended to use the SDK.
 
-## Project layout
+For more information about our API, see the [getting started with the API](api/start).
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## SDK
+
+Elfskot provides an easy way to integrate with our applications through our SDK. Our SDK has been developed in C#, and is available as a [Nuget package](https://www.nuget.org/packages/Elfskot.Connect.SDK/). 
+
+For more information about our SDK, see the [getting started with the SDK](sdk/start).
+
+## Support
+
+If you are missing information, or need support, please reach out to us on `support@elfskot.com`.
