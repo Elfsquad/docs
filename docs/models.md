@@ -86,21 +86,45 @@ Every configuration model is based on features. Features are used to capture ric
 
 ### FeatureText
 
-### FeatureProperty
+| Name        | Type      | Description                                       |
+| ----------- | --------- | ------------------------------------------------- |
+| Id          | `Guid`    | Identifier of the feature text.                   |
+| LanguageIso | `string`  | Two letter ISO (639-1) code of the text language. |
+| Type        | `integer` | [Type](#feature-text-type) of the feature text.   |
+| Value       | `string`  | Text value.                                       |
+| FeatureId   | `Guid`    | Identifier of the feature.                        |
 
-|a|b|
-|--|--|
-|z|z|
+#### Feature text type
+
+| Key  | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | **Descriptions**: If used; the description will be shown instead of ‘name’. If left blank; the feature ‘name’ will be shown in the configurator. |
+| 1    | **Extended descriptions:** If used; this text will be shown under the description/name in the configurator. |
+| 2    | **More info:** If used; more info can be opened in the configurator. This information is showed in a screen-wide pop-up. |
+| 5    | **Quotation text:** Optionally, this info can be generated on the quotation template (PDF). |
+
+
+
+### FeatureProperty
 
 #### AssociatedFeatureProperty
 
-Hello
+
 
 #### FeatureHasFeatureProperty
 
-world!
+
 
 ## VAT
+
+| Name        | Type      | Description                                     |
+| ----------- | --------- | ----------------------------------------------- |
+| Id          | `Guid`    | Identifier of the VAT.                          |
+| Name        | `string`  | Describes the VAT.                              |
+| Pct         | `decimal` | Percentage value of the VAT e.g. 21.            |
+| IncludesVAT | `boolean` | Defines whether the price already includes VAT. |
+
+
 
 ## Quotation
 
@@ -162,7 +186,7 @@ Attachment for a quotation.
 
 ## UnitOfMeasurement
 |Name|Type|Description|
- |--|--|--|
- |Id|`Guid`|Identifier for the unit of measurement. |
- |Code | `string` | The code for the unit of measurement. Example: `kg`. |
+|--|--|--|
+|Id|`Guid`|Identifier for the unit of measurement. |
+|Code | `string` | The code for the unit of measurement. Example: `kg`. |
 |Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
