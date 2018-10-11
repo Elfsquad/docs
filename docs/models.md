@@ -56,3 +56,9 @@ world!
 ## Quotation
 
 ## UnitOfMeasurement
+
+|Name|Type|Description|
+|--|--|--|
+|Id|`Guid`|Identifier for the unit of measurement. |
+|Code | `string` | The code for the unit of measurement. Example: `kg`. |
+|Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
