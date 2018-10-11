@@ -1,6 +1,6 @@
 # Models
 
-This page shows an overview of the available models.
+This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. 
 
 ## Category
 
@@ -269,3 +269,5 @@ A quotation can have the following states:
 |Id|`Guid`|Identifier for the unit of measurement. |
 |Code | `string` | The code for the unit of measurement. Example: `kg`. |
 |Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
+
+Missing a property? Feel free to contact us at `support@elfskot.com`.
