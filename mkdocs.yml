@@ -6,9 +6,14 @@ nav:
     - Models: models.md
   - 'REST API':
     - 'Getting started': api/start.md
-    - Authorization: api/authorization.md
-    - CrmAccounts: api/crm.md
-    - Features: api/features.md
-    - Quotations: api/quotations.md
+    - Endpoints: api/endpoints.md
+    - 'Tutorial: Features': api/tutorial/features.md
+    - 'Tutorial: Feature properties': api/tutorial/features-properties.md
+    - 'Tutorial: CRM accounts': api/tutorial/crm-accounts.md
+    - 'Tutorial: Quotations': api/tutorial/quotations.md
   - SDK:
     - 'Getting started': sdk/start.md
+    - 'Tutorial: Features': sdk/tutorial/features.md
+    - 'Tutorial: Feature properties': sdk/tutorial/features-properties.md
+    - 'Tutorial: CRM accounts': sdk/tutorial/crm-accounts.md
+    - 'Tutorial: Quotations': sdk/tutorial/quotations.md

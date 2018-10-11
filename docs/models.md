@@ -125,6 +125,18 @@ world!
 |CurrencyIso|`string`| Two letter ISO (639-1) code of the currency. |
 |LanguageIso|`string`| Two letter ISO (639-1) code of the language. |
 |Files|`QuotationFile[]`| List of [quotation files](#quotationfile) that are attached. |
+|TotalDiscountAmt|`decimal` (Read-only)|Total amount of discount on the total price.|
+|TotalDiscountPct|`decimal`|Total percentage of discount, e.g. `10` for 10%.|
+|SubTotalExclPrice|`decimal` (Read-only)|Subtotal price excluding VAT.|
+|SubTotalInclPrice|`decimal` (Read-only)|Subtotal including VAT.|
+|TotalExclPrice|`decimal` (Read-only)|Total price excluding VAT.|
+|TotalInclPrice|`decimal` (Read-only)|Total price including VAT.|
+|SubTotalMargin|`decimal` (Read-only)|Subtotal margin.|
+|TotalMargin|`decimal` (Read-only)|Total margin.|
+|TotalMarginDiscount|`decimal` (Read-only)|Total margin discount.|
+|SubTotalPurchasePrice|`decimal` (Read-only)|Subtotal purchase price.|
+|WholeSaleDiscountAmt|`decimal` (Read-only)|Wholesale discount amount.|
+|WholeSaleDiscountPct|`decimal` (Read-only)|Wholesale discount percentage.|
 
 ### QuotationStatus
 
