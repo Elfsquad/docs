@@ -208,11 +208,60 @@ A quotation can have the following states:
 
 ### QuotationLine
 
-Quotation lines...
+|Name|Type|Description|
+|--|--|--|
+|QuotationId|`Guid`|Identifier of the quotation to which this line belongs.|
+|LineNumber|`int`|Indicates the sequence of the lines within one quotation.|
+|ArticleCode|`string`|For reference purposes, e.g. an ERP item code.|
+|CardImageUrl|`string`|URL to the image for the feature.|
+|Description|`string` (Read-only)| Description of the feature.|
+|ExtendedDescription|`string` (Read-only)| Extended description of the feature.|
+|MoreInfo|`string` (Read-only) | More info of the feature. |
+|QuotationText| `string` (Read-only) | Quotation text of the feature. |
+|FeatureId | `Guid` | Identifier of the feature. |
+|QuantityAmount| `decimal` | Quantity of the feature on this line. |
+|Quantity| `string` (Read-only) | Number formatted quantity, e.g. `100.14`. |
+|UnitOfMeasurement| `string` (Read-only) | Unit of measurement of the feature. |
+|Hidden| `bool` | Indicates if the line is visible in EMS. |
+|ParentLineId | `Guid` | Identifier of the parent line (QuotationLine). |
+|GroupedRootLine| `bool` | Indicates if the quotation line is the root of a group of lines. |
+|GroupId| `Guid`| Identifier of the group to which this line belongs. |
+|GroupOrder| `int` | Indicates the order in which the groups are displayed. |
+|AddedFromConfiguration| `bool` | Indicates that the line has been added from a configuration. |
+|DiscountPct| `decimal` | Discount percentage, e.g. `10`. |
+|MarginPct| `decimal` (Read-only) | Margin percentage. |
+|GroupDiscountPct | `decimal` | Discount percentage on the group, e.g. `10`. |
+|TotalExclPrice| `decimal` (Read-only) | Total price of the quotation line excluding VAT. |
+|TotalExclPriceExclDiscount | `decimal` (Read-only) | Total price of the quotation excluding VAT and discount. |
+|TotalInclPrice| `decimal` (Read-only) | Total price including VAT. |
+|GroupBaseExclPrice| `decimal` (Read-only) | |
+|GroupBaseInclPrice| `decimal` (Read-only) | |
+|GroupAdditionalExclPrice | `decimal` (Read-only) | | 
+|GroupAdditionalInclPrice | `decimal` (Read-only) | | 
+|GroupTotalExclPrice | `decimal` (Read-only) | | 
+|GroupTotalInclPrice | `decimal` (Read-only) | | 
+|DefaultPurchasePriceDiscountPct | `decimal` (Read-only) | | 
+|PurchasePrice | `decimal` (Read-only) | | 
+|UnitPrice | `decimal` | Unit price of the feature. | 
+|TotalExclMargin | `decimal` (Read-only) | | 
+|TotalInclMargin | `decimal` (Read-only) | | 
+|GroupPurchasePrice | `decimal` (Read-only) | | 
+|GroupMargin | `decimal` (Read-only) | | 
 
 ### QuotationFile
 
-Attachment for a quotation.
+|Name|Type|Description|
+|--|--|--|
+|QuotationId|`Guid`|Identifier of the quotation.|
+|FileId|`Guid`|Identifier of the [FileEntity](#fileentity).|
+
+### FileEntity
+
+|Name|Type|Description|
+|--|--|--|
+|Id|`Guid`|Identifier of the file entity. |
+|Name|`string`|Name of the file.|
+|Url|`string`|URL of the file.|
 
 ## UnitOfMeasurement
 |Name|Type|Description|
