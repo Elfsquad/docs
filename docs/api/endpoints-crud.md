@@ -15,7 +15,7 @@ It is also possible to use query parameters when retrieving a list of entities:
 | Orderby    | `string`  | Used to order the result based on a property of the entity.  | `GET /api/2/features?orderby=name`                           |
 | Descending | `boolean` | By default the Orderby parameter orders the result in ascending order. If you want to retrieve the result in descending order you need to specify the descending parameter. | `GET /api/2/features?orderby=name&descending=true`           |
 | Include    | `string`  | All non-native types are by default excluded from the API response. If you require them you have to specify this in the request. **Note: ** Include values should be formatted in CamelCase. | `GET /api/2/quotations?include=Lines` Will return all the lines of the corresponding quotations. You can add multiple include parameters to suffice all your requirements: `GET /api/2/quotations?include=Lines&include=Debtor&include=Seller` |
-| CUSTOM     | `string`  | Besides the native query parameters above; it is also possible to query on entity specific properties. | For example; if you want to retrieve a list of all quotations that have the ***synced*** property set to ***true*** you can use the url: `/api/2/quotations?synced=true`. Where ***synced*** is a property of the quotation model. |
+| Filter     | `string`  | Besides the native query parameters above; it is also possible to query on entity specific properties. | For example; if you want to retrieve a list of all quotations that have the ***synced*** property set to ***true*** you can use the url: `/api/2/quotations?synced=true`. Where ***synced*** is a property of the quotation model. |
 
 
 
