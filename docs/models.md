@@ -96,5 +96,38 @@ world!
 
 ## Quotation
 
+|Name|Type|Description|
+|--|--|--|
+|Id|`Guid`|Identifier for the quotation.|
+|QuotationNumber|`int`|Unique quotation number that is used as a reference.|
+|VersionNumber|`int`|Version number of the quotation. Default is `1`.|
+|RevisionOfId|`Guid`|Identifier of the quotation on which this revision is based.|
+|Status|`integer`|The [status](#quotationstatus) of the quotation.|
+|IsExpired|`bool` (Read-only)| Returns `true` if the quotation is expired.|
+|StatusDescription|`string` (Read-only)|Returns the status of the quotation as a text. Example: `Concept` or `Accepted`|
+|Remarks|`string`|A field for remarks. Used to add notes to the quotation.|
+|Subject|`string`|The subject of the quotation.|
+|ExpiresDate|`DateTime`|Date when the state of the quotation is set to expired.|
+|DeliveryDate|`DateTime`|Date when the quotation is delivered.|
+|DebtorId|`Guid`|Identifier of the debtor, which is a [CRM account](#crmaccount).|
+|SellerId|`Guid`|Identifier of the seller, which is a [CRM account](#crmaccount).|
+|ShipToId|`Guid`|Identifier for the shipping address, which is a [CRM account](#crmaccount).|
+|Margin|`decimal`|The margin that is used on this quotation in percentages. Example: for 10% the value is `10`.|
+
+
+### QuotationStatus
+
+A quotation can have the following states:
+
+|Key|Description|
+|--|--|
+|0|Concept|
+|1|Declined|
+|2|Accepted|
+|3|Expired|
+|4|Revised|
+|5|Pending|
+|6|Order|
+
 ## UnitOfMeasurement
 
