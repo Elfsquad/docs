@@ -107,6 +107,20 @@ Every configuration model is based on features. Features are used to capture ric
 
 ### FeatureProperty
 
+| Name               | Type                          | Description                 |
+| ------------------ | ----------------------------- | --------------------------- |
+| Id                 | `Guid`                        | Identifier of the property. |
+| Name               | `string`                      | Name of the property.       |
+| Type               | `integer`                     | Type of the property        |
+| AssociatedFeatures | `AssociatedFeatureProperty[]` |                             |
+
+#### FeaturePropertyType
+
+| Key  | Description             |
+| ---- | ----------------------- |
+| 0    | **Input**:              |
+| 1    | **AssociatedFeatures**: |
+
 #### AssociatedFeatureProperty
 
 
