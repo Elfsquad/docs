@@ -25,7 +25,17 @@ These methods support a single entity as well as a list of entities. Based on th
 
 
 
-| Endpoint   | Description | URI               | Supported methods      |
-| ---------- | ----------- | ----------------- | ---------------------- |
-| Quotations |             | /api/2/quotations | GET, POST, PUT, DELETE |
+| Model                                                        | URI                                | Supported methods      |
+| ------------------------------------------------------------ | ---------------------------------- | ---------------------- |
+| [AssociatedFeatureProperties](/models#associatedfeatureproperty) | /api/2/associatedfeatureproperties | GET, POST, PUT, DELETE |
+| [Categories](/models#categories)                             | /api/2/categories                  | GET, POST, PUT, DELETE |
+| [CrmAccounts](/models#crmaccounts)                           | /api/2/crmaccounts                 | GET, POST, PUT, DELETE |
+| [FeatureHasFeatureProperty](/models#featurehasfeatureproperty) | /api/2/featurehasfeatureproperties | GET, POST, PUT, DELETE |
+| [FeatureProperty](/models#featureproperty)                   | /api/2/featureproperties           | GET, POST, PUT, DELETE |
+| [Feature](/models#feature)                                   | /api/2/features                    | GET, POST, PUT, DELETE |
+| [QuotationLine](/models#quotationline)                       | /api/2/quotationlines              | GET, POST, PUT, DELETE |
+| [QuotationProperty](/models#quotationproperty)               | /api/2/quotationproperties         | GET, POST, PUT, DELETE |
+| [Quotation](/models#quotation)                               | /api/2/quotations                  | GET, POST, PUT, DELETE |
+| [UnitOfMeasurement](/models#unitofmeasurement)               | /api/2/uom                         | GET, POST, PUT, DELETE |
+| [VAT](/models#vat)                                           | /api/2/vats                        | GET, POST, PUT, DELETE |
 
