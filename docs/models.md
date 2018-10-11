@@ -4,7 +4,24 @@ This page shows an overview of the available models.
 
 ## Category
 
+| Name          | Type             | Description                                                  |
+| ------------- | ---------------- | ------------------------------------------------------------ |
+| Id            | `Guid`           | Identifier of the category.                                  |
+| Texts         | `CategoryText[]` | Translated titles of the category.                           |
+| Subcategories | `Category[]`     | Array of subcategories.                                      |
+| ParentId      | `Guid`           | Identifier of the parent category.                           |
+| Order         | `integer`        | Order in which the category should be displayed in the different product selection pages. |
+
 ### CategoryText
+
+| Name        | Type     | Description                                       |
+| ----------- | -------- | ------------------------------------------------- |
+| Id          | `Guid`   | Identifier of the category text.                  |
+| Value       | `string` | Value of the text.                                |
+| LanguageIso | `string` | Two letter ISO (639-1) code of the text language. |
+| CategoryId  | `Guid`   | Identifier of the category.                       |
+
+
 
 ## CrmAccount
 
@@ -28,8 +45,8 @@ Every configuration model is based on features. Features are used to capture ric
 | SubcategoryIds | `Guid[]` | List of identifiers for sub-categories. |
 | Tags | `string[]` | List of tags. A tag can be used to give a feature a certain label. |
 | MarginPct | `decimal` | |
-| Properties | `List<FeatureHasFeatureProperty>` | |
-| Texts | `List<FeatureText>` || |
+| Properties | `FeatureHasFeatureProperty[]` | |
+| Texts | `FeatureText[]` ||
 | CardImageUrl | `string` | URL for the image of the feature. This image is displayed in the cards. |
 | OrganizationSellsFeature | `List<OrganizationSellsFeature>` | |
 | VATId | `Guid` | [VAT](#vat) that is used as default for this feature. |
@@ -57,8 +74,3 @@ world!
 
 ## UnitOfMeasurement
 
-|Name|Type|Description|
-|--|--|--|
-|Id|`Guid`|Identifier for the unit of measurement. |
-|Code | `string` | The code for the unit of measurement. Example: `kg`. |
-|Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
