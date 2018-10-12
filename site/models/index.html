@@ -91,11 +91,15 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../api/start.md">Getting started</a>
+    <a class="" href="../api/start/">Getting started</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../api/endpoints.md">Endpoints</a>
+    <a class="" href="../api/endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api/endpoints-custom/">Custom endpoints</a>
                 </li>
                 <li class="">
                     
@@ -180,7 +184,7 @@
             <div class="section">
               
                 <h1 id="models">Models</h1>
-<p>This page shows an overview of the available models.</p>
+<p>This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. </p>
 <h2 id="category">Category</h2>
 <table>
 <thead>
@@ -580,7 +584,7 @@
 <tr>
 <td>AssociatedFeatures</td>
 <td><code>AssociatedFeatureProperty[]</code></td>
-<td></td>
+<td>If the type of this property is set to <code>1</code> (AssociatedFeatures) this property is filled with the relationships with features that can be associated with this property.</td>
 </tr>
 </tbody>
 </table>
@@ -595,16 +599,80 @@
 <tbody>
 <tr>
 <td>0</td>
-<td><strong>Input</strong>:</td>
+<td><strong>Input</strong>: If the feature property is marked as a Input type; a decimal value can be associated with this property.</td>
 </tr>
 <tr>
 <td>1</td>
-<td><strong>AssociatedFeatures</strong>:</td>
+<td><strong>AssociatedFeatures</strong>: If the feature property is marked as a AssociatedFeatures type; a selection of defined features can be associated with this property.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="associatedfeatureproperty">AssociatedFeatureProperty</h4>
+<p>The AssociatedFeatureProperty is a relationship between a feature property's AssociatedFeatures list and a Feature.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the associated feature property.</td>
+</tr>
+<tr>
+<td>FeaturePropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#featureproperty">feature property</a>.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#feature">feature</a>.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="featurehasfeatureproperty">FeatureHasFeatureProperty</h4>
+<p>Relationship between a feature and a feature property.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the FeatureHasFeatureProperty relationship.</td>
+</tr>
+<tr>
+<td>FeaturePropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#featureproperty">feature property</a>.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#feature">feature</a>.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>If the type of the FeaturePropery is set to <code>0</code>(Input); this property holds the input value.</td>
+</tr>
+<tr>
+<td>AssociatedFeatureId</td>
+<td><code>Guid</code></td>
+<td>If the type of the FeatureProperty is set to <code>1</code>(AssociatedFeature); this property holds the <a href="#feature">feature</a> identifier that is associated with this property.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="vat">VAT</h2>
 <table>
 <thead>
@@ -1117,12 +1185,15 @@
 </tr>
 </tbody>
 </table>
+<p>Missing a property? Feel free to contact us at <code>support@elfskot.com</code>.</p>
               
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api/start/" class="btn btn-neutral float-right" title="Getting started">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href=".." class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -1153,6 +1224,8 @@
       
         <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../api/start/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
