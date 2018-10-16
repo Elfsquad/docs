@@ -43,7 +43,7 @@ When the request is submitted, and all the parameters are correct, the API will 
 }
 ```
 
-![example 1](/img/login_request.png)
+![example 1](/docs/img/login_request.png)
 
 If the API gives a `415 Unsupported Media Type` error, make sure that the content type of the request is set to `application/json`.
 
@@ -59,4 +59,4 @@ Now we can use the accessToken to authenticate with the Elfskot API and retrieve
 | ------------- | ---------------------------------------------- |
 | Authorization | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... |
 
-![example 2](/img/get_features.png)
+![example 2](/docs/img/get_features.png)
