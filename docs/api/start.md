@@ -18,7 +18,7 @@ The getting started guide contains the following content:
 4. Add a **Elfskot Connect** application.
 5. Copy the **ApplicationId** and **Secret** and store them in a safe place.
 
-### 2. Retrieve a JWT from the API
+### 2. Retrieve a access token from the API
 
 To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:
 
