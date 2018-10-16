@@ -1,0 +1,11 @@
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.deps.json
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.runtimeconfig.json
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.runtimeconfig.dev.json
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.dll
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.pdb
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.csprojAssemblyReference.cache
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.csproj.CoreCompileInputs.cache
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.AssemblyInfoInputs.cache
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.AssemblyInfo.cs
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.dll
+D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.pdb
