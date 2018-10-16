@@ -16,4 +16,4 @@ For more information about our SDK, see the [getting started with the SDK](sdk/s
 
 ## Support
 
-If you are missing information, or need support, please reach out to us on `support@elfskot.com`.
+If you are missing information, or need support, please reach out to us on `help@elfskot.com`.

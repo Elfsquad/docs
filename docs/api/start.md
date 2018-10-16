@@ -1,4 +1,4 @@
-# Requirements
+Requirements
 
 To follow this guide, it is advised to have Google Crome and Postman installed. The examples will show how to the raw HTTP requests with Postman. Postman can be [downloaded from their website](https://www.getpostman.com/apps).
 
@@ -8,7 +8,17 @@ The getting started guide contains the following content:
 2. Creating a request and attaching the access token.
 3. Examples in C# and Python.
 
-## Requesting an access token
+## Authentication
+
+### 1. Add a Elfskot Connect integration application
+
+1. Open your [EMS environment](https://ems.elfskot.cloud).
+2. In the navigation menu open **Integrations**.
+3. Add a new Integration Application by clicking the Add button in the bottom-right corner.
+4. Add a **Elfskot Connect** application.
+5. Copy the **ApplicationId** and **Secret** and store them in a safe place.
+
+### 2. Retrieve a access token from the API
 
 To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:
 
@@ -33,22 +43,20 @@ When the request is submitted, and all the parameters are correct, the API will 
 }
 ```
 
+![example 1](/docs/img/login_request.png)
+
 If the API gives a `415 Unsupported Media Type` error, make sure that the content type of the request is set to `application/json`.
 
 ## Create a request
 
-## Examples
+Now we can use the accessToken to authenticate with the Elfskot API and retrieve a list of features:
 
-We have two examples available to get started with our API.
+**URI** `GET https://api.elfskot.cloud/api/2/features`
 
-### Example C# project
+**Headers**
 
-To get started quickly, download our C# example project from here. The example project already contains a method to request an access token.
+| Key           | Value                                          |
+| ------------- | ---------------------------------------------- |
+| Authorization | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... |
 
-### Example Python code
-
-The following code example will show how to retrieve an access token, and use this token to do another request.
-
-```python
-print('Hello world')
-```
+![example 2](/docs/img/get_features.png)
