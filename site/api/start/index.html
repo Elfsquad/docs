@@ -72,17 +72,18 @@
     <a class="current" href="./">Getting started</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#requirements">Requirements</a></li>
+    <li class="toctree-l3"><a href="#authentication">Authentication</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#requesting-an-access-token">Requesting an access token</a></li>
+            <li><a class="toctree-l4" href="#1-add-a-elfskot-connect-integration-application">1. Add a Elfskot Connect integration application</a></li>
         
-            <li><a class="toctree-l4" href="#create-a-request">Create a request</a></li>
-        
-            <li><a class="toctree-l4" href="#examples">Examples</a></li>
+            <li><a class="toctree-l4" href="#2-retrieve-a-jwt-from-the-api">2. Retrieve a JWT from the API</a></li>
         
         </ul>
+    
+
+    <li class="toctree-l3"><a href="#create-a-request">Create a request</a></li>
     
 
     </ul>
@@ -90,53 +91,6 @@
                 <li class="">
                     
     <a class="" href="../endpoints-crud/">Basic endpoints</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../endpoints-custom/">Custom endpoints</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/features.md">Tutorial: Features</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/features-properties.md">Tutorial: Feature properties</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/crm-accounts.md">Tutorial: CRM accounts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/quotations.md">Tutorial: Quotations</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">SDK</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../sdk/start.md">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../sdk/tutorial/features.md">Tutorial: Features</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../sdk/tutorial/features-properties.md">Tutorial: Feature properties</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../sdk/tutorial/crm-accounts.md">Tutorial: CRM accounts</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../sdk/tutorial/quotations.md">Tutorial: Quotations</a>
                 </li>
     </ul>
 	    </li>
@@ -177,7 +131,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="requirements">Requirements</h1>
+                <p>Requirements</p>
 <p>To follow this guide, it is advised to have Google Crome and Postman installed. The examples will show how to the raw HTTP requests with Postman. Postman can be <a href="https://www.getpostman.com/apps">downloaded from their website</a>.</p>
 <p>The getting started guide contains the following content:</p>
 <ol>
@@ -185,7 +139,16 @@
 <li>Creating a request and attaching the access token.</li>
 <li>Examples in C# and Python.</li>
 </ol>
-<h2 id="requesting-an-access-token">Requesting an access token</h2>
+<h2 id="authentication">Authentication</h2>
+<h3 id="1-add-a-elfskot-connect-integration-application">1. Add a Elfskot Connect integration application</h3>
+<ol>
+<li>Open your <a href="https://ems.elfskot.cloud">EMS environment</a>.</li>
+<li>In the navigation menu open <strong>Integrations</strong>.</li>
+<li>Add a new Integration Application by clicking the Add button in the bottom-right corner.</li>
+<li>Add a <strong>Elfskot Connect</strong> application.</li>
+<li>Copy the <strong>ApplicationId</strong> and <strong>Secret</strong> and store them in a safe place.</li>
+</ol>
+<h3 id="2-retrieve-a-jwt-from-the-api">2. Retrieve a JWT from the API</h3>
 <p>To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:</p>
 <p><strong>URI:</strong> <code>POST https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin</code></p>
 <p><strong>Content-type:</strong> application/json</p>
@@ -203,16 +166,27 @@
 }
 </code></pre>
 
+<p><img alt="example 1" src="/img/login_request.png" /></p>
 <p>If the API gives a <code>415 Unsupported Media Type</code> error, make sure that the content type of the request is set to <code>application/json</code>.</p>
 <h2 id="create-a-request">Create a request</h2>
-<h2 id="examples">Examples</h2>
-<p>We have two examples available to get started with our API.</p>
-<h3 id="example-c-project">Example C# project</h3>
-<p>To get started quickly, download our C# example project from here. The example project already contains a method to request an access token.</p>
-<h3 id="example-python-code">Example Python code</h3>
-<p>The following code example will show how to retrieve an access token, and use this token to do another request.</p>
-<pre><code class="python">print('Hello world')
-</code></pre>
+<p>Now we can use the accessToken to authenticate with the Elfskot API and retrieve a list of features:</p>
+<p><strong>URI</strong> <code>GET https://api.elfskot.cloud/api/2/features</code></p>
+<p><strong>Headers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="example 2" src="/img/get_features.png" /></p>
               
             </div>
           </div>
