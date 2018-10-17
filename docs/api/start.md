@@ -1,4 +1,4 @@
-Requirements
+# Requirements
 
 To follow this guide, it is advised to have Google Crome and Postman installed. The examples will show how to the raw HTTP requests with Postman. Postman can be [downloaded from their website](https://www.getpostman.com/apps).
 
@@ -8,17 +8,17 @@ The getting started guide contains the following content:
 2. Creating a request and attaching the access token.
 3. Examples in C# and Python.
 
-## Authentication
+# Authentication
 
-### 1. Add a Elfskot Connect integration application
+## Adding an integration application
 
 1. Open your [EMS environment](https://ems.elfskot.cloud).
 2. In the navigation menu open **Integrations**.
-3. Add a new Integration Application by clicking the Add button in the bottom-right corner.
-4. Add a **Elfskot Connect** application.
+3. Add a new integration application by clicking the add button in the bottom-right corner.
+4. Add an **Elfskot Connect** application.
 5. Copy the **ApplicationId** and **Secret** and store them in a safe place.
 
-### 2. Retrieve a access token from the API
+## Retrieving an access token
 
 To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:
 
@@ -43,20 +43,59 @@ When the request is submitted, and all the parameters are correct, the API will 
 }
 ```
 
+An example of how this is done in Postman, is shown below:
+
 ![example 1](/docs/img/login_request.png)
+
+### Error responses
 
 If the API gives a `415 Unsupported Media Type` error, make sure that the content type of the request is set to `application/json`.
 
-## Create a request
+In the case of a not authorized error, make sure that you have added the integration application, and that the `clientId` and `secret` are correct.
 
-Now we can use the accessToken to authenticate with the Elfskot API and retrieve a list of features:
+# Creating a request
 
-**URI** `GET https://api.elfskot.cloud/api/2/features`
+Now we can use the access token to authenticate with the Elfskot API. For any requests to the API, the access token should be added to the HTTP `Authorization` request header. An example is shown below where we retrieve a list of features:
 
-**Headers**
+**URI:** `GET https://api.elfskot.cloud/api/2/features`
+
+**Headers:**
 
 | Key           | Value                                          |
 | ------------- | ---------------------------------------------- |
-| Authorization | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... |
+| Authorization | bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... |
+
+A Postman example which retrieves all the features is shown below:
 
 ![example 2](/docs/img/get_features.png)
+
+# Example (C#): Requesting an access token
+
+The following C# example demonstrates how to retrieve an access token from the API:
+
+```csharp
+// Retrieves an access token from the API. This requires an integration application in 
+// the Elfskot Management System. See http://docs.elfskot.com for more information.
+string RequestAccessToken(string applicationId, string secret)
+{
+    using(var client = new HttpClient())
+    {
+        var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin");
+        request.Content = new StringContent(body, Encoding.UTF8, "application/json");
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Successfully retrieved an access token.");
+            return JsonConvert.DeserializeObject<dynamic>(response.Content.ReadAsStringAsync().Result).accessToken;
+        }
+        else
+        {
+            throw new HttpRequestException($"Failed to request access token, server responded with status code: {response.StatusCode}");
+        }
+    }
+}
+```
+
+This access token should present in the HTTP `Authorization` request header for every request.

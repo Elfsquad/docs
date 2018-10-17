@@ -12,7 +12,7 @@ namespace Elfskot.Example.Features
 {
     /// <summary>
     /// This example application demonstrates how to interact with Features. It will show how
-    /// to retrieve features, retrieve a single feature, create a new feature, update and existing feature
+    /// to retrieve features, retrieve a single feature, create a new feature, update an existing feature
     /// and deleting a feature.
     /// 
     /// For more information visit http://docs.elfskot.com.
