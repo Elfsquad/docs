@@ -72,18 +72,24 @@
     <a class="current" href="./">Getting started</a>
     <ul class="subnav">
             
+    <li class="toctree-l3"><a href="#requirements">Requirements</a></li>
+    
+
     <li class="toctree-l3"><a href="#authentication">Authentication</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#1-add-a-elfskot-connect-integration-application">1. Add a Elfskot Connect integration application</a></li>
+            <li><a class="toctree-l4" href="#adding-an-integration-application">Adding an integration application</a></li>
         
-            <li><a class="toctree-l4" href="#2-retrieve-a-jwt-from-the-api">2. Retrieve a JWT from the API</a></li>
+            <li><a class="toctree-l4" href="#retrieving-an-access-token">Retrieving an access token</a></li>
         
         </ul>
     
 
-    <li class="toctree-l3"><a href="#create-a-request">Create a request</a></li>
+    <li class="toctree-l3"><a href="#creating-a-request">Creating a request</a></li>
+    
+
+    <li class="toctree-l3"><a href="#example-c-requesting-an-access-token">Example (C#): Requesting an access token</a></li>
     
 
     </ul>
@@ -131,7 +137,7 @@
           <div role="main">
             <div class="section">
               
-                <p>Requirements</p>
+                <h1 id="requirements">Requirements</h1>
 <p>To follow this guide, it is advised to have Google Crome and Postman installed. The examples will show how to the raw HTTP requests with Postman. Postman can be <a href="https://www.getpostman.com/apps">downloaded from their website</a>.</p>
 <p>The getting started guide contains the following content:</p>
 <ol>
@@ -139,16 +145,16 @@
 <li>Creating a request and attaching the access token.</li>
 <li>Examples in C# and Python.</li>
 </ol>
-<h2 id="authentication">Authentication</h2>
-<h3 id="1-add-a-elfskot-connect-integration-application">1. Add a Elfskot Connect integration application</h3>
+<h1 id="authentication">Authentication</h1>
+<h2 id="adding-an-integration-application">Adding an integration application</h2>
 <ol>
 <li>Open your <a href="https://ems.elfskot.cloud">EMS environment</a>.</li>
 <li>In the navigation menu open <strong>Integrations</strong>.</li>
-<li>Add a new Integration Application by clicking the Add button in the bottom-right corner.</li>
-<li>Add a <strong>Elfskot Connect</strong> application.</li>
+<li>Add a new integration application by clicking the add button in the bottom-right corner.</li>
+<li>Add an <strong>Elfskot Connect</strong> application.</li>
 <li>Copy the <strong>ApplicationId</strong> and <strong>Secret</strong> and store them in a safe place.</li>
 </ol>
-<h3 id="2-retrieve-a-jwt-from-the-api">2. Retrieve a JWT from the API</h3>
+<h2 id="retrieving-an-access-token">Retrieving an access token</h2>
 <p>To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:</p>
 <p><strong>URI:</strong> <code>POST https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin</code></p>
 <p><strong>Content-type:</strong> application/json</p>
@@ -166,12 +172,15 @@
 }
 </code></pre>
 
+<p>An example of how this is done in Postman, is shown below:</p>
 <p><img alt="example 1" src="/docs/img/login_request.png" /></p>
+<h3 id="error-responses">Error responses</h3>
 <p>If the API gives a <code>415 Unsupported Media Type</code> error, make sure that the content type of the request is set to <code>application/json</code>.</p>
-<h2 id="create-a-request">Create a request</h2>
-<p>Now we can use the accessToken to authenticate with the Elfskot API and retrieve a list of features:</p>
-<p><strong>URI</strong> <code>GET https://api.elfskot.cloud/api/2/features</code></p>
-<p><strong>Headers</strong></p>
+<p>In the case of a not authorized error, make sure that you have added the integration application, and that the <code>clientId</code> and <code>secret</code> are correct.</p>
+<h1 id="creating-a-request">Creating a request</h1>
+<p>Now we can use the access token to authenticate with the Elfskot API. For any requests to the API, the access token should be added to the HTTP <code>Authorization</code> request header. An example is shown below where we retrieve a list of features:</p>
+<p><strong>URI:</strong> <code>GET https://api.elfskot.cloud/api/2/features</code></p>
+<p><strong>Headers:</strong></p>
 <table>
 <thead>
 <tr>
@@ -182,11 +191,39 @@
 <tbody>
 <tr>
 <td>Authorization</td>
-<td>Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...</td>
+<td>bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...</td>
 </tr>
 </tbody>
 </table>
+<p>A Postman example which retrieves all the features is shown below:</p>
 <p><img alt="example 2" src="/docs/img/get_features.png" /></p>
+<h1 id="example-c-requesting-an-access-token">Example (C#): Requesting an access token</h1>
+<p>The following C# example demonstrates how to retrieve an access token from the API:</p>
+<pre><code class="csharp">// Retrieves an access token from the API. This requires an integration application in 
+// the Elfskot Management System. See http://docs.elfskot.com for more information.
+string RequestAccessToken(string applicationId, string secret)
+{
+    using(var client = new HttpClient())
+    {
+        var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
+        var request = new HttpRequestMessage(HttpMethod.Post, &quot;https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin&quot;);
+        request.Content = new StringContent(body, Encoding.UTF8, &quot;application/json&quot;);
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine(&quot;Successfully retrieved an access token.&quot;);
+            return JsonConvert.DeserializeObject&lt;dynamic&gt;(response.Content.ReadAsStringAsync().Result).accessToken;
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed to request access token, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>This access token should present in the HTTP <code>Authorization</code> request header for every request.</p>
               
             </div>
           </div>

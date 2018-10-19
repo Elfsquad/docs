@@ -121,60 +121,7 @@
             <div class="section">
               
                 <h1 id="basic-endpoints">Basic endpoints</h1>
-<p><code>https://api.elfskot.cloud</code></p>
-<p><strong>Additional note about GET:</strong></p>
-<p>If the endpoint is requested without an ID, a list of all the entities will be returned. If an ID is specified, a single entity is returned.</p>
-<p>It is also possible to use query parameters when retrieving a list of entities:</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Skip</td>
-<td><code>integer</code></td>
-<td>Specifies how many entities should be skipped in the result.</td>
-<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
-</tr>
-<tr>
-<td>Limit</td>
-<td><code>integer</code></td>
-<td>Specifies how many entities you want to retrieve.</td>
-<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
-</tr>
-<tr>
-<td>Orderby</td>
-<td><code>string</code></td>
-<td>Used to order the result based on a property of the entity.</td>
-<td><code>GET /api/2/features?orderby=name</code></td>
-</tr>
-<tr>
-<td>Descending</td>
-<td><code>boolean</code></td>
-<td>By default the Orderby parameter orders the result in ascending order. If you want to retrieve the result in descending order you need to specify the descending parameter.</td>
-<td><code>GET /api/2/features?orderby=name&amp;descending=true</code></td>
-</tr>
-<tr>
-<td>Include</td>
-<td><code>string</code></td>
-<td>All non-native types are by default excluded from the API response. If you require them you have to specify this in the request. <strong>Note: </strong> Include values should be formatted in CamelCase.</td>
-<td><code>GET /api/2/quotations?include=Lines</code> Will return all the lines of the corresponding quotations. You can add multiple include parameters to suffice all your requirements: <code>GET /api/2/quotations?include=Lines&amp;include=Debtor&amp;include=Seller</code></td>
-</tr>
-<tr>
-<td>Filter</td>
-<td><code>string</code></td>
-<td>Besides the native query parameters above; it is also possible to query on entity specific properties.</td>
-<td>For example; if you want to retrieve a list of all quotations that have the <strong><em>synced</em></strong> property set to <strong><em>true</em></strong> you can use the url: <code>/api/2/quotations?synced=true</code>. Where <strong><em>synced</em></strong> is a property of the quotation model.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Additional note about POST/PUT:</strong></p>
-<p>These methods support a single entity as well as a list of entities. Based on the provided entities the method for a single or bulk will be picked automatically.</p>
+<p>The main endpoint for the API is: <code>https://api.elfskot.cloud</code>.</p>
 <table>
 <thead>
 <tr>
@@ -241,6 +188,59 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Additional note about GET:</strong></p>
+<p>If the endpoint is requested without an ID, a list of all the entities will be returned. If an ID is specified, a single entity is returned.</p>
+<p>It is also possible to use query parameters when retrieving a list of entities:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skip</td>
+<td><code>integer</code></td>
+<td>Specifies how many entities should be skipped in the result.</td>
+<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
+</tr>
+<tr>
+<td>Limit</td>
+<td><code>integer</code></td>
+<td>Specifies how many entities you want to retrieve.</td>
+<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
+</tr>
+<tr>
+<td>Orderby</td>
+<td><code>string</code></td>
+<td>Used to order the result based on a property of the entity.</td>
+<td><code>GET /api/2/features?orderby=name</code></td>
+</tr>
+<tr>
+<td>Descending</td>
+<td><code>boolean</code></td>
+<td>By default the Orderby parameter orders the result in ascending order. If you want to retrieve the result in descending order you need to specify the descending parameter.</td>
+<td><code>GET /api/2/features?orderby=name&amp;descending=true</code></td>
+</tr>
+<tr>
+<td>Include</td>
+<td><code>string</code></td>
+<td>All non-native types are by default excluded from the API response. If you require them you have to specify this in the request. <strong>Note: </strong> Include values should be formatted in CamelCase.</td>
+<td><code>GET /api/2/quotations?include=Lines</code> Will return all the lines of the corresponding quotations. You can add multiple include parameters to suffice all your requirements: <code>GET /api/2/quotations?include=Lines&amp;include=Debtor&amp;include=Seller</code></td>
+</tr>
+<tr>
+<td>Filter</td>
+<td><code>string</code></td>
+<td>Besides the native query parameters above; it is also possible to query on entity specific properties.</td>
+<td>For example; if you want to retrieve a list of all quotations that have the <code>synced</code> property set to <code>true</code> you can use the url: <code>/api/2/quotations?synced=true</code>. Where <code>synced</code> is a property of the quotation model.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional note about POST/PUT:</strong></p>
+<p>These methods support a single entity as well as a list of entities. Based on the provided entities the method for a single or bulk will be picked automatically.</p>
               
             </div>
           </div>
