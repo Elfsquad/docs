@@ -8,7 +8,7 @@ In this tutorial we will show how you can manage features. The examples will sho
  * How to update a feature.
  * How to delete a feature.
 
-There is also a [complete project available for download](https://github.com/Elfskot/docs/blob/master/examples/tutorial_features/Elfskot.Example.Features_20181016.zip). This project contains example code that will show how to accomplish the above described tasks.
+There is also a [complete project available for download](https://github.com/Elfskot/docs/raw/master/examples/tutorial_features/Elfskot.Example.Features_20181016.zip). This project contains example code that will show how to accomplish the above described tasks.
 
 If you do not know how to connect to the API, please check out the [getting started with the API](/api/start) first.
 

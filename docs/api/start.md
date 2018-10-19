@@ -45,7 +45,7 @@ When the request is submitted, and all the parameters are correct, the API will 
 
 An example of how this is done in Postman, is shown below:
 
-![example 1](/docs/img/login_request.png)
+![example 1](/img/login_request.png)
 
 ### Error responses
 
@@ -67,7 +67,7 @@ Now we can use the access token to authenticate with the Elfskot API. For any re
 
 A Postman example which retrieves all the features is shown below:
 
-![example 2](/docs/img/get_features.png)
+![example 2](/img/get_features.png)
 
 # Example (C#): Requesting an access token
 
