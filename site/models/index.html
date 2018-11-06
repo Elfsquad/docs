@@ -65,11 +65,15 @@
     
         <ul>
         
+            <li><a class="toctree-l4" href="#application-events">Application Events</a></li>
+        
             <li><a class="toctree-l4" href="#category">Category</a></li>
         
             <li><a class="toctree-l4" href="#crmaccount">CrmAccount</a></li>
         
             <li><a class="toctree-l4" href="#feature">Feature</a></li>
+        
+            <li><a class="toctree-l4" href="#organization">Organization</a></li>
         
             <li><a class="toctree-l4" href="#vat">VAT</a></li>
         
@@ -96,6 +100,14 @@
                 <li class="">
                     
     <a class="" href="../api/endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api/tutorial/features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../api/tutorial/applicationevents/">Tutorial: Application Events</a>
                 </li>
     </ul>
 	    </li>
@@ -138,6 +150,101 @@
               
                 <h1 id="models">Models</h1>
 <p>This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. </p>
+<h2 id="application-events">Application Events</h2>
+<p>There are a number of application event types available through the API. See <a href="api/tutorial/applicationevents/">application event tutorials</a> for more info.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the application event.</td>
+</tr>
+<tr>
+<td>IntegrationApplicationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the integration application that should handle this application event.</td>
+</tr>
+<tr>
+<td>Handled</td>
+<td><code>bool</code></td>
+<td>Indicate whether this application event has been handled by the integration application defined by <em>IntegrationApplicationId</em>.</td>
+</tr>
+<tr>
+<td>HandledDate</td>
+<td><code>DateTime</code></td>
+<td>DateTime at which the application event was handled by the integration application.</td>
+</tr>
+<tr>
+<td>Success</td>
+<td><code>bool</code></td>
+<td>Defines whether the application event was handled successfully by the integration application.</td>
+</tr>
+<tr>
+<td>ReasonPhrase</td>
+<td><code>string</code></td>
+<td>Explanation of why the application event has the current success status.</td>
+</tr>
+</tbody>
+</table>
+<p>Besides the common application event properties, each type of application event has additional information available to it:</p>
+<h3 id="quotationrequested">QuotationRequested</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the requested quotation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotationtopending">QuotationToPending</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation who's status is set to pending.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotationtoaccepted">QuotationToAccepted</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation who's status is set to accepted.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="category">Category</h2>
 <table>
 <thead>
@@ -623,6 +730,48 @@
 <td>AssociatedFeatureId</td>
 <td><code>Guid</code></td>
 <td>If the type of the FeatureProperty is set to <code>1</code>(AssociatedFeature); this property holds the <a href="#feature">feature</a> identifier that is associated with this property.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="organization">Organization</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the organization.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the organization.</td>
+</tr>
+<tr>
+<td>SettingsId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the settings corresponding to this organization.</td>
+</tr>
+<tr>
+<td>Users</td>
+<td><code>User[]</code></td>
+<td>List of <a href="#user">users</a> that are part of this organization.</td>
+</tr>
+<tr>
+<td>DefaultDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Organization's default discount percentage. Calculates the margin by decreasing the purchase price.</td>
+</tr>
+<tr>
+<td>DefaultUpValuePct</td>
+<td><code>decimal</code></td>
+<td>Organization's default up value percentage. Calculates the margin by increasing the sales price.</td>
 </tr>
 </tbody>
 </table>

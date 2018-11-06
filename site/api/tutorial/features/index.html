@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tutorial: Features - Elfskot Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tutorial: Features";
+    var mkdocs_page_input_path = "api\\tutorial\\features.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Elfskot Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Overview</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../..">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../models/">Models</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">REST API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tutorial: Features</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#introduction">Introduction</a></li>
+    
+
+    <li class="toctree-l3"><a href="#retrieving-an-access-token">Retrieving an access token</a></li>
+    
+
+    <li class="toctree-l3"><a href="#retrieving-a-list-of-features">Retrieving a list of features</a></li>
+    
+
+    <li class="toctree-l3"><a href="#creating-a-new-feature">Creating a new feature</a></li>
+    
+
+    <li class="toctree-l3"><a href="#retrieve-a-single-feature">Retrieve a single feature</a></li>
+    
+
+    <li class="toctree-l3"><a href="#update-an-existing-feature">Update an existing feature</a></li>
+    
+
+    <li class="toctree-l3"><a href="#delete-a-feature">Delete a feature</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../applicationevents/">Tutorial: Application Events</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Elfskot Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>REST API &raquo;</li>
+        
+      
+    
+    <li>Tutorial: Features</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<p>In this tutorial we will show how you can manage features. The examples will show the following:</p>
+<ul>
+<li>How to retrieve a list of features.</li>
+<li>How to create a new feature.</li>
+<li>How to retrieve a single feature.</li>
+<li>How to update a feature.</li>
+<li>How to delete a feature.</li>
+</ul>
+<p>There is also a <a href="https://github.com/Elfskot/docs/raw/master/examples/tutorial_features/Elfskot.Example.Features_20181016.zip">complete project available for download</a>. This project contains example code that will show how to accomplish the above described tasks.</p>
+<p>If you do not know how to connect to the API, please check out the <a href="/api/start">getting started with the API</a> first.</p>
+<h1 id="retrieving-an-access-token">Retrieving an access token</h1>
+<p>The following C# function will retrieve an access token from the API. </p>
+<pre><code class="csharp">// Retrieves an access token from the API. This requires an integration application in 
+// the Elfskot Management System. See http://docs.elfskot.com for more information.
+static string RequestAccessToken(string applicationId, string secret)
+{
+    using(var client = new HttpClient())
+    {
+        var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
+        var request = new HttpRequestMessage(HttpMethod.Post, &quot;https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin&quot;);
+        request.Content = new StringContent(body, Encoding.UTF8, &quot;application/json&quot;);
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine(&quot;Successfully retrieved an access token.&quot;);
+            return JsonConvert.DeserializeObject&lt;dynamic&gt;(response.Content.ReadAsStringAsync().Result).accessToken;
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed to request access token, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<p>The access token should be included in every request.</p>
+<h1 id="retrieving-a-list-of-features">Retrieving a list of features</h1>
+<p>To request all the features, we will call the following endpoint: <code>https://api.elfskot.cloud/api/2/features?include=Texts&amp;skip=0&amp;take=5</code>.</p>
+<pre><code class="csharp">// Retrieve a list of all features.
+static void RetrieveAllFeatures(string token)
+{
+    using(var client = new HttpClient())
+    {
+        // Appending ?include=Texts will have the API to include the texts. You can also use skip/take to filter.
+        // All the filter parameters are optional. See http://docs.elfskot.com for more information about filtering options.
+        var request = new HttpRequestMessage(HttpMethod.Get, &quot;https://api.elfskot.cloud/api/2/features?include=Texts&amp;skip=0&amp;take=5&quot;);
+        request.Headers.Add(&quot;Authorization&quot;, $&quot;bearer {token}&quot;);
+        PrintHTTPRequest(request);
+
+        var response = client.SendAsync(request).Result;
+
+        if(response.IsSuccessStatusCode)
+        {
+            var features = JsonConvert.DeserializeObject&lt;dynamic&gt;(response.Content.ReadAsStringAsync().Result);
+            Console.WriteLine($&quot;Retrieved {features.Count} features.&quot;);
+            Console.WriteLine(features.First);
+
+            // We can also loop through all the retrieved features.
+            //foreach(var feature in features)
+            //{
+            //    Console.WriteLine(feature.name);
+            //}
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<h1 id="creating-a-new-feature">Creating a new feature</h1>
+<p>To create a new feature, we first need to create a JSON object. This example creates an anonymous object which is converted to a JSON object. It is possible to include multiple layers of objects, i.e. the feature and the texts can be created in a single request.</p>
+<p>All the languages are already available in the API, as defined in ISO 639-1. Simply fill the <code>languageIso</code> with the two letter ISO.</p>
+<p>The API will return the created model at the end of the request. This contains the assigned ID which can be used later.</p>
+<pre><code class="csharp">// Creates a new feature in your Elfskot Management System, and 
+// returns the ID of the newly created feature.
+static object CreateFeature(string token)
+{
+    // This object is serialized to a JSON string, see the raw HTTP content
+    // to see what the request looks like.
+    var feature = new
+    {
+        name = &quot;Example feature&quot;,
+        articleCode = &quot;CODE-123&quot;,
+        salesPrice = 1000m,
+        packingUnit = 1,
+        texts = new List&lt;object&gt;()
+        {
+            new
+            {
+                languageIso = &quot;en&quot;, // 2-letter ISO code, all the languages are already there.
+                type = 0, // Description
+                value = &quot;Example feature description&quot;
+            },
+            new
+            {
+                languageIso = &quot;en&quot;,
+                type = 1, // Extended description
+                value = &quot;Example feature extended description&quot;
+            },
+            new
+            {
+                languageIso = &quot;en&quot;,
+                type = 2, // More info
+                value = &quot;Example feature more info&quot;
+            }
+        },
+        cardImageUrl = &quot;https://www.elfskot.com/wp-content/themes/elfskot/dist/svg/logo-elfskot.svg&quot;
+    };
+
+    using (var client = new HttpClient())
+    {
+        var request = new HttpRequestMessage(HttpMethod.Post, &quot;https://api.elfskot.cloud/api/2/features&quot;);
+        request.Headers.Add(&quot;Authorization&quot;, $&quot;bearer {token}&quot;);
+        request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, &quot;application/json&quot;);
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            // The entire feature is stored in 'result'.
+            var result = JsonConvert.DeserializeObject&lt;dynamic&gt;(response.Content.ReadAsStringAsync().Result);
+            Console.WriteLine($&quot;Successfully created new feature with id: {result.id}&quot;);
+            return result;
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<h1 id="retrieve-a-single-feature">Retrieve a single feature</h1>
+<p>To retrieve a single feature, call the endpoint <code>https://api.elfskot.cloud/api/2/features/{id}?include=Texts</code> with the ID of the feature. If you want additional properties, such as texts, they need to be included seperately. If a property is <code>null</code>, you probably need to include this in the request.</p>
+<pre><code class="csharp">// Retrieve a single feature by ID.
+static object RetrieveFeatureById(string token, string id)
+{
+    using (var client = new HttpClient())
+    {
+        // Appending ?include=Texts will have the API to include the texts.
+        var request = new HttpRequestMessage(HttpMethod.Get, $&quot;https://api.elfskot.cloud/api/2/features/{id}?include=Texts&quot;);
+        request.Headers.Add(&quot;Authorization&quot;, $&quot;bearer {token}&quot;);
+        PrintHTTPRequest(request);
+
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            var content = response.Content.ReadAsStringAsync().Result;
+            var feature = JsonConvert.DeserializeObject&lt;dynamic&gt;(content);
+            Console.WriteLine(feature);
+            return feature;
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<h1 id="update-an-existing-feature">Update an existing feature</h1>
+<p>Updating an existing feature is almost identical to creating a new feature. Send the feature object to the API with the HTTP PUT method. The API will return the updated feature object.</p>
+<pre><code class="csharp">// Updates a feature.
+static void UpdateFeature(string token, dynamic feature)
+{
+    using (var client = new HttpClient())
+    {
+        // Appending ?include=Texts will have the API to include the texts.
+        var request = new HttpRequestMessage(HttpMethod.Put, $&quot;https://api.elfskot.cloud/api/2/features&quot;);
+        request.Headers.Add(&quot;Authorization&quot;, $&quot;bearer {token}&quot;);
+        request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, &quot;application/json&quot;);
+        PrintHTTPRequest(request);
+
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            var content = response.Content.ReadAsStringAsync().Result;
+            var result = JsonConvert.DeserializeObject&lt;dynamic&gt;(content);
+            Console.WriteLine(result);
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+
+<h1 id="delete-a-feature">Delete a feature</h1>
+<p>To delete a feature, we call the following endpoint <code>https://api.elfskot.cloud/api/2/features/{id}</code>, where the <code>id</code> is the ID of the feature to be deleted. Be aware that if a feature is deleted, it will also be removed from all existing feature models.</p>
+<pre><code class="csharp">// Deletes a feature.
+static void DeleteFeature(string token, string id)
+{
+    using (var client = new HttpClient())
+    {
+        var request = new HttpRequestMessage(HttpMethod.Delete, $&quot;https://api.elfskot.cloud/api/2/features/{id}&quot;);
+        request.Headers.Add(&quot;Authorization&quot;, $&quot;bearer {token}&quot;);
+        PrintHTTPRequest(request);
+
+        var response = client.SendAsync(request).Result;
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine(&quot;Feature has been successfully deleted.&quot;);
+        }
+        else
+        {
+            throw new HttpRequestException($&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;);
+        }
+    }
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../applicationevents/" class="btn btn-neutral float-right" title="Tutorial: Application Events">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../endpoints-crud/" class="btn btn-neutral" title="Basic endpoints"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../endpoints-crud/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../applicationevents/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

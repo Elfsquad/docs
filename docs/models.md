@@ -2,6 +2,41 @@
 
 This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. 
 
+## Application Events
+
+There are a number of application event types available through the API. See [application event tutorials](api/tutorial/applicationevents/) for more info.
+
+| Name                     | Type       | Description                                                  |
+| ------------------------ | ---------- | ------------------------------------------------------------ |
+| Id                       | `Guid`     | Identifier of the application event.                         |
+| IntegrationApplicationId | `Guid`     | Identifier of the integration application that should handle this application event. |
+| Handled                  | `bool`     | Indicate whether this application event has been handled by the integration application defined by *IntegrationApplicationId*. |
+| HandledDate              | `DateTime` | DateTime at which the application event was handled by the integration application. |
+| Success                  | `bool`     | Defines whether the application event was handled successfully by the integration application. |
+| ReasonPhrase             | `string`   | Explanation of why the application event has the current success status. |
+
+Besides the common application event properties, each type of application event has additional information available to it:
+
+### QuotationRequested
+
+| Name        | Type   | Description                            |
+| ----------- | ------ | -------------------------------------- |
+| QuotationId | `Guid` | Identifier of the requested quotation. |
+
+### QuotationToPending
+
+| Name        | Type   | Description                                                 |
+| ----------- | ------ | ----------------------------------------------------------- |
+| QuotationId | `Guid` | Identifier of the quotation who's status is set to pending. |
+
+### QuotationToAccepted
+
+| Name        | Type   | Description                                                  |
+| ----------- | ------ | ------------------------------------------------------------ |
+| QuotationId | `Guid` | Identifier of the quotation who's status is set to accepted. |
+
+
+
 ## Category
 
 | Name          | Type             | Description                                                  |
@@ -145,6 +180,19 @@ Relationship between a feature and a feature property.
 
 
 
+## Organization
+
+| Name               | Type      | Description                                                  |
+| ------------------ | --------- | ------------------------------------------------------------ |
+| Id                 | `Guid`    | Identifier of the organization.                              |
+| Name               | `string`  | Name of the organization.                                    |
+| SettingsId         | `Guid`    | Identifier of the settings corresponding to this organization. |
+| Users              | `User[]`  | List of [users](#user) that are part of this organization.   |
+| DefaultDiscountPct | `decimal` | Organization's default discount percentage. Calculates the margin by decreasing the purchase price. |
+| DefaultUpValuePct  | `decimal` | Organization's default up value percentage. Calculates the margin by increasing the sales price. |
+
+
+
 ## VAT
 
 | Name        | Type      | Description                                     |
@@ -236,17 +284,17 @@ A quotation can have the following states:
 |TotalInclPrice| `decimal` (Read-only) | Total price including VAT. |
 |GroupBaseExclPrice| `decimal` (Read-only) | |
 |GroupBaseInclPrice| `decimal` (Read-only) | |
-|GroupAdditionalExclPrice | `decimal` (Read-only) | | 
-|GroupAdditionalInclPrice | `decimal` (Read-only) | | 
-|GroupTotalExclPrice | `decimal` (Read-only) | | 
-|GroupTotalInclPrice | `decimal` (Read-only) | | 
-|DefaultPurchasePriceDiscountPct | `decimal` (Read-only) | | 
-|PurchasePrice | `decimal` (Read-only) | | 
-|UnitPrice | `decimal` | Unit price of the feature. | 
-|TotalExclMargin | `decimal` (Read-only) | | 
-|TotalInclMargin | `decimal` (Read-only) | | 
-|GroupPurchasePrice | `decimal` (Read-only) | | 
-|GroupMargin | `decimal` (Read-only) | | 
+|GroupAdditionalExclPrice | `decimal` (Read-only) | |
+|GroupAdditionalInclPrice | `decimal` (Read-only) | |
+|GroupTotalExclPrice | `decimal` (Read-only) | |
+|GroupTotalInclPrice | `decimal` (Read-only) | |
+|DefaultPurchasePriceDiscountPct | `decimal` (Read-only) | |
+|PurchasePrice | `decimal` (Read-only) | |
+|UnitPrice | `decimal` | Unit price of the feature. |
+|TotalExclMargin | `decimal` (Read-only) | |
+|TotalInclMargin | `decimal` (Read-only) | |
+|GroupPurchasePrice | `decimal` (Read-only) | |
+|GroupMargin | `decimal` (Read-only) | |
 
 ### QuotationFile
 

@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Endpoints - Elfskot Docs</title>
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tutorial: Application Events - Elfskot Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Endpoints";
-    var mkdocs_page_input_path = "api\\endpoints-custom.md";
+    var mkdocs_page_name = "Tutorial: Application Events";
+    var mkdocs_page_input_path = "api\\tutorial\\applicationevents.md";
     var mkdocs_page_url = null;
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Elfskot Docs</a>
+        <a href="../../.." class="icon icon-home"> Elfskot Docs</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -54,11 +54,11 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../..">Getting started</a>
+    <a class="" href="../../..">Getting started</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../models/">Models</a>
+    <a class="" href="../../../models/">Models</a>
                 </li>
     </ul>
 	    </li>
@@ -69,11 +69,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../start/">Getting started</a>
+    <a class="" href="../../start/">Getting started</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../endpoints-crud/">Basic endpoints</a>
+    <a class="" href="../../endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../features/">Tutorial: Features</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tutorial: Application Events</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#application-events">Application events</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -88,7 +102,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Elfskot Docs</a>
+        <a href="../../..">Elfskot Docs</a>
       </nav>
 
       
@@ -96,11 +110,15 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="../../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>REST API &raquo;</li>
+        
+      
     
-    <li>Endpoints</li>
+    <li>Tutorial: Application Events</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -110,14 +128,43 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="endpoints">Endpoints</h1>
-<h2 id="generic-endpoints">Generic endpoints</h2>
-<h2 id="custom-endpoints">Custom endpoints</h2>
-<h3 id="quotations">Quotations</h3>
+                <h1 id="application-events">Application events</h1>
+<p>This tutorial describes how a integration application can act on different events that occur in the Elfskot product configurator.</p>
+<p>As of this writing there are 3 application events exposed through the API:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationRequested</td>
+<td>Event is emitted when a quotation is requested either through the configurator or order entry(EMS).</td>
+</tr>
+<tr>
+<td>QuotationToPending</td>
+<td>This event is emitted when a quotation's status is set to Pending.</td>
+</tr>
+<tr>
+<td>QuotationToAccepted</td>
+<td>This event is emitted when a quotation's status is set to Accepted.</td>
+</tr>
+</tbody>
+</table>
+<p><em>See <a href="/models/#application-events">/models/#application-events</a> for information about application event models.</em></p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../features/" class="btn btn-neutral" title="Tutorial: Features"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -141,12 +188,14 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../features/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
 
 </body>
 </html>

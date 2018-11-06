@@ -81,6 +81,14 @@
 
     </ul>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../tutorial/features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../tutorial/applicationevents/">Tutorial: Application Events</a>
+                </li>
     </ul>
 	    </li>
           
@@ -121,7 +129,83 @@
             <div class="section">
               
                 <h1 id="basic-endpoints">Basic endpoints</h1>
-<p><code>https://api.elfskot.cloud</code></p>
+<p>The main endpoint for the API is: <code>https://api.elfskot.cloud</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>URI</th>
+<th>Supported methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/models#applicationevents">ApplicationEvents</a></td>
+<td>/api/2/applicationevents</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#associatedfeatureproperty">AssociatedFeatureProperties</a></td>
+<td>/api/2/associatedfeatureproperties</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#categories">Categories</a></td>
+<td>/api/2/categories</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#crmaccounts">CrmAccounts</a></td>
+<td>/api/2/crmaccounts</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#featurehasfeatureproperty">FeatureHasFeatureProperty</a></td>
+<td>/api/2/featurehasfeatureproperties</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#featureproperty">FeatureProperty</a></td>
+<td>/api/2/featureproperties</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#feature">Feature</a></td>
+<td>/api/2/features</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#organization">Organizations</a></td>
+<td>/api/2/organizations</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#quotationline">QuotationLine</a></td>
+<td>/api/2/quotationlines</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#quotationproperty">QuotationProperty</a></td>
+<td>/api/2/quotationproperties</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#quotation">Quotation</a></td>
+<td>/api/2/quotations</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#unitofmeasurement">UnitOfMeasurement</a></td>
+<td>/api/2/uom</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+<tr>
+<td><a href="/models#vat">VAT</a></td>
+<td>/api/2/vats</td>
+<td>GET, POST, PUT, DELETE</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Additional note about GET:</strong></p>
 <p>If the endpoint is requested without an ID, a list of all the entities will be returned. If an ID is specified, a single entity is returned.</p>
 <p>It is also possible to use query parameters when retrieving a list of entities:</p>
@@ -169,84 +253,20 @@
 <td>Filter</td>
 <td><code>string</code></td>
 <td>Besides the native query parameters above; it is also possible to query on entity specific properties.</td>
-<td>For example; if you want to retrieve a list of all quotations that have the <strong><em>synced</em></strong> property set to <strong><em>true</em></strong> you can use the url: <code>/api/2/quotations?synced=true</code>. Where <strong><em>synced</em></strong> is a property of the quotation model.</td>
+<td>For example; if you want to retrieve a list of all quotations that have the <code>synced</code> property set to <code>true</code> you can use the url: <code>/api/2/quotations?synced=true</code>. Where <code>synced</code> is a property of the quotation model.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Additional note about POST/PUT:</strong></p>
 <p>These methods support a single entity as well as a list of entities. Based on the provided entities the method for a single or bulk will be picked automatically.</p>
-<table>
-<thead>
-<tr>
-<th>Model</th>
-<th>URI</th>
-<th>Supported methods</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/models#associatedfeatureproperty">AssociatedFeatureProperties</a></td>
-<td>/api/2/associatedfeatureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#categories">Categories</a></td>
-<td>/api/2/categories</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#crmaccounts">CrmAccounts</a></td>
-<td>/api/2/crmaccounts</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#featurehasfeatureproperty">FeatureHasFeatureProperty</a></td>
-<td>/api/2/featurehasfeatureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#featureproperty">FeatureProperty</a></td>
-<td>/api/2/featureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#feature">Feature</a></td>
-<td>/api/2/features</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotationline">QuotationLine</a></td>
-<td>/api/2/quotationlines</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotationproperty">QuotationProperty</a></td>
-<td>/api/2/quotationproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotation">Quotation</a></td>
-<td>/api/2/quotations</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#unitofmeasurement">UnitOfMeasurement</a></td>
-<td>/api/2/uom</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#vat">VAT</a></td>
-<td>/api/2/vats</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-</tbody>
-</table>
               
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tutorial/features/" class="btn btn-neutral float-right" title="Tutorial: Features">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../start/" class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -277,6 +297,8 @@
       
         <span><a href="../start/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../tutorial/features/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
