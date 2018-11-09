@@ -276,6 +276,7 @@ A quotation can have the following states:
 |GroupId| `Guid`| Identifier of the group to which this line belongs. |
 |GroupOrder| `int` | Indicates the order in which the groups are displayed. |
 |AddedFromConfiguration| `bool` | Indicates that the line has been added from a configuration. |
+|ConfigurationId| `Guid` | Identifier of the configuration from which this quotation line was created. |
 |DiscountPct| `decimal` | Discount percentage, e.g. `10`. |
 |MarginPct| `decimal` (Read-only) | Margin percentage. |
 |GroupDiscountPct | `decimal` | Discount percentage on the group, e.g. `10`. |
