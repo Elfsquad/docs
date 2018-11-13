@@ -19,3 +19,5 @@ nav:
     #- 'Tutorial: Feature properties': sdk/tutorial/features-properties.md
     #- 'Tutorial: CRM accounts': sdk/tutorial/crm-accounts.md
     #- 'Tutorial: Quotations': sdk/tutorial/quotations.md
+  - 'PyAPI (Python)':
+    - 'Getting started': pyapi/start.md
