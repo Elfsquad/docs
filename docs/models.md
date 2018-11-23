@@ -35,6 +35,12 @@ Besides the common application event properties, each type of application event 
 | ----------- | ------ | ------------------------------------------------------------ |
 | QuotationId | `Guid` | Identifier of the quotation who's status is set to accepted. |
 
+### QuotationVerified
+
+| Name        | Type   | Description                                         |
+| ----------- | ------ | --------------------------------------------------- |
+| QuotationId | `Guid` | Identifier of the quotation that has been verified. |
+
 
 
 ## Category
