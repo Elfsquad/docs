@@ -172,8 +172,8 @@ The following methods are available in the `Query` object:
 
 |Expression|Description|Example|
 |-|-|-|
-|`skip(int)`|Skips the first $n$ results.|`db.all('features').skip(10)`|
-|`take(int)`|Limit the query to $n$ results.|`db.all('features').take(10)`|
+|`skip(int)`|Skips the first n results.|`db.all('features').skip(10)`|
+|`take(int)`|Limit the query to n results.|`db.all('features').take(10)`|
 |`include(string`|Includes the objects in a list of objects, for example, feature texts.|`db.all('features').include('texts')`|
 |`filter(string,any)`|Filter on a property in the model.|`db.all('features').filter('name','S6000')`|
 |`sort(string)`|Order the results on a property.|`db.all('features').sort('name')`|
