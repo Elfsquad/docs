@@ -14,6 +14,14 @@ Elfskot provides an easy way to integrate with our applications through our SDK.
 
 For more information about our SDK, see the [getting started with the SDK](sdk/start).
 
+## Custom configurator
+
+There are several ways to embed the custom-facing configurator onto your existing website. 
+
+If the website is built using WordPress we provide a simple plugin that allows you to embed the configurator directly onto a page. For more information click [here](https://wordpress.org/plugins/elfskot-product-configurator/).
+
+You will also be able to create a new interface from scratch using our configuration endpoints. For more information see the [Tutorial: custom configurator](api/tutorial/custom configurator).
+
 ## Support
 
 If you are missing information, or need support, please reach out to us on `help@elfskot.com`.

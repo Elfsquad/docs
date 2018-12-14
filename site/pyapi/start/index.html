@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Getting started - Elfskot Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Getting started";
+    var mkdocs_page_input_path = "pyapi\\start.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Elfskot Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Overview</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../models/">Models</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">REST API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api/start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/tutorial/features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/tutorial/applicationevents/">Tutorial: Application Events</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">PyAPI (Python)</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Getting started</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#elfskot-pyapi">Elfskot PyApi</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#creating-a-feature">Creating a feature</a></li>
+        
+            <li><a class="toctree-l4" href="#count-features">Count features</a></li>
+        
+            <li><a class="toctree-l4" href="#help">Help</a></li>
+        
+            <li><a class="toctree-l4" href="#get-all-root-features">Get all root features</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Elfskot Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>PyAPI (Python) &raquo;</li>
+        
+      
+    
+    <li>Getting started</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="elfskot-pyapi">Elfskot PyApi</h1>
+<p>The Elfskot PyApi is a lightweight Python implementation that uses the REST API. The script can be copied from below:</p>
+<pre><code class="python"># Required packages:
+# pip3 install requests pandas
+import requests
+import json
+from enum import Enum
+import pandas as pd
+
+def head(s): return s[0] if len(s) &gt; 0 else []
+def tail(s): return s[1:]
+def reverse(s): return s[::-1]
+def last(s): return s[-1:]
+def init(s): return s[0:len(s)-1]
+def take(s, n): return s[:n]
+def drop(s, n): return s[n:]
+def product(s): return reduce(lambda x, y: x * y, s)
+
+class TextType(Enum):
+    Description = 0
+    ExtendedDescription = 1
+    MoreInfo = 2
+
+class ElfskotApi():
+
+    base_address = 'https://api.elfskot.cloud/api/2/'
+
+    def __init__(self, application_id, secret):
+        self.application_id = application_id
+        self.secret = secret
+        self.get_token()
+
+    def get_token(self):
+        payload = { 'clientId': self.application_id, 'secret': self.secret}
+        result = requests.post(self.get_url('auth/elfskotconnectlogin'), json=payload)
+        self.check_result(result)
+        self.token = json.loads(result.text)['accessToken']
+
+    def check_result(self, result):
+        if result.status_code != 200:
+            raise ValueError('Error: API returned status code {}'.format(result.status_code))
+        return True
+
+    def get_auth_header(self): return {'Authorization': 'bearer {}'.format(self.token)}
+    def get_url(self, endpoint): return self.base_address + endpoint
+
+    def http_return_if_valid(self, result):
+        self.check_result(result)
+        return json.loads(result.text)
+
+    def http_get(self, endpoint):
+        return self.http_return_if_valid(
+            requests.get(self.get_url(endpoint), headers=self.get_auth_header())
+        )
+
+    def http_post(self, endpoint, o):
+        return self.http_return_if_valid(
+            requests.post(self.get_url(endpoint), json=o, headers=self.get_auth_header())
+        )
+
+    def http_put(self, endpoint, o):
+        return self.http_return_if_valid(
+            requests.put(self.get_url(endpoint), json=o, headers=self.get_auth_header())
+        )
+
+    def http_delete(self, endpoint, key):
+        result = requests.delete(self.get_url(endpoint) + '/{}'.format(key), headers=self.get_auth_header())
+        if result.status_code != 200: 
+            raise ValueError('Error: API returned status code {}'.format(result.status_code))
+
+    def all(self, endpoint): return self.http_get(endpoint)
+    def get(self, endpoint, k): return head(self.http_get('{}?id={}'.format(endpoint, k)))
+    def find(self, endpoint, p, v): return self.http_get('{}?{}={}'.format(endpoint, p, v))
+    def first(self, endpoint, p, v): return head(self.find(endpoint, p, v))
+    def new(self, endpoint, o): return self.http_post(endpoint, o)
+    def update(self, endpoint, o): return self.http_put(endpoint, o)
+    def delete(self, endpoint, k): self.http_delete(endpoint, k)  
+    def help(self, endpoint): print('Model for {}:\r\n{}'
+                                    .format(endpoint, list(self.first(endpoint, 'id', '').keys())))
+</code></pre>
+
+<p>Note that it is currently not possible to use <code>include</code>, <code>skip</code>, and <code>limit</code> url parameters (hence lightweight). Usage of the PyApi is demonstrated below.</p>
+<h2 id="creating-a-feature">Creating a feature</h2>
+<p>A feature can be created in the following way:</p>
+<pre><code class="python">db = ElfskotApi('69b1132c-df11-49d0-baf2-2d8f6ddfc4f1', 'lkmx41yu')
+
+category = head(db.all('categories'))
+uom = db.first('uom', 'description', 'Milli')
+
+feature = {'name': 'Test feature', 
+           'articleCode': 'ART-123', 
+           'categoryId': category['id'], 
+           'unitOfMeasurementId': uom['id'],
+           'texts': [
+               {'languageIso': 'en', 'type': TextType.Description.value, 'value': 'Example description'},
+               {'languageIso': 'en', 'type': TextType.ExtendedDescription.value, 'value': 'Example description'},
+               {'languageIso': 'en', 'type': TextType.MoreInfo.value, 'value': 'Example description'}
+           ]}
+
+feature = db.new('features', feature)
+db.delete('features', feature['id'])
+</code></pre>
+
+<p>Remove the <code>db.delete</code> from the end of the script to keep the newly created feature.</p>
+<h2 id="count-features">Count features</h2>
+<p>It is possible to count all features in the following way:</p>
+<pre><code class="python">len(db.all('features'))
+</code></pre>
+
+<p>which returns:</p>
+<pre><code class="text">245
+</code></pre>
+
+<h2 id="help">Help</h2>
+<p>Help about a model can be found using <code>help(endpoint)</code>.</p>
+<pre><code class="python">db.help('featuremodels')
+</code></pre>
+
+<p>which returns:</p>
+<pre><code class="text">Model for featuremodels:
+['rootFeatureId', 'status', 'revisionOf', 'rootFeature', 'order', 'displayPrices', 'autodeskUrn', 'steps', 'nodes', 'relationships', 'organizationSellsFeatureModels', 'dynamicGroups', 'id', 'organizationId', 'organizationName', 'creatorId', 'reference', 'synced', 'createdDate', 'updatedDate', 'customField1', 'customField2', 'customField3', 'customField4', 'customField5']
+</code></pre>
+
+<h2 id="get-all-root-features">Get all root features</h2>
+<p>All root features can be found in the following way:</p>
+<pre><code class="python"># Fetch all root features
+for key in map(lambda x: x['rootFeatureId'], db.all('featuremodels')):
+    feature = db.get('features', key)
+    print(feature['name'])
+</code></pre>
+
+<p>which returns:</p>
+<pre><code class="text">S6000
+X8000
+Plateauaanhanger
+TEST relaties
+Betonput
+Test Wessel
+Formule cycle
+b_min
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../api/tutorial/applicationevents/" class="btn btn-neutral" title="Tutorial: Application Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../api/tutorial/applicationevents/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
