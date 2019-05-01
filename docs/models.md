@@ -325,4 +325,4 @@ A quotation can have the following states:
 |Code | `string` | The code for the unit of measurement. Example: `kg`. |
 |Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
 
-Missing a property? Feel free to contact us at `support@elfskot.com`.
+Missing a property? Feel free to contact us at `guru@elfskot.com`.
