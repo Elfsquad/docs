@@ -7,6 +7,7 @@ nav:
   - 'REST API':
     - 'Getting started': api/start.md
     - Basic endpoints: api/endpoints-crud.md
+    - Webhooks: api/webhooks.md
     #- Custom endpoints: api/endpoints-custom.md
     - 'Tutorial: Features': api/tutorial/features.md
     - 'Tutorial: Application Events': api/tutorial/applicationevents.md
