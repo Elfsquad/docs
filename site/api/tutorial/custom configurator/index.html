@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tutorial: Custom configurator - Elfskot Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tutorial: Custom configurator";
+    var mkdocs_page_input_path = "api\\tutorial\\custom configurator.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Elfskot Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Overview</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../..">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../models/">Models</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">REST API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../webhooks/">Webhooks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../applicationevents/">Tutorial: Application Events</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tutorial: Custom configurator</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#quick-overview">Quick overview</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#step-1-retrieve-a-list-of-configuration-models">Step 1. Retrieve a list of configuration models.</a></li>
+        
+            <li><a class="toctree-l4" href="#step-2-start-a-new-configuration">Step 2. Start a new configuration</a></li>
+        
+            <li><a class="toctree-l4" href="#step-3-update-value">Step 3. Update value</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">PyAPI (Python)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../pyapi/start/">Getting started</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Elfskot Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>REST API &raquo;</li>
+        
+      
+    
+    <li>Tutorial: Custom configurator</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="quick-overview">Quick overview</h2>
+<p>In this tutorial I will provide a quick overview of the endpoints that can be used to implement your own customer-facing configurator.</p>
+<h4 id="step-1-retrieve-a-list-of-configuration-models">Step 1. Retrieve a list of configuration models.</h4>
+<p>The first thing we want to do is provide the user with a selection of available configuration models. In order  to achieve this we can use the <a href="/models#featuremodels">featuremodels endpoint</a>:</p>
+<p><code>GET /api/2/featuremodels?include=RootFeature</code></p>
+<p>It is important we include the RootFeature property as it will contain information such as the name, price and image for a particular configuration model.</p>
+<h4 id="step-2-start-a-new-configuration">Step 2. Start a new configuration</h4>
+<p>When a user has selected a configuration model to be configured, we can use the Id property to start a new configuration session. </p>
+<p><code>GET /api/2/configurations/startnew/{featureModelId}</code></p>
+<p>Result (<em>Some data has been emitted for clarity.</em>):</p>
+<pre><code class="json">{
+  &quot;id&quot;: &quot;9c83b007-7e61-4b4c-9920-f125606844d5&quot;,
+  &quot;currencyIso&quot;: &quot;eur&quot;,
+  &quot;currency&quot;: {
+    &quot;iso&quot;: &quot;eur&quot;,
+    &quot;name&quot;: &quot;Euro&quot;,
+    &quot;symbol&quot;: &quot;\u20ac&quot;,
+    &quot;decimalDigits&quot;: 2,
+    &quot;rounding&quot;: 0,
+    &quot;namePlural&quot;: &quot;Euros&quot;,
+    &quot;isDefault&quot;: false
+  },
+  &quot;languageIso&quot;: &quot;nl&quot;,
+  &quot;countryIso&quot;: &quot;nl&quot;,
+  &quot;featureModelId&quot;: &quot;b8230fc6-454c-4190-a33a-08d5640714ca&quot;,
+  &quot;featureModel&quot;: ..., 
+  &quot;values&quot;: {
+    &quot;7bcf2363-4300-4a6a-faa9-08d5640714d2&quot;: 1,
+    &quot;580b4519-1a7a-46f9-fa7d-08d5640714d2&quot;: 4,
+    &quot;8c81fabc-eaed-41e2-8ec2-08d5d10145ad&quot;: 4,
+    &quot;e22f606d-3e4e-462e-8ec3-08d5d10145ad&quot;: 72,
+    ...
+  },
+  &quot;conflicts&quot;: null,
+  &quot;basePrice&quot;: 42750,
+  &quot;basePriceLabel&quot;: &quot;\u20ac 42.750,00&quot;,
+  &quot;basePriceIncVAT&quot;: 42750,
+  &quot;basePriceIncVATLabel&quot;: &quot;\u20ac 42.750,00&quot;,
+  &quot;basePriceExVAT&quot;: 42750,
+  &quot;basePriceExVATLabel&quot;: &quot;\u20ac 42.750,00&quot;,
+  &quot;additionalPrice&quot;: 10730,
+  &quot;additionalPriceLabel&quot;: &quot;\u20ac 10.730,00&quot;,
+  &quot;additionalPriceIncVAT&quot;: 10730,
+  &quot;additionalPriceIncVATLabel&quot;: &quot;\u20ac 10.730,00&quot;,
+  &quot;additionalPriceExVAT&quot;: 10730,
+  &quot;additionalPriceExVATLabel&quot;: &quot;\u20ac 10.730,00&quot;,
+  &quot;totalPrice&quot;: 53480,
+  &quot;totalPriceLabel&quot;: &quot;\u20ac 53.480,00&quot;,
+  &quot;totalPriceExVAT&quot;: 53480,
+  &quot;totalPriceExVATLabel&quot;: &quot;\u20ac 53.480,00&quot;,
+  &quot;totalPriceIncVAT&quot;: 53480,
+  &quot;totalPriceIncVATLabel&quot;: &quot;\u20ac 53.480,00&quot;,
+  &quot;leasePrices&quot;: null,
+  &quot;leasePricesLabels&quot;: null
+}
+</code></pre>
+
+<p>Overview of important configuration properties:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration session. This id is used for updating configuration values and requesting a quotation.</td>
+</tr>
+<tr>
+<td>FeatureModel</td>
+<td><code>object</code></td>
+<td>Object that represents the entire configuration model. This object should be used to build the configurator UI.</td>
+</tr>
+<tr>
+<td>Values</td>
+<td><code>object</code></td>
+<td>Object that contains all values of the configuration. The key represents the identifier of a feature model node. The value represents the selected value for that particular node.</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td><code>object</code></td>
+<td>If a conflict occurs during the configuration process this object will be filled with conflicting nodes and solution options.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-3-update-value">Step 3. Update value</h4>
+<p>In order to update a value for a particular option we use the update endpoint:</p>
+<p><code>PUT /api/2/configurations/{configurationId}?ignoreConflicts=true&amp;compress=true</code></p>
+<p><em>The ignoreConflicts parameter is optional. When this parameter is set to true the configurator will automatically resolve any conflicts that might occur.</em>
+<em>The compress parameter is also optional, but recommended. It will ensure only values will be returned that actually changed.</em></p>
+<p>Request body:</p>
+<p><code>{featureModelNodeId: "949af91c-8a0b-4540-fa87-08d5640714d2", value: 1}</code></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>featureModelNodeId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature model node.</td>
+</tr>
+<tr>
+<td>value</td>
+<td><code>number</code></td>
+<td>User-selected value for the option. 0 for false, 1 for true, or any other number when the option is provided as an input field.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../pyapi/start/" class="btn btn-neutral float-right" title="Getting started">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../applicationevents/" class="btn btn-neutral" title="Tutorial: Application Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../applicationevents/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../pyapi/start/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

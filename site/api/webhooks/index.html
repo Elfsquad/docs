@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Basic endpoints - Elfskot Docs</title>
+  <title>Webhooks - Elfskot Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Basic endpoints";
-    var mkdocs_page_input_path = "api\\endpoints-crud.md";
+    var mkdocs_page_name = "Webhooks";
+    var mkdocs_page_input_path = "api\\webhooks.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -71,19 +71,31 @@
                     
     <a class="" href="../start/">Getting started</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../endpoints-crud/">Basic endpoints</a>
+                </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Basic endpoints</a>
+    <a class="current" href="./">Webhooks</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#basic-endpoints">Basic endpoints</a></li>
+    <li class="toctree-l3"><a href="#webhooks">Webhooks</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#events">Events</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-a-webhooks-subscription">Creating a webhooks subscription</a></li>
+        
+            <li><a class="toctree-l4" href="#handling-a-webhooks-response">Handling a webhooks response</a></li>
+        
+            <li><a class="toctree-l4" href="#unsubscribing-a-webhook">Unsubscribing a webhook</a></li>
+        
+        </ul>
     
 
     </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../webhooks/">Webhooks</a>
                 </li>
                 <li class="">
                     
@@ -137,7 +149,7 @@
         
       
     
-    <li>Basic endpoints</li>
+    <li>Webhooks</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -147,137 +159,119 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="basic-endpoints">Basic endpoints</h1>
-<p>The main endpoint for the API is: <code>https://api.elfskot.cloud</code>.</p>
+                <h1 id="webhooks">Webhooks</h1>
+<p>Webhooks allow you to build integrations which subscribe to certain in Elfskot. When one of those events is triggered, we'll send a HTTP POST payload to the webhook's configured <code>CallbackUrl</code>.</p>
+<h2 id="events">Events</h2>
 <table>
 <thead>
 <tr>
-<th>Model</th>
-<th>URI</th>
-<th>Supported methods</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="/models#applicationevents">ApplicationEvents</a></td>
-<td>/api/2/applicationevents</td>
-<td>GET, POST, PUT, DELETE</td>
+<td>quotation.requested</td>
+<td>Triggered when a new quotation is requested in the showroom.</td>
 </tr>
 <tr>
-<td><a href="/models#associatedfeatureproperty">AssociatedFeatureProperties</a></td>
-<td>/api/2/associatedfeatureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
+<td>quotation.submitted</td>
+<td>Triggered when a quotation is submitted.</td>
 </tr>
 <tr>
-<td><a href="/models#categories">Categories</a></td>
-<td>/api/2/categories</td>
-<td>GET, POST, PUT, DELETE</td>
+<td>quotation.accepted</td>
+<td>Triggered when a quotation is accepted.</td>
 </tr>
 <tr>
-<td><a href="/models#crmaccounts">CrmAccounts</a></td>
-<td>/api/2/crmaccounts</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#featurehasfeatureproperty">FeatureHasFeatureProperty</a></td>
-<td>/api/2/featurehasfeatureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#featureproperty">FeatureProperty</a></td>
-<td>/api/2/featureproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#feature">Feature</a></td>
-<td>/api/2/features</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#organization">Organizations</a></td>
-<td>/api/2/organizations</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotationline">QuotationLine</a></td>
-<td>/api/2/quotationlines</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotationproperty">QuotationProperty</a></td>
-<td>/api/2/quotationproperties</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#quotation">Quotation</a></td>
-<td>/api/2/quotations</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#unitofmeasurement">UnitOfMeasurement</a></td>
-<td>/api/2/uom</td>
-<td>GET, POST, PUT, DELETE</td>
-</tr>
-<tr>
-<td><a href="/models#vat">VAT</a></td>
-<td>/api/2/vats</td>
-<td>GET, POST, PUT, DELETE</td>
+<td>quotation.verified</td>
+<td>Triggered when a quotation is verified.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Additional note about GET:</strong></p>
-<p>If the endpoint is requested without an ID, a list of all the entities will be returned. If an ID is specified, a single entity is returned.</p>
-<p>It is also possible to use query parameters when retrieving a list of entities:</p>
+<h3 id="event-response-examples">Event response examples</h3>
+<p>This section provides an overview of different examples of response payloads.</p>
+<h4 id="quotationrequested-quotationsubmitted-quotationaccepted-quotationverified">quotation.requested, quotation.submitted, quotation.accepted, quotation.verified</h4>
+<pre><code class="json">{
+    &quot;quotationId&quot;: &quot;56c4942c-d9c4-49db-beec-c1afcb1041c7&quot;,
+    &quot;userId&quot;: &quot;690dfb4a-6a8c-4816-b33e-f1f4565eb770&quot;
+}
+</code></pre>
+
+<h2 id="creating-a-webhooks-subscription">Creating a webhooks subscription</h2>
+<p>To create a new webhooks subscription you send a HTTP POST request:</p>
+<p><strong>URI:</strong> <code>POST https://api.elfskot.cloud/api/2/webhooks</code></p>
+<p><strong>Content-Type:</strong> application/json</p>
+<p><strong>Body</strong>:</p>
+<pre><code class="json">{
+    &quot;identifier&quot;: &quot;2313449eb71a4abb3df934eec91712e&quot;,
+    &quot;topic&quot;: &quot;quotation.submitted&quot;,
+    &quot;callbackUrl&quot;: &quot;https://example.com/subscriptions/quotationrequested&quot;
+}
+</code></pre>
+
+<h4 id="request-payload">Request payload</h4>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
-<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Skip</td>
-<td><code>integer</code></td>
-<td>Specifies how many entities should be skipped in the result.</td>
-<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
-</tr>
-<tr>
-<td>Limit</td>
-<td><code>integer</code></td>
-<td>Specifies how many entities you want to retrieve.</td>
-<td><code>GET /api/2/quotations?skip=10&amp;limit=100</code></td>
-</tr>
-<tr>
-<td>Orderby</td>
+<td>Identifier</td>
 <td><code>string</code></td>
-<td>Used to order the result based on a property of the entity.</td>
-<td><code>GET /api/2/features?orderby=name</code></td>
+<td>A unique identifier for this webhook subscription. The identifier can be used to unsubscribe the webhook.</td>
 </tr>
 <tr>
-<td>Descending</td>
-<td><code>boolean</code></td>
-<td>By default the Orderby parameter orders the result in ascending order. If you want to retrieve the result in descending order you need to specify the descending parameter.</td>
-<td><code>GET /api/2/features?orderby=name&amp;descending=true</code></td>
-</tr>
-<tr>
-<td>Include</td>
+<td>Topic</td>
 <td><code>string</code></td>
-<td>All non-native types are by default excluded from the API response. If you require them you have to specify this in the request. <strong>Note: </strong> Include values should be formatted in CamelCase.</td>
-<td><code>GET /api/2/quotations?include=Lines</code> Will return all the lines of the corresponding quotations. You can add multiple include parameters to suffice all your requirements: <code>GET /api/2/quotations?include=Lines&amp;include=Debtor&amp;include=Seller</code></td>
+<td>The name of the event you wish to subscribe to.</td>
 </tr>
 <tr>
-<td>Filter</td>
+<td>CallbackUrl</td>
 <td><code>string</code></td>
-<td>Besides the native query parameters above; it is also possible to query on entity specific properties.</td>
-<td>For example; if you want to retrieve a list of all quotations that have the <code>synced</code> property set to <code>true</code> you can use the url: <code>/api/2/quotations?synced=true</code>. Where <code>synced</code> is a property of the quotation model.</td>
+<td>A url that will be called when the subscribed event is triggered.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Additional note about POST/PUT:</strong></p>
-<p>These methods support a single entity as well as a list of entities. Based on the provided entities the method for a single or bulk will be picked automatically.</p>
+<h2 id="handling-a-webhooks-response">Handling a webhooks response</h2>
+<p>When the subscribed event is triggered we will send a POST request to the <code>callbackUrl</code> with the following payload:</p>
+<pre><code class="json">{
+    &quot;topic&quot;: &quot;quotation.submitted&quot;,
+    &quot;content&quot;: {
+        &quot;quotationId&quot;: &quot;56c4942c-d9c4-49db-beec-c1afcb1041c7&quot;,
+        &quot;userId&quot;: &quot;690dfb4a-6a8c-4816-b33e-f1f4565eb770&quot;
+    }
+}
+</code></pre>
+
+<h3 id="webhook-response-payload">Webhook response payload</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topic</td>
+<td><code>string</code></td>
+<td>The name of the event that was triggered.</td>
+</tr>
+<tr>
+<td>Content</td>
+<td><code>object</code></td>
+<td>Each event has a different response object. See the section events for a detailed description.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unsubscribing-a-webhook">Unsubscribing a webhook</h2>
+<p>To delete a webhooks subscription you send a HTTP DELETE request:</p>
+<p><strong>URI:</strong> <code>DELETE https://api.elfskot.cloud/api/2/webhooks/{identifier}</code></p>
               
             </div>
           </div>
@@ -285,10 +279,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../webhooks/" class="btn btn-neutral float-right" title="Webhooks">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tutorial/features/" class="btn btn-neutral float-right" title="Tutorial: Features">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../start/" class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../endpoints-crud/" class="btn btn-neutral" title="Basic endpoints"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -314,10 +308,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../start/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../endpoints-crud/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../webhooks/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../tutorial/features/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
