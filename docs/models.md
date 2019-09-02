@@ -223,6 +223,8 @@ Relationship between a feature and a feature property.
 |StatusDescription|`string` (Read-only)|Returns the status of the quotation as a text. Example: `Concept` or `Accepted`|
 |Remarks|`string`|A field for remarks. Used to add notes to the quotation.|
 |Subject|`string`|The subject of the quotation.|
+|CustomerReference|`string`|Text field that can be used to idenfity the customer.|
+|QuotationReference|`string`|Text field that can be sued to identify the quotation.|
 |ExpiresDate|`DateTime`|Date when the state of the quotation is set to expired.|
 |DeliveryDate|`DateTime`|Date when the quotation is delivered.|
 |DebtorId|`Guid`|Identifier of the debtor, which is a [CRM account](#crmaccount).|
