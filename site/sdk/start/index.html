@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Getting started - Elfskot Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Getting started";
+    var mkdocs_page_input_path = "sdk\\start.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Elfskot Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Overview</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../models/">Models</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">REST API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../api/start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/webhooks/">Webhooks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/tutorial/features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/tutorial/applicationevents/">Tutorial: Application Events</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../api/tutorial/custom configurator/">Tutorial: Custom configurator</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Getting started</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#get-started-using-the-sdk-c">Get started using the SDK (C#)</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l4" href="#authentication">Authentication</a></li>
+        
+            <li><a class="toctree-l4" href="#initializing-the-elfskotapiclient">Initializing the ElfskotApiClient</a></li>
+        
+            <li><a class="toctree-l4" href="#data-management">Data management</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../applicationevents/">Acting on events</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">PyAPI (Python)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pyapi/start/">Getting started</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Elfskot Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>SDK &raquo;</li>
+        
+      
+    
+    <li>Getting started</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="get-started-using-the-sdk-c">Get started using the SDK (C#)</h1>
+<h2 id="installation">Installation</h2>
+<p>Our SDK is available as a <a href="https://www.nuget.org/packages/Elfskot.Connect.SDK">NuGet package</a>. Install the SDK using the NuGet package manager:
+<code>Install-Package Elfskot.Connect.SDK</code></p>
+<h2 id="authentication">Authentication</h2>
+<p>See the <a href="/api/start/#authentication">Authentication section</a> of the REST API on how to acquire your <em>ApplicationId</em> and <em>Secret</em>.</p>
+<h2 id="initializing-the-elfskotapiclient">Initializing the ElfskotApiClient</h2>
+<p>All interactions with the Elfskot API are done using the <em>ElfskotApiClient</em>:</p>
+<pre><code class="csharp">var elfskotApiClient = new ElfskotApiClient(new Guid(&quot;YOUR APPLICATION ID&quot;),&quot;YOUR SECRET&quot;);
+</code></pre>
+
+<h2 id="data-management">Data management</h2>
+<p>Data management interactions are done through ManagementResources that can be directly accessed through <code>elfskotApiClient.Management</code>.</p>
+<h3 id="retrieving-entities">Retrieving entities</h3>
+<p>To retrieve a entity by its ID you can use the <code>GetById</code>  method:</p>
+<pre><code class="csharp">var contact = elfskotApiClient
+    .Management
+    .CrmContacts
+    .GetById(new Guid(&quot;56448abb-f00e-45a8-b1ac-08c62c8ed8f5&quot;));
+</code></pre>
+
+<p>To retrieve multiple entities you can use the <code>Get</code> method:</p>
+<pre><code class="csharp">var contacts = elfskotApiClient
+    .Management
+    .CrmContacts
+    .OrderBy(c =&gt; c.CreatedDate)
+    .Limit(10)
+    .Get();
+</code></pre>
+
+<h4 id="including-referenced-entities">Including referenced entities</h4>
+<p>By default the API will not include referenced entities. So for example if you want to retrieve the lines of quotation you can use the <code>Include</code> method:</p>
+<pre><code class="csharp">var quotation = elfskotApiClient
+    .Management
+    .Quotations
+    .Include(q =&gt; q.Lines) // &lt;-- Reference the entity you want to include.
+    .GetById(new Guid(&quot;56448abb-f00e-45a8-b1ac-08c62c8ed8f5&quot;));
+
+foreach(var line in quotation.Lines)
+{
+}
+</code></pre>
+
+<h3 id="inserting-entities">Inserting entities</h3>
+<p>To insert entities you can use the <code>Create</code> and <code>BulkCreate</code> methods:</p>
+<pre><code class="csharp">var newCrmAccount = new CrmAccount()
+    {
+        CompanyName = &quot;Brightwater Industries&quot;
+    };
+
+newCrmAccount = elfskotApiClient
+    .Management
+    .CrmAccounts
+    .Create(newCrmAccount);
+
+var newIdentifier = newCrmAccount.Id;
+</code></pre>
+
+<h3 id="updating-entities">Updating entities</h3>
+<p>To update a entity you can use the <code>Update</code> or <code>BulkUpdate</code> methods:</p>
+<pre><code class="csharp">quotation.Deliverydate = DateTimeOffset.Now;
+elfskotApiClient
+    .Management
+    .Quotations
+    .Update(quotation);
+</code></pre>
+
+<h3 id="deleting-entities">Deleting entities</h3>
+<p>To delete a entity you can use the <code>Delete</code> method:</p>
+<pre><code class="csharp">elfskotApiClient
+    .Management
+    .CrmContacts
+    .Delete(new Guid(&quot;56448abb-f00e-45a8-b1ac-08c62c8ed8f5&quot;));
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../applicationevents/" class="btn btn-neutral float-right" title="Acting on events">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../api/tutorial/custom configurator/" class="btn btn-neutral" title="Tutorial: Custom configurator"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../api/tutorial/custom configurator/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../applicationevents/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -15,8 +15,9 @@ nav:
     #- 'Tutorial: Feature properties': api/tutorial/features-properties.md
     #- 'Tutorial: CRM accounts': api/tutorial/crm-accounts.md
     #- 'Tutorial: Quotations': api/tutorial/quotations.md
-  #- SDK:
-    #- 'Getting started': sdk/start.md
+  - SDK:
+    - 'Getting started': sdk/start.md
+    - 'Acting on events': sdk/applicationevents.md
     #- 'Tutorial: Features': sdk/tutorial/features.md
     #- 'Tutorial: Feature properties': sdk/tutorial/features-properties.md
     #- 'Tutorial: CRM accounts': sdk/tutorial/crm-accounts.md
