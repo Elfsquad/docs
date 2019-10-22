@@ -11,7 +11,8 @@ nav:
     #- Custom endpoints: api/endpoints-custom.md
     - 'Tutorial: Features': api/tutorial/features.md
     - 'Tutorial: Application Events': api/tutorial/applicationevents.md
-    - 'Tutorial: Custom configurator': api/tutorial/custom configurator.md
+    #- 'Tutorial: Custom configurator': api/tutorial/custom configurator.md
+    - 'Tutorial: Custom configurator in Angular': api/tutorial/angularconfigurator/angular_configurator.md
     #- 'Tutorial: Feature properties': api/tutorial/features-properties.md
     #- 'Tutorial: CRM accounts': api/tutorial/crm-accounts.md
     #- 'Tutorial: Quotations': api/tutorial/quotations.md

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Tutorial: Custom configurator in Angular - Elfskot Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tutorial: Custom configurator in Angular";
+    var mkdocs_page_input_path = "api\\tutorial\\angularconfigurator\\angular_configurator.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Elfskot Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Overview</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../..">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../../models/">Models</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">REST API</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../endpoints-crud/">Basic endpoints</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../webhooks/">Webhooks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../features/">Tutorial: Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../applicationevents/">Tutorial: Application Events</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Tutorial: Custom configurator in Angular</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#custom-configurator-in-angular">Custom configurator in Angular</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#setup-the-angular-project">Setup the Angular project</a></li>
+        
+            <li><a class="toctree-l4" href="#product-overview-page">Product overview page</a></li>
+        
+            <li><a class="toctree-l4" href="#configurator-page">Configurator page</a></li>
+        
+            <li><a class="toctree-l4" href="#checkout-page">Checkout page</a></li>
+        
+            <li><a class="toctree-l4" href="#result">Result</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">SDK</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../sdk/start/">Getting started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../../sdk/applicationevents/">Acting on events</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">PyAPI (Python)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../../pyapi/start/">Getting started</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Elfskot Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>REST API &raquo;</li>
+        
+      
+    
+    <li>Tutorial: Custom configurator in Angular</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="custom-configurator-in-angular">Custom configurator in Angular</h2>
+<p>In this tutorial I will provide a quick overview of how to implement your own customer-facing configurator in Angular.</p>
+<p>The resulting project is also available at github <a href="https://github.com/elfskot">https://github.com/elfskot</a>.</p>
+<p>If you are not familiar with Angular you should follow the Getting Started guide at <a href="https://angular.io/start">https://angular.io/start </a>.</p>
+<h3 id="setup-the-angular-project">Setup the Angular project</h3>
+<p>Create a new Angular project using your terminal</p>
+<pre><code class="bash">ng new BrightwaterConfigurator --routing=true --style=css --skipTests=true
+</code></pre>
+
+<p>In the index.html file add a reference to the Elfskot JS library and some basic CSS.</p>
+<pre><code class="html">&lt;script src=&quot;https://elfskot.azureedge.net/elfskot-v0.1.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<pre><code class="html">&lt;style&gt;
+    body{
+      font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<p>Remove all the contents of the app.component.html file but keep the router-outlet element</p>
+<pre><code class="html">&lt;router-outlet&gt;&lt;/router-outlet&gt;
+</code></pre>
+
+<h3 id="product-overview-page">Product overview page</h3>
+<p>First we create a component that will hold our product overview page using the <em>ng generate</em> command</p>
+<pre><code class="bash">ng generate component Products
+</code></pre>
+
+<h4 id="product-overview-route">Product overview route</h4>
+<p>Now that we have the Products component, we should register it as the base route. In the <em>app-routing-module.ts</em> file add a route to the Products component</p>
+<pre><code class="typescript">import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+
+const routes: Routes = [
+  {  path: '', component: ProductsComponent } // &lt;-- Route to the Products component
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+
+<h4 id="product-overview-component">Product overview component</h4>
+<p>The first step to creating our product overview is the retrieve a list of all available configuration models. 
+In the <em>ngOnInit</em> method of the <em>products.component.ts</em> file call the <em>Elfskot.configurator.getConfigurationModels</em> method</p>
+<pre><code class="typescript">import { Component, OnInit } from '@angular/core';
+
+declare var Elfskot;
+
+@Component({
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
+})
+export class ProductsComponent implements OnInit {
+
+  products: any[] = [];
+
+  constructor() { }
+
+  ngOnInit() {
+    Elfskot.configurator.getConfigurationModels('en', (productOverview) =&gt; {
+      this.products = productOverview.features;
+    });
+  }
+
+}
+</code></pre>
+
+<p>The <em>Elfskot.configurator.getConfigurationModels</em> method takes 2 parameters</p>
+<ul>
+<li>The preferred language ISO</li>
+<li>A callback function</li>
+</ul>
+<p>The callback function provides a object, with different elements, that can be used to setup your product selection page. For now we will only be using the features.</p>
+<p>Next we add HTML and CSS to the <em>ProductsComponent</em>.</p>
+<p>In the <em>products.component.html</em> file add</p>
+<pre><code class="html">&lt;div class=&quot;product-overview&quot;&gt;
+  &lt;div *ngFor=&quot;let product of products&quot; class=&quot;product-card&quot; [routerLink]=&quot;['configure', product.featureModelId]&quot;&gt;
+    &lt;img [src]=&quot;product.imageUrl&quot; /&gt;
+    &lt;h3 [innerHTML]=&quot;product.description&quot;&gt;&lt;/h3&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>In the <em>products.component.css</em> file add</p>
+<pre><code class="css">.product-overview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    margin:12px;
+    width:320px;
+}
+    .product-card h3{
+        padding:12px;
+    }
+    .product-card img{
+        width:100%;
+        height:auto;
+    }
+
+.product-card:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+</code></pre>
+
+<p>If we were to run the Angular project now we would get the following result:</p>
+<p><img alt="Product overview" src="/img/productoverview.PNG" /></p>
+<h3 id="configurator-page">Configurator page</h3>
+<p>Now that we have a product selection page, we can proceed to build the actual configurator. </p>
+<p>First add a ConfiguratorComponent</p>
+<pre><code class="bash">ng generate component Configurator
+</code></pre>
+
+<p>Register a configuration route in the <em>app-routing.module.ts</em></p>
+<pre><code class="typescript">import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { ConfiguratorComponent } from './configurator/configurator.component';
+
+const routes: Routes = [
+  {  path: '', component: ProductsComponent },
+  {  path: 'configure/:id', component: ConfiguratorComponent } // &lt;-- Route to the Configurator component
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+
+<p>In the configure route we added a <em>id</em> parameter that will be used to hold the identifier of the selected configuration model in the product overview page.</p>
+<h4 id="configurator-component">Configurator Component</h4>
+<p>First add a declaration for the global Elfskot variable. Your <em>configurator.component.ts</em> file should look like this</p>
+<pre><code class="typescript">import { Component, OnInit } from '@angular/core';
+
+declare var Elfskot;
+
+@Component({
+  selector: 'app-configurator',
+  templateUrl: './configurator.component.html',
+  styleUrls: ['./configurator.component.css']
+})
+export class ConfiguratorComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+
+<p>Add the reference to the current route to the constructor and a private field to hold the configuration object we will retrieve later.</p>
+<pre><code class="typescript">private configuration = null;
+
+constructor(private route: ActivatedRoute) { }
+</code></pre>
+
+<p>Now in the <em>ngOnInit</em> we will add a listener for parameter changes in the route. If the route changes  we will start a new configuration session</p>
+<pre><code class="typescript">ngOnInit() {
+    this.route.params.subscribe((params) =&gt; {
+      this.startNewSession(params['id']);
+    });
+}
+</code></pre>
+
+<p>Add a private method to start a new configuration session</p>
+<pre><code class="typescript">private startNewSession(id: string) : void {
+    Elfskot.configurator.startNewConfiguration(id, 'en', (configuration) =&gt; {
+        this.configuration = configuration;
+    });
+}
+</code></pre>
+
+<p>The <em>Elfskot.configurator.startNewConfiguration</em> method takes 3 parameters</p>
+<ul>
+<li>The identifier of the configuration model</li>
+<li>A language iso</li>
+<li>Callback method that takes the new configuration object</li>
+</ul>
+<p>The resulting configuration object contains many different fields that can be used to construct the interface of your configurator. In this tutorial we will be mainly focused on the <em>totalPrice</em> and <em>steps</em> fields.</p>
+<p>The <em>steps</em> field should be used to construct the user interface. The <em>steps</em> are structured as follows</p>
+<ul>
+<li>Steps<ul>
+<li>Title (optional)</li>
+<li>Type (0 = Hotspots, 1 = 3D)</li>
+<li>Features
+        * Description
+        * UnitPrice
+        * TotalPrice
+        * Type (0 = Optional, 1 = Mandatory, 2 = Alternative, 3 = Or)
+        * Features (Children of the current feature, recursive)
+                * ..
+        * ...</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<p>To listen to changes in the configuration session we can add a configurationUpdated event listener in the <em>ngOnInit</em> function</p>
+<pre><code class="typescript">ngOnInit() {
+    this.route.params.subscribe((params) =&gt; {
+      this.startNewSession(params['id']);
+    });
+
+    Elfskot.on('configurationUpdated', (configuration) =&gt; {
+      this.configuration = configuration;
+    });
+}
+</code></pre>
+
+<p>The <em>configurationUpdated</em> event returns the entire updated configuration object including updated prices etc.</p>
+<p>The complete ConfiguratorComponent should look like this</p>
+<pre><code class="typescript">import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+declare var Elfskot;
+
+@Component({
+  selector: 'app-configurator',
+  templateUrl: './configurator.component.html',
+  styleUrls: ['./configurator.component.css']
+})
+export class ConfiguratorComponent implements OnInit {
+
+  private configuration = null;
+
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.route.params.subscribe((params) =&gt; {
+      this.startNewSession(params['id']);
+    });
+
+    Elfskot.on('configurationUpdated', (configuration) =&gt; {
+      this.configuration = configuration;
+    });
+  }
+
+  private startNewSession(id: string) : void {
+    Elfskot.configurator.startNewConfiguration(id, 'en', (configuration) =&gt; {
+      this.configuration = configuration;
+    });
+  }
+
+}
+</code></pre>
+
+<h5 id="configurator-option-component">Configurator Option component</h5>
+<p>Because of the recursive nature of the <em>Steps -&gt; Features -&gt; Features</em> structure we will need to create a new Angular component to hold the options of the configurator.</p>
+<p>Add a ConfiguratorOption component to the project</p>
+<pre><code class="bash">ng generate component ConfiguratorOption
+</code></pre>
+
+<p>The ConfiguratorOption component will take a Feature object as input and act on all the user interactions for this feature.</p>
+<pre><code class="typescript">import { Component, OnInit, Input } from '@angular/core';
+
+declare var Elfskot;
+
+@Component({
+  selector: 'app-configurator-option',
+  templateUrl: './configurator-option.component.html',
+  styleUrls: ['./configurator-option.component.css']
+})
+export class ConfiguratorOptionComponent implements OnInit {
+
+  @Input('feature') feature;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  toggle(): void {
+    let value = 1;
+    if (this.feature.isSelected) {
+      value = 0;
+    }
+
+    Elfskot.configurator.updateRequirement(this.feature.id, value);
+  }
+}
+</code></pre>
+
+<p>The <em>toggle</em> function calls <em>Elfskot.configurator.updateRequirement</em> which takes 2 parameters</p>
+<ul>
+<li>The identifier of the selected element</li>
+<li>A value, which should be a number</li>
+</ul>
+<p>In the <em>configurator-option.component.html</em> file we define a template that can act on the different types of features</p>
+<pre><code class="html">&lt;div class=&quot;configurator-option&quot; *ngIf=&quot;feature.type != 1 || feature.features.length &gt; 0&quot;&gt;
+  &lt;b *ngIf=&quot;feature.type == 1&quot; [innerHTML]=&quot;feature.description&quot;&gt;&lt;/b&gt;
+
+  &lt;label *ngIf=&quot;feature.type == 0 || feature.type == 3&quot;&gt;
+    &lt;img [src]=&quot;feature.imageUrl&quot; /&gt;
+    &lt;input type=&quot;checkbox&quot; [checked]=&quot;feature.isSelected&quot; (change)=&quot;toggle()&quot; /&gt;
+    &lt;span [innerHTML]=&quot;feature.description&quot;&gt;&lt;/span&gt;
+    &lt;small&gt;{{feature.unitPrice}}&lt;/small&gt;
+  &lt;/label&gt;
+
+  &lt;label *ngIf=&quot;feature.type == 2&quot;&gt;
+    &lt;img [src]=&quot;feature.imageUrl&quot; /&gt;
+    &lt;input type=&quot;radio&quot; [checked]=&quot;feature.isSelected&quot; (change)=&quot;toggle()&quot; /&gt;
+    &lt;span [innerHTML]=&quot;feature.description&quot;&gt;&lt;/span&gt;
+    &lt;small&gt;{{feature.unitPrice}}&lt;/small&gt;
+  &lt;/label&gt;
+
+  &lt;app-configurator-option *ngFor=&quot;let child of feature.features&quot; [feature]=&quot;child&quot;&gt;&lt;/app-configurator-option&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>In the <em>configurator-option.component.css</em> file add some CSS to aid in displaying the structure of the configuration model</p>
+<pre><code class="css">img {
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.configurator-option{
+    padding-left:32px;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+small {
+    font-style: italic;
+    font-size: 10px;
+    color: #f00;
+}
+</code></pre>
+
+<h4 id="add-the-configuratoroption-component-to-the-configuratorcomponent">Add the ConfiguratorOption component to the ConfiguratorComponent</h4>
+<p>Now that we have the ConfiguratorOption component defined, we can add it to the configurator page.</p>
+<p>In the <em>configurator.component.html</em> we create a loop that will iterate over the different steps of the configuration model and call the ConfiguratorOption component for each rootfeature in the step.</p>
+<pre><code class="html">&lt;div *ngIf=&quot;configuration&quot; class=&quot;configurator-container&quot;&gt;
+
+    &lt;h2 [innerHTML]=&quot;configuration.root.description&quot;&gt;&lt;/h2&gt;
+
+    &lt;ng-container *ngFor=&quot;let step of configuration.steps&quot;&gt;
+
+      &lt;app-configurator-option *ngFor=&quot;let feature of step.features&quot; [feature]=&quot;feature&quot;&gt;&lt;/app-configurator-option&gt;
+
+    &lt;/ng-container&gt;
+
+    &lt;h3&gt;Total price &lt;small&gt;{{configuration.totalPriceExclVat}}&lt;/small&gt;&lt;/h3&gt;
+
+    &lt;button routerLink=&quot;/checkout&quot;&gt;Request quote&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>If we were to open a configuration now it would look like this</p>
+<p><img alt="Configurator" src="/img/configurator.PNG" /></p>
+<h3 id="checkout-page">Checkout page</h3>
+<p>Now that we are able to configure a product, we can go ahead and request a quotation.</p>
+<p>Initialize the CheckoutComponent</p>
+<pre><code class="bash">ng generate component Checkout
+</code></pre>
+
+<p>And register a route to the CheckoutComponent in the <em>app-routing.module.ts</em> file</p>
+<pre><code class="typescript">import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { ProductsComponent } from './products/products.component';
+import { ConfiguratorComponent } from './configurator/configurator.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
+const routes: Routes = [
+  {  path: '', component: ProductsComponent },
+  {  path: 'configure/:id', component: ConfiguratorComponent },
+  {  path: 'checkout', component: CheckoutComponent } // &lt;-- Route to the checkout page
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+
+<p>In the <em>checkout.component.ts</em> file we create a function that will call the <em>Elfskot.configurator.requestQuote</em> function and handle its response.</p>
+<pre><code class="typescript">import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+
+declare var Elfskot;
+
+@Component({
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
+})
+export class CheckoutComponent implements OnInit {
+
+  configuration = null;
+  isSubmitted = false;
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    if (!Elfskot.configurator.configuration){
+      this.router.navigateByUrl('/');
+      return;
+    }
+
+    this.configuration = Elfskot.configurator.configuration;
+  }
+
+  requestQuote(model) {
+    Elfskot.configurator.requestQuote(model, () =&gt; {
+      this.isSubmitted = true;
+    });
+  }
+
+}
+</code></pre>
+
+<p>The <em>checkout.component.html</em> file is divided in 2 sections: <em>before the request is submitted</em> and <em>after the request is submitted</em></p>
+<pre><code class="html">&lt;h3 *ngIf=&quot;configuration&quot;&gt;Request quote &lt;small&gt;{{configuration.root.description}}&lt;/small&gt;&lt;/h3&gt;
+
+&lt;div *ngIf=&quot;!isSubmitted&quot;&gt;
+
+  &lt;form #checkoutForm=&quot;ngForm&quot; (ngSubmit)=&quot;requestQuote(checkoutForm.value)&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Request quote&lt;/legend&gt;
+      &lt;label&gt;First name &lt;input type=&quot;text&quot; name=&quot;firstName&quot; ngModel /&gt;&lt;/label&gt;    
+      &lt;label&gt;Last name &lt;input type=&quot;text&quot; name=&quot;lastName&quot; ngModel /&gt;&lt;/label&gt;    
+      &lt;label&gt;Company name &lt;input type=&quot;text&quot; name=&quot;companyName&quot; ngModel /&gt;&lt;/label&gt;  
+      &lt;label&gt;Phone number &lt;input type=&quot;text&quot; name=&quot;phoneNumber&quot; ngModel /&gt;&lt;/label&gt;    
+      &lt;label&gt;Email &lt;input type=&quot;email&quot; name=&quot;email&quot; ngModel /&gt;&lt;/label&gt;    
+      &lt;label&gt;Street &lt;input type=&quot;email&quot; name=&quot;streetName&quot; ngModel /&gt;&lt;/label&gt;    
+      &lt;label&gt;Postal code &lt;input type=&quot;email&quot; name=&quot;postalCode&quot; ngModel /&gt;&lt;/label&gt;
+
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+
+&lt;/div&gt;
+
+&lt;div *ngIf=&quot;isSubmitted&quot;&gt;
+  &lt;h2&gt;Thank you for your quotation request!&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="result">Result</h3>
+<p><img alt="Result" src="/img/configurator-result.gif" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../../sdk/start/" class="btn btn-neutral float-right" title="Getting started">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../applicationevents/" class="btn btn-neutral" title="Tutorial: Application Events"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../applicationevents/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../../../sdk/start/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+
+</body>
+</html>
