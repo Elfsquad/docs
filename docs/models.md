@@ -277,7 +277,7 @@ A quotation can have the following states:
 |FeatureId | `Guid` | Identifier of the feature. |
 |QuantityAmount| `decimal` | Quantity of the feature on this line. |
 |Quantity| `string` (Read-only) | Number formatted quantity, e.g. `100.14`. |
-|UnitOfMeasurement| `string` (Read-only) | Unit of measurement of the feature. |
+|UnitOfMeasurement| `string` (Read-only) | Unit of measurement of the feature. Default  is `pcs`. |
 |Hidden| `bool` | Indicates if the line is visible in EMS. |
 |ParentLineId | `Guid` | Identifier of the parent line (QuotationLine). |
 |GroupedRootLine| `bool` | Indicates if the quotation line is the root of a group of lines. |
