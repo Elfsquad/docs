@@ -66,27 +66,30 @@ Besides the common application event properties, each type of application event 
 
 ## CrmAccount
 
-| Name           | Type                 | Description                                                  |
-| -------------- | -------------------- | ------------------------------------------------------------ |
-| Id             | `Guid`               | Identifier of the CRM account.                               |
-| Salutation     | `string`             | The salutation e.g. 'Dear sir/madam,'                        |
-| FullName       | `string` (Read-only) | Full name of the account.                                    |
-| FirstName      | `string`             |                                                              |
-| LastNamePrefix | `string`             | The prefix of the lastName e.g. [FirstName] van der [LastName] |
-| LastName       | `string`             |                                                              |
-| CompanyName    | `string`             | Name of the company.                                         |
-| Email          | `string`             |                                                              |
-| Phone1         | `string`             | Primary phone number.                                        |
-| Phone2         | `string`             | Secondary phone number.                                      |
-| StreetName     | `string`             |                                                              |
-| HouseNumber    | `string`             |                                                              |
-| PostalCode     | `string`             |                                                              |
-| City           | `string`             |                                                              |
-| CountryIso     | `string`             | Two-letter ISO 3166-1 code of the country, e.g. 'NL'.        |
-| CocNumber      | `string`             | Chamber of Commerce number.                                  |
-| VatNumber      | `string`             |                                                              |
-| Iban           | `string`             |                                                              |
-| Type           | `integer`            | [Type](#relationship-type) of the CRM account.               |
+| Name             | Type                 | Description                                                  |
+| ---------------- | -------------------- | ------------------------------------------------------------ |
+| Id               | `Guid`               | Identifier of the CRM account.                               |
+| Salutation       | `string`             | The salutation e.g. 'Dear sir/madam,'                        |
+| FullName         | `string` (Read-only) | Full name of the account.                                    |
+| FirstName        | `string`             |                                                              |
+| LastNamePrefix   | `string`             | The prefix of the lastName e.g. [FirstName] van der [LastName] |
+| LastName         | `string`             |                                                              |
+| CompanyName      | `string`             | Name of the company.                                         |
+| Email            | `string`             |                                                              |
+| Phone1           | `string`             | Primary phone number.                                        |
+| Phone2           | `string`             | Secondary phone number.                                      |
+| StreetName       | `string`             |                                                              |
+| HouseNumber      | `string`             |                                                              |
+| PostalCode       | `string`             |                                                              |
+| City             | `string`             |                                                              |
+| CountryIso       | `string`             | Two-letter ISO 3166-1 code of the country, e.g. 'NL'.        |
+| Country          | `string`             | Country e.g. 'United Kingdom'                                |
+| CocNumber        | `string`             | Chamber of Commerce number.                                  |
+| VatNumber        | `string`             |                                                              |
+| Iban             | `string`             |                                                              |
+| Type             | `integer`            | [Type](#relationship-type) of the CRM account.               |
+| DefaultContact   | `CrmContact`         | The Default CrmContact                                       |
+| DefaultContactId | `Guid`               | Identifier for the DefaultContact                            |
 
 ### Relationship type
 
@@ -95,6 +98,27 @@ Besides the common application event properties, each type of application event 
 | 0    | Customer         |
 | 1    | Delivery address |
 | 2    | Employee         |
+
+## CrmContact
+
+| Name             | Type     | Description                                                  |
+| ---------------- | -------- | ------------------------------------------------------------ |
+| Id               | `Guid`   | Identifier of the CRM contact.                               |
+| Salutation       | `string` | The salutation e.g. 'Dear sir/madam,'                        |
+| FirstName        | `string` |                                                              |
+| LastNamePrefix   | `string` | The prefix of the last name e.g. [FirstName] van der [LastName]. |
+| LastName         | `string` |                                                              |
+| CompanyName      | `string` | The name of the company.                                     |
+| Email            | `string` |                                                              |
+| Phone1           | `string` | Primary phone number.                                        |
+| Phone2           | `string` | Secondary phone number.                                      |
+| StreetName       | `string` |                                                              |
+| HouseNumber      | `string` |                                                              |
+| PostalCode       | `string` |                                                              |
+| City             | `string` |                                                              |
+| UseParentAddress | `bool`   | If this property is set; the contact should inherit it's company's address. |
+| CountryIso       | `string` | Two-letter ISO 3166-1 code of the country, e.g. 'NL'.        |
+| CrmAccountId     | `Guid`   | Identifier for the CrmAccount                                |
 
 
 
