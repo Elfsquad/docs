@@ -43,11 +43,16 @@ Besides the common application event properties, each type of application event 
 
 
 
+
+
+
+
 ## Category
 
 | Name          | Type             | Description                                                  |
 | ------------- | ---------------- | ------------------------------------------------------------ |
 | Id            | `Guid`           | Identifier of the category.                                  |
+| Name          | `string`         | Name of the category.                                        |
 | Texts         | `CategoryText[]` | Translated titles of the category.                           |
 | Subcategories | `Category[]`     | Array of subcategories.                                      |
 | ParentId      | `Guid`           | Identifier of the parent category.                           |
@@ -61,6 +66,21 @@ Besides the common application event properties, each type of application event 
 | Value       | `string` | Value of the text.                                |
 | LanguageIso | `string` | Two letter ISO (639-1) code of the text language. |
 | CategoryId  | `Guid`   | Identifier of the category.                       |
+
+
+
+## Country
+
+| Name        | Type     | Description                                           |
+| ----------- | -------- | ----------------------------------------------------- |
+| Iso         | `string` | Two-letter ISO 3166-1 code of the country, e.g. 'NL'. |
+| Name        | `string` | Name of the country.                                  |
+| Active      | `bool`   |                                                       |
+| EnglishName | `string` | Name of the country, in English.                      |
+| PhonePrefix | `string` | Phone prefix number, e.g. '+31'                       |
+| Capital     | `string` | Capital city of the country                           |
+
+
 
 
 
@@ -122,6 +142,31 @@ Besides the common application event properties, each type of application event 
 
 
 
+## Currency
+
+| Name          | Type      | Description                                  |
+| ------------- | --------- | -------------------------------------------- |
+| Iso           | `string`  | Three letter ISO 4217:2015 code, e.g. 'EUR'. |
+| Name          | `string`  | Name of the curreny.                         |
+| Symbol        | `string`  | Symbol, e.g. '$'.                            |
+| DecimalDigits | `decimal` |                                              |
+| Rounding      | `decimal` |                                              |
+| NamePlural    | `string`  |                                              |
+
+
+
+## ExchangeRate
+
+| Name        | Type      | Description                                  |
+| ----------- | --------- | -------------------------------------------- |
+| Id          | `guid`    | Identifier for the ExchangeRate              |
+| CurrencyIso | `string`  | Three letter ISO 4217:2015 code, e.g. 'EUR'. |
+| Rate        | `decimal` |                                              |
+
+
+
+
+
 
 ## Feature
 
@@ -138,8 +183,11 @@ Every configuration model is based on features. Features are used to capture ric
 | MaxValue | `decimal` | Maximum amount. Example: maximum width of a bed is 210 cm. A user cannot enter quantities higher than this maximum value. |
 | StepValue | `decimal` | The step amount that is taken into consideration (between min/ max values). Example: with a step value of 10 cm a user cannot select a width of 115cm. This will be rounded off to 120cm. |
 | PackingUnit | `decimal` | The amount that has to be taken into account when rounding up on the material list. Example: several lines of the same nuts are generated from the configurator to the quotation. This function sums-up all these lines and rounds it up to the packing unit quantity. |
+| Category | `Category` | Category of which this feature belongs to. |
 | CategoryId | `Guid` | Identifier for the [category](#category) to which this feature is attached. |
 | SubcategoryIds | `Guid[]` | List of identifiers for sub-categories. |
+| ThreeDModelItems | `string[]` | The names of parts in a 3D model that are associated with this feature. |
+| HiddenThreeDModelItems | `string[]` | The names of parts in a 3D model that should be hidden when this feature is selected in a configuration. |
 | Tags | `string[]` | List of tags. A tag can be used to give a feature a certain label. |
 | MarginPct | `decimal` | |
 | Properties | `FeatureHasFeatureProperty[]` | |
@@ -147,7 +195,22 @@ Every configuration model is based on features. Features are used to capture ric
 | CardImageUrl | `string` | URL for the image of the feature. This image is displayed in the cards. |
 | OrganizationSellsFeature | `OrganizationSellsFeature[]` | |
 | VATId | `Guid` | [VAT](#vat) that is used as default for this feature. |
-| UnitOfMeasurementId | `Guid` | [Unit of measurement](#unitofmeasurement) for this feature. |
+| UnitOfMeasurementId | `Guid` | Identifier of the [Unit of measurement](#unitofmeasurement) for this feature. |
+| UnitOfMeasurement | `UnitOfMeasurement` | [Unit of measurement](#unitofmeasurement) for this feature. |
+
+
+
+#### FeatureType
+
+| Key  | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | **Feature**: Default type                                    |
+| 2    | **ColorPicker**: If used; the feature will be displayed as a color picker. |
+| 3    | **Text**: If used; the feature will be displayed as a text input. |
+
+
+
+
 
 ### FeatureText
 
@@ -166,9 +229,11 @@ Every configuration model is based on features. Features are used to capture ric
 | 0    | **Descriptions**: If used; the description will be shown instead of ‘name’. If left blank; the feature ‘name’ will be shown in the configurator. |
 | 1    | **Extended descriptions:** If used; this text will be shown under the description/name in the configurator. |
 | 2    | **More info:** If used; more info can be opened in the configurator. This information is showed in a screen-wide pop-up. |
+| 3    | **Title**                                                    |
+| 4    | **PromptMessage**                                            |
 | 5    | **Quotation text:** Optionally, this info can be generated on the quotation template (PDF). |
 
-
+#### 
 
 ### FeatureProperty
 
@@ -185,16 +250,18 @@ Every configuration model is based on features. Features are used to capture ric
 | ---- | ------------------------------------------------------------ |
 | 0    | **Input**: If the feature property is marked as a Input type; a decimal value can be associated with this property. |
 | 1    | **AssociatedFeatures**: If the feature property is marked as a AssociatedFeatures type; a selection of defined features can be associated with this property. |
+| 2    | **Text**: If the feature property is market as a Text type; a text value can be associated with this property. |
 
 #### AssociatedFeatureProperty
 
 The AssociatedFeatureProperty is a relationship between a feature property's AssociatedFeatures list and a Feature.
 
-| Name              | Type   | Description                                             |
-| ----------------- | ------ | ------------------------------------------------------- |
-| Id                | `Guid` | Identifier of the associated feature property.          |
-| FeaturePropertyId | `Guid` | Identifier of the [feature property](#featureproperty). |
-| FeatureId         | `Guid` | Identifier of the [feature](#feature).                  |
+| Name              | Type      | Description                                             |
+| ----------------- | --------- | ------------------------------------------------------- |
+| Id                | `Guid`    | Identifier of the associated feature property.          |
+| FeaturePropertyId | `Guid`    | Identifier of the [feature property](#featureproperty). |
+| FeatureId         | `Guid`    | Identifier of the [feature](#feature).                  |
+| Feature           | `Feature` | The Feature object                                      |
 
 #### FeatureHasFeatureProperty
 
@@ -207,6 +274,46 @@ Relationship between a feature and a feature property.
 | FeatureId           | `Guid`    | Identifier of the [feature](#feature).                       |
 | Value               | `decimal` | If the type of the FeaturePropery is set to `0`(Input); this property holds the input value. |
 | AssociatedFeatureId | `Guid`    | If the type of the FeatureProperty is set to `1`(AssociatedFeature); this property holds the [feature](#feature) identifier that is associated with this property. |
+
+
+
+## LeaseTable
+
+| Name              | Type                    | Description |
+| ----------------- | ----------------------- | ----------- |
+| CommencementPrice | `decimal`               |             |
+| TerminationPrice  | `decimal`               |             |
+| Currency          | `Currency`              |             |
+| ExchangeRate      | `ExchangeRate`          |             |
+| LeaseTableLines   | `List<LeaseTableLines>` |             |
+
+
+
+### LeaseTableLine
+
+| Name         | Type       | Description                                         |
+| ------------ | ---------- | --------------------------------------------------- |
+| Id           | `Guid`     | Identifier of the LeaseTableLine.                   |
+| LeaseTableId | `Guid`     | Identifier of the parent [LeaseTable](#LeaseTable). |
+| MinValue     | `decimal`  |                                                     |
+| MaxValue     | `decimal`  |                                                     |
+| TermValue    | `int`      |                                                     |
+| TermType     | `TermType` | Type of the lease term                              |
+
+
+
+#### TermType
+
+A LeaseTableLine can have the following terms:
+
+| Key  | Description |
+| ---- | ----------- |
+| 0    | Days        |
+| 1    | Weeks       |
+| 2    | Months      |
+| 3    | Years       |
+
+
 
 
 
@@ -333,8 +440,13 @@ A quotation can have the following states:
 
 |Name|Type|Description|
 |--|--|--|
+|Id|`Guid`|Identifier for the QuotationFile.|
 |QuotationId|`Guid`|Identifier of the quotation.|
 |FileId|`Guid`|Identifier of the [FileEntity](#fileentity).|
+
+In order to add  file to a quotation, a post request should be sent to the quotation endpoint with parameters `{id}/addfile`
+
+
 
 ### FileEntity
 
@@ -350,5 +462,23 @@ A quotation can have the following states:
 |Id|`Guid`|Identifier for the unit of measurement. |
 |Code | `string` | The code for the unit of measurement. Example: `kg`. |
 |Description| `string`| The description for the unit of measurement. Example: `Kilogram`. |
+
+
+
+## UserCreationRequest
+
+| Name             | Type              | Description                                                  |
+| ---------------- | ----------------- | ------------------------------------------------------------ |
+| Id               | `Guid`            | Identifier for the UserCreationRequest                       |
+| RequestDate      | `DateTimeOffset`  | Date and time for the request in UTC format e.g. 'DD-MM-YYYY HH-MM-SS' |
+| RequireTwoFactor | `bool`            | If two factor authentication is required: true, otherwise false. |
+| IsSeller         | `bool`            |                                                              |
+| CurrencyIso      | `string`          | Three letter ISO (4217) code for the used currency e.g. EUR  |
+| LanguageIso      | `string`          | Two letter ISO (639-1) code of the text language             |
+| IsExpired        | `bool`(Read-only) | Returns true if the UserCreationRequest is expired.          |
+
+
+
+
 
 Missing a property? Feel free to contact us at `guru@elfskot.com`.

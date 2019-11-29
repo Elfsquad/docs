@@ -11,11 +11,13 @@ The main endpoint for the API is: `https://api.elfskot.cloud`.
 | [FeatureHasFeatureProperty](/models#featurehasfeatureproperty) | /api/2/featurehasfeatureproperties | GET, POST, PUT, DELETE |
 | [FeatureProperty](/models#featureproperty)                   | /api/2/featureproperties           | GET, POST, PUT, DELETE |
 | [Feature](/models#feature)                                   | /api/2/features                    | GET, POST, PUT, DELETE |
+| [LeaseTable](/models#LeaseTable)                             | /api/2/leasetables                 | GET, POST, PUT, DELETE |
 | [Organizations](/models#organization)                        | /api/2/organizations               | GET, POST, PUT, DELETE |
 | [QuotationLine](/models#quotationline)                       | /api/2/quotationlines              | GET, POST, PUT, DELETE |
 | [QuotationProperty](/models#quotationproperty)               | /api/2/quotationproperties         | GET, POST, PUT, DELETE |
 | [Quotation](/models#quotation)                               | /api/2/quotations                  | GET, POST, PUT, DELETE |
 | [UnitOfMeasurement](/models#unitofmeasurement)               | /api/2/uom                         | GET, POST, PUT, DELETE |
+| [UserCreationRequest](/models#UserCreationRequest)           | /api/2/UserCreationRequests        | GET, POST, PUT, DELETE |
 | [VAT](/models#vat)                                           | /api/2/vats                        | GET, POST, PUT, DELETE |
 
 **Additional note about GET:**
