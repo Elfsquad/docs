@@ -24,4 +24,5 @@ You will also be able to create a new interface from scratch using our configura
 
 ## Support
 
-If you are missing information, or need support, please reach out to us on `guru@elfskot.com`.
+If you are missing information, or need support, please reach out to us on `support@elfsquad.io`.
+
