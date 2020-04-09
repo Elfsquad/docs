@@ -1,6 +1,6 @@
 ﻿// © Elfskot Product Configurator 2018, All Rights Reserved.
-// E-mail:  info@elfskot.com
-// Website: http://www.elfskot.com
+// E-mail:  info@elfsquad.io
+// Website: http://www.elfsquad.io
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
