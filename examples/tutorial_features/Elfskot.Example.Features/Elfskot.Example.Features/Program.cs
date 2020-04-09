@@ -1,4 +1,4 @@
-﻿// © Elfskot Product Configurator 2018, All Rights Reserved.
+﻿// © Elfsquad Product Configurator 2018, All Rights Reserved.
 // E-mail:  info@elfsquad.io
 // Website: http://www.elfsquad.io
 using Newtonsoft.Json;
@@ -8,20 +8,20 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace Elfskot.Example.Features
+namespace Elfsquad.Example.Features
 {
     /// <summary>
     /// This example application demonstrates how to interact with Features. It will show how
     /// to retrieve features, retrieve a single feature, create a new feature, update an existing feature
     /// and deleting a feature.
     /// 
-    /// For more information visit http://docs.elfskot.com.
+    /// For more information visit http://docs.elfsquad.io.
     /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
-            // Create a new Elfskot Integration Application in the Elfskot Management System.
+            // Create a new Elfsquad Integration Application in the Elfsquad Management System.
             var applicationId = "2ba8916e-c006-46b7-a5ab-a62706f9d9d1";
             var secret = "7mqu1yjl";
 
@@ -58,8 +58,8 @@ namespace Elfskot.Example.Features
             using(var client = new HttpClient())
             {
                 // Appending ?include=Texts will have the API to include the texts. You can also use skip/take to filter.
-                // All the filter parameters are optional. See http://docs.elfskot.com for more information about filtering options.
-                var request = new HttpRequestMessage(HttpMethod.Get, "https://api.elfskot.cloud/api/2/features?include=Texts&skip=0&take=5");
+                // All the filter parameters are optional. See http://docs.elfsquad.io for more information about filtering options.
+                var request = new HttpRequestMessage(HttpMethod.Get, "https://api.elfsquad.io/api/2/features?include=Texts&skip=0&take=5");
                 request.Headers.Add("Authorization", $"bearer {token}");
                 PrintHTTPRequest(request);
 
@@ -84,7 +84,7 @@ namespace Elfskot.Example.Features
             }
         }
 
-        // Creates a new feature in your Elfskot Management System, and 
+        // Creates a new feature in your Elfsquad Management System, and 
         // returns the ID of the newly created feature.
         static object CreateFeature(string token)
         {
@@ -117,12 +117,12 @@ namespace Elfskot.Example.Features
                         value = "Example feature more info"
                     }
                 },
-                cardImageUrl = "https://www.elfskot.com/wp-content/themes/elfskot/dist/svg/logo-elfskot.svg"
+                cardImageUrl = "https://www.elfsquad.io/wp-content/themes/elfsquad/dist/svg/logo-elfsquad.svg"
             };
 
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/features");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfsquad.io/api/2/features");
                 request.Headers.Add("Authorization", $"bearer {token}");
                 request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, "application/json");
                 var response = client.SendAsync(request).Result;
@@ -147,7 +147,7 @@ namespace Elfskot.Example.Features
             using (var client = new HttpClient())
             {
                 // Appending ?include=Texts will have the API to include the texts.
-                var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.elfskot.cloud/api/2/features/{id}?include=Texts");
+                var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.elfsquad.io/api/2/features/{id}?include=Texts");
                 request.Headers.Add("Authorization", $"bearer {token}");
                 PrintHTTPRequest(request);
 
@@ -173,7 +173,7 @@ namespace Elfskot.Example.Features
             using (var client = new HttpClient())
             {
                 // Appending ?include=Texts will have the API to include the texts.
-                var request = new HttpRequestMessage(HttpMethod.Put, $"https://api.elfskot.cloud/api/2/features");
+                var request = new HttpRequestMessage(HttpMethod.Put, $"https://api.elfsquad.io/api/2/features");
                 request.Headers.Add("Authorization", $"bearer {token}");
                 request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, "application/json");
                 PrintHTTPRequest(request);
@@ -198,7 +198,7 @@ namespace Elfskot.Example.Features
         {
             using (var client = new HttpClient())
             {
-                var request = new HttpRequestMessage(HttpMethod.Delete, $"https://api.elfskot.cloud/api/2/features/{id}");
+                var request = new HttpRequestMessage(HttpMethod.Delete, $"https://api.elfsquad.io/api/2/features/{id}");
                 request.Headers.Add("Authorization", $"bearer {token}");
                 PrintHTTPRequest(request);
 
@@ -216,13 +216,13 @@ namespace Elfskot.Example.Features
         }
 
         // Retrieves an access token from the API. This requires an integration application in 
-        // the Elfskot Management System. See http://docs.elfskot.com for more information.
+        // the Elfsquad Management System. See http://docs.elfsquad.io for more information.
         static string RequestAccessToken(string applicationId, string secret)
         {
             using(var client = new HttpClient())
             {
                 var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
-                var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin");
+                var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfsquad.io/api/2/auth/elfskotconnectlogin");
                 request.Content = new StringContent(body, Encoding.UTF8, "application/json");
                 var response = client.SendAsync(request).Result;
 
