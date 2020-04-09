@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Webhooks - Elfskot Docs</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <title>Webhooks - Elfsquad Docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,8 +36,9 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Elfskot Docs</a>
+        <a href="../.." class="icon icon-home"> Elfsquad Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -45,102 +47,68 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Overview</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../..">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../models/">Models</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">REST API</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../start/">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../endpoints-crud/">Basic endpoints</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Webhooks</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#webhooks">Webhooks</a></li>
-    
+                <p class="caption"><span class="caption-text">Overview</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../models/">Models</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">REST API</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../start/">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../endpoints-crud/">Basic endpoints</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Webhooks</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#events">Events</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#events">Events</a></li>
-        
-            <li><a class="toctree-l4" href="#creating-a-webhooks-subscription">Creating a webhooks subscription</a></li>
-        
-            <li><a class="toctree-l4" href="#handling-a-webhooks-response">Handling a webhooks response</a></li>
-        
-            <li><a class="toctree-l4" href="#unsubscribing-a-webhook">Unsubscribing a webhook</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#event-response-examples">Event response examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#quotationrequested-quotationsubmitted-quotationaccepted-quotationverified">quotation.requested, quotation.submitted, quotation.accepted, quotation.verified</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/features/">Tutorial: Features</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/applicationevents/">Tutorial: Application Events</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../tutorial/angularconfigurator/angular_configurator/">Tutorial: Custom configurator in Angular</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">SDK</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../sdk/start/">Getting started</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../sdk/applicationevents/">Acting on events</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">PyAPI (Python)</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../pyapi/start/">Getting started</a>
-                </li>
-    </ul>
-	    </li>
-          
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-webhooks-subscription">Creating a webhooks subscription</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#request-payload">Request payload</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#handling-a-webhooks-response">Handling a webhooks response</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#webhook-response-payload">Webhook response payload</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unsubscribing-a-webhook">Unsubscribing a webhook</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorial/features/">Tutorial: Features</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorial/applicationevents/">Tutorial: Application Events</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorial/angularconfigurator/angular_configurator/">Tutorial: Custom configurator in Angular</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">SDK</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../sdk/start/">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../sdk/applicationevents/">Acting on events</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">PyAPI (Python)</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../pyapi/start/">Getting started</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -148,7 +116,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Elfskot Docs</a>
+        <a href="../..">Elfsquad Docs</a>
       </nav>
 
       
@@ -169,13 +137,14 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
             <div class="section">
               
                 <h1 id="webhooks">Webhooks</h1>
-<p>Webhooks allow you to build integrations which subscribe to certain events in Elfskot. When one of those events is triggered, we'll send a HTTP POST payload to the webhook's configured <code>CallbackUrl</code>.</p>
+<p>Webhooks allow you to build integrations which subscribe to certain events inElfsquad. When one of those events is triggered, we'll send a HTTP POST payload to the webhook's configured <code>CallbackUrl</code>.</p>
 <h2 id="events">Events</h2>
 <table>
 <thead>
@@ -214,7 +183,7 @@
 
 <h2 id="creating-a-webhooks-subscription">Creating a webhooks subscription</h2>
 <p>To create a new webhooks subscription you send a HTTP POST request:</p>
-<p><strong>URI:</strong> <code>POST https://api.elfskot.cloud/api/2/webhooks</code></p>
+<p><strong>URI:</strong> <code>POST https://api.elfsquad.io/api/2/webhooks</code></p>
 <p><strong>Content-Type:</strong> application/json</p>
 <p><strong>Body</strong>:</p>
 <pre><code class="json">{
@@ -286,7 +255,7 @@
 </table>
 <h2 id="unsubscribing-a-webhook">Unsubscribing a webhook</h2>
 <p>To delete a webhooks subscription you send a HTTP DELETE request:</p>
-<p><strong>URI:</strong> <code>DELETE https://api.elfskot.cloud/api/2/webhooks/{identifier}</code></p>
+<p><strong>URI:</strong> <code>DELETE https://api.elfsquad.io/api/2/webhooks/{identifier}</code></p>
               
             </div>
           </div>
@@ -309,7 +278,7 @@
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -319,7 +288,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -333,6 +302,11 @@
     <script>var base_url = '../..';</script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
