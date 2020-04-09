@@ -1,6 +1,6 @@
-# Elfskot PyApi
+#Elfsquad PyApi
 
-The following code is the implementation of the Elfskot PyApi. It is adviced to store the code in a file `elfskotapi.py`, which can then be included in your Python projects. The usage of the PyApi is described in the remainder of this document.
+The following code is the implementation of theElfsquad PyApi. It is adviced to store the code in a file `elfskotapi.py`, which can then be included in your Python projects. The usage of the PyApi is described in the remainder of this document.
 
 ```python
 # Required packages:
@@ -27,7 +27,7 @@ class TextType(Enum):
 
 class ElfskotApi():
 
-    base_address = 'https://api.elfskot.cloud/api/2/'
+    base_address = 'https://api.elfsquad.io/api/2/'
 
     def __init__(self, application_id, secret):
         self.application_id = application_id

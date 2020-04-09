@@ -12,17 +12,17 @@ The getting started guide contains the following content:
 
 ## Adding an integration application
 
-1. Open your [EMS environment](https://ems.elfskot.cloud).
+1. Open your [EMS environment](https://ems.elfsquad.io).
 2. In the navigation menu open **Integrations**.
 3. Add a new integration application by clicking the add button in the bottom-right corner.
-4. Add an **Elfskot Connect** application.
+4. Add an **Elfsquad Connect** application.
 5. Copy the **ApplicationId** and **Secret** and store them in a safe place.
 
 ## Retrieving an access token
 
 To make requests to our API, you will first need to request an access token. To request an access token, make a HTTP request to the API with the following parameters:
 
-**URI:** `POST https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin`
+**URI:** `POST https://api.elfsquad.io/api/2/auth/elfskotconnectlogin`
 
 **Content-type:** application/json
 
@@ -55,9 +55,9 @@ In the case of a not authorized error, make sure that you have added the integra
 
 # Creating a request
 
-Now we can use the access token to authenticate with the Elfskot API. For any requests to the API, the access token should be added to the HTTP `Authorization` request header. An example is shown below where we retrieve a list of features:
+Now we can use the access token to authenticate with theElfsquad API. For any requests to the API, the access token should be added to the HTTP `Authorization` request header. An example is shown below where we retrieve a list of features:
 
-**URI:** `GET https://api.elfskot.cloud/api/2/features`
+**URI:** `GET https://api.elfsquad.io/api/2/features`
 
 **Headers:**
 
@@ -75,13 +75,13 @@ The following C# example demonstrates how to retrieve an access token from the A
 
 ```csharp
 // Retrieves an access token from the API. This requires an integration application in 
-// the Elfskot Management System. See http://docs.elfskot.com for more information.
+// theElfsquad Management System. See http://docs.elfsquad.io for more information.
 string RequestAccessToken(string applicationId, string secret)
 {
     using(var client = new HttpClient())
     {
         var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin");
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfsquad.io/api/2/auth/elfskotconnectlogin");
         request.Content = new StringContent(body, Encoding.UTF8, "application/json");
         var response = client.SendAsync(request).Result;
 

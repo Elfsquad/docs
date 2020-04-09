@@ -481,4 +481,4 @@ In order to add  file to a quotation, a post request should be sent to the quota
 
 
 
-Missing a property? Feel free to contact us at `guru@elfskot.com`.
+Missing a property? Feel free to contact us at `support@elfsquad.io`.

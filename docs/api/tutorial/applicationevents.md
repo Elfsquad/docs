@@ -1,6 +1,6 @@
 # Application events
 
-This tutorial describes how a integration application can act on different events that occur in the Elfskot product configurator.
+This tutorial describes how a integration application can act on different events that occur in theElfsquad product configurator.
 
 As of this writing there are 3 application events exposed through the API:
 

@@ -1,6 +1,6 @@
 # Webhooks
 
-Webhooks allow you to build integrations which subscribe to certain events in Elfskot. When one of those events is triggered, we'll send a HTTP POST payload to the webhook's configured `CallbackUrl`.
+Webhooks allow you to build integrations which subscribe to certain events inElfsquad. When one of those events is triggered, we'll send a HTTP POST payload to the webhook's configured `CallbackUrl`.
 
 ## Events
 
@@ -30,7 +30,7 @@ This section provides an overview of different examples of response payloads.
 
 To create a new webhooks subscription you send a HTTP POST request:
 
-**URI:** `POST https://api.elfskot.cloud/api/2/webhooks`
+**URI:** `POST https://api.elfsquad.io/api/2/webhooks`
 
 **Content-Type:** application/json
 
@@ -81,5 +81,5 @@ When the subscribed event is triggered we will send a POST request to the `callb
 
 To delete a webhooks subscription you send a HTTP DELETE request:
 
-**URI:** `DELETE https://api.elfskot.cloud/api/2/webhooks/{identifier}`
+**URI:** `DELETE https://api.elfsquad.io/api/2/webhooks/{identifier}`
 

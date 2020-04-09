@@ -1,6 +1,6 @@
 # Basic endpoints
 
-The main endpoint for the API is: `https://api.elfskot.cloud`.
+The main endpoint for the API is: `https://api.elfsquad.io`.
 
 | Model                                                        | URI                                | Supported methods      |
 | ------------------------------------------------------------ | ---------------------------------- | ---------------------- |

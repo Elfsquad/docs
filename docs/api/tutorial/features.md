@@ -18,13 +18,13 @@ The following C# function will retrieve an access token from the API.
 
 ```csharp
 // Retrieves an access token from the API. This requires an integration application in 
-// the Elfskot Management System. See http://docs.elfskot.com for more information.
+// theElfsquad Management System. See http://docs.elfsquad.io for more information.
 static string RequestAccessToken(string applicationId, string secret)
 {
     using(var client = new HttpClient())
     {
         var body = JsonConvert.SerializeObject(new { clientId = applicationId, secret = secret });
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/auth/elfskotconnectlogin");
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfsquad.io/api/2/auth/elfskotconnectlogin");
         request.Content = new StringContent(body, Encoding.UTF8, "application/json");
         var response = client.SendAsync(request).Result;
 
@@ -45,7 +45,7 @@ The access token should be included in every request.
 
 # Retrieving a list of features
 
-To request all the features, we will call the following endpoint: `https://api.elfskot.cloud/api/2/features?include=Texts&skip=0&take=5`.
+To request all the features, we will call the following endpoint: `https://api.elfsquad.io/api/2/features?include=Texts&skip=0&take=5`.
 
 ```csharp
 // Retrieve a list of all features.
@@ -54,8 +54,8 @@ static void RetrieveAllFeatures(string token)
     using(var client = new HttpClient())
     {
         // Appending ?include=Texts will have the API to include the texts. You can also use skip/take to filter.
-        // All the filter parameters are optional. See http://docs.elfskot.com for more information about filtering options.
-        var request = new HttpRequestMessage(HttpMethod.Get, "https://api.elfskot.cloud/api/2/features?include=Texts&skip=0&take=5");
+        // All the filter parameters are optional. See http://docs.elfsquad.io for more information about filtering options.
+        var request = new HttpRequestMessage(HttpMethod.Get, "https://api.elfsquad.io/api/2/features?include=Texts&skip=0&take=5");
         request.Headers.Add("Authorization", $"bearer {token}");
         PrintHTTPRequest(request);
 
@@ -90,7 +90,7 @@ All the languages are already available in the API, as defined in ISO 639-1. Sim
 The API will return the created model at the end of the request. This contains the assigned ID which can be used later.
 
 ```csharp
-// Creates a new feature in your Elfskot Management System, and 
+// Creates a new feature in yourElfsquad Management System, and 
 // returns the ID of the newly created feature.
 static object CreateFeature(string token)
 {
@@ -123,12 +123,12 @@ static object CreateFeature(string token)
                 value = "Example feature more info"
             }
         },
-        cardImageUrl = "https://www.elfskot.com/wp-content/themes/elfskot/dist/svg/logo-elfskot.svg"
+        cardImageUrl = "https://www.elfsquad.io/wp-content/themes/elfskot/dist/svg/logo-elfskot.svg"
     };
 
     using (var client = new HttpClient())
     {
-        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfskot.cloud/api/2/features");
+        var request = new HttpRequestMessage(HttpMethod.Post, "https://api.elfsquad.io/api/2/features");
         request.Headers.Add("Authorization", $"bearer {token}");
         request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, "application/json");
         var response = client.SendAsync(request).Result;
@@ -150,7 +150,7 @@ static object CreateFeature(string token)
 
 # Retrieve a single feature
 
-To retrieve a single feature, call the endpoint `https://api.elfskot.cloud/api/2/features/{id}?include=Texts` with the ID of the feature. If you want additional properties, such as texts, they need to be included seperately. If a property is `null`, you probably need to include this in the request.
+To retrieve a single feature, call the endpoint `https://api.elfsquad.io/api/2/features/{id}?include=Texts` with the ID of the feature. If you want additional properties, such as texts, they need to be included seperately. If a property is `null`, you probably need to include this in the request.
 
 ```csharp
 // Retrieve a single feature by ID.
@@ -159,7 +159,7 @@ static object RetrieveFeatureById(string token, string id)
     using (var client = new HttpClient())
     {
         // Appending ?include=Texts will have the API to include the texts.
-        var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.elfskot.cloud/api/2/features/{id}?include=Texts");
+        var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.elfsquad.io/api/2/features/{id}?include=Texts");
         request.Headers.Add("Authorization", $"bearer {token}");
         PrintHTTPRequest(request);
 
@@ -191,7 +191,7 @@ static void UpdateFeature(string token, dynamic feature)
     using (var client = new HttpClient())
     {
         // Appending ?include=Texts will have the API to include the texts.
-        var request = new HttpRequestMessage(HttpMethod.Put, $"https://api.elfskot.cloud/api/2/features");
+        var request = new HttpRequestMessage(HttpMethod.Put, $"https://api.elfsquad.io/api/2/features");
         request.Headers.Add("Authorization", $"bearer {token}");
         request.Content = new StringContent(JsonConvert.SerializeObject(feature), Encoding.UTF8, "application/json");
         PrintHTTPRequest(request);
@@ -214,7 +214,7 @@ static void UpdateFeature(string token, dynamic feature)
 
 # Delete a feature
 
-To delete a feature, we call the following endpoint `https://api.elfskot.cloud/api/2/features/{id}`, where the `id` is the ID of the feature to be deleted. Be aware that if a feature is deleted, it will also be removed from all existing feature models.
+To delete a feature, we call the following endpoint `https://api.elfsquad.io/api/2/features/{id}`, where the `id` is the ID of the feature to be deleted. Be aware that if a feature is deleted, it will also be removed from all existing feature models.
 
 ```csharp
 // Deletes a feature.
@@ -222,7 +222,7 @@ static void DeleteFeature(string token, string id)
 {
     using (var client = new HttpClient())
     {
-        var request = new HttpRequestMessage(HttpMethod.Delete, $"https://api.elfskot.cloud/api/2/features/{id}");
+        var request = new HttpRequestMessage(HttpMethod.Delete, $"https://api.elfsquad.io/api/2/features/{id}");
         request.Headers.Add("Authorization", $"bearer {token}");
         PrintHTTPRequest(request);
 
