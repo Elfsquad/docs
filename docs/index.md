@@ -1,6 +1,6 @@
-# Welcome to Elfskot Docs
+# Welcome to Elfsquad Docs
 
-Elfskot provides two methods to integrate with our services. To get an impression of which data is available, [see the models page](models).
+Elfsquad provides two methods to integrate with our services. To get an impression of which data is available, [see the models page](models).
 
 ## REST API
 
@@ -10,7 +10,7 @@ For more information about our API, see the [getting started with the API](api/s
 
 ## SDK
 
-Elfskot provides an easy way to integrate with our applications through our SDK. Our SDK has been developed in C#, and is available as a [Nuget package](https://www.nuget.org/packages/Elfskot.Connect.SDK/). 
+Elfsquad provides an easy way to integrate with our applications through our SDK. Our SDK has been developed in C#, and is available as a [Nuget package](https://www.nuget.org/packages/Elfskot.Connect.SDK/). 
 
 For more information about our SDK, see the [getting started with the SDK](sdk/start).
 
