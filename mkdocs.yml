@@ -1,5 +1,10 @@
 site_name: Elfsquad Docs
-theme: readthedocs
+theme: 
+  name: material
+  logo: https://ems.elfsquad.io/assets/images/logo_white.png
+  palette:  
+    primary: black
+    accent: blue
 nav:
   - Overview:
     - 'Getting started': index.md
@@ -8,20 +13,12 @@ nav:
     - 'Getting started': api/start.md
     - Basic endpoints: api/endpoints-crud.md
     - Webhooks: api/webhooks.md
-    #- Custom endpoints: api/endpoints-custom.md
+    - Configurator: api/configurator.md
     - 'Tutorial: Features': api/tutorial/features.md
     - 'Tutorial: Application Events': api/tutorial/applicationevents.md
-    #- 'Tutorial: Custom configurator': api/tutorial/custom configurator.md
     - 'Tutorial: Custom configurator in Angular': api/tutorial/angularconfigurator/angular_configurator.md
-    #- 'Tutorial: Feature properties': api/tutorial/features-properties.md
-    #- 'Tutorial: CRM accounts': api/tutorial/crm-accounts.md
-    #- 'Tutorial: Quotations': api/tutorial/quotations.md
   - SDK:
     - 'Getting started': sdk/start.md
     - 'Acting on events': sdk/applicationevents.md
-    #- 'Tutorial: Features': sdk/tutorial/features.md
-    #- 'Tutorial: Feature properties': sdk/tutorial/features-properties.md
-    #- 'Tutorial: CRM accounts': sdk/tutorial/crm-accounts.md
-    #- 'Tutorial: Quotations': sdk/tutorial/quotations.md
   - 'PyAPI (Python)':
     - 'Getting started': pyapi/start.md

@@ -2,7 +2,7 @@
 
 This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. 
 
-## Application Events
+### Application Events
 
 There are a number of application event types available through the API. See [application event tutorials](api/tutorial/applicationevents/) for more info.
 
@@ -17,25 +17,25 @@ There are a number of application event types available through the API. See [ap
 
 Besides the common application event properties, each type of application event has additional information available to it:
 
-### QuotationRequested
+#### QuotationRequested
 
 | Name        | Type   | Description                            |
 | ----------- | ------ | -------------------------------------- |
 | QuotationId | `Guid` | Identifier of the requested quotation. |
 
-### QuotationToPending
+#### QuotationToPending
 
 | Name        | Type   | Description                                                 |
 | ----------- | ------ | ----------------------------------------------------------- |
 | QuotationId | `Guid` | Identifier of the quotation who's status is set to pending. |
 
-### QuotationToAccepted
+#### QuotationToAccepted
 
 | Name        | Type   | Description                                                  |
 | ----------- | ------ | ------------------------------------------------------------ |
 | QuotationId | `Guid` | Identifier of the quotation who's status is set to accepted. |
 
-### QuotationVerified
+#### QuotationVerified
 
 | Name        | Type   | Description                                         |
 | ----------- | ------ | --------------------------------------------------- |
@@ -47,7 +47,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## Category
+### Category
 
 | Name          | Type             | Description                                                  |
 | ------------- | ---------------- | ------------------------------------------------------------ |
@@ -58,7 +58,7 @@ Besides the common application event properties, each type of application event 
 | ParentId      | `Guid`           | Identifier of the parent category.                           |
 | Order         | `integer`        | Order in which the category should be displayed in the different product selection pages. |
 
-### CategoryText
+#### CategoryText
 
 | Name        | Type     | Description                                       |
 | ----------- | -------- | ------------------------------------------------- |
@@ -69,7 +69,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## Country
+### Country
 
 | Name        | Type     | Description                                           |
 | ----------- | -------- | ----------------------------------------------------- |
@@ -84,7 +84,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## CrmAccount
+### CrmAccount
 
 | Name             | Type                 | Description                                                  |
 | ---------------- | -------------------- | ------------------------------------------------------------ |
@@ -111,7 +111,7 @@ Besides the common application event properties, each type of application event 
 | DefaultContact   | `CrmContact`         | The Default CrmContact                                       |
 | DefaultContactId | `Guid`               | Identifier for the DefaultContact                            |
 
-### Relationship type
+#### Relationship type
 
 | Key  | Description      |
 | ---- | ---------------- |
@@ -119,7 +119,7 @@ Besides the common application event properties, each type of application event 
 | 1    | Delivery address |
 | 2    | Employee         |
 
-## CrmContact
+### CrmContact
 
 | Name             | Type     | Description                                                  |
 | ---------------- | -------- | ------------------------------------------------------------ |
@@ -142,7 +142,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## Currency
+### Currency
 
 | Name          | Type      | Description                                  |
 | ------------- | --------- | -------------------------------------------- |
@@ -155,7 +155,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## ExchangeRate
+### ExchangeRate
 
 | Name        | Type      | Description                                  |
 | ----------- | --------- | -------------------------------------------- |
@@ -168,7 +168,7 @@ Besides the common application event properties, each type of application event 
 
 
 
-## Feature
+### Feature
 
 Every configuration model is based on features. Features are used to capture rich product information (texts, images, pricing). Once created, features can be categorized and implemented in product structures.
 
@@ -212,7 +212,7 @@ Every configuration model is based on features. Features are used to capture ric
 
 
 
-### FeatureText
+#### FeatureText
 
 | Name        | Type      | Description                                       |
 | ----------- | --------- | ------------------------------------------------- |
@@ -277,7 +277,7 @@ Relationship between a feature and a feature property.
 
 
 
-## LeaseTable
+### LeaseTable
 
 | Name              | Type                    | Description |
 | ----------------- | ----------------------- | ----------- |
@@ -289,7 +289,7 @@ Relationship between a feature and a feature property.
 
 
 
-### LeaseTableLine
+#### LeaseTableLine
 
 | Name         | Type       | Description                                         |
 | ------------ | ---------- | --------------------------------------------------- |
@@ -317,7 +317,7 @@ A LeaseTableLine can have the following terms:
 
 
 
-## Organization
+### Organization
 
 | Name               | Type      | Description                                                  |
 | ------------------ | --------- | ------------------------------------------------------------ |
@@ -330,7 +330,7 @@ A LeaseTableLine can have the following terms:
 
 
 
-## VAT
+### VAT
 
 | Name        | Type      | Description                                     |
 | ----------- | --------- | ----------------------------------------------- |
@@ -341,7 +341,7 @@ A LeaseTableLine can have the following terms:
 
 
 
-## Quotation
+### Quotation
 
 |Name|Type|Description|
 |--|--|--|
@@ -379,7 +379,7 @@ A LeaseTableLine can have the following terms:
 |WholeSaleDiscountAmt|`decimal` (Read-only)|Wholesale discount amount.|
 |WholeSaleDiscountPct|`decimal` (Read-only)|Wholesale discount percentage.|
 
-### QuotationStatus
+#### QuotationStatus
 
 A quotation can have the following states:
 
@@ -393,7 +393,7 @@ A quotation can have the following states:
 |5|Pending|
 |6|Order|
 
-### QuotationLine
+#### QuotationLine
 
 |Name|Type|Description|
 |--|--|--|
@@ -436,7 +436,7 @@ A quotation can have the following states:
 |GroupPurchasePrice | `decimal` (Read-only) | |
 |GroupMargin | `decimal` (Read-only) | |
 
-### QuotationFile
+#### QuotationFile
 
 |Name|Type|Description|
 |--|--|--|
@@ -456,7 +456,7 @@ In order to add  file to a quotation, a post request should be sent to the quota
 |Name|`string`|Name of the file.|
 |Url|`string`|URL of the file.|
 
-## UnitOfMeasurement
+### UnitOfMeasurement
 |Name|Type|Description|
 |--|--|--|
 |Id|`Guid`|Identifier for the unit of measurement. |
@@ -465,7 +465,7 @@ In order to add  file to a quotation, a post request should be sent to the quota
 
 
 
-## UserCreationRequest
+### UserCreationRequest
 
 | Name             | Type              | Description                                                  |
 | ---------------- | ----------------- | ------------------------------------------------------------ |
@@ -479,6 +479,153 @@ In order to add  file to a quotation, a post request should be sent to the quota
 
 
 
+---
 
+### Configuration
+
+Models that can be used to edit a existing configuration or develop your own custom configurator interface.
+
+| Name                         | Type                         | Description                                                  |
+| ---------------------------- | ---------------------------- | ------------------------------------------------------------ |
+| Id                           | `Guid`                       | Unique identifier of the configuration session               |
+| Code                         | `string`                     | A unique code that represents this configuration session and can be used by a user to resume the session. |
+| ConfigurationModelId         | `Guid`                       | Identifier of the configuration model that is being configured. |
+| Root                         | `ConfigurationFeature`       | The root feature of the configuration model that is being configured. |
+| Steps                        | `ConfigurationStep[]`        | List of steps that is used to structure the configurator UI. |
+| PreconfigurationFeatures     | `ConfigurationFeature[]`     | A set of features that should be displayed before the user sees any of the configurator steps. |
+| Values                       | `{ 'id': SelectedValue }`    | Object that gives easy access to a selected value for a given feature. |
+| TextValues                   | `{ 'id': string }`           | Object that gives easy access to a selected text value for a given feature. |
+| Requirements                 | `ConfigurationRequirement[]` | Set of requirements made by the user during the configuration session. |
+| Language                     | `string`                     | Two-letter ISO code of the selected configuration language.  |
+| Currency                     | `string`                     | Two-letter ISO code of the selected configuration currency.  |
+| BasePriceExclVat             | `string`                     | Formatted string of the base price excluding VAT.            |
+| BasePriceInclVat             | `string`                     | Formatted string of the base price including VAT.            |
+| BasePriceExclVatNumber       | `decimal`                    | Base price excluding VAT.                                    |
+| BasePriceInclVatNumber       | `decimal`                    | Base price including VAT.                                    |
+| AdditionalPriceExclVat       | `string`                     | Formatted string of the additional price excluding VAT.      |
+| AdditionalPriceInclVat       | `string`                     | Formatted string of the additional price including VAT.      |
+| AdditionalPriceExclVatNumber | `decimal`                    | Additional price excluding VAT.                              |
+| AdditionalPriceInclVatNumber | `decimal`                    | Additional price including VAT.                              |
+| TotalPriceExclVat            | `string`                     | Formatted string of the total price excluding VAT.           |
+| TotalPriceInclVat            | `string`                     | Formatted string of the total price including VAT.           |
+| TotalPriceExclVatNumber      | `decimal`                    | Total price excluding VAT.                                   |
+| TotalPriceInclVatNumber      | `decimal`                    | Total price including VAT.                                   |
+| Conflicts                    | `ConfigurationConflict[]`    | When conflicts occur during the configuration session, this array will be populated with conflict data. |
+
+#### ConfigurationFeature
+
+| Name                 | Type                       | Description                                                  |
+| -------------------- | -------------------------- | ------------------------------------------------------------ |
+| Id                   | `Guid`                     | Unique identifier of this feature's unique position in the configuration model. |
+| ConfigurationModelId | `Guid`                     | Identifier of the configuration model this feature belongs to. |
+| ParentId             | `Guid?`                    | Identifier of the parent feature. Null if this feature is the root. |
+| FeatureId            | `Guid`                     | Identifier of the feature that is attached.                  |
+| Value                | `decimal`                  | Selected value in the configuration session.                 |
+| TextValue            | `string`                   | Selected text value in the configuration session.            |
+| IsSelected           | `boolean`                  | Flag indicating if the feature is selected in the configuration session. |
+| Code                 | `string`                   | Code of the feature.                                         |
+| Description          | `string`                   | Description of the feature.                                  |
+| ExtendedDescription  | `string`                   | Extended description of the feature.                         |
+| MoreInfo             | `string`                   | More info of the feature.                                    |
+| Name                 | `string`                   | Name of the feature.                                         |
+| ArticleCode          | `string`                   | Same as Code.                                                |
+| UnitOfMeasurement    | `string`                   | Unit of measurement of the feature.                          |
+| ImageUrl             | `string`                   | URL to the image of the feature.                             |
+| Type                 | `RelationshipType`         | Relationship type of this feature to its parent.             |
+| FeatureType          | `ConfigurationFeatureType` | Determines how the user should interact with this feature in the configurator. |
+| DisplayType          | `DisplayType`              | Determines how the feature should be rendered in the configurator. |
+| Features             | `ConfigurationFeature[]`   | Child features.                                              |
+| IsBestMatch          | `boolean`                  | Flag that indicates of the feature is a best match based on a selection in the PreconfigurationFeatures of the configuration session. |
+| IsMandatory          | `boolean`                  | Flag that indicates if this feature is mandatory. The user should not be provided with a way to create a quotation before this feature is answered. |
+| HideInQuotation      | `boolean`                  | Flag that indicates that is feature is not displayed in the quotation. The configurator should not display this feature in any overviews. |
+| UnitPrice            | `string`                   | Formatted string of the unit price excluding VAT.            |
+| UnitPriceExclVat     | `decimal`                  | Unit price excluding VAT.                                    |
+| UnitPriceInclVat     | `decimal`                  | Unit price including VAT.                                    |
+| TotalPrice           | `string`                   | Formatted string of the total price excluding VAT.           |
+| TotalPriceExclVat    | `decimal`                  | Total price excluding VAT.                                   |
+| TotalPriceInclVat    | `decimal`                  | Total price including VAT.                                   |
+| MinValue             | `decimal`                  | Minimal value of the feature.                                |
+| MaxValue             | `decimal`                  | Max value of the feature.                                    |
+| StepValue            | `decimal`                  | Allowed step values between the minimum and maximum values of the feature. |
+
+##### RelationshipType
+
+Relationship type of a feature to its parent.
+
+| Key  | Description |
+| ---- | ----------- |
+| 0    | Optional    |
+| 1    | Mandatory   |
+| 2    | Alternative |
+| 3    | Or          |
+
+##### ConfigurationFeatureType
+
+Determines how the user should interact with this feature in the configurator.
+
+| Key  | Description                                    |
+| ---- | ---------------------------------------------- |
+| 0    | Standard type.                                 |
+| 2    | Feature should be displayed as a color picker. |
+| 3    | Feature should be displayed as a text input.   |
+
+##### DisplayType
+
+| Key  | Description             |
+| ---- | ----------------------- |
+| 0    | Standard                |
+| 1    | Image box               |
+| 2    | Dropdown                |
+| 4    | Searchbar in dialog     |
+| 5    | Table                   |
+| 6    | Searchbar not in dialog |
+
+#### ConfigurationStep
+
+| Name                 | Type                     | Description                                                 |
+| -------------------- | ------------------------ | ----------------------------------------------------------- |
+| Id                   | `Guid`                   | Identifier of the step.                                     |
+| ConfigurationModelId | `Guid`                   | Identifier of the configuration model this step belongs to. |
+| Title                | `string`                 | Title of the step.                                          |
+| Type                 | `StepType`               | Type of the step                                            |
+| Features             | `ConfigurationFeature[]` | Features that should be displayed in this step.             |
+| IconUrl              | `string`                 | URL of the icon that should be displayed for the step.      |
+
+##### StepType
+
+| Key  | Description |
+| ---- | ----------- |
+| 2    | Hotspots    |
+| 5    | 3D          |
+
+#### ConfigurationConflict
+
+| Name           | Type                   | Description                                                  |
+| -------------- | ---------------------- | ------------------------------------------------------------ |
+| Feature        | `ConfigurationFeature` | The feature that has conflict.                               |
+| Type           | `ConflictType`         | Type of the conflict.                                        |
+| RequestedValue | `decimal`              | If the conflict type is `Value`, this property holds the value that was requested as part of a user requirement. |
+| ActualValue    | `decimal`              | If the conflict type is `Value`, this property holds the actual value that will be assigned if the conflict is ignored. |
+
+##### ConflictType
+
+| Key  | Description |
+| ---- | ----------- |
+| 0    | Add         |
+| 1    | Remove      |
+| 2    | Alternative |
+| 3    | Value       |
+
+#### ConfigurationRequirement
+
+| Name   | Type      | Description                              |
+| ------ | --------- | ---------------------------------------- |
+| NodeId | `Guid`    | Identifier of the configuration feature. |
+| Value  | `decimal` | Selected value.                          |
+
+
+
+---
 
 Missing a property? Feel free to contact us at `support@elfsquad.io`.
+
