@@ -1,213 +1,1250 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Models - Elfsquad Docs</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Models";
-    var mkdocs_page_input_path = "models.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
 
-<body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Elfsquad Docs</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>Models - Elfsquad Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Elfsquad Docs" class="md-header-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <p class="caption"><span class="caption-text">Overview</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Models</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#application-events">Application Events</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationrequested">QuotationRequested</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationtopending">QuotationToPending</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationtoaccepted">QuotationToAccepted</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationverified">QuotationVerified</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#category">Category</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#categorytext">CategoryText</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#country">Country</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#crmaccount">CrmAccount</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#relationship-type">Relationship type</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#crmcontact">CrmContact</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#currency">Currency</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#exchangerate">ExchangeRate</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#feature">Feature</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#featuretype">FeatureType</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#featuretext">FeatureText</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#feature-text-type">Feature text type</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#_1"></a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#featureproperty">FeatureProperty</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#featurepropertytype">FeaturePropertyType</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#associatedfeatureproperty">AssociatedFeatureProperty</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#featurehasfeatureproperty">FeatureHasFeatureProperty</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#leasetable">LeaseTable</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#leasetableline">LeaseTableLine</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#termtype">TermType</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#organization">Organization</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#vat">VAT</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#quotation">Quotation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationstatus">QuotationStatus</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationline">QuotationLine</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#quotationfile">QuotationFile</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#fileentity">FileEntity</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#unitofmeasurement">UnitOfMeasurement</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#usercreationrequest">UserCreationRequest</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">REST API</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/start/">Getting started</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/endpoints-crud/">Basic endpoints</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/webhooks/">Webhooks</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/tutorial/features/">Tutorial: Features</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/tutorial/applicationevents/">Tutorial: Application Events</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/tutorial/angularconfigurator/angular_configurator/">Tutorial: Custom configurator in Angular</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">SDK</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../sdk/start/">Getting started</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../sdk/applicationevents/">Acting on events</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">PyAPI (Python)</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../pyapi/start/">Getting started</a>
-                    </li>
-                </ul>
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Elfsquad Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Elfsquad Docs</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Overview &raquo;</li>
-        
-      
-    
-    <li>Models</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
+  </div>
 </div>
-          <div role="main">
-            <div class="section">
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Elfsquad Docs" class="md-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    Elfsquad Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Models
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Models" class="md-nav__link md-nav__link--active">
+      Models
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-events" class="md-nav__link">
+    Application Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationrequested" class="md-nav__link">
+    QuotationRequested
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtopending" class="md-nav__link">
+    QuotationToPending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtoaccepted" class="md-nav__link">
+    QuotationToAccepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationverified" class="md-nav__link">
+    QuotationVerified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorytext" class="md-nav__link">
+    CategoryText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country" class="md-nav__link">
+    Country
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmaccount" class="md-nav__link">
+    CrmAccount
+  </a>
+  
+    <nav class="md-nav" aria-label="CrmAccount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type" class="md-nav__link">
+    Relationship type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmcontact" class="md-nav__link">
+    CrmContact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchangerate" class="md-nav__link">
+    ExchangeRate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featuretype" class="md-nav__link">
+    FeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featuretext" class="md-nav__link">
+    FeatureText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-text-type" class="md-nav__link">
+    Feature text type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#featureproperty" class="md-nav__link">
+    FeatureProperty
+  </a>
+  
+    <nav class="md-nav" aria-label="FeatureProperty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featurepropertytype" class="md-nav__link">
+    FeaturePropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associatedfeatureproperty" class="md-nav__link">
+    AssociatedFeatureProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featurehasfeatureproperty" class="md-nav__link">
+    FeatureHasFeatureProperty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasetable" class="md-nav__link">
+    LeaseTable
+  </a>
+  
+    <nav class="md-nav" aria-label="LeaseTable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasetableline" class="md-nav__link">
+    LeaseTableLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termtype" class="md-nav__link">
+    TermType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vat" class="md-nav__link">
+    VAT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotation" class="md-nav__link">
+    Quotation
+  </a>
+  
+    <nav class="md-nav" aria-label="Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationstatus" class="md-nav__link">
+    QuotationStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationline" class="md-nav__link">
+    QuotationLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationfile" class="md-nav__link">
+    QuotationFile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileentity" class="md-nav__link">
+    FileEntity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitofmeasurement" class="md-nav__link">
+    UnitOfMeasurement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usercreationrequest" class="md-nav__link">
+    UserCreationRequest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeature" class="md-nav__link">
+    ConfigurationFeature
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationFeature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationshiptype" class="md-nav__link">
+    RelationshipType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeaturetype" class="md-nav__link">
+    ConfigurationFeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytype" class="md-nav__link">
+    DisplayType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationstep" class="md-nav__link">
+    ConfigurationStep
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationStep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steptype" class="md-nav__link">
+    StepType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationconflict" class="md-nav__link">
+    ConfigurationConflict
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationConflict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conflicttype" class="md-nav__link">
+    ConflictType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationrequirement" class="md-nav__link">
+    ConfigurationRequirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      REST API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="REST API" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/endpoints-crud/" title="Basic endpoints" class="md-nav__link">
+      Basic endpoints
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/configurator/" title="Configurator" class="md-nav__link">
+      Configurator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/features/" title="Tutorial: Features" class="md-nav__link">
+      Tutorial: Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/applicationevents/" title="Tutorial: Application Events" class="md-nav__link">
+      Tutorial: Application Events
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-nav__link">
+      Tutorial: Custom configurator in Angular
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      SDK
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sdk/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sdk/applicationevents/" title="Acting on events" class="md-nav__link">
+      Acting on events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      PyAPI (Python)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="PyAPI (Python)" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        PyAPI (Python)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pyapi/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-events" class="md-nav__link">
+    Application Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationrequested" class="md-nav__link">
+    QuotationRequested
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtopending" class="md-nav__link">
+    QuotationToPending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtoaccepted" class="md-nav__link">
+    QuotationToAccepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationverified" class="md-nav__link">
+    QuotationVerified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorytext" class="md-nav__link">
+    CategoryText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country" class="md-nav__link">
+    Country
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmaccount" class="md-nav__link">
+    CrmAccount
+  </a>
+  
+    <nav class="md-nav" aria-label="CrmAccount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type" class="md-nav__link">
+    Relationship type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmcontact" class="md-nav__link">
+    CrmContact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchangerate" class="md-nav__link">
+    ExchangeRate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featuretype" class="md-nav__link">
+    FeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featuretext" class="md-nav__link">
+    FeatureText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-text-type" class="md-nav__link">
+    Feature text type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#featureproperty" class="md-nav__link">
+    FeatureProperty
+  </a>
+  
+    <nav class="md-nav" aria-label="FeatureProperty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featurepropertytype" class="md-nav__link">
+    FeaturePropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associatedfeatureproperty" class="md-nav__link">
+    AssociatedFeatureProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featurehasfeatureproperty" class="md-nav__link">
+    FeatureHasFeatureProperty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasetable" class="md-nav__link">
+    LeaseTable
+  </a>
+  
+    <nav class="md-nav" aria-label="LeaseTable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasetableline" class="md-nav__link">
+    LeaseTableLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termtype" class="md-nav__link">
+    TermType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vat" class="md-nav__link">
+    VAT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotation" class="md-nav__link">
+    Quotation
+  </a>
+  
+    <nav class="md-nav" aria-label="Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationstatus" class="md-nav__link">
+    QuotationStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationline" class="md-nav__link">
+    QuotationLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationfile" class="md-nav__link">
+    QuotationFile
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileentity" class="md-nav__link">
+    FileEntity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitofmeasurement" class="md-nav__link">
+    UnitOfMeasurement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usercreationrequest" class="md-nav__link">
+    UserCreationRequest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeature" class="md-nav__link">
+    ConfigurationFeature
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationFeature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationshiptype" class="md-nav__link">
+    RelationshipType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeaturetype" class="md-nav__link">
+    ConfigurationFeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytype" class="md-nav__link">
+    DisplayType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationstep" class="md-nav__link">
+    ConfigurationStep
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationStep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steptype" class="md-nav__link">
+    StepType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationconflict" class="md-nav__link">
+    ConfigurationConflict
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationConflict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conflicttype" class="md-nav__link">
+    ConflictType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationrequirement" class="md-nav__link">
+    ConfigurationRequirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
               
+                
+                
+                  
+                
+                
                 <h1 id="models">Models</h1>
 <p>This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. </p>
-<h2 id="application-events">Application Events</h2>
+<h3 id="application-events">Application Events</h3>
 <p>There are a number of application event types available through the API. See <a href="api/tutorial/applicationevents/">application event tutorials</a> for more info.</p>
 <table>
 <thead>
@@ -251,7 +1288,7 @@
 </tbody>
 </table>
 <p>Besides the common application event properties, each type of application event has additional information available to it:</p>
-<h3 id="quotationrequested">QuotationRequested</h3>
+<h4 id="quotationrequested">QuotationRequested</h4>
 <table>
 <thead>
 <tr>
@@ -268,7 +1305,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationtopending">QuotationToPending</h3>
+<h4 id="quotationtopending">QuotationToPending</h4>
 <table>
 <thead>
 <tr>
@@ -285,7 +1322,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationtoaccepted">QuotationToAccepted</h3>
+<h4 id="quotationtoaccepted">QuotationToAccepted</h4>
 <table>
 <thead>
 <tr>
@@ -302,7 +1339,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationverified">QuotationVerified</h3>
+<h4 id="quotationverified">QuotationVerified</h4>
 <table>
 <thead>
 <tr>
@@ -319,7 +1356,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="category">Category</h2>
+<h3 id="category">Category</h3>
 <table>
 <thead>
 <tr>
@@ -361,7 +1398,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="categorytext">CategoryText</h3>
+<h4 id="categorytext">CategoryText</h4>
 <table>
 <thead>
 <tr>
@@ -393,7 +1430,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="country">Country</h2>
+<h3 id="country">Country</h3>
 <table>
 <thead>
 <tr>
@@ -435,7 +1472,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="crmaccount">CrmAccount</h2>
+<h3 id="crmaccount">CrmAccount</h3>
 <table>
 <thead>
 <tr>
@@ -557,7 +1594,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="relationship-type">Relationship type</h3>
+<h4 id="relationship-type">Relationship type</h4>
 <table>
 <thead>
 <tr>
@@ -580,7 +1617,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="crmcontact">CrmContact</h2>
+<h3 id="crmcontact">CrmContact</h3>
 <table>
 <thead>
 <tr>
@@ -672,7 +1709,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="currency">Currency</h2>
+<h3 id="currency">Currency</h3>
 <table>
 <thead>
 <tr>
@@ -714,7 +1751,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="exchangerate">ExchangeRate</h2>
+<h3 id="exchangerate">ExchangeRate</h3>
 <table>
 <thead>
 <tr>
@@ -741,7 +1778,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="feature">Feature</h2>
+<h3 id="feature">Feature</h3>
 <p>Every configuration model is based on features. Features are used to capture rich product information (texts, images, pricing). Once created, features can be categorized and implemented in product structures.</p>
 <table>
 <thead>
@@ -892,7 +1929,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="featuretext">FeatureText</h3>
+<h4 id="featuretext">FeatureText</h4>
 <table>
 <thead>
 <tr>
@@ -1091,7 +2128,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="leasetable">LeaseTable</h2>
+<h3 id="leasetable">LeaseTable</h3>
 <table>
 <thead>
 <tr>
@@ -1128,7 +2165,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="leasetableline">LeaseTableLine</h3>
+<h4 id="leasetableline">LeaseTableLine</h4>
 <table>
 <thead>
 <tr>
@@ -1198,7 +2235,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="organization">Organization</h2>
+<h3 id="organization">Organization</h3>
 <table>
 <thead>
 <tr>
@@ -1240,7 +2277,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="vat">VAT</h2>
+<h3 id="vat">VAT</h3>
 <table>
 <thead>
 <tr>
@@ -1272,7 +2309,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="quotation">Quotation</h2>
+<h3 id="quotation">Quotation</h3>
 <table>
 <thead>
 <tr>
@@ -1449,7 +2486,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationstatus">QuotationStatus</h3>
+<h4 id="quotationstatus">QuotationStatus</h4>
 <p>A quotation can have the following states:</p>
 <table>
 <thead>
@@ -1489,7 +2526,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationline">QuotationLine</h3>
+<h4 id="quotationline">QuotationLine</h4>
 <table>
 <thead>
 <tr>
@@ -1691,7 +2728,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="quotationfile">QuotationFile</h3>
+<h4 id="quotationfile">QuotationFile</h4>
 <table>
 <thead>
 <tr>
@@ -1746,7 +2783,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="unitofmeasurement">UnitOfMeasurement</h2>
+<h3 id="unitofmeasurement">UnitOfMeasurement</h3>
 <table>
 <thead>
 <tr>
@@ -1773,7 +2810,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="usercreationrequest">UserCreationRequest</h2>
+<h3 id="usercreationrequest">UserCreationRequest</h3>
 <table>
 <thead>
 <tr>
@@ -1820,58 +2857,617 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h3 id="configuration">Configuration</h3>
+<p>Models that can be used to edit a existing configuration or develop your own custom configurator interface.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Unique identifier of the configuration session</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>A unique code that represents this configuration session and can be used by a user to resume the session.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model that is being configured.</td>
+</tr>
+<tr>
+<td>Root</td>
+<td><code>ConfigurationFeature</code></td>
+<td>The root feature of the configuration model that is being configured.</td>
+</tr>
+<tr>
+<td>Steps</td>
+<td><code>ConfigurationStep[]</code></td>
+<td>List of steps that is used to structure the configurator UI.</td>
+</tr>
+<tr>
+<td>PreconfigurationFeatures</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>A set of features that should be displayed before the user sees any of the configurator steps.</td>
+</tr>
+<tr>
+<td>Values</td>
+<td><code>{ 'id': SelectedValue }</code></td>
+<td>Object that gives easy access to a selected value for a given feature.</td>
+</tr>
+<tr>
+<td>TextValues</td>
+<td><code>{ 'id': string }</code></td>
+<td>Object that gives easy access to a selected text value for a given feature.</td>
+</tr>
+<tr>
+<td>Requirements</td>
+<td><code>ConfigurationRequirement[]</code></td>
+<td>Set of requirements made by the user during the configuration session.</td>
+</tr>
+<tr>
+<td>Language</td>
+<td><code>string</code></td>
+<td>Two-letter ISO code of the selected configuration language.</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td><code>string</code></td>
+<td>Two-letter ISO code of the selected configuration currency.</td>
+</tr>
+<tr>
+<td>BasePriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the base price excluding VAT.</td>
+</tr>
+<tr>
+<td>BasePriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the base price including VAT.</td>
+</tr>
+<tr>
+<td>BasePriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Base price excluding VAT.</td>
+</tr>
+<tr>
+<td>BasePriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Base price including VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the additional price excluding VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the additional price including VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Additional price excluding VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Additional price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td><code>ConfigurationConflict[]</code></td>
+<td>When conflicts occur during the configuration session, this array will be populated with conflict data.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationfeature">ConfigurationFeature</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Unique identifier of this feature's unique position in the configuration model.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model this feature belongs to.</td>
+</tr>
+<tr>
+<td>ParentId</td>
+<td><code>Guid?</code></td>
+<td>Identifier of the parent feature. Null if this feature is the root.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature that is attached.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>Selected value in the configuration session.</td>
+</tr>
+<tr>
+<td>TextValue</td>
+<td><code>string</code></td>
+<td>Selected text value in the configuration session.</td>
+</tr>
+<tr>
+<td>IsSelected</td>
+<td><code>boolean</code></td>
+<td>Flag indicating if the feature is selected in the configuration session.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>Code of the feature.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>Description of the feature.</td>
+</tr>
+<tr>
+<td>ExtendedDescription</td>
+<td><code>string</code></td>
+<td>Extended description of the feature.</td>
+</tr>
+<tr>
+<td>MoreInfo</td>
+<td><code>string</code></td>
+<td>More info of the feature.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the feature.</td>
+</tr>
+<tr>
+<td>ArticleCode</td>
+<td><code>string</code></td>
+<td>Same as Code.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurement</td>
+<td><code>string</code></td>
+<td>Unit of measurement of the feature.</td>
+</tr>
+<tr>
+<td>ImageUrl</td>
+<td><code>string</code></td>
+<td>URL to the image of the feature.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>RelationshipType</code></td>
+<td>Relationship type of this feature to its parent.</td>
+</tr>
+<tr>
+<td>FeatureType</td>
+<td><code>ConfigurationFeatureType</code></td>
+<td>Determines how the user should interact with this feature in the configurator.</td>
+</tr>
+<tr>
+<td>DisplayType</td>
+<td><code>DisplayType</code></td>
+<td>Determines how the feature should be rendered in the configurator.</td>
+</tr>
+<tr>
+<td>Features</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>Child features.</td>
+</tr>
+<tr>
+<td>IsBestMatch</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates of the feature is a best match based on a selection in the PreconfigurationFeatures of the configuration session.</td>
+</tr>
+<tr>
+<td>IsMandatory</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates if this feature is mandatory. The user should not be provided with a way to create a quotation before this feature is answered.</td>
+</tr>
+<tr>
+<td>HideInQuotation</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates that is feature is not displayed in the quotation. The configurator should not display this feature in any overviews.</td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+<td><code>string</code></td>
+<td>Formatted string of the unit price excluding VAT.</td>
+</tr>
+<tr>
+<td>UnitPriceExclVat</td>
+<td><code>decimal</code></td>
+<td>Unit price excluding VAT.</td>
+</tr>
+<tr>
+<td>UnitPriceInclVat</td>
+<td><code>decimal</code></td>
+<td>Unit price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPrice</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVat</td>
+<td><code>decimal</code></td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVat</td>
+<td><code>decimal</code></td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>MinValue</td>
+<td><code>decimal</code></td>
+<td>Minimal value of the feature.</td>
+</tr>
+<tr>
+<td>MaxValue</td>
+<td><code>decimal</code></td>
+<td>Max value of the feature.</td>
+</tr>
+<tr>
+<td>StepValue</td>
+<td><code>decimal</code></td>
+<td>Allowed step values between the minimum and maximum values of the feature.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="relationshiptype">RelationshipType</h5>
+<p>Relationship type of a feature to its parent.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alternative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Or</td>
+</tr>
+</tbody>
+</table>
+<h5 id="configurationfeaturetype">ConfigurationFeatureType</h5>
+<p>Determines how the user should interact with this feature in the configurator.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Standard type.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Feature should be displayed as a color picker.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Feature should be displayed as a text input.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="displaytype">DisplayType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Image box</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dropdown</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Searchbar in dialog</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Table</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Searchbar not in dialog</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationstep">ConfigurationStep</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the step.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model this step belongs to.</td>
+</tr>
+<tr>
+<td>Title</td>
+<td><code>string</code></td>
+<td>Title of the step.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>StepType</code></td>
+<td>Type of the step</td>
+</tr>
+<tr>
+<td>Features</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>Features that should be displayed in this step.</td>
+</tr>
+<tr>
+<td>IconUrl</td>
+<td><code>string</code></td>
+<td>URL of the icon that should be displayed for the step.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="steptype">StepType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Hotspots</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3D</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationconflict">ConfigurationConflict</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td><code>ConfigurationFeature</code></td>
+<td>The feature that has conflict.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>ConflictType</code></td>
+<td>Type of the conflict.</td>
+</tr>
+<tr>
+<td>RequestedValue</td>
+<td><code>decimal</code></td>
+<td>If the conflict type is <code>Value</code>, this property holds the value that was requested as part of a user requirement.</td>
+</tr>
+<tr>
+<td>ActualValue</td>
+<td><code>decimal</code></td>
+<td>If the conflict type is <code>Value</code>, this property holds the actual value that will be assigned if the conflict is ignored.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="conflicttype">ConflictType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Add</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Remove</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alternative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationrequirement">ConfigurationRequirement</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration feature.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>Selected value.</td>
+</tr>
+</tbody>
+</table>
+<hr />
 <p>Missing a property? Feel free to contact us at <code>support@elfsquad.io</code>.</p>
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../api/start/" class="btn btn-neutral float-right" title="Getting started">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href=".." class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="Getting started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../api/start/" title="Getting started" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting started
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../api/start/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+    
+  </body>
 </html>

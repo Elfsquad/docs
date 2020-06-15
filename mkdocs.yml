@@ -22,3 +22,5 @@ nav:
     - 'Acting on events': sdk/applicationevents.md
   - 'PyAPI (Python)':
     - 'Getting started': pyapi/start.md
+markdown_extensions:
+  - codehilite
