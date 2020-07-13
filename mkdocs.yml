@@ -15,11 +15,16 @@ nav:
     - Webhooks: api/webhooks.md
     - Configurator: api/configurator.md
     - 'Tutorial: Features': api/tutorial/features.md
-    - 'Tutorial: Application Events': api/tutorial/applicationevents.md
-    - 'Tutorial: Custom configurator in Angular': api/tutorial/angularconfigurator/angular_configurator.md
-  - SDK:
+    - 'Tutorial: Application Events': api/tutorial/applicationevents.md    
+  - SDK (C#):
     - 'Getting started': sdk/start.md
     - 'Acting on events': sdk/applicationevents.md
+  - SDK (JS):
+    - 'Getting started': lib/start.md
+    - 'API defintion': lib/api-definition.md
+    - 'Step-by-Step Tutorials':
+        - 'Basic operations': lib/tutorials/basic-operations.md
+        - 'Tutorial: Custom configurator in Angular': api/tutorial/angularconfigurator/angular_configurator.md
   - 'PyAPI (Python)':
     - 'Getting started': pyapi/start.md
 markdown_extensions:
