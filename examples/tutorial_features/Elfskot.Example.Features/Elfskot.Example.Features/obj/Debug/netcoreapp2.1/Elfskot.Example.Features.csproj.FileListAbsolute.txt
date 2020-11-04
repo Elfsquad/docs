@@ -9,3 +9,15 @@ D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features
 D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.AssemblyInfo.cs
 D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.dll
 D:\Repositories\elfskot.docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.pdb
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.deps.json
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.runtimeconfig.json
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.runtimeconfig.dev.json
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.dll
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\bin\Debug\netcoreapp2.1\Elfskot.Example.Features.pdb
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.csprojAssemblyReference.cache
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.AssemblyInfoInputs.cache
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.AssemblyInfo.cs
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.csproj.CoreCompileInputs.cache
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.dll
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.pdb
+C:\Workspace\docs\examples\tutorial_features\Elfskot.Example.Features\Elfskot.Example.Features\obj\Debug\netcoreapp2.1\Elfskot.Example.Features.genruntimeconfig.cache

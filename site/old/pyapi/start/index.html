@@ -1,0 +1,1152 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>Getting started - Elfsquad Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elfsquad-pyapi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Elfsquad Docs" class="md-header-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Elfsquad Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Getting started
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Elfsquad Docs" class="md-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    Elfsquad Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../apis/data/" title="Data API" class="md-nav__link">
+      Data API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API V2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API V2" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API V2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      REST API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="REST API" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/endpoints-crud/" title="Basic endpoints" class="md-nav__link">
+      Basic endpoints
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/configurator/" title="Configurator" class="md-nav__link">
+      Configurator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/features/" title="Tutorial: Features" class="md-nav__link">
+      Tutorial: Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/applicationevents/" title="Tutorial: Application Events" class="md-nav__link">
+      Tutorial: Application Events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      SDK (C#)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (C#)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (C#)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdk/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdk/applicationevents/" title="Acting on events" class="md-nav__link">
+      Acting on events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      SDK (JS)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (JS)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (JS)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lib/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lib/api-definition/" title="API defintion" class="md-nav__link">
+      API defintion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Step-by-Step Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Step-by-Step Tutorials" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Step-by-Step Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../lib/tutorials/basic-operations/" title="Basic operations" class="md-nav__link">
+      Basic operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-nav__link">
+      Tutorial: Custom configurator in Angular
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
+    
+    <label class="md-nav__link" for="nav-4-5">
+      PyAPI (Python)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="PyAPI (Python)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        PyAPI (Python)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting started
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Getting started" class="md-nav__link md-nav__link--active">
+      Getting started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pyapi-reference" class="md-nav__link">
+    PyApi reference
+  </a>
+  
+    <nav class="md-nav" aria-label="PyApi reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elfskotapi" class="md-nav__link">
+    ElfskotApi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-demonstration" class="md-nav__link">
+    Usage demonstration
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage demonstration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pyapi-reference" class="md-nav__link">
+    PyApi reference
+  </a>
+  
+    <nav class="md-nav" aria-label="PyApi reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elfskotapi" class="md-nav__link">
+    ElfskotApi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-demonstration" class="md-nav__link">
+    Usage demonstration
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage demonstration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="elfsquad-pyapi">Elfsquad PyApi</h1>
+<p>The following code is the implementation of theElfsquad PyApi. It is adviced to store the code in a file <code>elfskotapi.py</code>, which can then be included in your Python projects. The usage of the PyApi is described in the remainder of this document.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Required packages:</span>
+<span class="c1"># pip3 install requests pandas</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">unpack</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;list&#39;</span> <span class="k">else</span> <span class="n">s</span>
+<span class="k">def</span> <span class="nf">head</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+<span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[:</span><span class="n">n</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">drop</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span> <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="p">:]</span>
+
+<span class="k">class</span> <span class="nc">TextType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">Description</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">ExtendedDescription</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">MoreInfo</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">class</span> <span class="nc">ElfskotApi</span><span class="p">():</span>
+
+    <span class="n">base_address</span> <span class="o">=</span> <span class="s1">&#39;https://api.elfsquad.io/api/2/&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">application_id</span><span class="p">,</span> <span class="n">secret</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_id</span> <span class="o">=</span> <span class="n">application_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">secret</span> <span class="o">=</span> <span class="n">secret</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;clientId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">application_id</span><span class="p">,</span> <span class="s1">&#39;secret&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">secret</span><span class="p">}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_url</span><span class="p">(</span><span class="s1">&#39;auth/elfskotconnectlogin&#39;</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s1">&#39;accessToken&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">check_result</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Error: API returned status code </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="p">))</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">get_auth_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="s1">&#39;bearer </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="p">)}</span>
+    <span class="k">def</span> <span class="nf">get_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_address</span> <span class="o">+</span> <span class="n">endpoint</span>
+
+    <span class="k">def</span> <span class="nf">http_return_if_valid</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">http_get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_return_if_valid</span><span class="p">(</span>
+            <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">endpoint</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_auth_header</span><span class="p">())</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">http_post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_return_if_valid</span><span class="p">(</span>
+            <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">endpoint</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">o</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_auth_header</span><span class="p">())</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">http_put</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_return_if_valid</span><span class="p">(</span>
+            <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">endpoint</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">o</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_auth_header</span><span class="p">())</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">http_delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_url</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_auth_header</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span> 
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Error: API returned status code </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span> <span class="k">return</span> <span class="n">Query</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_get</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_post</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_put</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span> <span class="bp">self</span><span class="o">.</span><span class="n">http_delete</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>  
+    <span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model for </span><span class="si">{}</span><span class="s1">:</span><span class="se">\r\n</span><span class="si">{}</span><span class="s1">&#39;</span>
+                                    <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+
+<span class="k">class</span> <span class="nc">Query</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">http</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">http</span> <span class="o">=</span> <span class="n">http</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span> <span class="o">=</span> <span class="n">endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">raise_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">skip</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;skip&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">raise_</span><span class="p">(</span><span class="s1">&#39;Skip already set.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;skip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s1">&#39;limit&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">raise_</span><span class="p">(</span><span class="s1">&#39;Take already called.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;limit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="c1"># this does no require multiple includes yet, it is limited to</span>
+    <span class="c1"># one field.</span>
+    <span class="k">def</span> <span class="nf">include</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;include&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">property</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="nb">property</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">property</span><span class="p">,</span> <span class="n">descending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;orderby&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">property</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">descending</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;descending&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">url_qry_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">?</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">endpoint</span><span class="p">,</span> <span class="s1">&#39;&amp;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> 
+                                                       <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()]))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="p">[]:</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">http</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_qry_params</span><span class="p">())</span>
+        <span class="k">try</span><span class="p">:</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">StopIteration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="p">())</span>
+    <span class="k">def</span> <span class="nf">first</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="n">head</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="p">())</span>
+</code></pre></div>
+
+<h2 id="pyapi-reference">PyApi reference</h2>
+<h3 id="elfskotapi">ElfskotApi</h3>
+<p>The <code>ElfskotApi</code> object is a HTTP client which also handles the authorization token. It allows the <code>GET</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code> HTTP methods. The <code>ElfskotApi</code> is instantiated with a <code>appId</code> and <code>secret</code> which are found in the integration section of the EMS. The following example shows how to instantiate the object:</p>
+<div class="highlight"><pre><span></span><code><span class="n">db</span> <span class="o">=</span> <span class="n">ElfskotApi</span><span class="p">(</span><span class="s1">&#39;appId&#39;</span><span class="p">,</span> <span class="s1">&#39;secret&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>The following methods are available for the <code>ElfskotApi</code> object:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>query(endpoint)</code></td>
+<td>Return the <code>Query</code> object for the endpoint.</td>
+<td><code>db.query('features')</code></td>
+</tr>
+<tr>
+<td><code>all(endpoint)</code></td>
+<td>Returns the <code>Query</code> object for the endpoint.</td>
+<td><code>db.all('features')</code></td>
+</tr>
+<tr>
+<td><code>find(endpoint, property, value)</code></td>
+<td>Finds all objects with a property equal to the value.</td>
+<td><code>db.find('features','name','tire')</code></td>
+</tr>
+<tr>
+<td><code>get(endpoint, id)</code></td>
+<td>Finds a single object, based on an id.</td>
+<td><code>db.get('features', ...)</code></td>
+</tr>
+<tr>
+<td><code>new(endpoint, object)</code></td>
+<td>Creates a new object.</td>
+<td><code>db.new('features', feature)</code></td>
+</tr>
+<tr>
+<td><code>update(endpoint, object)</code></td>
+<td>Updates an object, it matches it by id.</td>
+<td><code>db.update('features',feature)</code></td>
+</tr>
+<tr>
+<td><code>delete(endpoint, id)</code></td>
+<td>Deletes an object, based on the id.</td>
+<td><code>db.delete('features', ...)</code></td>
+</tr>
+<tr>
+<td><code>help(endpoint</code>)</td>
+<td>Retrieves the first object in the endpoint, and displays all column names.</td>
+<td><code>db.help('features')</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="query">Query</h3>
+<p>The <code>Query</code> class allows you to compose HTTP requests for our API. It supports lazy evaluation, and the data is only requested when the data is enumerated, or accessed. The <code>Query</code> object helps with composing the url for the request. The <code>Query</code> object will allow you to use the query parameters that are supported by our API. The query parameters that are supported are: <code>skip</code>, <code>limit</code>, <code>orderby</code>, <code>descending</code>, <code>include</code>, and <code>filter</code>.</p>
+<p>The following methods are available in the <code>Query</code> object:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>skip(int)</code></td>
+<td>Skips the first n results.</td>
+<td><code>db.all('features').skip(10)</code></td>
+</tr>
+<tr>
+<td><code>take(int)</code></td>
+<td>Limit the query to n results.</td>
+<td><code>db.all('features').take(10)</code></td>
+</tr>
+<tr>
+<td><code>include(string</code></td>
+<td>Includes the objects in a list of objects, for example, feature texts.</td>
+<td><code>db.all('features').include('texts')</code></td>
+</tr>
+<tr>
+<td><code>filter(string,any)</code></td>
+<td>Filter on a property in the model.</td>
+<td><code>db.all('features').filter('name','S6000')</code></td>
+</tr>
+<tr>
+<td><code>sort(string)</code></td>
+<td>Order the results on a property.</td>
+<td><code>db.all('features').sort('name')</code></td>
+</tr>
+<tr>
+<td><code>descending()</code></td>
+<td>Order the results in descending order.</td>
+<td><code>db.all('features').sort('name').descending()</code></td>
+</tr>
+<tr>
+<td><code>list()</code></td>
+<td>Returns the results as a list, this will evaluate the query.</td>
+<td><code>db.all('features').list()</code></td>
+</tr>
+<tr>
+<td><code>df()</code></td>
+<td>Returns the results as a <code>DataFrame</code> (requires <code>pandas</code>), this will evaluate the query.</td>
+<td><code>db.all('features').df()</code></td>
+</tr>
+<tr>
+<td><code>first()</code></td>
+<td>Returns the first element in the results, this will evaluate the query.</td>
+<td><code>db.all('features').first()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: If you want to retrieve a single object, use the <code>take(1)</code> expression with <code>first()</code> to evaluate the query. This ensures that the API is only processing a single record, which improves the speed. For example: <code>db.all('features').sort('name').take(1).first()</code>.</p>
+<h2 id="usage-demonstration">Usage demonstration</h2>
+<h3 id="getting-started">Getting started</h3>
+<p>First instantiate a new <code>ElfskotApi</code> object with the <code>appId</code> and <code>secret</code> which are found in the integrations tab in your EMS.</p>
+<div class="highlight"><pre><span></span><code><span class="n">db</span> <span class="o">=</span> <span class="n">ElfskotApi</span><span class="p">(</span><span class="s1">&#39;appId&#39;</span><span class="p">,</span> <span class="s1">&#39;secret&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>While initializing the object, an authorization token is requested from the API. When the object is initialized, it is now possible to query our REST API.</p>
+<p>As an example, we will request a sorted list (by name) of features. Also, the texts of the feature should be included in the query. Finally, we take the first feature that is found and print it.</p>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s1">&#39;features&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;texts&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;articleCode&#39;: None,
+ &#39;cardImageUrl&#39;: None,
+ &#39;category&#39;: None,
+ &#39;categoryId&#39;: None,
+ &#39;createdDate&#39;: &#39;2018-03-30T09:52:47.7797469+00:00&#39;,
+ &#39;creatorId&#39;: &#39;7c10626d-6d57-403c-ec51-08d56407f341&#39;,
+ &#39;customField1&#39;: None,
+ &#39;customField2&#39;: None,
+ &#39;customField3&#39;: None,
+ &#39;customField4&#39;: None,
+ &#39;customField5&#39;: None,
+ &#39;hiddenThreeDModelItems&#39;: [],
+ &#39;id&#39;: &#39;be855af0-3cf2-47c0-bac8-08d595a67251&#39;,
+ &#39;marginPct&#39;: 0.0,
+ &#39;maxValue&#39;: 0.0,
+ &#39;minValue&#39;: 0.0,
+ &#39;name&#39;: None,
+ &#39;organizationId&#39;: None,
+ &#39;organizationName&#39;: None,
+ &#39;organizationSellsFeature&#39;: None,
+ &#39;packingUnit&#39;: 0.0,
+ &#39;properties&#39;: None,
+ &#39;reference&#39;: None,
+ &#39;salesPrice&#39;: 0.0,
+ &#39;salesPriceLabel&#39;: &#39;€ 0,00&#39;,
+ &#39;stepValue&#39;: 0.0,
+ &#39;subcategoryIds&#39;: [],
+ &#39;synced&#39;: False,
+ &#39;tags&#39;: [],
+ &#39;texts&#39;: [],
+ &#39;threeDModelItems&#39;: [],
+ &#39;type&#39;: 0,
+ &#39;unitOfMeasure&#39;: None,
+ &#39;unitOfMeasurement&#39;: None,
+ &#39;unitOfMeasurementId&#39;: None,
+ &#39;updatedDate&#39;: &#39;2018-10-10T12:09:21.8682548+00:00&#39;,
+ &#39;vat&#39;: None,
+ &#39;vatId&#39;: None}
+</code></pre></div>
+
+<p>In the same way, it is possible to request all the categories from the API, and display them by id and name. Do note that the name is a multilingual field, therefore it returns a list with the names in each language. It is also required to include the texts, because this is a different object.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="p">{</span><span class="n">c</span><span class="p">[</span><span class="s1">&#39;texts&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;value&#39;</span><span class="p">]:</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]},</span> <span class="n">db</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s1">&#39;categories&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">include</span><span class="p">(</span><span class="s1">&#39;texts&#39;</span><span class="p">)))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[{&#39;Model&#39;: &#39;4fde3e79-c90e-4844-3d1b-08d50589c407&#39;},
+ {&#39;Engine&#39;: &#39;c6619774-d2aa-4bc4-3d1d-08d50589c407&#39;},
+ {&#39;Transmission&#39;: &#39;b60ee5fb-bb67-4420-3d1e-08d50589c407&#39;},
+ {&#39;Exterior color&#39;: &#39;3ef76c1c-0d4a-4598-3d1f-08d50589c407&#39;},
+ {&#39;Chassis&#39;: &#39;79d10665-18ca-4405-3d20-08d50589c407&#39;},
+ {&#39;Interior&#39;: &#39;88e43ee0-be1c-4efe-3d21-08d50589c407&#39;},
+ {&#39;Infotainment&#39;: &#39;dd2c73a1-007d-4c32-3d22-08d50589c407&#39;},
+ {&#39;Rims&#39;: &#39;a51f921f-8ba4-47b1-3d23-08d50589c407&#39;},
+ {&#39;Tires&#39;: &#39;1c52e16f-fb87-41dd-3d24-08d50589c407&#39;},
+ {&#39;Exhaust&#39;: &#39;2ad69069-8e98-4034-d91b-08d507486180&#39;},
+ {&#39;Sedans&#39;: &#39;2ac6bffb-2543-48f3-f3d4-08d5688fd09d&#39;},
+ {&#39;Off-road&#39;: &#39;e4e18ddb-9cc2-4155-67c6-08d568a38d77&#39;}]
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../api/tutorial/angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tutorial: Custom configurator in Angular
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

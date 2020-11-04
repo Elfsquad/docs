@@ -1,0 +1,927 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>Tutorial: Features - Elfsquad Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="Elfsquad Docs" class="md-header-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Elfsquad Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Tutorial: Features
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Elfsquad Docs" class="md-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    Elfsquad Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../apis/data/" title="Data API" class="md-nav__link">
+      Data API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API V2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API V2" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API V2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      REST API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="REST API" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../endpoints-crud/" title="Basic endpoints" class="md-nav__link">
+      Basic endpoints
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configurator/" title="Configurator" class="md-nav__link">
+      Configurator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Tutorial: Features" class="md-nav__link md-nav__link--active">
+      Tutorial: Features
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../applicationevents/" title="Tutorial: Application Events" class="md-nav__link">
+      Tutorial: Application Events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      SDK (C#)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (C#)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (C#)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sdk/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sdk/applicationevents/" title="Acting on events" class="md-nav__link">
+      Acting on events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      SDK (JS)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (JS)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (JS)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../lib/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../lib/api-definition/" title="API defintion" class="md-nav__link">
+      API defintion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Step-by-Step Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Step-by-Step Tutorials" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Step-by-Step Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../lib/tutorials/basic-operations/" title="Basic operations" class="md-nav__link">
+      Basic operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-nav__link">
+      Tutorial: Custom configurator in Angular
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      PyAPI (Python)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="PyAPI (Python)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        PyAPI (Python)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pyapi/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="introduction">Introduction</h1>
+<p>In this tutorial we will show how you can manage features. The examples will show the following:</p>
+<ul>
+<li>How to retrieve a list of features.</li>
+<li>How to create a new feature.</li>
+<li>How to retrieve a single feature.</li>
+<li>How to update a feature.</li>
+<li>How to delete a feature.</li>
+</ul>
+<p>There is also a <a href="https://github.com/Elfskot/docs/raw/master/examples/tutorial_features/Elfskot.Example.Features_20181016.zip">complete project available for download</a>. This project contains example code that will show how to accomplish the above described tasks.</p>
+<p>If you do not know how to connect to the API, please check out the <a href="/api/start">getting started with the API</a> first.</p>
+<h1 id="retrieving-an-access-token">Retrieving an access token</h1>
+<p>The following C# function will retrieve an access token from the API. </p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Retrieves an access token from the API. This requires an integration application in </span>
+<span class="c1">// theElfsquad Management System. See http://docs.elfsquad.io for more information.</span>
+<span class="k">static</span> <span class="kt">string</span> <span class="nf">RequestAccessToken</span><span class="p">(</span><span class="kt">string</span> <span class="n">applicationId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">secret</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">using</span><span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">body</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span> <span class="n">clientId</span> <span class="p">=</span> <span class="n">applicationId</span><span class="p">,</span> <span class="n">secret</span> <span class="p">=</span> <span class="n">secret</span> <span class="p">});</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Post</span><span class="p">,</span> <span class="s">&quot;https://api.elfsquad.io/api/2/auth/elfskotconnectlogin&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Successfully retrieved an access token.&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;(</span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">().</span><span class="n">Result</span><span class="p">).</span><span class="n">accessToken</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed to request access token, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The access token should be included in every request.</p>
+<h1 id="retrieving-a-list-of-features">Retrieving a list of features</h1>
+<p>To request all the features, we will call the following endpoint: <code>https://api.elfsquad.io/api/2/features?include=Texts&amp;skip=0&amp;take=5</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Retrieve a list of all features.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">RetrieveAllFeatures</span><span class="p">(</span><span class="kt">string</span> <span class="n">token</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">using</span><span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="c1">// Appending ?include=Texts will have the API to include the texts. You can also use skip/take to filter.</span>
+        <span class="c1">// All the filter parameters are optional. See http://docs.elfsquad.io for more information about filtering options.</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Get</span><span class="p">,</span> <span class="s">&quot;https://api.elfsquad.io/api/2/features?include=Texts&amp;skip=0&amp;take=5&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;bearer {token}&quot;</span><span class="p">);</span>
+        <span class="n">PrintHTTPRequest</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">features</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;(</span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">().</span><span class="n">Result</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Retrieved {features.Count} features.&quot;</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">features</span><span class="p">.</span><span class="n">First</span><span class="p">);</span>
+
+            <span class="c1">// We can also loop through all the retrieved features.</span>
+            <span class="c1">//foreach(var feature in features)</span>
+            <span class="c1">//{</span>
+            <span class="c1">//    Console.WriteLine(feature.name);</span>
+            <span class="c1">//}</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="creating-a-new-feature">Creating a new feature</h1>
+<p>To create a new feature, we first need to create a JSON object. This example creates an anonymous object which is converted to a JSON object. It is possible to include multiple layers of objects, i.e. the feature and the texts can be created in a single request.</p>
+<p>All the languages are already available in the API, as defined in ISO 639-1. Simply fill the <code>languageIso</code> with the two letter ISO.</p>
+<p>The API will return the created model at the end of the request. This contains the assigned ID which can be used later.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Creates a new feature in yourElfsquad Management System, and </span>
+<span class="c1">// returns the ID of the newly created feature.</span>
+<span class="k">static</span> <span class="kt">object</span> <span class="nf">CreateFeature</span><span class="p">(</span><span class="kt">string</span> <span class="n">token</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// This object is serialized to a JSON string, see the raw HTTP content</span>
+    <span class="c1">// to see what the request looks like.</span>
+    <span class="kt">var</span> <span class="n">feature</span> <span class="p">=</span> <span class="k">new</span>
+    <span class="p">{</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="s">&quot;Example feature&quot;</span><span class="p">,</span>
+        <span class="n">articleCode</span> <span class="p">=</span> <span class="s">&quot;CODE-123&quot;</span><span class="p">,</span>
+        <span class="n">salesPrice</span> <span class="p">=</span> <span class="m">1000</span><span class="n">m</span><span class="p">,</span>
+        <span class="n">packingUnit</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span>
+        <span class="n">texts</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">object</span><span class="p">&gt;()</span>
+        <span class="p">{</span>
+            <span class="k">new</span>
+            <span class="p">{</span>
+                <span class="n">languageIso</span> <span class="p">=</span> <span class="s">&quot;en&quot;</span><span class="p">,</span> <span class="c1">// 2-letter ISO code, all the languages are already there.</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="m">0</span><span class="p">,</span> <span class="c1">// Description</span>
+                <span class="k">value</span> <span class="p">=</span> <span class="s">&quot;Example feature description&quot;</span>
+            <span class="p">},</span>
+            <span class="k">new</span>
+            <span class="p">{</span>
+                <span class="n">languageIso</span> <span class="p">=</span> <span class="s">&quot;en&quot;</span><span class="p">,</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="c1">// Extended description</span>
+                <span class="k">value</span> <span class="p">=</span> <span class="s">&quot;Example feature extended description&quot;</span>
+            <span class="p">},</span>
+            <span class="k">new</span>
+            <span class="p">{</span>
+                <span class="n">languageIso</span> <span class="p">=</span> <span class="s">&quot;en&quot;</span><span class="p">,</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="m">2</span><span class="p">,</span> <span class="c1">// More info</span>
+                <span class="k">value</span> <span class="p">=</span> <span class="s">&quot;Example feature more info&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="n">cardImageUrl</span> <span class="p">=</span> <span class="s">&quot;https://www.elfsquad.io/wp-content/themes/elfskot/dist/svg/logo-elfskot.svg&quot;</span>
+    <span class="p">};</span>
+
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Post</span><span class="p">,</span> <span class="s">&quot;https://api.elfsquad.io/api/2/features&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;bearer {token}&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">feature</span><span class="p">),</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// The entire feature is stored in &#39;result&#39;.</span>
+            <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;(</span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">().</span><span class="n">Result</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Successfully created new feature with id: {result.id}&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="retrieve-a-single-feature">Retrieve a single feature</h1>
+<p>To retrieve a single feature, call the endpoint <code>https://api.elfsquad.io/api/2/features/{id}?include=Texts</code> with the ID of the feature. If you want additional properties, such as texts, they need to be included seperately. If a property is <code>null</code>, you probably need to include this in the request.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Retrieve a single feature by ID.</span>
+<span class="k">static</span> <span class="kt">object</span> <span class="nf">RetrieveFeatureById</span><span class="p">(</span><span class="kt">string</span> <span class="n">token</span><span class="p">,</span> <span class="kt">string</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="c1">// Appending ?include=Texts will have the API to include the texts.</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Get</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;https://api.elfsquad.io/api/2/features/{id}?include=Texts&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;bearer {token}&quot;</span><span class="p">);</span>
+        <span class="n">PrintHTTPRequest</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">().</span><span class="n">Result</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">feature</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;(</span><span class="n">content</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">feature</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">feature</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="update-an-existing-feature">Update an existing feature</h1>
+<p>Updating an existing feature is almost identical to creating a new feature. Send the feature object to the API with the HTTP PUT method. The API will return the updated feature object.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Updates a feature.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">UpdateFeature</span><span class="p">(</span><span class="kt">string</span> <span class="n">token</span><span class="p">,</span> <span class="kt">dynamic</span> <span class="n">feature</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="c1">// Appending ?include=Texts will have the API to include the texts.</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Put</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;https://api.elfsquad.io/api/2/features&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;bearer {token}&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StringContent</span><span class="p">(</span><span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">feature</span><span class="p">),</span> <span class="n">Encoding</span><span class="p">.</span><span class="n">UTF8</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
+        <span class="n">PrintHTTPRequest</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">content</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">().</span><span class="n">Result</span><span class="p">;</span>
+            <span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">DeserializeObject</span><span class="p">&lt;</span><span class="kt">dynamic</span><span class="p">&gt;(</span><span class="n">content</span><span class="p">);</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="delete-a-feature">Delete a feature</h1>
+<p>To delete a feature, we call the following endpoint <code>https://api.elfsquad.io/api/2/features/{id}</code>, where the <code>id</code> is the ID of the feature to be deleted. Be aware that if a feature is deleted, it will also be removed from all existing feature models.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Deletes a feature.</span>
+<span class="k">static</span> <span class="k">void</span> <span class="nf">DeleteFeature</span><span class="p">(</span><span class="kt">string</span> <span class="n">token</span><span class="p">,</span> <span class="kt">string</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpClient</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HttpRequestMessage</span><span class="p">(</span><span class="n">HttpMethod</span><span class="p">.</span><span class="n">Delete</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;https://api.elfsquad.io/api/2/features/{id}&quot;</span><span class="p">);</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">Headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span> <span class="err">$</span><span class="s">&quot;bearer {token}&quot;</span><span class="p">);</span>
+        <span class="n">PrintHTTPRequest</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+
+        <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">SendAsync</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="n">Result</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Feature has been successfully deleted.&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">HttpRequestException</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;Failed HTTP request, server responded with status code: {response.StatusCode}&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../configurator/" title="Configurator" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Configurator
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../applicationevents/" title="Tutorial: Application Events" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tutorial: Application Events
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

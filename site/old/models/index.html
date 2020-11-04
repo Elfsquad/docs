@@ -1,0 +1,3955 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>Models - Elfsquad Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Elfsquad Docs" class="md-header-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Elfsquad Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Elfsquad Docs" class="md-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    Elfsquad Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../apis/data/" title="Data API" class="md-nav__link">
+      Data API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API V2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API V2" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API V2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Models
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Models" class="md-nav__link md-nav__link--active">
+      Models
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-events" class="md-nav__link">
+    Application Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationrequested" class="md-nav__link">
+    QuotationRequested
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtopending" class="md-nav__link">
+    QuotationToPending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtoaccepted" class="md-nav__link">
+    QuotationToAccepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationverified" class="md-nav__link">
+    QuotationVerified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorytext" class="md-nav__link">
+    CategoryText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country" class="md-nav__link">
+    Country
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmaccount" class="md-nav__link">
+    CrmAccount
+  </a>
+  
+    <nav class="md-nav" aria-label="CrmAccount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type" class="md-nav__link">
+    Relationship type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmcontact" class="md-nav__link">
+    CrmContact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchangerate" class="md-nav__link">
+    ExchangeRate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featuretype" class="md-nav__link">
+    FeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featuretext" class="md-nav__link">
+    FeatureText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-text-type" class="md-nav__link">
+    Feature text type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#featureproperty" class="md-nav__link">
+    FeatureProperty
+  </a>
+  
+    <nav class="md-nav" aria-label="FeatureProperty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featurepropertytype" class="md-nav__link">
+    FeaturePropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associatedfeatureproperty" class="md-nav__link">
+    AssociatedFeatureProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featurehasfeatureproperty" class="md-nav__link">
+    FeatureHasFeatureProperty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasetable" class="md-nav__link">
+    LeaseTable
+  </a>
+  
+    <nav class="md-nav" aria-label="LeaseTable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasetableline" class="md-nav__link">
+    LeaseTableLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termtype" class="md-nav__link">
+    TermType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vat" class="md-nav__link">
+    VAT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotation" class="md-nav__link">
+    Quotation
+  </a>
+  
+    <nav class="md-nav" aria-label="Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationstatus" class="md-nav__link">
+    QuotationStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyvalue" class="md-nav__link">
+    QuotationPropertyValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationline" class="md-nav__link">
+    QuotationLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationfile" class="md-nav__link">
+    QuotationFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationproperty" class="md-nav__link">
+    QuotationProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitypropertytype" class="md-nav__link">
+    EntityPropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitypropertytext" class="md-nav__link">
+    EntityPropertyText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyfield" class="md-nav__link">
+    QuotationPropertyField
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyfieldtext" class="md-nav__link">
+    QuotationPropertyFieldText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileentity" class="md-nav__link">
+    FileEntity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitofmeasurement" class="md-nav__link">
+    UnitOfMeasurement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usercreationrequest" class="md-nav__link">
+    UserCreationRequest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeature" class="md-nav__link">
+    ConfigurationFeature
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationFeature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationshiptype" class="md-nav__link">
+    RelationshipType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeaturetype" class="md-nav__link">
+    ConfigurationFeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytype" class="md-nav__link">
+    DisplayType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationstep" class="md-nav__link">
+    ConfigurationStep
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationStep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steptype" class="md-nav__link">
+    StepType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationconflict" class="md-nav__link">
+    ConfigurationConflict
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationConflict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conflicttype" class="md-nav__link">
+    ConflictType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationrequirement" class="md-nav__link">
+    ConfigurationRequirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      REST API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="REST API" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/endpoints-crud/" title="Basic endpoints" class="md-nav__link">
+      Basic endpoints
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/configurator/" title="Configurator" class="md-nav__link">
+      Configurator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/features/" title="Tutorial: Features" class="md-nav__link">
+      Tutorial: Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/applicationevents/" title="Tutorial: Application Events" class="md-nav__link">
+      Tutorial: Application Events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      SDK (C#)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (C#)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (C#)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sdk/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sdk/applicationevents/" title="Acting on events" class="md-nav__link">
+      Acting on events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      SDK (JS)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (JS)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (JS)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lib/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lib/api-definition/" title="API defintion" class="md-nav__link">
+      API defintion
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Step-by-Step Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Step-by-Step Tutorials" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Step-by-Step Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lib/tutorials/basic-operations/" title="Basic operations" class="md-nav__link">
+      Basic operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/tutorial/angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-nav__link">
+      Tutorial: Custom configurator in Angular
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      PyAPI (Python)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="PyAPI (Python)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        PyAPI (Python)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pyapi/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-events" class="md-nav__link">
+    Application Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationrequested" class="md-nav__link">
+    QuotationRequested
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtopending" class="md-nav__link">
+    QuotationToPending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationtoaccepted" class="md-nav__link">
+    QuotationToAccepted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationverified" class="md-nav__link">
+    QuotationVerified
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category" class="md-nav__link">
+    Category
+  </a>
+  
+    <nav class="md-nav" aria-label="Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorytext" class="md-nav__link">
+    CategoryText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#country" class="md-nav__link">
+    Country
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmaccount" class="md-nav__link">
+    CrmAccount
+  </a>
+  
+    <nav class="md-nav" aria-label="CrmAccount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationship-type" class="md-nav__link">
+    Relationship type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crmcontact" class="md-nav__link">
+    CrmContact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exchangerate" class="md-nav__link">
+    ExchangeRate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature" class="md-nav__link">
+    Feature
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featuretype" class="md-nav__link">
+    FeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featuretext" class="md-nav__link">
+    FeatureText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-text-type" class="md-nav__link">
+    Feature text type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#featureproperty" class="md-nav__link">
+    FeatureProperty
+  </a>
+  
+    <nav class="md-nav" aria-label="FeatureProperty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#featurepropertytype" class="md-nav__link">
+    FeaturePropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associatedfeatureproperty" class="md-nav__link">
+    AssociatedFeatureProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#featurehasfeatureproperty" class="md-nav__link">
+    FeatureHasFeatureProperty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leasetable" class="md-nav__link">
+    LeaseTable
+  </a>
+  
+    <nav class="md-nav" aria-label="LeaseTable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leasetableline" class="md-nav__link">
+    LeaseTableLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termtype" class="md-nav__link">
+    TermType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#organization" class="md-nav__link">
+    Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vat" class="md-nav__link">
+    VAT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotation" class="md-nav__link">
+    Quotation
+  </a>
+  
+    <nav class="md-nav" aria-label="Quotation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quotationstatus" class="md-nav__link">
+    QuotationStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyvalue" class="md-nav__link">
+    QuotationPropertyValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationline" class="md-nav__link">
+    QuotationLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationfile" class="md-nav__link">
+    QuotationFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationproperty" class="md-nav__link">
+    QuotationProperty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitypropertytype" class="md-nav__link">
+    EntityPropertyType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitypropertytext" class="md-nav__link">
+    EntityPropertyText
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyfield" class="md-nav__link">
+    QuotationPropertyField
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quotationpropertyfieldtext" class="md-nav__link">
+    QuotationPropertyFieldText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fileentity" class="md-nav__link">
+    FileEntity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unitofmeasurement" class="md-nav__link">
+    UnitOfMeasurement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usercreationrequest" class="md-nav__link">
+    UserCreationRequest
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeature" class="md-nav__link">
+    ConfigurationFeature
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationFeature">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relationshiptype" class="md-nav__link">
+    RelationshipType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationfeaturetype" class="md-nav__link">
+    ConfigurationFeatureType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytype" class="md-nav__link">
+    DisplayType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationstep" class="md-nav__link">
+    ConfigurationStep
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationStep">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steptype" class="md-nav__link">
+    StepType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationconflict" class="md-nav__link">
+    ConfigurationConflict
+  </a>
+  
+    <nav class="md-nav" aria-label="ConfigurationConflict">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conflicttype" class="md-nav__link">
+    ConflictType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationrequirement" class="md-nav__link">
+    ConfigurationRequirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="models">Models</h1>
+<p>This page shows an overview of the available models. This list doesn't contain all the possible properties, but only the properties that are relevant. </p>
+<h3 id="application-events">Application Events</h3>
+<p>There are a number of application event types available through the API. See <a href="api/tutorial/applicationevents/">application event tutorials</a> for more info.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the application event.</td>
+</tr>
+<tr>
+<td>IntegrationApplicationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the integration application that should handle this application event.</td>
+</tr>
+<tr>
+<td>Handled</td>
+<td><code>bool</code></td>
+<td>Indicate whether this application event has been handled by the integration application defined by <em>IntegrationApplicationId</em>.</td>
+</tr>
+<tr>
+<td>HandledDate</td>
+<td><code>DateTime</code></td>
+<td>DateTime at which the application event was handled by the integration application.</td>
+</tr>
+<tr>
+<td>Success</td>
+<td><code>bool</code></td>
+<td>Defines whether the application event was handled successfully by the integration application.</td>
+</tr>
+<tr>
+<td>ReasonPhrase</td>
+<td><code>string</code></td>
+<td>Explanation of why the application event has the current success status.</td>
+</tr>
+</tbody>
+</table>
+<p>Besides the common application event properties, each type of application event has additional information available to it:</p>
+<h4 id="quotationrequested">QuotationRequested</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the requested quotation.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationtopending">QuotationToPending</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation who's status is set to pending.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationtoaccepted">QuotationToAccepted</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation who's status is set to accepted.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationverified">QuotationVerified</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation that has been verified.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="category">Category</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the category.</td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>CategoryText[]</code></td>
+<td>Translated titles of the category.</td>
+</tr>
+<tr>
+<td>Subcategories</td>
+<td><code>Category[]</code></td>
+<td>Array of subcategories.</td>
+</tr>
+<tr>
+<td>ParentId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the parent category.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td><code>integer</code></td>
+<td>Order in which the category should be displayed in the different product selection pages.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="categorytext">CategoryText</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Value of the text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the text language.</td>
+</tr>
+<tr>
+<td>CategoryId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the category.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="country">Country</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iso</td>
+<td><code>string</code></td>
+<td>Two-letter ISO 3166-1 code of the country, e.g. 'NL'.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the country.</td>
+</tr>
+<tr>
+<td>Active</td>
+<td><code>bool</code></td>
+<td></td>
+</tr>
+<tr>
+<td>EnglishName</td>
+<td><code>string</code></td>
+<td>Name of the country, in English.</td>
+</tr>
+<tr>
+<td>PhonePrefix</td>
+<td><code>string</code></td>
+<td>Phone prefix number, e.g. '+31'</td>
+</tr>
+<tr>
+<td>Capital</td>
+<td><code>string</code></td>
+<td>Capital city of the country</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crmaccount">CrmAccount</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the CRM account.</td>
+</tr>
+<tr>
+<td>Salutation</td>
+<td><code>string</code></td>
+<td>The salutation e.g. 'Dear sir/madam,'</td>
+</tr>
+<tr>
+<td>FullName</td>
+<td><code>string</code> (Read-only)</td>
+<td>Full name of the account.</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>LastNamePrefix</td>
+<td><code>string</code></td>
+<td>The prefix of the lastName e.g. [FirstName] van der [LastName]</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CompanyName</td>
+<td><code>string</code></td>
+<td>Name of the company.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Phone1</td>
+<td><code>string</code></td>
+<td>Primary phone number.</td>
+</tr>
+<tr>
+<td>Phone2</td>
+<td><code>string</code></td>
+<td>Secondary phone number.</td>
+</tr>
+<tr>
+<td>StreetName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>HouseNumber</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>PostalCode</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>City</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CountryIso</td>
+<td><code>string</code></td>
+<td>Two-letter ISO 3166-1 code of the country, e.g. 'NL'.</td>
+</tr>
+<tr>
+<td>Country</td>
+<td><code>string</code></td>
+<td>Country e.g. 'United Kingdom'</td>
+</tr>
+<tr>
+<td>CocNumber</td>
+<td><code>string</code></td>
+<td>Chamber of Commerce number.</td>
+</tr>
+<tr>
+<td>VatNumber</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Iban</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td><a href="#relationship-type">Type</a> of the CRM account.</td>
+</tr>
+<tr>
+<td>DefaultContact</td>
+<td><code>CrmContact</code></td>
+<td>The Default CrmContact</td>
+</tr>
+<tr>
+<td>DefaultContactId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the DefaultContact</td>
+</tr>
+</tbody>
+</table>
+<h4 id="relationship-type">Relationship type</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Customer</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Delivery address</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Employee</td>
+</tr>
+</tbody>
+</table>
+<h3 id="crmcontact">CrmContact</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the CRM contact.</td>
+</tr>
+<tr>
+<td>Salutation</td>
+<td><code>string</code></td>
+<td>The salutation e.g. 'Dear sir/madam,'</td>
+</tr>
+<tr>
+<td>FirstName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>LastNamePrefix</td>
+<td><code>string</code></td>
+<td>The prefix of the last name e.g. [FirstName] van der [LastName].</td>
+</tr>
+<tr>
+<td>LastName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CompanyName</td>
+<td><code>string</code></td>
+<td>The name of the company.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Phone1</td>
+<td><code>string</code></td>
+<td>Primary phone number.</td>
+</tr>
+<tr>
+<td>Phone2</td>
+<td><code>string</code></td>
+<td>Secondary phone number.</td>
+</tr>
+<tr>
+<td>StreetName</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>HouseNumber</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>PostalCode</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>City</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+<tr>
+<td>UseParentAddress</td>
+<td><code>bool</code></td>
+<td>If this property is set; the contact should inherit it's company's address.</td>
+</tr>
+<tr>
+<td>CountryIso</td>
+<td><code>string</code></td>
+<td>Two-letter ISO 3166-1 code of the country, e.g. 'NL'.</td>
+</tr>
+<tr>
+<td>CrmAccountId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the CrmAccount</td>
+</tr>
+</tbody>
+</table>
+<h3 id="currency">Currency</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Iso</td>
+<td><code>string</code></td>
+<td>Three letter ISO 4217:2015 code, e.g. 'EUR'.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the curreny.</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td><code>string</code></td>
+<td>Symbol, e.g. '$'.</td>
+</tr>
+<tr>
+<td>DecimalDigits</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Rounding</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>NamePlural</td>
+<td><code>string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exchangerate">ExchangeRate</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>guid</code></td>
+<td>Identifier for the ExchangeRate</td>
+</tr>
+<tr>
+<td>CurrencyIso</td>
+<td><code>string</code></td>
+<td>Three letter ISO 4217:2015 code, e.g. 'EUR'.</td>
+</tr>
+<tr>
+<td>Rate</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feature">Feature</h3>
+<p>Every configuration model is based on features. Features are used to capture rich product information (texts, images, pricing). Once created, features can be categorized and implemented in product structures.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the feature.</td>
+</tr>
+<tr>
+<td>ArticleCode</td>
+<td><code>string</code></td>
+<td>For reference purposes; e.g. the ERP item code.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td>The type is <code>0</code> by default, and <code>2</code> if the feature should be displayed as a color picker in the configurator.</td>
+</tr>
+<tr>
+<td>SalesPrice</td>
+<td><code>decimal</code></td>
+<td>The sales price of the feature.</td>
+</tr>
+<tr>
+<td>MinValue</td>
+<td><code>decimal</code></td>
+<td>Minimal amount. Example: minimal width of a bed has to be 110 cm. A user cannot enter quantities below this minimal value.</td>
+</tr>
+<tr>
+<td>MaxValue</td>
+<td><code>decimal</code></td>
+<td>Maximum amount. Example: maximum width of a bed is 210 cm. A user cannot enter quantities higher than this maximum value.</td>
+</tr>
+<tr>
+<td>StepValue</td>
+<td><code>decimal</code></td>
+<td>The step amount that is taken into consideration (between min/ max values). Example: with a step value of 10 cm a user cannot select a width of 115cm. This will be rounded off to 120cm.</td>
+</tr>
+<tr>
+<td>PackingUnit</td>
+<td><code>decimal</code></td>
+<td>The amount that has to be taken into account when rounding up on the material list. Example: several lines of the same nuts are generated from the configurator to the quotation. This function sums-up all these lines and rounds it up to the packing unit quantity.</td>
+</tr>
+<tr>
+<td>Category</td>
+<td><code>Category</code></td>
+<td>Category of which this feature belongs to.</td>
+</tr>
+<tr>
+<td>CategoryId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the <a href="#category">category</a> to which this feature is attached.</td>
+</tr>
+<tr>
+<td>SubcategoryIds</td>
+<td><code>Guid[]</code></td>
+<td>List of identifiers for sub-categories.</td>
+</tr>
+<tr>
+<td>ThreeDModelItems</td>
+<td><code>string[]</code></td>
+<td>The names of parts in a 3D model that are associated with this feature.</td>
+</tr>
+<tr>
+<td>HiddenThreeDModelItems</td>
+<td><code>string[]</code></td>
+<td>The names of parts in a 3D model that should be hidden when this feature is selected in a configuration.</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td><code>string[]</code></td>
+<td>List of tags. A tag can be used to give a feature a certain label.</td>
+</tr>
+<tr>
+<td>MarginPct</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><code>FeatureHasFeatureProperty[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>FeatureText[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CardImageUrl</td>
+<td><code>string</code></td>
+<td>URL for the image of the feature. This image is displayed in the cards.</td>
+</tr>
+<tr>
+<td>OrganizationSellsFeature</td>
+<td><code>OrganizationSellsFeature[]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>VATId</td>
+<td><code>Guid</code></td>
+<td><a href="#vat">VAT</a> that is used as default for this feature.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurementId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#unitofmeasurement">Unit of measurement</a> for this feature.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurement</td>
+<td><code>UnitOfMeasurement</code></td>
+<td><a href="#unitofmeasurement">Unit of measurement</a> for this feature.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="featuretype">FeatureType</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Feature</strong>: Default type</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ColorPicker</strong>: If used; the feature will be displayed as a color picker.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Text</strong>: If used; the feature will be displayed as a text input.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="featuretext">FeatureText</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the text language.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td><a href="#feature-text-type">Type</a> of the feature text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Text value.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="feature-text-type">Feature text type</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Descriptions</strong>: If used; the description will be shown instead of ‘name’. If left blank; the feature ‘name’ will be shown in the configurator.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Extended descriptions:</strong> If used; this text will be shown under the description/name in the configurator.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>More info:</strong> If used; more info can be opened in the configurator. This information is showed in a screen-wide pop-up.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Title</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>PromptMessage</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Quotation text:</strong> Optionally, this info can be generated on the quotation template (PDF).</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_1"></h4>
+<h3 id="featureproperty">FeatureProperty</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the property.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the property.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>integer</code></td>
+<td>Type of the property</td>
+</tr>
+<tr>
+<td>AssociatedFeatures</td>
+<td><code>AssociatedFeatureProperty[]</code></td>
+<td>If the type of this property is set to <code>1</code> (AssociatedFeatures) this property is filled with the relationships with features that can be associated with this property.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="featurepropertytype">FeaturePropertyType</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Input</strong>: If the feature property is marked as a Input type; a decimal value can be associated with this property.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>AssociatedFeatures</strong>: If the feature property is marked as a AssociatedFeatures type; a selection of defined features can be associated with this property.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Text</strong>: If the feature property is market as a Text type; a text value can be associated with this property.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="associatedfeatureproperty">AssociatedFeatureProperty</h4>
+<p>The AssociatedFeatureProperty is a relationship between a feature property's AssociatedFeatures list and a Feature.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the associated feature property.</td>
+</tr>
+<tr>
+<td>FeaturePropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#featureproperty">feature property</a>.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#feature">feature</a>.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td><code>Feature</code></td>
+<td>The Feature object</td>
+</tr>
+</tbody>
+</table>
+<h4 id="featurehasfeatureproperty">FeatureHasFeatureProperty</h4>
+<p>Relationship between a feature and a feature property.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the FeatureHasFeatureProperty relationship.</td>
+</tr>
+<tr>
+<td>FeaturePropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#featureproperty">feature property</a>.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#feature">feature</a>.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>If the type of the FeaturePropery is set to <code>0</code>(Input); this property holds the input value.</td>
+</tr>
+<tr>
+<td>AssociatedFeatureId</td>
+<td><code>Guid</code></td>
+<td>If the type of the FeatureProperty is set to <code>1</code>(AssociatedFeature); this property holds the <a href="#feature">feature</a> identifier that is associated with this property.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="leasetable">LeaseTable</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CommencementPrice</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>TerminationPrice</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Currency</td>
+<td><code>Currency</code></td>
+<td></td>
+</tr>
+<tr>
+<td>ExchangeRate</td>
+<td><code>ExchangeRate</code></td>
+<td></td>
+</tr>
+<tr>
+<td>LeaseTableLines</td>
+<td><code>List&lt;LeaseTableLines&gt;</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="leasetableline">LeaseTableLine</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the LeaseTableLine.</td>
+</tr>
+<tr>
+<td>LeaseTableId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the parent <a href="#LeaseTable">LeaseTable</a>.</td>
+</tr>
+<tr>
+<td>MinValue</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>MaxValue</td>
+<td><code>decimal</code></td>
+<td></td>
+</tr>
+<tr>
+<td>TermValue</td>
+<td><code>int</code></td>
+<td></td>
+</tr>
+<tr>
+<td>TermType</td>
+<td><code>TermType</code></td>
+<td>Type of the lease term</td>
+</tr>
+</tbody>
+</table>
+<h4 id="termtype">TermType</h4>
+<p>A LeaseTableLine can have the following terms:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Days</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Weeks</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Months</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Years</td>
+</tr>
+</tbody>
+</table>
+<h3 id="organization">Organization</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the organization.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the organization.</td>
+</tr>
+<tr>
+<td>SettingsId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the settings corresponding to this organization.</td>
+</tr>
+<tr>
+<td>Users</td>
+<td><code>User[]</code></td>
+<td>List of <a href="#user">users</a> that are part of this organization.</td>
+</tr>
+<tr>
+<td>DefaultDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Organization's default discount percentage. Calculates the margin by decreasing the purchase price.</td>
+</tr>
+<tr>
+<td>DefaultUpValuePct</td>
+<td><code>decimal</code></td>
+<td>Organization's default up value percentage. Calculates the margin by increasing the sales price.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vat">VAT</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the VAT.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Describes the VAT.</td>
+</tr>
+<tr>
+<td>Pct</td>
+<td><code>decimal</code></td>
+<td>Percentage value of the VAT e.g. 21.</td>
+</tr>
+<tr>
+<td>IncludesVAT</td>
+<td><code>boolean</code></td>
+<td>Defines whether the price already includes VAT.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quotation">Quotation</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the quotation.</td>
+</tr>
+<tr>
+<td>QuotationNumber</td>
+<td><code>int</code></td>
+<td>Unique quotation number that is used as a reference.</td>
+</tr>
+<tr>
+<td>VersionNumber</td>
+<td><code>int</code></td>
+<td>Version number of the quotation. Default is <code>1</code>.</td>
+</tr>
+<tr>
+<td>RevisionOfId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation on which this revision is based.</td>
+</tr>
+<tr>
+<td>Status</td>
+<td><code>integer</code></td>
+<td>The <a href="#quotationstatus">status</a> of the quotation.</td>
+</tr>
+<tr>
+<td>IsExpired</td>
+<td><code>bool</code> (Read-only)</td>
+<td>Returns <code>true</code> if the quotation is expired.</td>
+</tr>
+<tr>
+<td>StatusDescription</td>
+<td><code>string</code> (Read-only)</td>
+<td>Returns the status of the quotation as a text. Example: <code>Concept</code> or <code>Accepted</code></td>
+</tr>
+<tr>
+<td>Remarks</td>
+<td><code>string</code></td>
+<td>A field for remarks. Used to add notes to the quotation.</td>
+</tr>
+<tr>
+<td>Subject</td>
+<td><code>string</code></td>
+<td>The subject of the quotation.</td>
+</tr>
+<tr>
+<td>CustomerReference</td>
+<td><code>string</code></td>
+<td>Text field that can be used to idenfity the customer.</td>
+</tr>
+<tr>
+<td>QuotationReference</td>
+<td><code>string</code></td>
+<td>Text field that can be sued to identify the quotation.</td>
+</tr>
+<tr>
+<td>ExpiresDate</td>
+<td><code>DateTime</code></td>
+<td>Date when the state of the quotation is set to expired.</td>
+</tr>
+<tr>
+<td>DeliveryDate</td>
+<td><code>DateTime</code></td>
+<td>Date when the quotation is delivered.</td>
+</tr>
+<tr>
+<td>DebtorId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the debtor, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>SellerId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the seller, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>ShipToId</td>
+<td><code>Guid</code></td>
+<td>Identifier for the shipping address, which is a <a href="#crmaccount">CRM account</a>.</td>
+</tr>
+<tr>
+<td>Margin</td>
+<td><code>decimal</code></td>
+<td>The margin that is used on this quotation in percentages. Example: for 10% the value is <code>10</code>.</td>
+</tr>
+<tr>
+<td>Lines</td>
+<td><code>QuotationLine[]</code></td>
+<td><a href="#quotationline">Quotation lines</a> for the quotation.</td>
+</tr>
+<tr>
+<td>CurrencyIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the currency.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the language.</td>
+</tr>
+<tr>
+<td>Files</td>
+<td><code>QuotationFile[]</code></td>
+<td>List of <a href="#quotationfile">quotation files</a> that are attached.</td>
+</tr>
+<tr>
+<td>TotalDiscountAmt</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total amount of discount on the total price.</td>
+</tr>
+<tr>
+<td>TotalDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Total percentage of discount, e.g. <code>10</code> for 10%.</td>
+</tr>
+<tr>
+<td>SubTotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal price excluding VAT.</td>
+</tr>
+<tr>
+<td>SubTotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal including VAT.</td>
+</tr>
+<tr>
+<td>TotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>SubTotalMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal margin.</td>
+</tr>
+<tr>
+<td>TotalMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total margin.</td>
+</tr>
+<tr>
+<td>TotalMarginDiscount</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total margin discount.</td>
+</tr>
+<tr>
+<td>SubTotalPurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Subtotal purchase price.</td>
+</tr>
+<tr>
+<td>WholeSaleDiscountAmt</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Wholesale discount amount.</td>
+</tr>
+<tr>
+<td>WholeSaleDiscountPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Wholesale discount percentage.</td>
+</tr>
+<tr>
+<td>Properties</td>
+<td><code>QuotationPropertyValue[]</code></td>
+<td>Array containing the <a href="#quotationpropertyvalue">quotation property values</a> for the quotation</td>
+</tr>
+<tr>
+<td>PropertyIds</td>
+<td><code>Guid[]</code></td>
+<td>Ids of selected quotation property fields</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationstatus">QuotationStatus</h4>
+<p>A quotation can have the following states:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Concept</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Declined</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Accepted</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Expired</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Revised</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pending</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Order</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationpropertyvalue">QuotationPropertyValue</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the quotation property value.</td>
+</tr>
+<tr>
+<td>EntityId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation this property value belongs to.</td>
+</tr>
+<tr>
+<td>EntityPropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation property this property value belongs to.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Value of the quotation property</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationline">QuotationLine</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation to which this line belongs.</td>
+</tr>
+<tr>
+<td>LineNumber</td>
+<td><code>int</code></td>
+<td>Indicates the sequence of the lines within one quotation.</td>
+</tr>
+<tr>
+<td>ArticleCode</td>
+<td><code>string</code></td>
+<td>For reference purposes, e.g. an ERP item code.</td>
+</tr>
+<tr>
+<td>CardImageUrl</td>
+<td><code>string</code></td>
+<td>URL to the image for the feature.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code> (Read-only)</td>
+<td>Description of the feature.</td>
+</tr>
+<tr>
+<td>ExtendedDescription</td>
+<td><code>string</code> (Read-only)</td>
+<td>Extended description of the feature.</td>
+</tr>
+<tr>
+<td>MoreInfo</td>
+<td><code>string</code> (Read-only)</td>
+<td>More info of the feature.</td>
+</tr>
+<tr>
+<td>QuotationText</td>
+<td><code>string</code> (Read-only)</td>
+<td>Quotation text of the feature.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature.</td>
+</tr>
+<tr>
+<td>QuantityAmount</td>
+<td><code>decimal</code></td>
+<td>Quantity of the feature on this line.</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td><code>string</code> (Read-only)</td>
+<td>Number formatted quantity, e.g. <code>100.14</code>.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurement</td>
+<td><code>string</code> (Read-only)</td>
+<td>Unit of measurement of the feature. Default  is <code>pcs</code>.</td>
+</tr>
+<tr>
+<td>Hidden</td>
+<td><code>bool</code></td>
+<td>Indicates if the line is visible in EMS.</td>
+</tr>
+<tr>
+<td>ParentLineId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the parent line (QuotationLine).</td>
+</tr>
+<tr>
+<td>GroupedRootLine</td>
+<td><code>bool</code></td>
+<td>Indicates if the quotation line is the root of a group of lines.</td>
+</tr>
+<tr>
+<td>GroupId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the group to which this line belongs.</td>
+</tr>
+<tr>
+<td>GroupOrder</td>
+<td><code>int</code></td>
+<td>Indicates the order in which the groups are displayed.</td>
+</tr>
+<tr>
+<td>AddedFromConfiguration</td>
+<td><code>bool</code></td>
+<td>Indicates that the line has been added from a configuration.</td>
+</tr>
+<tr>
+<td>ConfigurationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration from which this quotation line was created.</td>
+</tr>
+<tr>
+<td>DiscountPct</td>
+<td><code>decimal</code></td>
+<td>Discount percentage, e.g. <code>10</code>.</td>
+</tr>
+<tr>
+<td>MarginPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Margin percentage.</td>
+</tr>
+<tr>
+<td>GroupDiscountPct</td>
+<td><code>decimal</code></td>
+<td>Discount percentage on the group, e.g. <code>10</code>.</td>
+</tr>
+<tr>
+<td>TotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price of the quotation line excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalExclPriceExclDiscount</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price of the quotation excluding VAT and discount.</td>
+</tr>
+<tr>
+<td>TotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>GroupBaseExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupBaseInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupAdditionalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupAdditionalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupTotalExclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupTotalInclPrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>DefaultPurchasePriceDiscountPct</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>PurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+<td><code>decimal</code></td>
+<td>Unit price of the feature.</td>
+</tr>
+<tr>
+<td>TotalExclMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>TotalInclMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupPurchasePrice</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+<tr>
+<td>GroupMargin</td>
+<td><code>decimal</code> (Read-only)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationfile">QuotationFile</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the QuotationFile.</td>
+</tr>
+<tr>
+<td>QuotationId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation.</td>
+</tr>
+<tr>
+<td>FileId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the <a href="#fileentity">FileEntity</a>.</td>
+</tr>
+</tbody>
+</table>
+<p>In order to add  file to a quotation, a post request should be sent to the quotation endpoint with parameters <code>{id}/addfile</code></p>
+<h4 id="quotationproperty">QuotationProperty</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the quotation property.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>Description of the quotation property.</td>
+</tr>
+<tr>
+<td>IsRequired</td>
+<td><code>bool</code></td>
+<td>Wether the quotation property is required or not.</td>
+</tr>
+<tr>
+<td>IsReadonly</td>
+<td><code>bool</code></td>
+<td>Wether the quotation property is read only or not.</td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>EntityPropertyType</code></td>
+<td>Type of the quotation property.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>EntityPropertyText[]</code></td>
+<td>Array containing translations for quotation property</td>
+</tr>
+<tr>
+<td>Order</td>
+<td><code>Guid</code></td>
+<td>The order in which the quotation properties are displayed on the quotations page.</td>
+</tr>
+<tr>
+<td>Fields</td>
+<td><code>QuotationPropertyField[]</code></td>
+<td>Array containing the fields for FieldSelect type quotation property</td>
+</tr>
+</tbody>
+</table>
+<h4 id="entitypropertytype">EntityPropertyType</h4>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Text</strong>: If the quotation property is marked as a Text type; A string value can be associated with this property. Displayed as single line input field in EMS.</td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Number</strong>:  If the quotation property is marked as a Number type; A decimal value can be associated with this property.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Date</strong>: If the feature property is marked as a Date type; a datetime value can be associated with this property.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>FieldSelect</strong>: If the feature property is marked as a FieldSelect type; a text value from a dropdown can be associated with this property.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Toggle</strong>: If the feature property is marked as a Toggle type; a bool value can be associated with this property.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>MultiLine</strong>: If the feature property is marked as a MultiLine type; a text value can be associated with this property. Displayed as multi line input field in EMS</td>
+</tr>
+</tbody>
+</table>
+<h4 id="entitypropertytext">EntityPropertyText</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the property text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Value (translation) of the property text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>ISO code of language used for property text (translation)</td>
+</tr>
+<tr>
+<td>EntityPropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the entity property the text (translation) belongs to.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationpropertyfield">QuotationPropertyField</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the property field.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>Code of property field</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>Description of property field</td>
+</tr>
+<tr>
+<td>QuotationPropertyId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation property this field belongs to.</td>
+</tr>
+<tr>
+<td>Texts</td>
+<td><code>QuotationPropertyFieldText[]</code></td>
+<td>Array containing translations for property field.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quotationpropertyfieldtext">QuotationPropertyFieldText</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the property field text.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>string</code></td>
+<td>Value (translation) of the property field text.</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>ISO code of language used for property field text (translation)</td>
+</tr>
+<tr>
+<td>QuotationPropertyFieldId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the quotation property field the text (translation) belongs to.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fileentity">FileEntity</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the file entity.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the file.</td>
+</tr>
+<tr>
+<td>Url</td>
+<td><code>string</code></td>
+<td>URL of the file.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unitofmeasurement">UnitOfMeasurement</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the unit of measurement.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>The code for the unit of measurement. Example: <code>kg</code>.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>The description for the unit of measurement. Example: <code>Kilogram</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usercreationrequest">UserCreationRequest</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier for the UserCreationRequest</td>
+</tr>
+<tr>
+<td>RequestDate</td>
+<td><code>DateTimeOffset</code></td>
+<td>Date and time for the request in UTC format e.g. 'DD-MM-YYYY HH-MM-SS'</td>
+</tr>
+<tr>
+<td>RequireTwoFactor</td>
+<td><code>bool</code></td>
+<td>If two factor authentication is required: true, otherwise false.</td>
+</tr>
+<tr>
+<td>IsSeller</td>
+<td><code>bool</code></td>
+<td></td>
+</tr>
+<tr>
+<td>CurrencyIso</td>
+<td><code>string</code></td>
+<td>Three letter ISO (4217) code for the used currency e.g. EUR</td>
+</tr>
+<tr>
+<td>LanguageIso</td>
+<td><code>string</code></td>
+<td>Two letter ISO (639-1) code of the text language</td>
+</tr>
+<tr>
+<td>IsExpired</td>
+<td><code>bool</code>(Read-only)</td>
+<td>Returns true if the UserCreationRequest is expired.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="configuration">Configuration</h3>
+<p>Models that can be used to edit a existing configuration or develop your own custom configurator interface.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Unique identifier of the configuration session</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>A unique code that represents this configuration session and can be used by a user to resume the session.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model that is being configured.</td>
+</tr>
+<tr>
+<td>Root</td>
+<td><code>ConfigurationFeature</code></td>
+<td>The root feature of the configuration model that is being configured.</td>
+</tr>
+<tr>
+<td>Steps</td>
+<td><code>ConfigurationStep[]</code></td>
+<td>List of steps that is used to structure the configurator UI.</td>
+</tr>
+<tr>
+<td>PreconfigurationFeatures</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>A set of features that should be displayed before the user sees any of the configurator steps.</td>
+</tr>
+<tr>
+<td>Values</td>
+<td><code>{ 'id': SelectedValue }</code></td>
+<td>Object that gives easy access to a selected value for a given feature.</td>
+</tr>
+<tr>
+<td>TextValues</td>
+<td><code>{ 'id': string }</code></td>
+<td>Object that gives easy access to a selected text value for a given feature.</td>
+</tr>
+<tr>
+<td>Requirements</td>
+<td><code>ConfigurationRequirement[]</code></td>
+<td>Set of requirements made by the user during the configuration session.</td>
+</tr>
+<tr>
+<td>Language</td>
+<td><code>string</code></td>
+<td>Two-letter ISO code of the selected configuration language.</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td><code>string</code></td>
+<td>Two-letter ISO code of the selected configuration currency.</td>
+</tr>
+<tr>
+<td>BasePriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the base price excluding VAT.</td>
+</tr>
+<tr>
+<td>BasePriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the base price including VAT.</td>
+</tr>
+<tr>
+<td>BasePriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Base price excluding VAT.</td>
+</tr>
+<tr>
+<td>BasePriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Base price including VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the additional price excluding VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the additional price including VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Additional price excluding VAT.</td>
+</tr>
+<tr>
+<td>AdditionalPriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Additional price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVat</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVatNumber</td>
+<td><code>decimal</code></td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>Conflicts</td>
+<td><code>ConfigurationConflict[]</code></td>
+<td>When conflicts occur during the configuration session, this array will be populated with conflict data.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationfeature">ConfigurationFeature</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Unique identifier of this feature's unique position in the configuration model.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model this feature belongs to.</td>
+</tr>
+<tr>
+<td>ParentId</td>
+<td><code>Guid?</code></td>
+<td>Identifier of the parent feature. Null if this feature is the root.</td>
+</tr>
+<tr>
+<td>FeatureId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the feature that is attached.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>Selected value in the configuration session.</td>
+</tr>
+<tr>
+<td>TextValue</td>
+<td><code>string</code></td>
+<td>Selected text value in the configuration session.</td>
+</tr>
+<tr>
+<td>IsSelected</td>
+<td><code>boolean</code></td>
+<td>Flag indicating if the feature is selected in the configuration session.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><code>string</code></td>
+<td>Code of the feature.</td>
+</tr>
+<tr>
+<td>Description</td>
+<td><code>string</code></td>
+<td>Description of the feature.</td>
+</tr>
+<tr>
+<td>ExtendedDescription</td>
+<td><code>string</code></td>
+<td>Extended description of the feature.</td>
+</tr>
+<tr>
+<td>MoreInfo</td>
+<td><code>string</code></td>
+<td>More info of the feature.</td>
+</tr>
+<tr>
+<td>Name</td>
+<td><code>string</code></td>
+<td>Name of the feature.</td>
+</tr>
+<tr>
+<td>ArticleCode</td>
+<td><code>string</code></td>
+<td>Same as Code.</td>
+</tr>
+<tr>
+<td>UnitOfMeasurement</td>
+<td><code>string</code></td>
+<td>Unit of measurement of the feature.</td>
+</tr>
+<tr>
+<td>ImageUrl</td>
+<td><code>string</code></td>
+<td>URL to the image of the feature.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>RelationshipType</code></td>
+<td>Relationship type of this feature to its parent.</td>
+</tr>
+<tr>
+<td>FeatureType</td>
+<td><code>ConfigurationFeatureType</code></td>
+<td>Determines how the user should interact with this feature in the configurator.</td>
+</tr>
+<tr>
+<td>DisplayType</td>
+<td><code>DisplayType</code></td>
+<td>Determines how the feature should be rendered in the configurator.</td>
+</tr>
+<tr>
+<td>Features</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>Child features.</td>
+</tr>
+<tr>
+<td>IsBestMatch</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates of the feature is a best match based on a selection in the PreconfigurationFeatures of the configuration session.</td>
+</tr>
+<tr>
+<td>IsMandatory</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates if this feature is mandatory. The user should not be provided with a way to create a quotation before this feature is answered.</td>
+</tr>
+<tr>
+<td>HideInQuotation</td>
+<td><code>boolean</code></td>
+<td>Flag that indicates that is feature is not displayed in the quotation. The configurator should not display this feature in any overviews.</td>
+</tr>
+<tr>
+<td>UnitPrice</td>
+<td><code>string</code></td>
+<td>Formatted string of the unit price excluding VAT.</td>
+</tr>
+<tr>
+<td>UnitPriceExclVat</td>
+<td><code>decimal</code></td>
+<td>Unit price excluding VAT.</td>
+</tr>
+<tr>
+<td>UnitPriceInclVat</td>
+<td><code>decimal</code></td>
+<td>Unit price including VAT.</td>
+</tr>
+<tr>
+<td>TotalPrice</td>
+<td><code>string</code></td>
+<td>Formatted string of the total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceExclVat</td>
+<td><code>decimal</code></td>
+<td>Total price excluding VAT.</td>
+</tr>
+<tr>
+<td>TotalPriceInclVat</td>
+<td><code>decimal</code></td>
+<td>Total price including VAT.</td>
+</tr>
+<tr>
+<td>MinValue</td>
+<td><code>decimal</code></td>
+<td>Minimal value of the feature.</td>
+</tr>
+<tr>
+<td>MaxValue</td>
+<td><code>decimal</code></td>
+<td>Max value of the feature.</td>
+</tr>
+<tr>
+<td>StepValue</td>
+<td><code>decimal</code></td>
+<td>Allowed step values between the minimum and maximum values of the feature.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="relationshiptype">RelationshipType</h5>
+<p>Relationship type of a feature to its parent.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alternative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Or</td>
+</tr>
+</tbody>
+</table>
+<h5 id="configurationfeaturetype">ConfigurationFeatureType</h5>
+<p>Determines how the user should interact with this feature in the configurator.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Standard type.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Feature should be displayed as a color picker.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Feature should be displayed as a text input.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="displaytype">DisplayType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Image box</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dropdown</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Searchbar in dialog</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Table</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Searchbar not in dialog</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationstep">ConfigurationStep</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td><code>Guid</code></td>
+<td>Identifier of the step.</td>
+</tr>
+<tr>
+<td>ConfigurationModelId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration model this step belongs to.</td>
+</tr>
+<tr>
+<td>Title</td>
+<td><code>string</code></td>
+<td>Title of the step.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>StepType</code></td>
+<td>Type of the step</td>
+</tr>
+<tr>
+<td>Features</td>
+<td><code>ConfigurationFeature[]</code></td>
+<td>Features that should be displayed in this step.</td>
+</tr>
+<tr>
+<td>IconUrl</td>
+<td><code>string</code></td>
+<td>URL of the icon that should be displayed for the step.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="steptype">StepType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Hotspots</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3D</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationconflict">ConfigurationConflict</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature</td>
+<td><code>ConfigurationFeature</code></td>
+<td>The feature that has conflict.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td><code>ConflictType</code></td>
+<td>Type of the conflict.</td>
+</tr>
+<tr>
+<td>RequestedValue</td>
+<td><code>decimal</code></td>
+<td>If the conflict type is <code>Value</code>, this property holds the value that was requested as part of a user requirement.</td>
+</tr>
+<tr>
+<td>ActualValue</td>
+<td><code>decimal</code></td>
+<td>If the conflict type is <code>Value</code>, this property holds the actual value that will be assigned if the conflict is ignored.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="conflicttype">ConflictType</h5>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Add</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Remove</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alternative</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="configurationrequirement">ConfigurationRequirement</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeId</td>
+<td><code>Guid</code></td>
+<td>Identifier of the configuration feature.</td>
+</tr>
+<tr>
+<td>Value</td>
+<td><code>decimal</code></td>
+<td>Selected value.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Missing a property? Feel free to contact us at <code>support@elfsquad.io</code>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../" title="Getting started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../api/start/" title="Getting started" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting started
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

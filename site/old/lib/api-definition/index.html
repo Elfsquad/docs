@@ -1,0 +1,1754 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+    
+    
+      
+        <title>API defintion - Elfsquad Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configurator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Elfsquad Docs" class="md-header-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Elfsquad Docs
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              API defintion
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Elfsquad Docs" class="md-nav__button md-logo" aria-label="Elfsquad Docs">
+      
+  <img src="https://ems.elfsquad.io/assets/images/logo_white.png" alt="logo">
+
+    </a>
+    Elfsquad Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../authentication/" title="Authentication" class="md-nav__link">
+      Authentication
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../apis/data/" title="Data API" class="md-nav__link">
+      Data API
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      API V2
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="API V2" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        API V2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Overview
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Overview" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Overview
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      REST API
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="REST API" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        REST API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/endpoints-crud/" title="Basic endpoints" class="md-nav__link">
+      Basic endpoints
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/configurator/" title="Configurator" class="md-nav__link">
+      Configurator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/features/" title="Tutorial: Features" class="md-nav__link">
+      Tutorial: Features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/applicationevents/" title="Tutorial: Application Events" class="md-nav__link">
+      Tutorial: Application Events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      SDK (C#)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (C#)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (C#)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdk/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sdk/applicationevents/" title="Acting on events" class="md-nav__link">
+      Acting on events
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
+    
+    <label class="md-nav__link" for="nav-4-4">
+      SDK (JS)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="SDK (JS)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        SDK (JS)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        API defintion
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="API defintion" class="md-nav__link md-nav__link--active">
+      API defintion
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurator" class="md-nav__link">
+    Configurator
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getconfigurationmodelslanguage" class="md-nav__link">
+    getConfigurationModels(language)
+  </a>
+  
+    <nav class="md-nav" aria-label="getConfigurationModels(language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startnewconfigurationidlanguage" class="md-nav__link">
+    startNewConfiguration(id,language)
+  </a>
+  
+    <nav class="md-nav" aria-label="startNewConfiguration(id,language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_1" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelanguagelanguage-callback" class="md-nav__link">
+    changeLanguage(language, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="changeLanguage(language, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_2" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updaterequirementid-value-ignoreconflicts-isselection" class="md-nav__link">
+    updateRequirement(id, value, ignoreConflicts, isSelection)
+  </a>
+  
+    <nav class="md-nav" aria-label="updateRequirement(id, value, ignoreConflicts, isSelection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_3" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_3" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requestquoteform-callback" class="md-nav__link">
+    requestQuote(form, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="requestQuote(form, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_4" class="md-nav__link">
+    Input
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-object" class="md-nav__link">
+    Form object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer3d" class="md-nav__link">
+    Viewer3D
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewer3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init3dviewerelement-configuration-callback" class="md-nav__link">
+    init3DViewer(element, configuration, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="init3DViewer(element, configuration, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_5" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datamanagement" class="md-nav__link">
+    DataManagement
+  </a>
+  
+    <nav class="md-nav" aria-label="DataManagement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usermanager" class="md-nav__link">
+    UserManager
+  </a>
+  
+    <nav class="md-nav" aria-label="UserManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getuser" class="md-nav__link">
+    getUser()
+  </a>
+  
+    <nav class="md-nav" aria-label="getUser()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output_4" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginredirect" class="md-nav__link">
+    loginRedirect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_oidcusermanager" class="md-nav__link">
+    _oidcUserManager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      Step-by-Step Tutorials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Step-by-Step Tutorials" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Step-by-Step Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tutorials/basic-operations/" title="Basic operations" class="md-nav__link">
+      Basic operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/tutorial/angularconfigurator/angular_configurator/" title="Tutorial: Custom configurator in Angular" class="md-nav__link">
+      Tutorial: Custom configurator in Angular
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+    
+    <label class="md-nav__link" for="nav-4-5">
+      PyAPI (Python)
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="PyAPI (Python)" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        PyAPI (Python)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pyapi/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurator" class="md-nav__link">
+    Configurator
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getconfigurationmodelslanguage" class="md-nav__link">
+    getConfigurationModels(language)
+  </a>
+  
+    <nav class="md-nav" aria-label="getConfigurationModels(language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startnewconfigurationidlanguage" class="md-nav__link">
+    startNewConfiguration(id,language)
+  </a>
+  
+    <nav class="md-nav" aria-label="startNewConfiguration(id,language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_1" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changelanguagelanguage-callback" class="md-nav__link">
+    changeLanguage(language, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="changeLanguage(language, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_2" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_2" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updaterequirementid-value-ignoreconflicts-isselection" class="md-nav__link">
+    updateRequirement(id, value, ignoreConflicts, isSelection)
+  </a>
+  
+    <nav class="md-nav" aria-label="updateRequirement(id, value, ignoreConflicts, isSelection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_3" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_3" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_3" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requestquoteform-callback" class="md-nav__link">
+    requestQuote(form, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="requestQuote(form, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_4" class="md-nav__link">
+    Input
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#form-object" class="md-nav__link">
+    Form object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewer3d" class="md-nav__link">
+    Viewer3D
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewer3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init3dviewerelement-configuration-callback" class="md-nav__link">
+    init3DViewer(element, configuration, callback)
+  </a>
+  
+    <nav class="md-nav" aria-label="init3DViewer(element, configuration, callback)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input_5" class="md-nav__link">
+    Input
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datamanagement" class="md-nav__link">
+    DataManagement
+  </a>
+  
+    <nav class="md-nav" aria-label="DataManagement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usermanager" class="md-nav__link">
+    UserManager
+  </a>
+  
+    <nav class="md-nav" aria-label="UserManager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_3" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getuser" class="md-nav__link">
+    getUser()
+  </a>
+  
+    <nav class="md-nav" aria-label="getUser()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output_4" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loginredirect" class="md-nav__link">
+    loginRedirect()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_2" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_oidcusermanager" class="md-nav__link">
+    _oidcUserManager
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>API defintion</h1>
+                
+                <p>By including the Elfsquad JavaScript library in your web project the <code>Elfsquad</code> object becomes globally available in your site.</p>
+<p>The <code>Elfsquad</code> object consists of three parts:</p>
+<ul>
+<li><a href="#Configurator">Configurator</a>    <ul>
+<li><a href="#Viewer3D">Viewer3D</a></li>
+</ul>
+</li>
+<li><a href="#DataManagement">DataManagement</a></li>
+<li><a href="#UserManager">UserManager</a></li>
+</ul>
+<h2 id="configurator">Configurator</h2>
+<p><code>Elfsquad.configurator</code> is used for all configuration related interactions.</p>
+<h3 id="methods">Methods</h3>
+<h4 id="getconfigurationmodelslanguage">getConfigurationModels(language)</h4>
+<p>Retrieves a production selection model that can be used to create a model selection page.</p>
+<h5 id="input">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language</td>
+<td>string</td>
+<td>Two-letter ISO code of the language</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output">Output</h5>
+<h5 id="example">Example</h5>
+<div class="highlight"><pre><span></span><code><span class="nx">Elfsquad</span>
+    <span class="p">.</span><span class="nx">configurator</span>
+    <span class="p">.</span><span class="nx">getConfigurationModels</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">productSelectionModel</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="cm">/* ... */</span> 
+    <span class="p">});</span>
+</code></pre></div>
+
+<h4 id="startnewconfigurationidlanguage">startNewConfiguration(id,language)</h4>
+<p>Starts a new configuration session and returns a promise with the <a href="/models#configuration">configuration object</a>.</p>
+<h5 id="input_1">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Identifier of the configuration model</td>
+</tr>
+<tr>
+<td>language</td>
+<td>string</td>
+<td>Two-letter ISO code of the language</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output_1">Output</h5>
+<p>A promise with the  <a href="/models#configuration">configuration object</a>.</p>
+<h5 id="example_1">Example</h5>
+<div class="highlight"><pre><span></span><code><span class="nx">Elfsquad</span>
+    <span class="p">.</span><span class="nx">configurator</span>
+    <span class="p">.</span><span class="nx">startNewConfiguration</span><span class="p">(</span><span class="s1">&#39;&lt;INSERT ID&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">configuration</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> 
+        <span class="cm">/* ... */</span> 
+    <span class="p">});</span>
+</code></pre></div>
+
+<h4 id="changelanguagelanguage-callback">changeLanguage(language, callback)</h4>
+<p>Changes the language of the configuration session and calls the callback function with the updated <a href="/models#configuration">configuration object</a>.</p>
+<h5 id="input_2">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>language</td>
+<td>string</td>
+<td>Two-letter ISO code of the language</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>Function that is called with the updated configuration object</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output_2">Output</h5>
+<p>Callback function is called the  <a href="/models#configuration">configuration object</a> as a parameter.</p>
+<h5 id="example_2">Example</h5>
+<div class="highlight"><pre><span></span><code><span class="nx">Elfsquad</span>
+    <span class="p">.</span><span class="nx">configurator</span>
+    <span class="p">.</span><span class="nx">changeLanguage</span><span class="p">(</span><span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">updatedConfiguration</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="cm">/* ... */</span>
+    <span class="p">});</span>
+</code></pre></div>
+
+<h4 id="updaterequirementid-value-ignoreconflicts-isselection">updateRequirement(id, value, ignoreConflicts, isSelection)</h4>
+<p>Update the user requirement for a given configuration feature.</p>
+<h5 id="input_3">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Identifier of the configuration feature to update</td>
+</tr>
+<tr>
+<td>value</td>
+<td>number</td>
+<td>Value to set. If the requirement is a selection, the value should be 1 for true and 0 for false.</td>
+</tr>
+<tr>
+<td>ignoreConflicts</td>
+<td>boolean</td>
+<td>When ignoring conflicts, conflicts will be resolved automatically.</td>
+</tr>
+<tr>
+<td>isSelection</td>
+<td>boolean</td>
+<td>Value indicating whether the requirement is a selection change or value change.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="output_3">Output</h5>
+<p>A promise with the  <a href="/models#configuration">configuration object</a>.</p>
+<h5 id="example_3">Example</h5>
+<div class="highlight"><pre><span></span><code><span class="nx">Elfsquad</span>
+    <span class="p">.</span><span class="nx">configurator</span>
+    <span class="p">.</span><span class="nx">updateRequirement</span><span class="p">(</span><span class="s1">&#39;&lt;INSERT ID&gt;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">updatedConfiguration</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span> 
+        <span class="cm">/* ... */</span> 
+    <span class="p">});</span>
+</code></pre></div>
+
+<h4 id="requestquoteform-callback">requestQuote(form, callback)</h4>
+<p>Request a quotation for the configuration.</p>
+<h5 id="input_4">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>form</td>
+<td>object</td>
+<td>Object containing quotation request data (see below).</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>function</td>
+<td>Function that is called when the quotation request was successful.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="form-object">Form object</h6>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>firstName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>lastNamePrefix</td>
+<td>string</td>
+</tr>
+<tr>
+<td>salutation</td>
+<td>string</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+</tr>
+<tr>
+<td>postalCode</td>
+<td>string</td>
+</tr>
+<tr>
+<td>streetName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>houseNumber</td>
+<td>string</td>
+</tr>
+<tr>
+<td>countryIso</td>
+<td>string</td>
+</tr>
+<tr>
+<td>languageIso</td>
+<td>string</td>
+</tr>
+<tr>
+<td>phoneNumber</td>
+<td>string</td>
+</tr>
+<tr>
+<td>phoneNumber2</td>
+<td>string</td>
+</tr>
+<tr>
+<td>companyName</td>
+<td>string</td>
+</tr>
+<tr>
+<td>remarks</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<h3 id="properties">Properties</h3>
+<h2 id="viewer3d">Viewer3D</h2>
+<p>The Viewer3D object is used to initialize and interact with the 3D viewer. The Viewer3D object is accessible through <code>Elfsquad.configurator.viewer3D</code>.</p>
+<h3 id="methods_1">Methods</h3>
+<h4 id="init3dviewerelement-configuration-callback">init3DViewer(element, configuration, callback)</h4>
+<p>Takes a HTML element and turns in into a 3D viewer.</p>
+<h5 id="input_5">Input</h5>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element</td>
+<td>HTMLElement</td>
+<td>Reference to a HTML element that should be turned into the 3D viewer</td>
+</tr>
+<tr>
+<td>configuration</td>
+<td><a href="/models#configuration">Configuration</a></td>
+<td>The current configuration object</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>Function that is called when the loader is finished loading</td>
+</tr>
+</tbody>
+</table>
+<h2 id="datamanagement">DataManagement</h2>
+<p><code>Elfsquad.dataManagement</code> is used for retrieving/editing master data.</p>
+<h3 id="methods_2">Methods</h3>
+<h3 id="properties_1">Properties</h3>
+<h2 id="usermanager">UserManager</h2>
+<p><code>Elfsquad.userManager</code> is used for authentication/authorization related interactions.</p>
+<h3 id="methods_3">Methods</h3>
+<h4 id="getuser">getUser()</h4>
+<p>Retrieves the oidc client user object. For more info see <a href="https://github.com/IdentityModel/oidc-client-js/wiki">https://github.com/IdentityModel/oidc-client-js/wiki</a>.</p>
+<h5 id="output_4">Output</h5>
+<p>Returns the <a href="https://github.com/IdentityModel/oidc-client-js/wiki#user">oidc client User object</a></p>
+<h4 id="loginredirect">loginRedirect()</h4>
+<p>Invokes the redirection login flow through the oidc-client. For more info see <a href="https://github.com/IdentityModel/oidc-client-js/wiki">https://github.com/IdentityModel/oidc-client-js/wiki</a>.</p>
+<h4 id="logout">logout()</h4>
+<p>Invokes the redirection logout flow through the oidc-client. . For more info see <a href="https://github.com/IdentityModel/oidc-client-js/wiki">https://github.com/IdentityModel/oidc-client-js/wiki</a>.</p>
+<h3 id="properties_2">Properties</h3>
+<h4 id="_oidcusermanager">_oidcUserManager</h4>
+<p>Reference to the <a href="https://github.com/IdentityModel/oidc-client-js/wiki">OIDC user manager object</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../start/" title="Getting started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../tutorials/basic-operations/" title="Basic operations" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Basic operations
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
