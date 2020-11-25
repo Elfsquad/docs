@@ -4,7 +4,7 @@ In this tutorial I will provide a quick overview of the endpoints that can be us
 
 #### Step 1. Retrieve a list of configuration models.
 
-The first thing we want to do is provide the user with a selection of available configuration models. In order  to achieve this we can use the [featuremodels endpoint](/models#featuremodels):
+The first thing we want to do is provide the user with a selection of available configuration models. In order  to achieve this we can use the [featuremodels endpoint](/ems/models#featuremodels):
 
 `GET /api/2/featuremodels?include=RootFeature`
 

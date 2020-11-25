@@ -11,5 +11,5 @@ As of this writing there are 3 application events exposed through the API:
 | QuotationToAccepted | This event is emitted when a quotation's status is set to Accepted. |
 | QuotationVerified   | This event is emitted when a quotation's status is set to Verified. |
 
-*See [/models/#application-events](/models/#application-events) for information about application event models.*
+*See [/ems/models/#application-events](/ems/models/#application-events) for information about application event models.*
 

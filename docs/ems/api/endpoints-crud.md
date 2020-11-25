@@ -4,21 +4,21 @@ The main endpoint for the API is: `https://api.elfsquad.io`.
 
 | Model                                                        | URI                                | Supported methods      |
 | ------------------------------------------------------------ | ---------------------------------- | ---------------------- |
-| [ApplicationEvents](/models#applicationevents)               | /api/2/applicationevents           | GET, POST, PUT, DELETE |
-| [AssociatedFeatureProperties](/models#associatedfeatureproperty) | /api/2/associatedfeatureproperties | GET, POST, PUT, DELETE |
-| [Categories](/models#categories)                             | /api/2/categories                  | GET, POST, PUT, DELETE |
-| [CrmAccounts](/models#crmaccounts)                           | /api/2/crmaccounts                 | GET, POST, PUT, DELETE |
-| [FeatureHasFeatureProperty](/models#featurehasfeatureproperty) | /api/2/featurehasfeatureproperties | GET, POST, PUT, DELETE |
-| [FeatureProperty](/models#featureproperty)                   | /api/2/featureproperties           | GET, POST, PUT, DELETE |
-| [Feature](/models#feature)                                   | /api/2/features                    | GET, POST, PUT, DELETE |
-| [LeaseTable](/models#LeaseTable)                             | /api/2/leasetables                 | GET, POST, PUT, DELETE |
-| [Organizations](/models#organization)                        | /api/2/organizations               | GET, POST, PUT, DELETE |
-| [QuotationLine](/models#quotationline)                       | /api/2/quotationlines              | GET, POST, PUT, DELETE |
-| [QuotationProperty](/models#quotationproperty)               | /api/2/quotationproperties         | GET, POST, PUT, DELETE |
-| [Quotation](/models#quotation)                               | /api/2/quotations                  | GET, POST, PUT, DELETE |
-| [UnitOfMeasurement](/models#unitofmeasurement)               | /api/2/uom                         | GET, POST, PUT, DELETE |
-| [UserCreationRequest](/models#UserCreationRequest)           | /api/2/UserCreationRequests        | GET, POST, PUT, DELETE |
-| [VAT](/models#vat)                                           | /api/2/vats                        | GET, POST, PUT, DELETE |
+| [ApplicationEvents](/ems/models#applicationevents)               | /api/2/applicationevents           | GET, POST, PUT, DELETE |
+| [AssociatedFeatureProperties](/ems/models#associatedfeatureproperty) | /api/2/associatedfeatureproperties | GET, POST, PUT, DELETE |
+| [Categories](/ems/models#categories)                             | /api/2/categories                  | GET, POST, PUT, DELETE |
+| [CrmAccounts](/ems/models#crmaccounts)                           | /api/2/crmaccounts                 | GET, POST, PUT, DELETE |
+| [FeatureHasFeatureProperty](/ems/models#featurehasfeatureproperty) | /api/2/featurehasfeatureproperties | GET, POST, PUT, DELETE |
+| [FeatureProperty](/ems/models#featureproperty)                   | /api/2/featureproperties           | GET, POST, PUT, DELETE |
+| [Feature](/ems/models#feature)                                   | /api/2/features                    | GET, POST, PUT, DELETE |
+| [LeaseTable](/ems/models#LeaseTable)                             | /api/2/leasetables                 | GET, POST, PUT, DELETE |
+| [Organizations](/ems/models#organization)                        | /api/2/organizations               | GET, POST, PUT, DELETE |
+| [QuotationLine](/ems/models#quotationline)                       | /api/2/quotationlines              | GET, POST, PUT, DELETE |
+| [QuotationProperty](/ems/models#quotationproperty)               | /api/2/quotationproperties         | GET, POST, PUT, DELETE |
+| [Quotation](/ems/models#quotation)                               | /api/2/quotations                  | GET, POST, PUT, DELETE |
+| [UnitOfMeasurement](/ems/models#unitofmeasurement)               | /api/2/uom                         | GET, POST, PUT, DELETE |
+| [UserCreationRequest](/ems/models#UserCreationRequest)           | /api/2/UserCreationRequests        | GET, POST, PUT, DELETE |
+| [VAT](/ems/models#vat)                                           | /api/2/vats                        | GET, POST, PUT, DELETE |
 
 **Additional note about GET:**
 

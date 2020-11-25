@@ -38,7 +38,7 @@ Elfsquad
 
 #### startNewConfiguration(id,language)
 
-Starts a new configuration session and returns a promise with the [configuration object](/models#configuration).
+Starts a new configuration session and returns a promise with the [configuration object](/ems/models#configuration).
 
 ##### Input
 
@@ -49,7 +49,7 @@ Starts a new configuration session and returns a promise with the [configuration
 
 ##### Output
 
-A promise with the  [configuration object](/models#configuration).
+A promise with the  [configuration object](/ems/models#configuration).
 
 ##### Example
 
@@ -64,7 +64,7 @@ Elfsquad
 
 #### changeLanguage(language, callback)
 
-Changes the language of the configuration session and calls the callback function with the updated [configuration object](/models#configuration).
+Changes the language of the configuration session and calls the callback function with the updated [configuration object](/ems/models#configuration).
 
 ##### Input
 
@@ -75,7 +75,7 @@ Changes the language of the configuration session and calls the callback functio
 
 ##### Output
 
-Callback function is called the  [configuration object](/models#configuration) as a parameter.
+Callback function is called the  [configuration object](/ems/models#configuration) as a parameter.
 
 ##### Example
 
@@ -102,7 +102,7 @@ Update the user requirement for a given configuration feature.
 
 ##### Output
 
-A promise with the  [configuration object](/models#configuration).
+A promise with the  [configuration object](/ems/models#configuration).
 
 ##### Example
 
@@ -163,7 +163,7 @@ Takes a HTML element and turns in into a 3D viewer.
 | Parameter     | Type                                   | Description                                                  |
 | ------------- | -------------------------------------- | ------------------------------------------------------------ |
 | element       | HTMLElement                            | Reference to a HTML element that should be turned into the 3D viewer |
-| configuration | [Configuration](/models#configuration) | The current configuration object                             |
+| configuration | [Configuration](/ems/models#configuration) | The current configuration object                             |
 | callback      | Function                               | Function that is called when the loader is finished loading  |
 
 ## DataManagement

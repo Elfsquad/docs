@@ -18,28 +18,28 @@ nav:
   #   - Configurator API: apis/configurator.md
   #   - Quotations API: apis/quotations.md
   #   - "[OLD] API V2": apis/apiv2.md
-  - "API V2":
+  - "EMS API":
     - Overview:
-      - 'Getting started': old/index.md
-      - Models: old/models.md
+      - 'Getting started': ems/index.md
+      - Models: ems/models.md
     - 'REST API':
-      - 'Getting started': old/api/start.md
-      - Basic endpoints: old/api/endpoints-crud.md
-      - Webhooks: old/api/webhooks.md
-      - Configurator: old/api/configurator.md
-      - 'Tutorial: Features': old/api/tutorial/features.md
-      - 'Tutorial: Application Events': old/api/tutorial/applicationevents.md    
+      - 'Getting started': ems/api/start.md
+      - Basic endpoints: ems/api/endpoints-crud.md
+      - Webhooks: ems/api/webhooks.md
+      - Configurator: ems/api/configurator.md
+      - 'Tutorial: Features': ems/api/tutorial/features.md
+      - 'Tutorial: Application Events': ems/api/tutorial/applicationevents.md    
     - SDK (C#):
-      - 'Getting started': old/sdk/start.md
-      - 'Acting on events': old/sdk/applicationevents.md
+      - 'Getting started': ems/sdk/start.md
+      - 'Acting on events': ems/sdk/applicationevents.md
     - SDK (JS):
-      - 'Getting started': old/lib/start.md
-      - 'API defintion': old/lib/api-definition.md
+      - 'Getting started': ems/lib/start.md
+      - 'API defintion': ems/lib/api-definition.md
       - 'Step-by-Step Tutorials':
-          - 'Basic operations': old/lib/tutorials/basic-operations.md
-          - 'Tutorial: Custom configurator in Angular': old/api/tutorial/angularconfigurator/angular_configurator.md
+          - 'Basic operations': ems/lib/tutorials/basic-operations.md
+          - 'Tutorial: Custom configurator in Angular': ems/api/tutorial/angularconfigurator/angular_configurator.md
     - 'PyAPI (Python)':
-      - 'Getting started': old/pyapi/start.md
+      - 'Getting started': ems/pyapi/start.md
 markdown_extensions:
   - codehilite
   - admonition

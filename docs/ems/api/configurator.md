@@ -26,7 +26,7 @@ GET https://api.elfsquad.io/api/3/configurator/new/{IDENTIFIER}
 
 #### Response
 
-See [configuration](/models/#configuration).
+See [configuration](/ems/models/#configuration).
 
 ---
 
@@ -60,7 +60,7 @@ PUT https://api.elfsquad.io/api/3/configurator/{CONFIGURATION_ID}
 
 #### Response
 
-See [configuration](/models/#configuration).
+See [configuration](/ems/models/#configuration).
 
 ---
 
