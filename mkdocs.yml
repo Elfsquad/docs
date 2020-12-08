@@ -2,6 +2,7 @@ site_name: Elfsquad Docs
 theme: 
   name: material
   logo: https://ems.elfsquad.io/assets/images/logo_white.png
+  favicon: https://www.elfsquad.io/favicon-32x32.png
   palette:  
     primary: black
     accent: blue
