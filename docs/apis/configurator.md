@@ -1,4 +1,4 @@
-The Elfsquad Configurator API enables retrieve, create and update configurations.
+The Elfsquad Configurator API enables you to retrieve, create and update configurations.
 
 Example use-cases:
 
