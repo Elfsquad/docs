@@ -14,6 +14,7 @@ nav:
   - Introduction: 'index.md'
   - Authentication: 'authentication.md'
   - Data API: apis/data.md
+  - Configurator API: apis/configurator.md
   # - APIs:
   #   - Data API: apis/data.md
   #   - Configurator API: apis/configurator.md

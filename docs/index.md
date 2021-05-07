@@ -7,4 +7,5 @@ See the [Authentication page](authentication) for information about authenticati
 
 * [Data API](apis/data)
 * [Configurator API](apis/configurator)
-* [Quotations API](apis/quotations)
+* [EMS API](/ems)
+
