@@ -11,4 +11,4 @@ See the [Authentication page](authentication) for information about authenticati
 
 * [Data API](/apis/data)
 * [Configurator API](/apis/configurator)
-* [EMS API](/apis/ems)
+<!-- * [EMS API](/apis/ems) -->

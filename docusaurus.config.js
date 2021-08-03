@@ -16,8 +16,9 @@ module.exports = {
     navbar: {
       title: 'Elfsquad Docs',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Elfsquad',
+        src: 'img/logo_white.png',
+        srcDark: 'img/logo_white.png'
       },
       items: [
         {
@@ -26,9 +27,13 @@ module.exports = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          to: '/blog', 
+          label: 'Blog', 
+          position: 'left'
+        },
+        {
+          href: 'https://github.com/elfsquad',
           label: 'GitHub',
           position: 'right',
         },
@@ -109,6 +114,10 @@ module.exports = {
           {
             routePath: '/apis/data',
             specUrl: "https://api.elfsquad.io/data/1/swagger/v2/swagger.json",
+          },
+          {
+            routePath: '/apis/configurator',
+            specUrl: 'http://localhost:63666/configurator/v1/swagger.json'
           }
         ]
       }
