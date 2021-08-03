@@ -94,13 +94,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/elfsquad/docs/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/elfsquad/docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -117,7 +117,7 @@ module.exports = {
           },
           {
             routePath: '/apis/configurator',
-            specUrl: 'http://localhost:63666/configurator/v1/swagger.json'
+            specUrl: 'https://api.elfsquad.io/configurator/v1/swagger.json'
           }
         ]
       }
