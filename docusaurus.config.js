@@ -9,7 +9,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'Elfsquad', // Usually your GitHub org/user name.
   projectName: 'Elfsquad', // Usually your repo name.
   themeConfig: {
