@@ -17,7 +17,7 @@ module.exports = {
       title: 'Elfsquad Docs',
       logo: {
         alt: 'Elfsquad',
-        src: 'img/logo_white.png',
+        src: 'img/logo_black.png',
         srcDark: 'img/logo_white.png'
       },
       items: [
