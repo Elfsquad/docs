@@ -1,3 +1,7 @@
+---
+title: User Authentication
+sidebar_position: 3
+---
 
 ## Before You Begin
 
@@ -28,18 +32,15 @@ When this is the case, the user will be redirected to https://myapp.com/callback
 Now all that is left, is to extract the access token (eyabcdefghijk12345678) from this url.
 One example of how to do this, would be to serve a web page with some javascript at the redirect url:
 
-!!! code-example "Javascript example"
-
-    === "HTML"
-        ``` html
-                <html>
-                    <body>
-                        <script>
-                            let token = window.location.hash.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
-                            alert("your access token is : " +token);
-                        </script>
-                    </body>
-                </html>
-        ```
+``` html
+<html>
+    <body>
+        <script>
+            let token = window.location.hash.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
+            alert("your access token is : " +token);
+        </script>
+    </body>
+</html>
+```
 
 Your app will now be able to use this token to make calls to the Elfsquad API's on the end users behalf.
