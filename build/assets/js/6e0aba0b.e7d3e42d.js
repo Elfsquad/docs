@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[320],{5056:function(e){e.exports=JSON.parse('{"type":"url","content":"https://api.elfsquad.io/configurator/v1/swagger.json"}')}}]);
