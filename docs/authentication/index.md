@@ -1,7 +1,7 @@
 ---
 title: Authentication
 sidebar_position: 1
-sidebar_label: Introduction
+sidebar_label: Overview
 slug: ./
 ---
 

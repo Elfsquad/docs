@@ -28,6 +28,11 @@ module.exports = {
           label: 'Tutorial',
         },
         {
+          to: '/docs/APIs/',
+          label: 'APIs',
+          position: 'left'
+        },
+        {
           to: '/blog', 
           label: 'Blog', 
           position: 'left'
@@ -119,7 +124,10 @@ module.exports = {
             routePath: '/apis/configurator',
             specUrl: 'https://api.elfsquad.io/configurator/v1/swagger.json'
           }
-        ]
+        ],
+        theme: {
+          primaryColor: '#0088da'
+        }
       }
     ]
   ],
