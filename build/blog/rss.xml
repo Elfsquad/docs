@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Elfsquad Docs Blog</title>
+        <link>https://docs.elfsquad.io/blog</link>
+        <description>Elfsquad Docs Blog</description>
+        <lastBuildDate>Wed, 25 Nov 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Tutorial - Custom configurator]]></title>
+            <link>https://docs.elfsquad.io/blog/tutorial - custom configurator</link>
+            <guid>tutorial - custom configurator</guid>
+            <pubDate>Wed, 25 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Quick overview]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tutorial - Custom configurator in Angular]]></title>
+            <link>https://docs.elfsquad.io/blog/tutorial - custom configurator in Angular</link>
+            <guid>tutorial - custom configurator in Angular</guid>
+            <pubDate>Tue, 24 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Custom configurator in Angular]]></description>
+        </item>
+    </channel>
+</rss>

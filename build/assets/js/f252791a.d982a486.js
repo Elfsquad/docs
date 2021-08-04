@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[361],{9502:function(a){a.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"angular","name":"angular","count":1,"permalink":"/blog/tags/angular"}')}}]);
