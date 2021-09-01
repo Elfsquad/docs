@@ -37,7 +37,7 @@ const FeatureList = [
     description: (
       <>
         <p>
-          There are several ways to embed the custom-facing configurator onto your existing website.
+          There are several ways to embed the customer-facing configurator onto your existing website.
         </p>
         <p>
           You will also be able to create a new interface from scratch using our <a href="apis/configurator">configuration endpoints.</a> Or check out our <a href="/blog/tutorial%20-%20custom%20configurator">tutorial on Custom Configurators.</a>
