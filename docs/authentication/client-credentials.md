@@ -29,19 +29,9 @@ Replace the `{CLIENT_ID}` and `{CLIENT_SECRET}` values in the example below with
 POST /connect/token HTTP/1.1
 Host: login.elfsquad.io
 Content-Type: application/x-www-form-urlencoded
-
 client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope=Elfskot.Api
 ```
 </TabItem>
-
-Body (x-www-form-urlencoded):  
-|KEY               |VALUE             |
-|:-----------------|:-----------------|
-|client_id         |`{CLIENT_ID}`     |
-|client_secret     |`{CLIENT_SECRET}` |
-|grant_type        |client_credentials|
-|scope             |Elfskot.Api       |
-
 
 <TabItem value="curl">
 
@@ -73,7 +63,13 @@ Console.WriteLine(response.Content);
 </TabItem>
 </Tabs>
 
-     
+Body (x-www-form-urlencoded):  
+|KEY               |VALUE             |
+|:-----------------|:-----------------|
+|client_id         |`{CLIENT_ID}`     |
+|client_secret     |`{CLIENT_SECRET}` |
+|grant_type        |client_credentials|
+|scope             |Elfskot.Api       |     
 
 ## Step 2: Retrieve the access token from the response
 A successful response will look like this:
