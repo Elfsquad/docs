@@ -29,7 +29,10 @@ Replace the `{CLIENT_ID}` and `{CLIENT_SECRET}` values in the example below with
 POST /connect/token HTTP/1.1
 Host: login.elfsquad.io
 Content-Type: application/x-www-form-urlencoded
+
+client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credentials&scope=Elfskot.Api
 ```
+</TabItem>
 
 Body (x-www-form-urlencoded):  
 |KEY               |VALUE             |
@@ -39,7 +42,7 @@ Body (x-www-form-urlencoded):
 |grant_type        |client_credentials|
 |scope             |Elfskot.Api       |
 
-</TabItem>
+
 <TabItem value="curl">
 
 ``` bash
