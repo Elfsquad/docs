@@ -26,7 +26,7 @@ Replace the `{CLIENT_ID}` and `{CLIENT_SECRET}` values in the example below with
 <TabItem value="http">
 
 ```http
-POST /connect/token HTTP/1.1
+POST /oauth2/token HTTP/1.1
 Host: login.elfsquad.io
 Content-Type: application/x-www-form-urlencoded
   
@@ -37,7 +37,7 @@ client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credential
 <TabItem value="curl">
 
 ``` bash
-curl --location --request POST 'https://login.elfsquad.io/connect/token' \
+curl --location --request POST 'https://login.elfsquad.io/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'client_id={CLIENT_ID}' \
 --data-urlencode 'client_secret={CLIENT_SECRET}' \
@@ -49,7 +49,7 @@ curl --location --request POST 'https://login.elfsquad.io/connect/token' \
 <TabItem value="csharp">
 
 ```c#
-var client = new RestClient("https://login.elfsquad.io/connect/token");
+var client = new RestClient("https://login.elfsquad.io/oauth2/token");
 client.Timeout = -1;
 var request = new RestRequest(Method.POST);
 request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
