@@ -17,20 +17,6 @@ const FeatureList = [
       </>      
     ),
   },
-  // {
-  //   title: 'SDK (C#)',
-  //   Svg: require('../../static/img/undraw_developer_activity_bv83.svg').default,
-  //   description: (
-  //     <>
-  //      <p>
-  //         Elfsquad provides an easy way to integrate with our applications through our SDK. Our SDK has been developed in C#, and is available as a Nuget package.
-  //      </p>
-  //      <p>
-  //         For more information about our SDK, see the <a href="/docs/SDK-CSharp/getting-started">getting started with the SDK.</a>
-  //      </p>
-  //     </>
-  //   ),
-  // },
   {
     title: 'Custom Configurator',
     Svg: require('../../static/img/undraw_building_websites_i78t.svg').default,
