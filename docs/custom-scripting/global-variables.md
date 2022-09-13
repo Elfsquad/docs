@@ -28,6 +28,20 @@ async function fetchQuotation(){
 }
 ```
 
+## ui.openDialog
+The *ui.openDialog* function allows you to open a dialog and embed one or more scripts to that dialog. These scripts can be used to add your own custom behavior and content to the dialog.
+
+### Example
+```
+ui.openDialog({
+    title: 'Dialog Title',
+    width: '80vw',
+    height: '80vh',
+    scripts: ['script 1'],
+    parameters: parameters
+});
+```
+
 ## ui.openFormDialog
 The *ui.openFormDialog* allows you to open a dialog with a form. The form definition is implemented using JSON forms. You can refer to their documentation for implementation details at [https://jsonforms.io/docs](https://jsonforms.io/docs).
 
