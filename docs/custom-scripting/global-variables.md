@@ -32,7 +32,7 @@ async function fetchQuotation(){
 The *ui.openDialog* function allows you to open a dialog and embed one or more scripts to that dialog. These scripts can be used to add your own custom behavior and content to the dialog.
 
 ### Example
-```
+``` js
 ui.openDialog({
     title: 'Dialog Title',
     width: '80vw',
