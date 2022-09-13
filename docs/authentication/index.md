@@ -23,6 +23,10 @@ x-elfsquad-id:  {TENANT_ID}
 ```
 The Tenant ID can be found at the bottom of the submenu in the [integrations page](https://ems.elfsquad.io/integration).
 
+If your environment includes multiple showroom domains, you can also opt to use the `x-elfsquad-domain` header. This allows you to make requests as a specific showroom, such that you will get the correct configuration models and settings that belong to that showroom instance:
+```
+x-elfsquad-domain: {SHOWROOM_DOMAIN}
+```
 
 ## Client Credentials
 For integration flows that do not require requests that are issued by a user, you can use this authentication method. For example when creating automation tooling and data integrations.
