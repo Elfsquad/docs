@@ -24,13 +24,16 @@ repository](https://github.com/elfsquad/showroom-example) on our Github.
 Create a new Angular project using the Angular CLI.
 
 ## Creating the project
-
+```bash
     ng new ShowroomExample --routing=true --style=css --skipTests=true
+```
 
 Once that’s finished, you should be able to run the application and open
 it on [localhost:4200](http://localhost:4200).
 
+```
     ng serve
+```
 
 ## Installing dependencies
 
@@ -41,13 +44,16 @@ packages.
 
 These are developed and maintained by Elfsquad.
 
+```bash
     npm install @elfsquad/authentication
     npm install @elfsquad/configurator
+```
 
 ## Adding some basic html/css
 
 In the `index.html`, we add a little bit of styling:
 
+```html
     <style>
         * {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -58,6 +64,7 @@ In the `index.html`, we add a little bit of styling:
           padding: 0;
         }
     </style>
+```
 
 And in the `app.component.html` file, we’ll remove everything but the
 `<router-outlet></router-outlet>` tag.
@@ -69,6 +76,7 @@ We can initialize this class in the `app.module.ts` file. The
 configurator context can be used for both anonymous and showrooms that
 require a logged in user.
 
+```typescript
     import { NgModule } from '@angular/core';
     import { BrowserModule } from '@angular/platform-browser';
     import {ConfiguratorContext, IConfiguratorOptions} from '@elfsquad/configurator';
@@ -102,14 +110,14 @@ require a logged in user.
       bootstrap: [AppComponent],
     })
     export class AppModule { }
+  ```
 
 If you want to require a logged in user, you can need to change a few
 snippets of code in the example above.
 
 1.  Add the `authenticationOptions` to the `configuratorOptions` object:
 
-<!-- -->
-
+```typescript
     const options = {
       tenantId: '5dcd73c7-c0e9-44e8-85f3-dfef7553e8a2',
       authenticationMethod: AuthenticationMethod.USER_LOGIN,
@@ -118,12 +126,13 @@ snippets of code in the example above.
         redirectUri: 'http://localhost:4200',
       }
     };
+```
 
 1.  Check if the user is logged in and if not, redirect to the login
     page.
 
-<!-- -->
 
+```typescript
     const configuratorContext = new ConfiguratorContext(options);
     configuratorContext.authenticationContext.isSignedIn().then(signedIn => {
       if (signedIn) {
@@ -131,6 +140,7 @@ snippets of code in the example above.
       }
       configuratorContext.authenticationContext.signIn();
     });
+```
 
 > ⚠️ Make sure to replace the `tenantId` with your tenant id
 
@@ -147,6 +157,7 @@ Now that we’ve created the component, we should register it as a route,
 so our users can access it. You can register the route by adding it to
 the `app-routing-module.ts` file.
 
+```typescript
     import { NgModule } from '@angular/core';
     import { RouterModule, Routes } from '@angular/router';
     import {ProductOverviewComponent} from './product-overview/product-overview.component';
@@ -160,6 +171,7 @@ the `app-routing-module.ts` file.
       exports: [RouterModule]
     })
     export class AppRoutingModule { }
+```
 
 ## Retrieving the configuration models
 
@@ -167,6 +179,7 @@ The first step to creating the product overview is retrieving a list of
 available configuration models. We can do this in the `ngOnInit` method
 of the `ProductOverview` component.
 
+```typescript
     import { Component, Inject, OnInit } from '@angular/core';
     import { ConfigurationModel, ConfiguratorContext } from '@elfsquad/configurator';
 
@@ -188,6 +201,7 @@ of the `ProductOverview` component.
         });
       }
     }
+```
 
 The configuration models should now be retrieved when you open the page.
 
@@ -196,15 +210,18 @@ The configuration models should now be retrieved when you open the page.
 To display those models, we create a grid overview in the
 `product-overview.component.html` file.
 
+```html
     <div class="product-overview">
       <div *ngFor="let model of configurationModels" class="product-card" [routerLink]="['configure', model.featureModelId]">
         <img [src]="model.imageUrl" />
         <h3 [innerHTML]="model.description"></h3>
       </div>
     </div>
+```
 
 And the following CSS:
 
+```css
     div.product-overview {
       padding: 80px;
       display: flex;
@@ -223,6 +240,7 @@ And the following CSS:
       height: auto;
       width: 100%;
     }
+```
 
 # Creating the configurator page
 
@@ -232,13 +250,17 @@ model.
 
 Let’s start by creating a `ConfiguratorComponent`
 
+```bash
     ng generate component Configurator
+```
 
 And registering a route to access the configurator page. Notice we use a
 `:id` parameter in the path. This id can either be the name or the id of
 a configuration model.
 
+```typescript
     { path: 'configure/:id', component: ConfiguratorComponent }
+```
 
 ## Starting a new configuration
 
@@ -255,8 +277,7 @@ configuration. To do this, we’ll:
 4.  Update `ConfiguratorComponent.configuration` every time the
     configuration is updated.
 
-<!-- -->
-
+```typescript
     import { Component, OnInit } from '@angular/core';
     import { ActivatedRoute } from '@angular/router';
     import { Configuration, ConfiguratorContext } from '@elfsquad/configurator';
@@ -286,6 +307,7 @@ configuration. To do this, we’ll:
         });
       }
     }
+```
 
 The resulting configuration object contains many different fields, all
 of which can be explored on
@@ -313,6 +335,7 @@ We will display only one step at a time. To do this, we’ll add a
 `activeIndex` and functions to go the next/previous step to the
 `configurator.component.ts` file.
 
+```typescript
       public activeIndex: number = 0;
 
       public next() {
@@ -322,11 +345,13 @@ We will display only one step at a time. To do this, we’ll add a
       public previous() {
         this.activeIndex -= 1;
       }
+```
 
 In the HTML, we’ll iterate overall features in the step and display them
 by using the `app-feature` tag. This is a component we’ll create in the
 next step.
 
+```html
     <div *ngFor="let step of configuration?.steps ?? []; let i = index">
       <div class="step" [class.active]="i === activeIndex">
         <app-feature [configuration]="configuration" [feature]="feature" *ngFor="let feature of step.features"></app-feature>
@@ -352,9 +377,11 @@ next step.
         Next
       </button>
     </div>
+```
 
 and CSS
 
+```css
     div.step {
       display: none;
       max-width: 400px;
@@ -368,6 +395,7 @@ and CSS
       margin-top: 12px;
       margin-left: 24px;
     }
+```
 
 # Creating the feature component
 
@@ -377,10 +405,13 @@ is a new component that we’re about to implement.
 Because of the recursive nature of features, we need to create a new
 component for them.
 
+```bash
     ng generate component Feature
+```
 
 This component will take a feature as input.
 
+```typescript
     import { Component, Input, OnInit } from '@angular/core';
     import { ConfigurationFeature, ConfiguratorContext } from '@elfsquad/configurator';
 
@@ -397,6 +428,7 @@ This component will take a feature as input.
 
       ngOnInit(): void { }
     }
+```
 
 ## Toggling features on/off
 
@@ -405,6 +437,7 @@ we’ll only have to implement the `toggle()` function.
 
 This function will (de)select an option within the configuration model.
 
+```typescript
       toggle(): void {
         if (!this.feature)
           return;
@@ -419,12 +452,14 @@ This function will (de)select an option within the configuration model.
           value
         );
       }
+```
 
 ## Displaying the feature
 
 For displaying features, we’ll add some HTML to the
 `feature.component.html` file.
 
+```html
     <div class="feature">
       <div class="header">
         <span [innerHTML]="feature?.description"></span>
@@ -451,9 +486,11 @@ For displaying features, we’ll add some HTML to the
         *ngFor="let f of feature?.features"
         ></app-feature>
     </div>
+```
 
 And add the css below to `feature.component.css`
 
+```css
     div.feature {
       width: 100%;
       height: 100%;
@@ -466,28 +503,36 @@ And add the css below to `feature.component.css`
       align-items: center;
       justify-content: space-between;
     }
+```
 
 # Requesting a quote
 
 Now that we are able to configure a product, we can go ahead and request
 a quotation. We’ll add a button to the configurator page:
 
+```html
     <button [routerLink]="['/checkout', configuration?.id]">Request quote</button>
+```
 
 ## Creating the checkout page
 
 As before, we’ll start by creating the `Checkout` component.
 
+```bash
     ng generate component Checkout
+```
 
 and add the route to the `app-routing.module.ts` file. In this route,
 the id stands for the configuration id.
 
+```typescript
       { path: 'checkout/:id', component: CheckoutComponent }
+```
 
 In the `checkout.component.ts` file, we’ll create a function to request
 a quote
 
+```typescript
       public isSubmitted = false;
       public model: QuotationRequest = {};
 
@@ -496,10 +541,12 @@ a quote
           this.isSubmitted = true;
         });
       }
+```
 
 The checkout page itself, is divided into two sections. One before the
 request is submitted, and one afterward:
 
+```html
     <h3>Request quote</h3>
 
     <div *ngIf="!isSubmitted">
@@ -548,3 +595,4 @@ request is submitted, and one afterward:
       <h3>Thank you for your request!</h3>
       <p>We will contact you shortly.</p>
     </div>
+```
