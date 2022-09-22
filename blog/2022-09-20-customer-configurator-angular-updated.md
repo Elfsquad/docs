@@ -8,8 +8,6 @@ author_image_url: https://avatars.githubusercontent.com/u/49564025?v=4
 tags: [angular, configurator]
 ---
 
-# Introduction
-
 In this tutorial, I will provide a quick overview of how to implement
 your customer-facing showroom in Angular.
 
@@ -19,11 +17,11 @@ repository](https://github.com/elfsquad/showroom-example) on our Github.
 > ℹ️ If you’re not familiar with Angular, you can follow the [Angular
 > getting started guide](https://angular.io/start).
 
-# Setting up a new Angular project
+## Setting up a new Angular project
 
 Create a new Angular project using the Angular CLI.
 
-## Creating the project
+### Creating the project
 ```bash
     ng new ShowroomExample --routing=true --style=css --skipTests=true
 ```
@@ -35,7 +33,7 @@ it on [localhost:4200](http://localhost:4200).
     ng serve
 ```
 
-## Installing dependencies
+### Installing dependencies
 
 For this tutorial, we’ll make use of the
 [@elfsquad/authentication](https://github.com/elfsquad/authentication)
@@ -49,7 +47,7 @@ These are developed and maintained by Elfsquad.
     npm install @elfsquad/configurator
 ```
 
-## Adding some basic html/css
+### Adding some basic html/css
 
 In the `index.html`, we add a little bit of styling:
 
@@ -69,7 +67,7 @@ In the `index.html`, we add a little bit of styling:
 And in the `app.component.html` file, we’ll remove everything but the
 `<router-outlet></router-outlet>` tag.
 
-## Creating the configurator context
+### Creating the configurator context
 
 We communicate with the Elfsquad API through the `ConfiguratorContext`.
 We can initialize this class in the `app.module.ts` file. The
@@ -144,14 +142,14 @@ snippets of code in the example above.
 
 > ⚠️ Make sure to replace the `tenantId` with your tenant id
 
-# Creating the product overview page
+## Creating the product overview page
 
 We start by creating a `ProductOverview` component. This component will
 show all configuration models available.
 
     ng generate component ProductOverview
 
-## Adding the product overview route
+### Adding the product overview route
 
 Now that we’ve created the component, we should register it as a route,
 so our users can access it. You can register the route by adding it to
@@ -173,7 +171,7 @@ the `app-routing-module.ts` file.
     export class AppRoutingModule { }
 ```
 
-## Retrieving the configuration models
+### Retrieving the configuration models
 
 The first step to creating the product overview is retrieving a list of
 available configuration models. We can do this in the `ngOnInit` method
@@ -205,7 +203,7 @@ of the `ProductOverview` component.
 
 The configuration models should now be retrieved when you open the page.
 
-## Displaying the configuration models
+### Displaying the configuration models
 
 To display those models, we create a grid overview in the
 `product-overview.component.html` file.
@@ -242,7 +240,7 @@ And the following CSS:
     }
 ```
 
-# Creating the configurator page
+## Creating the configurator page
 
 Now that we have a product overview page, we can proceed to build the
 actual configurator. This is the page on which users can configure their
@@ -262,7 +260,7 @@ a configuration model.
     { path: 'configure/:id', component: ConfiguratorComponent }
 ```
 
-## Starting a new configuration
+### Starting a new configuration
 
 Once the user visits the configurator page, we need to start a new
 configuration. To do this, we’ll:
@@ -329,7 +327,7 @@ of all steps. A step contains features, and each feature can contain
         - ...
       - ...
 
-## Displaying the steps
+### Displaying the steps
 
 We will display only one step at a time. To do this, we’ll add a
 `activeIndex` and functions to go the next/previous step to the
@@ -397,7 +395,7 @@ and CSS
     }
 ```
 
-# Creating the feature component
+## Creating the feature component
 
 We show features using the `app-feature` tag in the previous step. This
 is a new component that we’re about to implement.
@@ -430,7 +428,7 @@ This component will take a feature as input.
     }
 ```
 
-## Toggling features on/off
+### Toggling features on/off
 
 For this example, we’ll only enable toggling features on and off, so
 we’ll only have to implement the `toggle()` function.
@@ -454,7 +452,7 @@ This function will (de)select an option within the configuration model.
       }
 ```
 
-## Displaying the feature
+### Displaying the feature
 
 For displaying features, we’ll add some HTML to the
 `feature.component.html` file.
@@ -505,7 +503,7 @@ And add the css below to `feature.component.css`
     }
 ```
 
-# Requesting a quote
+## Requesting a quote
 
 Now that we are able to configure a product, we can go ahead and request
 a quotation. We’ll add a button to the configurator page:
@@ -514,7 +512,7 @@ a quotation. We’ll add a button to the configurator page:
     <button [routerLink]="['/checkout', configuration?.id]">Request quote</button>
 ```
 
-## Creating the checkout page
+### Creating the checkout page
 
 As before, we’ll start by creating the `Checkout` component.
 
