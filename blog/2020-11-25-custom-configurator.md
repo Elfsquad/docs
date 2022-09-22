@@ -10,21 +10,25 @@ tags: [configurator]
 
 ## Quick overview
 
-In this tutorial I will provide a quick overview of the endpoints that can be used to implement your own customer-facing configurator.
+In this tutorial I will provide a quick overview of the endpoints that
+can be used to implement your own customer-facing configurator.
 
-#### Step 1. Retrieve a list of configuration models.
+### Step 1. Retrieve a list of configuration models.
 
-The first thing we want to do is provide the user with a selection of available configuration models. In order  to achieve this we can use the [featuremodels endpoint](/apis/configurator):
+The first thing we want to do is provide the user with a selection of
+available configuration models. In order to achieve this we can use the
+[configuration models endpoint](https://docs.elfsquad.io/apis/configurator#tag/Configurator/paths/~1configurator~1{version}~1configurator~1configurationmodels/get)
 
-`GET /api/2/featuremodels?include=RootFeature`
+`GET /configurator/1/configurator/configurationmodels`
 
-It is important we include the RootFeature property as it will contain information such as the name, price and image for a particular configuration model.
+### Step 2. Start a new configuration
 
-#### Step 2. Start a new configuration
+When a user has selected a configuration model to be configured, we can
+use the `featureModelId` property to start a new configuration session.
+We use the [start configuration endpoint](https://docs.elfsquad.io/apis/configurator#tag/Configurator/paths/~1configurator~1{version}~1configurator~1new~1{featureModelName}/get) 
+for this.
 
-When a user has selected a configuration model to be configured, we can use the Id property to start a new configuration session. 
-
-`GET /api/2/configurations/startnew/{featureModelId}`
+`GET /configurator/1/configurator/new/{featureModelId}`
 
 Result (*Some data has been emitted for clarity.*):
 
@@ -85,14 +89,16 @@ Overview of important configuration properties:
 | Values       | `object` | Object that contains all values of the configuration. The key represents the identifier of a feature model node. The value represents the selected value for that particular node. |
 | Conflicts    | `object` | If a conflict occurs during the configuration process this object will be filled with conflicting nodes and solution options. |
 
-#### Step 3. Update value
+### Step 3. Update value
 
-In order to update a value for a particular option we use the update endpoint:
+In order to update a value for a particular option we use the [update
+requirement endpoint](https://docs.elfsquad.io/apis/configurator/#tag/Configurator/paths/~1configurator~1{version}~1configurator~1{configurationId}/put)
 
-`PUT /api/2/configurations/{configurationId}?ignoreConflicts=true&compress=true`
+`PUT /configurator/1/configurator/{configurationId}?ignoreConflicts=true`
 
-*The ignoreConflicts parameter is optional. When this parameter is set to true the configurator will automatically resolve any conflicts that might occur.*
-*The compress parameter is also optional, but recommended. It will ensure only values will be returned that actually changed.*
+* The `ignoreConflicts` parameter is optional. When this parameter is
+  set to true the configurator will automatically resolve any conflicts
+  that might occur.
 
 Request body:
 
@@ -102,3 +108,4 @@ Request body:
 | ------------------ | -------- | ------------------------------------------------------------ |
 | featureModelNodeId | `Guid`   | Identifier of the feature model node.                        |
 | value              | `number` | User-selected value for the option. 0 for false, 1 for true, or any other number when the option is provided as an input field. |
+
