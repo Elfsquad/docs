@@ -22,14 +22,8 @@ module.exports = {
       },
       items: [
         {
-          type: 'doc',
-          docId: 'Introduction',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          to: '/docs/APIs/',
-          label: 'APIs',
+          to: '/docs/Introduction/',
+          label: 'Documentation',
           position: 'left'
         },
         {
