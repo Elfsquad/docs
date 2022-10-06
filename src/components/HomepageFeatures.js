@@ -12,7 +12,7 @@ const FeatureList = [
           Integrate or build your own application directly on our REST API. Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up.
         </p>
         <p>
-          For more information about our API, see the <a href="/docs/APIs">API Overview</a>.
+          For more information about our API, see the <a href="/docs/Introduction">API Overview</a>.
         </p>
       </>      
     ),
