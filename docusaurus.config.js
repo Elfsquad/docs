@@ -111,12 +111,12 @@ module.exports = {
        {
         specs: [
           {
-            routePath: '/apis/data',
-            specUrl: "https://api.elfsquad.io/data/1/swagger/v2/swagger3.json",
+            route: '/apis/data',
+            spec: "https://api.elfsquad.io/data/1/swagger/v2/swagger3.json",
           },
           {
-            routePath: '/apis/configurator',
-            specUrl: 'https://api.elfsquad.io/configurator/v1/swagger.json'
+            route: '/apis/configurator',
+            spec: 'https://api.elfsquad.io/configurator/v1/swagger.json'
           }
         ],
         theme: {
