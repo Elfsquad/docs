@@ -1,8 +1,7 @@
 ---
 title: Data API
-sidebar_position: 2
-sidebar_label: Overview
-slug: ./
+sidebar_position: 1
+sidebar_label: Data API
 ---
 
 The Elfsquad Data API enables you to query and manipulate plain data through an API call. No business logic or events will be triggered when making changes through this API.
