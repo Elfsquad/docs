@@ -28,14 +28,12 @@ Now clicking on the default primary action 'Add to quotation' will no longer red
 
 To listen to this message, you could do something like: 
 ``` javascript
- window.addEventListener('message', function (e) {
+window.addEventListener('message', function (e) {
     try {
         var messageObject = JSON.parse(e.data);
-        if (messageObject && messageObject['action']) {
-            if (messageObject['action'] === 'createQuotation') {
-                onQuotationRequested(messageObject['argument']);
-            }
-        }
+        if (!messageObject) return;
+        if (messageObject['action'] != 'createQuotation') return;
+        onQuotationRequested(messageObject['argument']);
     } catch { }
 }, false);
 ```
@@ -81,11 +79,9 @@ A complete example embedding the Automotive showroom:
             window.addEventListener('message', function (e) {
                 try {
                     var messageObject = JSON.parse(e.data);
-                    if (messageObject && messageObject['action']) {
-                        if (messageObject['action'] === 'createQuotation') {
-                            onQuotationRequested(messageObject['argument']);
-                        }
-                    }
+                    if (!messageObject) return;
+                    if (messageObject['action'] != 'createQuotation') return;
+                    onQuotationRequested(messageObject['argument']);
                 } catch { }
             }, false);
 
