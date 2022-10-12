@@ -74,6 +74,7 @@ A complete example embedding the Automotive showroom:
 
         <iframe src="https://automotive.elfsquad.io/configure/Elfsquad carrosserie?orderentry=true"></iframe>
         <script>
+            // TODO: change these fields
             const TENANT_ID = '6fd356f8-b46f-4683-825d-cc17cc7fb73d'; // This ID can be found on the Integrations page of the EMS (https://ems.elfsquad.io/integration).
             const ELFSQUAD_DOMAIN = 'https://automotive.elfsquad.io'
 
