@@ -31,6 +31,18 @@ const FeatureList = [
       </>
     ),
   },
+  {
+    title: 'Guides',
+    Svg: require('../../static/img/undraw_books_re_8gea.svg').default,
+    description: (
+      <>
+        <p>Some integrations can be more complex than others.</p>
+        <p>
+          Leverage <a href="/docs/guides/embed-showroom">our guides</a> to make building complex integrations easier.
+        </p>
+      </>
+    ),
+  },
 ];
 
 function Feature({Svg, title, description}) {

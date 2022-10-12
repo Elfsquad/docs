@@ -1,6 +1,6 @@
 ---
 title: Embedding the showroom
-sidebar_position: 2
+sidebar_position: 1
 sidebar_label: Embedding the showroom
 slug: ./embed-showroom
 ---
