@@ -14,7 +14,7 @@ This guide assumes you've already familiarized yourself with the
 pagination and filtering.
 :::
 
-We'll be using the [Data API]("/docs/apis/data-api") to retrieve
+We'll be using the [Data API]("/apis/data-api") to retrieve
 quotation lines from Elfsquad.
 
 The `QuotationLines` endpoint is available for querying quotation lines.
