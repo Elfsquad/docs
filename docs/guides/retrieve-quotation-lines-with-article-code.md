@@ -60,7 +60,7 @@ var content = await response.Content.ReadAsStringAsync();
   <TabItem value="curl">
 
   ```bash
-  curl --request GET 'https://api.elfsquad.io/data/1/QuotationLines?$filter=QuotationId eq ee0a67a0-5a65-4868-b0a0-306c4cd3d62d and ArticleCode ne null' \
+  curl --request GET 'https://api.elfsquad.io/data/1/QuotationLines?$filter=QuotationId%20e%20ee0a67a0-5a65-4868-b0a0-306c4cd3d62d%20and%20ArticleCode ne null' \
        --header 'Authorization: Bearer YOUR_TOKEN'
   ```
   </TabItem>
