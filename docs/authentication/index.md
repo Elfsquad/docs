@@ -33,7 +33,7 @@ For integration flows that do not require requests that are issued by a user, yo
 
 The client credentials authentication method can be used in all available APIs.
 
-[Step by step tutorial](client-credentials)
+[Step by step tutorial](/docs/authentication/client-credentials)
 
 
 ## User authentication
@@ -41,4 +41,4 @@ For integration flows that require requests that are issued by a user, you can u
 
 The user authentication method can be used in all available APIs.
 
-[Step by step tutorial](user-authentication)
+[Step by step tutorial](/docs/authentication/user-authentication)
