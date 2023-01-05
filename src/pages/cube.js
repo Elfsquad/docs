@@ -14,7 +14,10 @@ function Box(props) {
       {...props}
       ref={mesh}>
       <RoundedBox args={[0.9, 0.9, 0.9]} radius={0.1}>
-        <meshPhysicalMaterial attach="material" color={"black"} emissive={'black'} roughness={0} iridescence={1} iridescenceIOR={2.3} metalness={1} />
+        <meshPhysicalMaterial 
+          attach="material" color={"black"} emissive={'black'} 
+          roughness={0} iridescence={1} iridescenceIOR={2.3} metalness={1}
+          reflectivity={1} sheen={1} />
       </RoundedBox>      
     </mesh>
   )
@@ -103,10 +106,10 @@ function Scene(props) {
 
       <ambientLight />
       
-      <spotLight position={[10, 10, 10]} />
-      <spotLight position={[10, -10, 10]} />
-      <spotLight position={[-10, 10, -10]} />
-      <spotLight position={[-10, -10, -10]} />
+      <spotLight position={[10, 10, 10]} penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[10, -10, 10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[-10, 10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[-10, -10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
 
       <Cube />
 
