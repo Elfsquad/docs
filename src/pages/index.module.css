@@ -13,6 +13,9 @@
 
   display: flex;
 
+  background-color: #1b1b1d;
+  color:#fff;
+
 }
 
 .heroBanner > * {
