@@ -16,7 +16,7 @@ function Box(props) {
       <RoundedBox args={[0.9, 0.9, 0.9]} radius={0.1}>
         <meshPhysicalMaterial 
           attach="material" color={"black"} emissive={'black'} 
-          roughness={0} iridescence={1.3} iridescenceIOR={2.4} metalness={1}
+          roughness={0} iridescence={2} iridescenceIOR={1.3} metalness={1}
           />
       </RoundedBox>      
     </mesh>
@@ -77,7 +77,7 @@ function Cube(props) {
       targetSlice = slices[getRandomInt(0, 2)];
       targetSlice.current.rotation.y += 0.01;
       tick = 1;
-    }, 2500);
+    }, 5000);
   }, []);
 
   return (
@@ -102,25 +102,23 @@ function Scene(props) {
   return (
     <Canvas style={{ height: 400, width: 400 }}>
 
-<OrthographicCamera
+    <OrthographicCamera
         makeDefault
-        zoom={1}
-        top={-3}
-        bottom={3}
-        left={3}
-        right={-3}
-        near={1}
+        zoom={80}
         far={2000}
         position={[0, 0, 200]}
       />
-      <OrbitControls />
+      <OrbitControls enableZoom={false} enablePan={false} />
+ 
+      <spotLight position={[10, 10, 0]} penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[-10, 10, 0]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[0, 10, 10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[0, 10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
 
-      <ambientLight />
-      
       <spotLight position={[10, 10, 10]} penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
-      <spotLight position={[10, -10, 10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
-      <spotLight position={[-10, 10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
-      <spotLight position={[-10, -10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[10, -10, 0]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[0, 10, 10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
+      <spotLight position={[0, -10, -10]}  penumbra={0} focus={0} angle={2} distance={200} intensity={10} />
 
       <Cube />
 

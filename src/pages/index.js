@@ -14,7 +14,9 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div>
           <h1 className="hero__title">{siteConfig.title}</h1>
-        </div>      
+          <p>Learn how to start building and integrating with Elfsquad</p>
+          <a href="/docs/Introduction">Getting Started</a>
+      </div>      
       <Scene className="cube" />
     </header>
   );
