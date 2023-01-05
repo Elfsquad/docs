@@ -14,7 +14,7 @@ function Box(props) {
       {...props}
       ref={mesh}>
       <RoundedBox args={[0.9, 0.9, 0.9]} radius={0.1}>
-        <meshPhysicalMaterial attach="material" color={"black"} iridescence={1} iridescenceIOR={1.3} metalness={1} />
+        <meshPhysicalMaterial attach="material" color={"black"} emissive={'black'} roughness={0} iridescence={1} iridescenceIOR={2.3} metalness={1} />
       </RoundedBox>      
     </mesh>
   )
@@ -66,9 +66,7 @@ function Cube(props) {
         targetSlice.current.rotation.y = 0;
         targetSlice = null;
       }
-  
-    }
-   
+    }   
   });
 
   useEffect(() => {
@@ -78,8 +76,6 @@ function Cube(props) {
       tick = 1;
     }, 2500);
   }, []);
-
-  
 
   return (
       <mesh ref={mesh}>
@@ -106,7 +102,11 @@ function Scene(props) {
       <OrbitControls />
 
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+      
+      <spotLight position={[10, 10, 10]} />
+      <spotLight position={[10, -10, 10]} />
+      <spotLight position={[-10, 10, -10]} />
+      <spotLight position={[-10, -10, -10]} />
 
       <Cube />
 
