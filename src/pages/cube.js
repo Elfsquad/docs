@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, createRef } from 'react'
 import { Canvas, useFrame  } from '@react-three/fiber'
+import * as THREE from 'three';
 import { OrbitControls, Stats, RoundedBox, OrthographicCamera  } from "@react-three/drei";
 
 
@@ -16,8 +17,8 @@ function Box(props) {
       <RoundedBox args={[0.9, 0.9, 0.9]} radius={0.1}>
         <meshPhysicalMaterial 
           attach="material" color={"black"} emissive={'black'} 
-          roughness={0} iridescence={1} iridescenceIOR={2.3} metalness={1}
-          reflectivity={1} sheen={1} />
+          roughness={0} iridescence={1.3} iridescenceIOR={2.4} metalness={1}
+          />
       </RoundedBox>      
     </mesh>
   )
@@ -102,6 +103,17 @@ function Scene(props) {
   return (
     <Canvas style={{ height: 400, width: 400 }}>
 
+<OrthographicCamera
+        makeDefault
+        zoom={1}
+        top={-3}
+        bottom={3}
+        left={3}
+        right={-3}
+        near={1}
+        far={2000}
+        position={[0, 0, 200]}
+      />
       <OrbitControls />
 
       <ambientLight />
