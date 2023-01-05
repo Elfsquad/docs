@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect, createRef } from 'react'
 import { Canvas, useFrame  } from '@react-three/fiber'
-import * as THREE from 'three';
 import { OrbitControls, Stats, RoundedBox, OrthographicCamera  } from "@react-three/drei";
 
 
