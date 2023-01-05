@@ -120,7 +120,7 @@ module.exports = {
           }
         ],
         theme: {
-          primaryColor: '#0088da'
+          primaryColor: '#1b1b1d'
         }
       }
     ]

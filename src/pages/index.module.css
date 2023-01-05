@@ -10,6 +10,17 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+
+}
+
+.heroBanner > * {
+  flex: 1;
+}
+
+.cube {
+  height:420px;
 }
 
 @media screen and (max-width: 966px) {
