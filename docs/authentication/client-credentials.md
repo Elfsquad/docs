@@ -8,11 +8,14 @@ import TabItem from '@theme/TabItem';
 
 
 ## Before You Begin
-Create a new OpenId client integration page in the [Integrations page](https://ems.elfsquad.io/integration) and note your Client id and Secret.
+Create a new OpenId client integration page in the [Integrations
+page](https://ems.elfsquad.io/integration) and note your Client id and
+Secret.
 
 ## Step 1: Use your Client ID and Secret to obtain an access token
 
-Replace the `{CLIENT_ID}` and `{CLIENT_SECRET}` values in the example below with those specific to your OpenId Client.
+Replace the `{CLIENT_ID}` and `{CLIENT_SECRET}` values in the example
+below with those specific to your OpenId Client.
 
 
 <Tabs
