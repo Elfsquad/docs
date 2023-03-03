@@ -13,7 +13,7 @@ To embed a third party viewer in Elfsquad, an iframe is used.
 Communication between Elfsquad and the viewer is accomplished using the
 iframe postmessage API.
 
-### Events
+## Events
 
 Elfsquad sends several events to the embedded iframe, such as when a
 configuration is modified. 
@@ -22,7 +22,7 @@ Each event consists of two properties: the `name` property, which
 identifies the type of event, and the `args` property, which contains the
 relevant data.
 
-#### `elfsquad.configurationUpdated`
+### `elfsquad.configurationUpdated`
 This event is sent whenever the configuration is modified. 
 
 ```ts
@@ -33,7 +33,7 @@ window.parent.addEventListener('message', function(e) {            �
 });
 ```
 
-#### `elfsquad.stepChanged`
+### `elfsquad.stepChanged`
 This event is sent whenever the user changes step.
 
 ```ts
@@ -44,7 +44,7 @@ window.parent.addEventListener('message', function(e) {
 });
 ```
 
-### Commands
+## Commands
 
 You can also instruct Elfsquad from within the viewer by sending
 messages to it. These messages are similar to the event messages and
@@ -54,7 +54,7 @@ for the message arguments.
 By sending these messages, you can instruct Elfsquad to perform various
 actions, such as updating the configuration.
 
-#### `elfsquad.triggerConfigurationUpdated`
+### `elfsquad.triggerConfigurationUpdated`
 
 This triggers a `elfsquad.configurationUpdated` event to be send,
 without updating the configuration.
@@ -65,7 +65,7 @@ window.top.postMessage({
 }, '*')
 ```
 
-#### `elfsquad.updateRequirement`
+### `elfsquad.updateRequirement`
 
 This executes an update requirement API call.
 
@@ -80,7 +80,7 @@ window.top.postMessage({                   
 }, '*');
 ```
 
-#### `elfsquad.updateRequirements`
+### `elfsquad.updateRequirements`
 
 This executes an API call to update multiple requirements.
 
@@ -99,3 +99,16 @@ window.top.postMessage({                   
 }, '*');
 ```
 
+### `elfsquad.updateImageValue`
+
+This command uploads an image and assigns it as a image value to a node.
+
+```ts
+window.top.postMessage({                    
+    name: 'elfsquad.updateImageValue',
+    args: {
+        nodeId: {nodeId},
+        image: {base64EncodedImageData}
+    },
+}, '*');
+```
