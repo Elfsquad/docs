@@ -135,3 +135,13 @@ Archer modeling language supports function expressions, which allow you to perfo
 | `sum` | Returns the sum of the arguments. |
 | `iff` \| `if` \| `ite` | Returns the second argument if the first argument is true, otherwise returns the third argument. |
 | `distinct` \| `alldiff` | Returns true if all arguments are distinct, otherwise returns false. |
+
+
+## Common Mistakes
+
+1. **Not enclosing variable names in square brackets**: In Archer Modelling Language, all variable names need to be enclosed in square brackets. For instance, use `[VariableName]` instead of `VariableName`.
+2. **Incorrect relationship syntax**: Relationships between variables are defined using arrows (`->`). Make sure the arrow points from the parent variable to the child variable, like `[ParentVariable] - relationship -> [ChildVariable]`.
+3. **Ignoring value bounds**: When defining variables that have a certain range or limit, don't forget to define the lower and upper bounds. These bounds can prevent models from having impractical or impossible configurations.
+4. **Misusing logical relationships**: Be careful when using logical relationships like `excludes`, `requires`, etc. Using them incorrectly can lead to constraints that are contradictory or don't make sense in the context of the model.
+
+Remember, practicing and reviewing your models can help avoid these common mistakes. Always double-check your models for these errors before finalizing them.
