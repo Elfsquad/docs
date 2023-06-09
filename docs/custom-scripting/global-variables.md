@@ -68,8 +68,8 @@ ui.openFormDialog({
         ]
     },
     data: { name: "" },
-    confirmText: 'Submit',
-    cancelText: 'Cancel'
+    confirm: 'Submit',
+    cancel: 'Cancel'
 })
 .then((result) => {
     const name = result.name;
