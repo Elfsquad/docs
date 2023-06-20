@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 :::info
 This guide assumes you've already familiarized yourself with the
-[Authentication](http://localhost:3000/docs/authentication/) page,
+[Authentication](https://docs.elfsquad.io/docs/authentication/) page,
 pagination and filtering.
 :::
 
