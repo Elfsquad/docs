@@ -13,7 +13,7 @@ This sample script demonstrate how custom scripting can be leveraged to retrieve
 ``` js
 async function fetchAll(url) {
     let nextUrl = url;
-    let result = [];
+    const result = [];
     while (nextUrl) {
         let response = await api.fetch(nextUrl);
         result.push(...response.body.value);
@@ -21,5 +21,5 @@ async function fetchAll(url) {
     }
     return result;
 }
-let resultaat = fetchAll(`data/1/quotations`);
+const result = fetchAll(`data/1/quotations`);
 ```
