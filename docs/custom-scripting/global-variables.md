@@ -41,38 +41,3 @@ ui.openDialog({
     parameters: parameters
 });
 ```
-
-## ui.openFormDialog
-The *ui.openFormDialog* allows you to open a dialog with a form. The form definition is implemented using JSON forms. You can refer to their documentation for implementation details at [https://jsonforms.io/docs](https://jsonforms.io/docs).
-
-### Example
-``` js
-ui.openFormDialog({
-    width: '500px',
-    height: '500px',
-    title: 'Enter your name',
-    schema: {
-        properties: {
-            name: {
-            type: "string"
-            }
-        }
-    },
-    uiSchema: {
-        type: "VerticalLayout",
-        elements: [
-            {
-                type: "Control",
-                scope: "#/properties/name"
-            }
-        ]
-    },
-    data: { name: "" },
-    confirm: 'Submit',
-    cancel: 'Cancel'
-})
-.then((result) => {
-    const name = result.name;
-    console.log('Entered name', name);
-});
-```
