@@ -11,21 +11,21 @@ With Archer modeling language, users can create complex configuration models tha
 Whether you're a domain expert or a software developer, Archer modeling language provides a powerful tool for modeling configuration models in your area of expertise. With its intuitive syntax and flexible design, Archer modeling language makes it easy to create and analyze complex systems, enabling you to make better decisions and achieve better outcomes.
 
 ## Defining models
-To define a model in Archer modeling language, use the following syntax: `model [ModelName] { }`. Replace `ModelName` with the name of your model. Inside the curly braces, you can define all of the model's variables and constraints. To specify relationships between variables, use the following syntax: `[VariableA] - [RelationshipType] -> [VariableB]`. Replace `VariableA` and `VariableB` with the names of the variables you want to relate, and `RelationshipType` with the type of relationship you want to specify.
+To define a model in Archer modeling language, use the following syntax: `model ModelName { }`. Replace `ModelName` with the name of your model. Inside the curly braces, you can define all of the model's variables and constraints. To specify relationships between variables, use the following syntax: `VariableA - RelationshipType -> VariableB`. Replace `VariableA` and `VariableB` with the names of the variables you want to relate, and `RelationshipType` with the type of relationship you want to specify.
 
 For example, suppose you want to model a smartphone with a certain amount of storage and memory, and optional GPS functionality. You can define a model named `Phone` using the following code:
 
 ```archer
-model [Phone] {
-  [Phone] - mandatory -> [Storage]
-  [Phone] - mandatory -> [Memory]
-  [Phone] - optional -> [GPS]
-  [Phone] - mandatory -> [Screen]
-  [Screen] - alternative -> [HD]
-  [Screen] - alternative -> [OLED]
+model Phone {
+  Phone - mandatory -> Storage
+  Phone - mandatory -> Memory
+  Phone - optional -> GPS
+  Phone - mandatory -> Screen
+  Screen - alternative -> HD
+  Screen - alternative -> OLED
 
-  constraint [Storage] >= 16
-  constraint [Memory] >= 2
+  constraint Storage >= 16
+  constraint Memory >= 2
 }
 ```
 
@@ -34,9 +34,9 @@ In this example, we've defined five variables, `Storage`, `Memory`, `GPS`, `Scre
 ### Defining relationships
 Relationships are used to define how different variables in a model relate to each other. The relationship statement syntax uses the form 
 ```archer
-[ID1] - [REL_TYPE] -> [ID2]
+ID1 - REL_TYPE -> ID2
 ```
-where `[ID1]` and `[ID2]` are the IDs of the variables being related, and `[REL_TYPE]` is the type of relationship being defined. There are 2 categories of relationships: structural and logical. Structural relationships are used to define the structure of a model, while logical relationships are used to define the logic of a model. 
+where `ID1` and `ID2` are the IDs of the variables being related, and `REL_TYPE` is the type of relationship being defined. There are 2 categories of relationships: structural and logical. Structural relationships are used to define the structure of a model, while logical relationships are used to define the logic of a model. 
 
 #### Structural relationships
 
@@ -58,25 +58,25 @@ where `[ID1]` and `[ID2]` are the IDs of the variables being related, and `[REL_
 | removes | This relationship type indicates that one variable removes another variable as a potential addition to a model. |
 
 ### Defining variable value bounds
-Archer modeling language supports variable value bounds, which allow you to specify the minimum and maximum values that a variable can take. To specify a variable's bound you can use the following syntax: `lower_bound [ID1] = <EXPR>`. Replace `[ID1]` with the ID of the variable you want to set the lower bound for, and `<EXPR>` with the expression that defines the lower bound. 
+Archer modeling language supports variable value bounds, which allow you to specify the minimum and maximum values that a variable can take. To specify a variable's bound you can use the following syntax: `lower_bound ID1 = <EXPR>`. Replace `ID1` with the ID of the variable you want to set the lower bound for, and `<EXPR>` with the expression that defines the lower bound. 
 
 The expression can include constants, variables, and arithmetic operations. For example, 
 ```archer
-lower_bound [ID1] = 1 + 3 * [ID2].[Value]
+lower_bound ID1 = 1 + 3 * ID2.Value
 ```
 sets the lower bound of variable ID1 to 1 plus three times the value of variable ID2. 
 
 Similarly, you can define the upper bound of variable `ID1` you can use:
 ```archer
-lower_bound [ID1] = [ID2].[Value] * 3
+lower_bound ID1 = ID2.Value * 3
 ```
 
 ### Defining variable conditions
-Archer modeling language supports variable conditions, which allow you to specify the conditions under which a variable can be included in a model. To specify a variable's condition you can use the following syntax: `condition [ID1] = <EXPR>`. Replace `[ID1]` with the ID of the variable you want to set the condition for, and `<EXPR>` with the expression that defines the condition.
+Archer modeling language supports variable conditions, which allow you to specify the conditions under which a variable can be included in a model. To specify a variable's condition you can use the following syntax: `condition ID1 = <EXPR>`. Replace `ID1` with the ID of the variable you want to set the condition for, and `<EXPR>` with the expression that defines the condition.
 
 The expression can include constants, variables, and arithmetic operations. For example, 
 ```archer
-condition [ID1] = [ID2].[Value] > 3
+condition ID1 = ID2.Value > 3
 ```
 will only allow variable `ID1` to be included in a model if the value of variable `ID2` is greater than 3. If the condition is not met, the variable will be removed from the model.
 
@@ -85,7 +85,7 @@ Archer modeling language supports constraints, which allow you to specify the co
 
 The expression can include constants, variables, and arithmetic operations. For example, 
 ```archer
-constraint [A].[Value] + [B].[Value] > [C].[Value]
+constraint A.Value + B.Value > C.Value
 ```
 will ensure that the sum of the values of variables `A` and `B` is greater than the value of variable `C`.
 
@@ -139,9 +139,8 @@ Archer modeling language supports function expressions, which allow you to perfo
 
 ## Common Mistakes
 
-1. **Not enclosing variable names in square brackets**: In Archer Modelling Language, all variable names need to be enclosed in square brackets. For instance, use `[VariableName]` instead of `VariableName`.
-2. **Incorrect relationship syntax**: Relationships between variables are defined using arrows (`->`). Make sure the arrow points from the parent variable to the child variable, like `[ParentVariable] - relationship -> [ChildVariable]`.
-3. **Ignoring value bounds**: When defining variables that have a certain range or limit, don't forget to define the lower and upper bounds. These bounds can prevent models from having impractical or impossible configurations.
-4. **Misusing logical relationships**: Be careful when using logical relationships like `excludes`, `requires`, etc. Using them incorrectly can lead to constraints that are contradictory or don't make sense in the context of the model.
+1. **Incorrect relationship syntax**: Relationships between variables are defined using arrows (`->`). Make sure the arrow points from the parent variable to the child variable, like `ParentVariable - relationship -> ChildVariable`.
+2. **Ignoring value bounds**: When defining variables that have a certain range or limit, don't forget to define the lower and upper bounds. These bounds can prevent models from having impractical or impossible configurations.
+3. **Misusing logical relationships**: Be careful when using logical relationships like `excludes`, `requires`, etc. Using them incorrectly can lead to constraints that are contradictory or don't make sense in the context of the model.
 
 Remember, practicing and reviewing your models can help avoid these common mistakes. Always double-check your models for these errors before finalizing them.
