@@ -41,3 +41,11 @@ ui.openDialog({
     parameters: parameters
 });
 ```
+## ui.reload
+The *ui.reload* function allows you to reload the data on the current page.
+
+### Example
+```js
+ui.reload();
+```
+
