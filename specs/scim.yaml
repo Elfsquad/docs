@@ -1,0 +1,530 @@
+---
+swagger: "2.0"
+info:
+  description: "SCIM 2.0 API"
+  version: "0.1.0"
+  title: "SCIM API"
+host: "api.elfsquad.io"
+basePath: "/scim/2"
+tags:
+- name: "User"
+schemes:
+- "https"
+consumes:
+- "application/json"
+- "application/scim+json"
+produces:
+- "application/json"
+- "application/scim+json"
+paths:
+  /Users/{id}:
+    get:
+      tags:
+      - "User"
+      summary: "Retrieve user by id"
+      operationId: "getUserById"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /Users:
+    get:
+      tags:
+      - "User"
+      summary: "List users"
+      operationId: "listUsers"
+      parameters:
+      - name: "filter"
+        in: "query"
+        description: "Does not support complex filters, for now."
+        required: false
+        type: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/UserSearchResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      tags:
+      - "User"
+      summary: "Create user"
+      operationId: "createUser"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        201:
+          description: "successfully created user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    delete:
+      tags:
+      - "User"
+      summary: "Delete user"
+      operationId: "deleteUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: "successfully deleted"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    put:
+      tags:
+      - "User"
+      summary: "Fully replace user"
+      operationId: "replaceUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "an existing user"
+        required: false
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        200:
+          description: "successfully fully updated a user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    patch:
+      tags:
+      - "User"
+      summary: "Parrtially update user"
+      operationId: "patchUser"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "user id"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "patch operations list"
+        required: false
+        schema:
+          $ref: "#/definitions/UserPatch"
+      responses:
+        200:
+          description: "successfully partially updated user"
+          schema:
+            $ref: "#/definitions/UserResponse"
+        400:
+          description: "bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        401:
+          description: "authorization failure"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        403:
+          description: "permissions denied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        429:
+          description: "too many requests"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        500:
+          description: "internal server error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+securityDefinitions:
+  OAuth2:
+    type: "oauth2"
+    authorizationUrl: ""
+    tokenUrl: ""
+    flow: "accessCode"
+definitions:
+  Address:
+    type: "object"
+    required:
+    - "type"
+    properties:
+      country:
+        type: "string"
+      locality:
+        type: "string"
+      postalCode:
+        type: "string"
+      region:
+        type: "string"
+      streetAddress:
+        type: "string"
+      type:
+        type: "string"
+        enum:
+        - "work"
+  Email:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "work"
+      value:
+        type: "string"
+  EnterpriseUser:
+    type: "object"
+    properties:
+      department:
+        type: "string"
+  ElfsquadUser:
+    type: "object"
+    properties:
+      currencyIso:
+        type: string
+        format: uuid
+      languageIso:
+        type: string
+        format: uuid
+      crmAccountId:
+        type: string
+        format: uuid
+      crmContactId:
+        type: string
+        format: uuid
+      isAdmin:
+        type: bool
+      organizationId:
+        type: string
+        format: uuid
+  ErrorResponse:
+    type: "object"
+    properties:
+      detail:
+        type: "string"
+        description: "detail error message"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:api:messages:2.0:Error"
+      scimType:
+        type: "string"
+        description: "bad request type when status code is 400"
+        enum:
+        - "uniqueness"
+        - "tooMany"
+        - "mutability"
+        - "sensitive"
+        - "invalidSyntax"
+        - "invalidFilter"
+        - "invalidPath"
+        - "invalidValue"
+        - "invalidVers"
+        - "noTarget"
+      status:
+        type: "string"
+        description: "same as HTTP status code, e.g. 400, 401, etc."
+  FilterSupported:
+    type: "object"
+    properties:
+      maxResults:
+        type: "integer"
+        format: "int32"
+      supported:
+        type: "boolean"
+        default: false
+  Meta:
+    type: "object"
+    properties:
+      created:
+        type: "string"
+        format: "date-time"
+      lastModified:
+        type: "string"
+        format: "date-time"
+      location:
+        type: "string"
+        description: "resource location URI"
+      resourceType:
+        type: "string"
+        enum:
+        - "User"
+        - "Group"
+    description: "resource metadata"
+  Name:
+    type: "object"
+    required:
+    - "familyName"
+    - "givenName"
+    properties:
+      familyName:
+        type: "string"
+      givenName:
+        type: "string"
+  PatchOperation:
+    type: "object"
+    required:
+    - "op"
+    properties:
+      op:
+        type: "string"
+        enum:
+        - "add"
+        - "replace"
+        - "remove"
+      path:
+        type: "string"
+      value:
+        type: "object"
+        description: "corresponding 'value' of that field specified by 'path'"
+  PhoneNumber:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "work"
+        - "mobile"
+        - "other"
+      value:
+        type: "string"
+  Photo:
+    type: "object"
+    required:
+    - "type"
+    - "value"
+    properties:
+      type:
+        type: "string"
+        enum:
+        - "photo"
+      value:
+        type: "string"
+  Supported:
+    type: "object"
+    properties:
+      supported:
+        type: "boolean"
+        default: false
+  User:
+    type: "object"
+    required:
+    - "userName"
+    - "externalId"
+    properties:
+      active:
+        type: "boolean"
+        description: "user status"
+        default: false
+      addresses:
+        type: "array"
+        items:
+          $ref: "#/definitions/Address"
+      emails:
+        type: "array"
+        items:
+          $ref: "#/definitions/Email"
+      externalId:
+        type: "string"
+        description: "external unique resource id defined by provisioning client"
+      id:
+        type: "string"
+        description: "unique resource id defined by Elfsquad"
+      name:
+        $ref: "#/definitions/Name"
+      phoneNumbers:
+        type: "array"
+        items:
+          $ref: "#/definitions/PhoneNumber"
+      photos:
+        type: "array"
+        items:
+          $ref: "#/definitions/Photo"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:schemas:core:2.0:User"
+      urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:
+        $ref: "#/definitions/EnterpriseUser"
+      userName:
+        type: "string"
+      urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:
+        $ref: "#/definitions/ElfsquadUser"
+  UserPatch:
+    type: "object"
+    required:
+    - "Operations"
+    - "schemas"
+    properties:
+      Operations:
+        type: "array"
+        description: "patch operations list"
+        items:
+          $ref: "#/definitions/PatchOperation"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - "urn:ietf:params:scim:api:messages:2.0:PatchOp"
+  UserResponse:
+    allOf:
+      - $ref: "#/definitions/User"
+      - type: "object"
+        properties:
+          meta:
+            $ref: "#/definitions/Meta"
+  UserSearchResponse:
+    type: "object"
+    properties:
+      Resources:
+        type: "array"
+        description: "user list"
+        items:
+          $ref: "#/definitions/UserResponse"
+      itemsPerPage:
+        type: "integer"
+        format: "int64"
+      schemas:
+        type: "array"
+        items:
+          type: "string"
+          enum:
+          - urn:ietf:params:scim:api:messages:2.0:ListResponse
+      startIndex:
+        type: "integer"
+        format: "int64"
+      totalResults:
+        type: "integer"
+        format: "int64"

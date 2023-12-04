@@ -9,6 +9,6 @@ See the [Authentication page](/docs/authentication) for information about authen
 
 ## Available APIs
 
-* [Data API](/apis/data)
-* [Configurator API](/apis/configurator)
-<!-- * [EMS API](/apis/ems) -->
+* [Data API](/docs/apis/data-api)
+* [Configurator API](/docs/apis/configurator-api)
+* [SCIM API](/docs/apis/scim-api)

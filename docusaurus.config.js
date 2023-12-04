@@ -117,6 +117,10 @@ module.exports = {
           {
             route: '/apis/configurator',
             spec: 'https://api.elfsquad.io/configurator/v1/swagger.json'
+          },
+          {
+            route: '/apis/scim',
+            spec: './specs/scim.yaml'
           }
         ],
         theme: {
