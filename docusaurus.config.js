@@ -124,7 +124,7 @@ module.exports = {
           },
           {
             route: '/apis/quotation',
-            spec: 'http://localhost:5105/swagger/v1/swagger.json'
+            spec: 'http://api.elfsquad.io/quotation/1/swagger/v1/swagger.json'
           }
         ],
         theme: {
