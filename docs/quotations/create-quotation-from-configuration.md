@@ -92,7 +92,8 @@ only need to perform one request to the [requestquote endpoint](https://docs.elf
 This endpoint accepts the quotation id, configuration id(s) and a
 `quotationRequest` object. This object is used for adding metadata about
 the anonymous user to the quotation, such as their name, email address,
-etc.
+etc. A new CrmAccount will be automatically created to store these data 
+points.
 
 <Tabs
   defaultValue="js"
