@@ -121,6 +121,10 @@ module.exports = {
           {
             route: '/apis/scim',
             spec: './specs/scim.yaml'
+          },
+          {
+            route: '/apis/quotation',
+            spec: 'http://localhost:5105/swagger/v1/swagger.json'
           }
         ],
         theme: {
