@@ -12,3 +12,5 @@ See the [Authentication page](/docs/authentication) for information about authen
 * [Data API](/docs/apis/data-api)
 * [Configurator API](/docs/apis/configurator-api)
 * [SCIM API](/docs/apis/scim-api)
+* [Quotation API](/docs/apis/quotation-api)
+

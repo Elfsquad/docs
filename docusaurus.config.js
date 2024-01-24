@@ -121,6 +121,10 @@ module.exports = {
           {
             route: '/apis/scim',
             spec: './specs/scim.yaml'
+          },
+          {
+            route: '/apis/quotation',
+            spec: 'http://api.elfsquad.io/quotation/1/swagger/v1/swagger.json'
           }
         ],
         theme: {
