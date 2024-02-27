@@ -71,9 +71,9 @@ Specifying ids in this example is crucial for the next step. While Elfsquad can 
 
 Fore more information about the request and response bodies, refer to the provided documentation.
 
-Single feature: https://docs.elfsquad.io/apis/data#tag/Features.Feature/operation/Features.Feature.CreateFeature
+Single feature: https://docs.elfsquad.io/apis/data#tag/Features/operation/Features.Feature.CreateFeature
 
-Multiple features: https://docs.elfsquad.io/apis/data#tag/Features.Actions/operation/Features.BulkInsert
+Multiple features: https://docs.elfsquad.io/apis/data#tag/Features/operation/Features.BulkInsert
 
 ## 2. Enriching master data: feature texts
 
@@ -121,9 +121,9 @@ Note that the featureId property should be equal to the id of the created featur
 
 Fore more information about the request and response bodies, refer to the provided documentation.
 
-Single feature: https://docs.elfsquad.io/apis/data/#tag/FeatureTexts.FeatureText/operation/FeatureTexts.FeatureText.CreateFeatureText
+Single feature: https://docs.elfsquad.io/apis/data/#tag/FeatureTexts/operation/FeatureTexts.FeatureText.CreateFeatureText
 
-Multiple features: https://docs.elfsquad.io/apis/data#tag/FeatureTexts.Actions/operation/FeatureTexts.BulkInsert
+Multiple features: https://docs.elfsquad.io/apis/data#tag/FeatureTexts/operation/FeatureTexts.BulkInsert
 
 ## 3. Expanding master data: feature properties
 
@@ -173,9 +173,9 @@ Specifying ids in this example is once again important for the next step.
 
 Fore more information about the request and response bodies, refer to the provided documentation.
 
-Single feature property: https://docs.elfsquad.io/apis/data#tag/FeatureProperties.FeatureFeatureProperty/operation/FeatureProperties.FeatureProperty.CreateFeatureProperty
+Single feature property: https://docs.elfsquad.io/apis/data#tag/FeatureProperties/operation/FeatureProperties.FeatureProperty.CreateFeatureProperty
 
-Multiple feature properties: https://docs.elfsquad.io/apis/data#tag/FeatureProperties.Actions/operation/FeatureProperties.BulkInsert
+Multiple feature properties: https://docs.elfsquad.io/apis/data#tag/FeatureProperties/operation/FeatureProperties.BulkInsert
 
 ### 3.2. Feature has feature properties
 
@@ -221,9 +221,9 @@ By sending the payload above we have assigned our feature created in step 1 a wi
 
 Fore more information about the request and response bodies, refer to the provided documentation.
 
-Single feature property: https://docs.elfsquad.io/apis/data/#tag/FeatureHasFeatureProperties.FeatureHasFeatureProperty/operation/FeatureHasFeatureProperties.FeatureHasFeatureProperty.CreateFeatureHasFeatureProperty
+Single feature property: https://docs.elfsquad.io/apis/data/#tag/FeatureHasFeatureProperties/operation/FeatureHasFeatureProperties.FeatureHasFeatureProperty.CreateFeatureHasFeatureProperty
 
-Multiple feature properties: https://docs.elfsquad.io/apis/data/#tag/FeatureHasFeatureProperties.Actions/operation/FeatureHasFeatureProperties.BulkInsert
+Multiple feature properties: https://docs.elfsquad.io/apis/data/#tag/FeatureHasFeatureProperties/operation/FeatureHasFeatureProperties.BulkInsert
 
 ## 4. Building the model: configuration model
 
@@ -248,7 +248,7 @@ With the following JSON body format:
 }
 ```
 
-Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModels.FeatureModel/operation/FeatureModels.FeatureModel.CreateFeatureModel
+Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModels/operation/FeatureModels.FeatureModel.CreateFeatureModel
 
 ## 5. Building the model: nodes
 
@@ -281,7 +281,7 @@ With the following JSON body format:
 }
 ```
 
-Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModelNodes.Actions/operation/FeatureModelNodes.BulkInsert
+Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModelNodes/operation/FeatureModelNodes.BulkInsert
 
 ## 6. Building the model: relationships
 
@@ -324,7 +324,7 @@ Property explanation:
     - **Mandatory**: The child node is always turned on.
     - **Alternative**: For the parent node, only one alternative child node can be selected at a time.
 
-Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModelNodes.Actions/operation/FeatureModelNodes.BulkInsert
+Fore more information about the request and response bodies, refer to the provided documentation. https://docs.elfsquad.io/apis/data/#tag/FeatureModelNodes/operation/FeatureModelNodes.BulkInsert
 
 After completing all the steps above, you have succesfully created your master data and model structure.
 Please refer to our internal documentation if you want to add more logic to your model using formulas, conditions and other constraints: https://support.elfsquad.io/hc/en-us/articles/7528093533212-Create-cross-tree-relations-via-data-API.
