@@ -411,7 +411,7 @@ This component will take a feature as input.
 
 ```typescript
     import { Component, Input, OnInit } from '@angular/core';
-    import { ConfigurationFeature, ConfiguratorContext } from '@elfsquad/configurator';
+    import { ConfigurationFeature, Configuration } from '@elfsquad/configurator';
 
     @Component({
       selector: 'app-feature',
