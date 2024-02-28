@@ -228,13 +228,13 @@ And the following CSS:
       justify-content: center;
     }
 
-    div.product-overview > div.product {
+    div.product-overview > div.product-card {
       padding: 8px;
       width: 28%;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
-    div.product-overview > div.product > img {
+    div.product-overview > div.product-card > img {
       height: auto;
       width: 100%;
     }
