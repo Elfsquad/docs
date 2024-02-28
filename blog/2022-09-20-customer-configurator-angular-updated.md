@@ -531,14 +531,30 @@ In the `checkout.component.ts` file, we’ll create a function to request
 a quote
 
 ```typescript
-      public isSubmitted = false;
-      public model: QuotationRequest = {};
+     import { Component, OnInit } from '@angular/core';
+import { ConfiguratorContext, QuotationRequest } from '@elfsquad/configurator';
 
-      requestQuote() {
-        this.configuratorContext.requestQuote(this.model).then(_ => {
-          this.isSubmitted = true;
-        });
-      }
+@Component({
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
+})
+export class CheckoutComponent implements OnInit {
+
+  constructor(private configuratorContext : ConfiguratorContext) { }
+
+  ngOnInit(): void {
+  }
+  public isSubmitted = false;
+  public model: QuotationRequest = {};
+
+  requestQuote() {
+    this.configuratorContext.requestQuote(this.model).then(_ => {
+      this.isSubmitted = true;
+    });
+  }
+}
+
 ```
 
 The checkout page itself, is divided into two sections. One before the
