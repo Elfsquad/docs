@@ -23,7 +23,7 @@ Create a new Angular project using the Angular CLI.
 
 ### Creating the project
 ```bash
-    ng new ShowroomExample --routing=true --style=css --skipTests=true
+    ng new ShowroomExample --routing=true --style=css
 ```
 
 Once that’s finished, you should be able to run the application and open
