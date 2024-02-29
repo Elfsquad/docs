@@ -165,3 +165,4 @@ For this request a JSON body with the following format is required:
 The value of quotationId should be replaced by the id of the quotation from the previous step.
 The value of configurationIds should be an array containing the id of the configuration from step 2. Please note that adding multiple (unique) configurations in one request is supported.
 After the request completes, the configuration will be added to the quotation. The new quotation is immediately visable in the EMS.
+Want to change the status of your newly created quotation? Please refer to our documentation: https://support.elfsquad.io/hc/en-us/articles/9435941123484-Quotation-functions-in-API.
