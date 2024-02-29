@@ -23,7 +23,7 @@ Create a new Angular project using the Angular CLI.
 
 ### Creating the project
 ```bash
-    ng new ShowroomExample --routing=true --style=css --skipTests=true
+    ng new ShowroomExample --routing=true --style=css
 ```
 
 Once that’s finished, you should be able to run the application and open
@@ -228,13 +228,13 @@ And the following CSS:
       justify-content: center;
     }
 
-    div.product-overview > div.product {
+    div.product-overview > div.product-card {
       padding: 8px;
       width: 28%;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
-    div.product-overview > div.product > img {
+    div.product-overview > div.product-card > img {
       height: auto;
       width: 100%;
     }
@@ -411,7 +411,7 @@ This component will take a feature as input.
 
 ```typescript
     import { Component, Input, OnInit } from '@angular/core';
-    import { ConfigurationFeature, ConfiguratorContext } from '@elfsquad/configurator';
+    import { ConfigurationFeature, Configuration } from '@elfsquad/configurator';
 
     @Component({
       selector: 'app-feature',
@@ -531,14 +531,30 @@ In the `checkout.component.ts` file, we’ll create a function to request
 a quote
 
 ```typescript
-      public isSubmitted = false;
-      public model: QuotationRequest = {};
+     import { Component, OnInit } from '@angular/core';
+import { ConfiguratorContext, QuotationRequest } from '@elfsquad/configurator';
 
-      requestQuote() {
-        this.configuratorContext.requestQuote(this.model).then(_ => {
-          this.isSubmitted = true;
-        });
-      }
+@Component({
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
+})
+export class CheckoutComponent implements OnInit {
+
+  constructor(private configuratorContext : ConfiguratorContext) { }
+
+  ngOnInit(): void {
+  }
+  public isSubmitted = false;
+  public model: QuotationRequest = {};
+
+  requestQuote() {
+    this.configuratorContext.requestQuote(this.model).then(_ => {
+      this.isSubmitted = true;
+    });
+  }
+}
+
 ```
 
 The checkout page itself, is divided into two sections. One before the

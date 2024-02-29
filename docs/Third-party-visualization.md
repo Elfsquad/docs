@@ -112,3 +112,16 @@ window.top.postMessage({                   
     },
 }, '*');
 ```
+
+### `elfsquad.updateTextValue`
+This command updates the text value of a node
+
+```ts
+window.top.postMessage({                    
+    name: 'elfsquad.updateTextValue',
+    args: {
+        nodeId: {nodeId},
+        textValue: 'text_value',
+    },
+}, '*');
+
