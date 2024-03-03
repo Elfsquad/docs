@@ -1,7 +1,8 @@
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 import {themes as prismThemes} from 'prism-react-renderer';
 
-/** @type {import('@docusaurus/types').DocusaurusConfig} */
-module.exports = {
+const config: Config = {
   title: 'Elfsquad Docs',
   tagline: 'Elfsquad Docs',
   url: 'https://docs.elfsquad.io',
@@ -83,7 +84,7 @@ module.exports = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula
     },
-  },
+  } satisfies Preset.ThemeConfig,
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -103,7 +104,7 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }
+      } satisfies Preset.Options,
     ],
     [
       'redocusaurus',
@@ -133,3 +134,6 @@ module.exports = {
     ]
   ],
 };
+
+
+export default config;
