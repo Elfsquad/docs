@@ -87,13 +87,15 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
             'https://github.com/elfsquad/docs/edit/main/',
+          docRootComponent: "@theme/DocRoot",
+          docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
         blog: {
           showReadingTime: true,
@@ -133,6 +135,48 @@ const config: Config = {
       }
     ]
   ],
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'classic',
+        config: {
+          data: {
+            specPath: 'https://api.elfsquad.io/data/1/swagger/v2/swagger3.json',
+            outputDir: 'docs/apis/data',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          quotation: {
+            specPath: 'http://api.elfsquad.io/quotation/1/swagger/v1/swagger.json',
+            outputDir: 'docs/apis/quotation',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          configurator: {
+            specPath: 'https://api.elfsquad.io/configurator/v1/swagger.json',
+            outputDir: 'docs/apis/configurator',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            },
+          },
+          scim: {
+            specPath: './specs/scim.yaml',
+            outputDir: 'docs/apis/scim',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          }
+        }
+      }
+    ]
+  ],
+  themes: [
+    'docusaurus-theme-openapi-docs'
+  ]
 };
 
 
