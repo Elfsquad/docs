@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
-
-import Scene from './cube';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -17,7 +14,6 @@ function HomepageHeader() {
           <p>Learn how to start building and integrating with Elfsquad</p>
           <a href="/docs/Introduction">Getting Started</a>
       </div>      
-      <Scene className="cube" />
     </header>
   );
 }
