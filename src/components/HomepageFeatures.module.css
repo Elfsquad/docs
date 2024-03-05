@@ -20,14 +20,27 @@
 
 
 .features .feature {
-  background: var(--adaptable-green);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 7px;
   padding: 13px;
-  height:100%;
   color:var(--off-white);
   font-size: 14px;
   width:230px
 }
+
+  .features .feature:nth-child(1) h3 {
+    color:#71d5d8;
+  }
+
+  .features .feature:nth-child(2) h3 {
+    color:#ff6911;
+  }
+
+  .features .feature:nth-child(3) h3 {
+    color:#7f60de;
+  }
+
+
 
   .features .feature h3 {
     color: var(--off-white);

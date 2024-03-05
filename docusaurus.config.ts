@@ -20,15 +20,25 @@ const config: Config = {
     },
     navbar: {
       title: 'elfsquad',
-      items: [
-        {
-          to: '/docs/Introduction/',
-          label: 'Documentation',
-          position: 'left'
-        },
+      items: [        
         {
           to: '/docs/apis/Introduction',
           label: 'API',
+          position: 'left'
+        },
+        {
+          to: '/docs/customization/Introduction/',
+          label: 'Customization',
+          position: 'left'
+        },
+        {
+          to: '/docs/guides/Introduction',
+          label: 'Guides',
+          position: 'left'
+        },
+        {
+          to: '/docs/archer/Introduction',
+          label: 'Archer',
           position: 'left'
         },
         {

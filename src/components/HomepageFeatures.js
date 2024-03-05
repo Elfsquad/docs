@@ -9,7 +9,7 @@ const FeatureList = [
     description: (
       <>
         <p>
-          Integrate or build your own application directly on our REST API. Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up.
+          Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up.
         </p>
         {/* <p>
           For more information about our API, see the <a href="/docs/Introduction">API Overview</a>.
@@ -18,7 +18,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Custom Configurator',
+    title: 'Customization',
     Svg: require('../../static/img/icons/Configure.svg').default,
     description: (
       <>
@@ -44,16 +44,13 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-
-    <div>
-        <div className={styles.feature}>
-        <div className="text--center">
-          <Svg className={styles.featureSvg} alt={title} />
-        </div>
-        <div className="text--center padding-horiz--md">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
+    <div className={styles.feature}>
+      <div className="text--center">
+        <Svg className={styles.featureSvg} alt={title} />
+      </div>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
     </div>
   );

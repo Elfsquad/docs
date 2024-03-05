@@ -1,6 +1,6 @@
 ---
 title: Generating 2d step images
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: Generating 2d step images
 slug: ./generating-2d-step-images
 ---
