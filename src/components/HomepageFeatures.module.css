@@ -3,11 +3,33 @@
 .features {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 2rem 0;
   width: 100%;
+  gap:12px;
+  flex:1;
+  align-items:stretch;
+  flex-wrap: wrap;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 72px;
+  width: 72px;
+  margin:12px;
 }
+
+
+.features .feature {
+  background: var(--adaptable-green);
+  border-radius: 12px;
+  padding: 13px;
+  height:100%;
+  color:var(--off-white);
+  font-size: 14px;
+  width:230px
+}
+
+  .features .feature h3 {
+    color: var(--off-white);
+  }
+

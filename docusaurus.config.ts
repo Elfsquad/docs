@@ -13,13 +13,13 @@ const config: Config = {
   organizationName: 'Elfsquad', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
-      title: 'Elfsquad Docs',
-      logo: {
-        alt: 'Elfsquad',
-        src: 'img/logo_black.png',
-        srcDark: 'img/logo_white.png'
-      },
+      title: 'elfsquad',
       items: [
         {
           to: '/docs/Introduction/',
@@ -114,7 +114,7 @@ const config: Config = {
         specs: [
           {
             route: '/apis/data',
-            spec: "https://api.elfsquad.io/data/1/swagger/v2/swagger3.json",
+            spec: "https://api.elfsquad.io/configurator/v1/swagger.json",
           },
           {
             route: '/apis/configurator',
@@ -130,7 +130,7 @@ const config: Config = {
           }
         ],
         theme: {
-          primaryColor: '#1b1b1d'
+          primaryColor: '#00FF81'
         }
       }
     ]
