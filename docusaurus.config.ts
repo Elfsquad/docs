@@ -27,6 +27,11 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: '/docs/apis/Introduction',
+          label: 'API',
+          position: 'left'
+        },
+        {
           to: '/blog', 
           label: 'Blog', 
           position: 'left'
@@ -90,12 +95,12 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           // Please change this to your repo.
           editUrl:
             'https://github.com/elfsquad/docs/edit/main/',
-          docRootComponent: "@theme/DocRoot",
-          docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
+            docRootComponent: "@theme/DocRoot",
+            docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
         blog: {
           showReadingTime: true,
@@ -143,29 +148,29 @@ const config: Config = {
         docsPluginId: 'classic',
         config: {
           data: {
-            specPath: 'https://api.elfsquad.io/data/1/swagger/v2/swagger3.json',
-            outputDir: 'docs/apis/data',
-            sidebarOptions: {
-              groupPathsBy: 'tag'
-            }
-          },
-          quotation: {
-            specPath: 'http://api.elfsquad.io/quotation/1/swagger/v1/swagger.json',
-            outputDir: 'docs/apis/quotation',
+            specPath: 'https://api.elfsquad.io/data/1/swagger/v2/swagger.json',
+            outputDir: 'docs/spec/data',
             sidebarOptions: {
               groupPathsBy: 'tag'
             }
           },
           configurator: {
             specPath: 'https://api.elfsquad.io/configurator/v1/swagger.json',
-            outputDir: 'docs/apis/configurator',
+            outputDir: 'docs/spec/configurator',
             sidebarOptions: {
               groupPathsBy: 'tag'
-            },
+            }
           },
           scim: {
             specPath: './specs/scim.yaml',
-            outputDir: 'docs/apis/scim',
+            outputDir: 'docs/spec/scim',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          quotation: {
+            specPath: 'https://api.elfsquad.io/quotation/1/swagger/v1/swagger.json',
+            outputDir: 'docs/spec/quotation',
             sidebarOptions: {
               groupPathsBy: 'tag'
             }
