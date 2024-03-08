@@ -20,12 +20,16 @@
 
 
 .features .feature {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--secondary);  
   border-radius: 7px;
   padding: 13px;
   color:var(--off-white);
   font-size: 14px;
   width:230px
+}
+
+html[data-theme='dark'] .features .feature {
+  background: rgba(255, 255, 255, 0.05);
 }
 
   .features .feature:nth-child(1) h3 {
@@ -38,6 +42,10 @@
 
   .features .feature:nth-child(3) h3 {
     color:#7f60de;
+  }
+
+  .features .feature:nth-child(4) h3 {
+    color:#00ff81;
   }
 
 

@@ -99,3 +99,9 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 canvas {
   min-height:400px !important;
 }
+
+
+
+.st1:last-child {
+  stroke-width: initial;
+}

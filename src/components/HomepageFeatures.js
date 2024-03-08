@@ -11,9 +11,6 @@ const FeatureList = [
         <p>
           Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up.
         </p>
-        {/* <p>
-          For more information about our API, see the <a href="/docs/Introduction">API Overview</a>.
-        </p> */}
       </>      
     ),
   },
@@ -37,6 +34,15 @@ const FeatureList = [
         <p>
           Leverage <a href="/docs/guides/embed-showroom">our guides</a> to make building complex integrations easier.
         </p>
+      </>
+    ),
+  },
+  {
+    title: 'Archer',
+    Svg: require('../../static/img/icons/Archer.svg').default,
+    description: (
+      <>
+        <p><a href="/docs/archer/Introduction">Archer modeling language</a> is a domain-specific language designed to model configuration models based on variables and constraints.</p>
       </>
     ),
   },
