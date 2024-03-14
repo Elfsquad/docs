@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: ./
 ---
 
 The Elfsquad API allows you to integrate your applications with the Elfsquad services. The Elfsquad API is available at api.elfsquad.io.

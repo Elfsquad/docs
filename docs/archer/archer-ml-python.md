@@ -2,7 +2,7 @@
 title: Python Integration with Archer
 sidebar_position: 2
 sidebar_label: Python integration
-slug: ./python
+slug: './python'
 ---
 
 Archer offers seamless integration with Python, enabling users to incorporate Python scripts into their Archer models directly. This guide provides a detailed explanation of this integration, showcasing its versatility and ease of use.

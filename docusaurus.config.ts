@@ -15,29 +15,29 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: false,
+      disableSwitch: true,
       respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'elfsquad',
       items: [        
         {
-          to: '/docs/apis/Introduction',
+          to: '/docs/apis',
           label: 'API',
           position: 'left'
         },
         {
-          to: '/docs/customization/Introduction/',
+          to: '/docs/customization',
           label: 'Customization',
           position: 'left'
         },
         {
-          to: '/docs/guides/Introduction',
+          to: '/docs/guides',
           label: 'Guides',
           position: 'left'
         },
         {
-          to: '/docs/archer/Introduction',
+          to: '/docs/archer',
           label: 'Archer',
           position: 'left'
         },
