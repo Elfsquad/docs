@@ -8,13 +8,11 @@ import HomepageFeatures from '../components/HomepageFeatures';
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div>
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p>Learn how to start building and integrating with Elfsquad</p>
-          <a href="/docs/Introduction">Getting Started</a>
-      </div>      
-    </header>
+      <div class="hero__left">
+          <h1 className="hero__title">Docs</h1>
+          <h1 className="hero__title">Elfsquad</h1>
+          <a className="primary" href="/docs/Introduction">Get started</a>
+      </div> 
   );
 }
 
@@ -25,10 +23,12 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Integrate your IT systems with Elfsquad CPQ">
-      <HomepageHeader />
-      <main>
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+
+        <HomepageHeader />
+
         <HomepageFeatures />
-      </main>
+        </header>
     </Layout>
   );
 }

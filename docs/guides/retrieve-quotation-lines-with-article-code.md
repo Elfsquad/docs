@@ -1,6 +1,6 @@
 ---
 title: Retrieve all quotation lines with an article code
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: Retrieve all quotation lines with an article code
 slug: ./retrieve-quotation-lines-with-article-code
 ---

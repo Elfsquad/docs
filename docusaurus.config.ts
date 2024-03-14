@@ -13,17 +13,32 @@ const config: Config = {
   organizationName: 'Elfsquad', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
-      title: 'Elfsquad Docs',
-      logo: {
-        alt: 'Elfsquad',
-        src: 'img/logo_black.png',
-        srcDark: 'img/logo_white.png'
-      },
-      items: [
+      title: 'elfsquad',
+      items: [        
         {
-          to: '/docs/Introduction/',
-          label: 'Documentation',
+          to: '/docs/apis',
+          label: 'API',
+          position: 'left'
+        },
+        {
+          to: '/docs/customization',
+          label: 'Customization',
+          position: 'left'
+        },
+        {
+          to: '/docs/guides',
+          label: 'Guides',
+          position: 'left'
+        },
+        {
+          to: '/docs/archer',
+          label: 'Archer',
           position: 'left'
         },
         {
@@ -87,13 +102,15 @@ const config: Config = {
   } satisfies Preset.ThemeConfig,
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars.ts'),
           // Please change this to your repo.
           editUrl:
             'https://github.com/elfsquad/docs/edit/main/',
+            docRootComponent: "@theme/DocRoot",
+            docItemComponent: "@theme/ApiItem" // derived from docusaurus-theme-openapi-docs
         },
         blog: {
           showReadingTime: true,
@@ -112,7 +129,7 @@ const config: Config = {
         specs: [
           {
             route: '/apis/data',
-            spec: "https://api.elfsquad.io/data/1/swagger/v2/swagger3.json",
+            spec: "https://api.elfsquad.io/configurator/v1/swagger.json",
           },
           {
             route: '/apis/configurator',
@@ -128,11 +145,53 @@ const config: Config = {
           }
         ],
         theme: {
-          primaryColor: '#1b1b1d'
+          primaryColor: '#00FF81'
         }
       }
     ]
   ],
+  plugins: [
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: 'api',
+        docsPluginId: 'classic',
+        config: {
+          data: {
+            specPath: 'https://api.elfsquad.io/data/1/swagger/v2/swagger.json',
+            outputDir: 'docs/spec/data',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          configurator: {
+            specPath: 'https://api.elfsquad.io/configurator/v1/swagger.json',
+            outputDir: 'docs/spec/configurator',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          scim: {
+            specPath: './specs/scim.yaml',
+            outputDir: 'docs/spec/scim',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          },
+          quotation: {
+            specPath: 'https://api.elfsquad.io/quotation/1/swagger/v1/swagger.json',
+            outputDir: 'docs/spec/quotation',
+            sidebarOptions: {
+              groupPathsBy: 'tag'
+            }
+          }
+        }
+      }
+    ]
+  ],
+  themes: [
+    'docusaurus-theme-openapi-docs'
+  ]
 };
 
 

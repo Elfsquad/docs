@@ -5,20 +5,29 @@
  * and scoped locally.
  */
 
+
+
+
 .heroBanner {
   padding: 4rem 4rem;
   position: relative;
   overflow: hidden;
-
   display: flex;
+  flex:1;
+}
 
-  background-color: #1b1b1d;
-  color:#fff;
+.heroBanner h1:first-child {
+  color:var(--primary);
+}
 
+.heroBanner h1 {
+  margin: 0;
+  line-height:48px;
 }
 
 .heroBanner > * {
-  flex:1;
+  font-family: 'Roobert';
+
 }
 
 .heroBanner > div:nth-child(2) {
@@ -27,16 +36,11 @@
   align-items: center;
 }
 
+
 .heroBanner a {
-  border: solid 1px var(--ifm-color-primary);
-  padding:8px;
-  border-radius: 4px;
-}
-.heroBanner a:hover {
   text-decoration: none;
-  background: var(--ifm-color-primary);
-  color:#fff;
 }
+
 
 @media screen and (max-width: 966px) {
   .heroBanner {
@@ -47,8 +51,4 @@
 
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
