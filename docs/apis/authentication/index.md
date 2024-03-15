@@ -52,7 +52,7 @@ automations or data synchronizations.
 The client credentials authentication method can be used in all
 available APIs.
 
-[Step by step tutorial](/docs/authentication/client-credentials)
+[Step by step tutorial](/docs/apis/authentication/client-credentials)
 
 ## Code
 For integrations that require requests that are issued by a user, you
@@ -61,5 +61,5 @@ interface that requires the user to be logged in.
 
 The code authentication method can be used in all available APIs.
 
-[Step by step tutorial](/docs/authentication/code)
+[Step by step tutorial](/docs/apis/authentication/code)
 

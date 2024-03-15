@@ -8,7 +8,7 @@ The Elfsquad SCIM API enables you to retrieve, create, update and delete
 users within Elfsquad. As the name might give away, this API is a
 (partial) implementation of the SCIM 2.0 standard.
 
-[Open SCIM API Specifcation](/apis/scim)
+[Open SCIM API Specifcation](/docs/spec/scim/scim-api)
 
 ### Authentication
 The SCIM API does *not* use our normal oauth authentication. Instead,

@@ -15,5 +15,5 @@ Edit a quotation status without triggering any logic/events
 Synchonise data with third party applications such as ERP and CAD
 The Elfsquad Excel plugin uses this API to query and change data
 
-[Open Data API Specifcation](/apis/data)
+[Open Data API Specifcation](/docs/spec/data/odata-service-for-namespace-default)
 

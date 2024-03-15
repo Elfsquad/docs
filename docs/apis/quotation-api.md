@@ -6,5 +6,5 @@ sidebar_label: Quotation API
 
 The quotation API enables you to interact with quotations.
 
-[Open Quotation API Specifcation](/apis/quotation)
+[Open Quotation API Specifcation](/docs/spec/quotation/elfsquad-web-quotationapi)
 

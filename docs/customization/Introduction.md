@@ -5,5 +5,5 @@ sidebar_label: Overview
 slug: ./
 ---
 
-* [Third party visualization](./third-party-visualization)  
-* [Custom scripting](./custom-scripting)
+* [Third party visualization](/docs/customization/Third-party-visualization)  
+* [Custom scripting](/docs/customization/custom-scripting/)

@@ -7,5 +7,5 @@ sidebar_label: Configurator API
 The Elfsquad Configurator API enables you to retrieve, create and update
 configurations. 
 
-[Open Configurator API Specifcation](/apis/configurator)
+[Open Configurator API Specifcation](/docs/spec/configurator/elfsquad-configurator-api)
 

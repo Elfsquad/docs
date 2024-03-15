@@ -11,7 +11,7 @@ function HomepageHeader() {
       <div class="hero__left">
           <h1 className="hero__title">Docs</h1>
           <h1 className="hero__title">Elfsquad</h1>
-          <a className="primary" href="/docs/Introduction">Get started</a>
+          <a className="primary" href="/docs/apis">Get started</a>
       </div> 
   );
 }

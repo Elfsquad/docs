@@ -60,8 +60,16 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/Introduction',
+              label: 'Guides',
+              to: '/docs/guides',
+            },
+            {
+              label: 'Customization',
+              to: '/docs/customization',
+            },
+            {
+              label: 'APIs',
+              to: '/docs/apis',
             },
           ],
         },
@@ -123,32 +131,6 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
-    [
-      'redocusaurus',
-       {
-        specs: [
-          {
-            route: '/apis/data',
-            spec: "https://api.elfsquad.io/configurator/v1/swagger.json",
-          },
-          {
-            route: '/apis/configurator',
-            spec: 'https://api.elfsquad.io/configurator/v1/swagger.json'
-          },
-          {
-            route: '/apis/scim',
-            spec: './specs/scim.yaml'
-          },
-          {
-            route: '/apis/quotation',
-            spec: 'http://api.elfsquad.io/quotation/1/swagger/v1/swagger.json'
-          }
-        ],
-        theme: {
-          primaryColor: '#00FF81'
-        }
-      }
-    ]
   ],
   plugins: [
     [
