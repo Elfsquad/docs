@@ -10,8 +10,8 @@ See the [Authentication page](/docs/apis/authentication) for information about a
 
 ## Available APIs
 
-* [Data API](/docs/spec/data/odata-service-for-namespace-default)
-* [Configurator API](/docs/spec/configurator/elfsquad-configurator-api)
-* [SCIM API](/docs/spec/scim/scim-api)
-* [Quotation API](/docs/spec/quotation/elfsquad-web-quotationapi)
+* [Data API](/docs/apis/data-api)
+* [Configurator API](/docs/apis/configurator-api)
+* [SCIM API](/docs/apis/scim-api)
+* [Quotation API](/docs/apis/quotation-api)
 

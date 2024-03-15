@@ -19,7 +19,7 @@ When creating a custom interface implementation in which you want to
 allow anonymous users, you can use this authentication method. 
 
 The anonymous authentication method only allows calling endpoints in the
-[configurator API](/apis/configurator/).
+[configurator API](/docs/apis/configurator-api)
 
 Authentication to the API can be performed via a custom HTTP header:
 

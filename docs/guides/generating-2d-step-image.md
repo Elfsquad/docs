@@ -24,8 +24,8 @@ step image.
 ```
 
 You can retrieve the layout, by calling the
-[`2dlayout`
-endpoint](/apis/configurator#tag/Configurator/paths/~1configurator~1{version}~1configurator~1{id}~12dlayout/get).
+[`2dlayout`)
+endpoint](/docs/spec/configurator/retrieve-2-d-image-layout).
 
 :::note 
 Since the image is based on a step, you will need to include the
