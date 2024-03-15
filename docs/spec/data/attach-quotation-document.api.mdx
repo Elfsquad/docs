@@ -1,0 +1,215 @@
+---
+id: attach-quotation-document
+title: "AttachQuotationDocument"
+description: "AttachQuotationDocument"
+sidebar_label: "AttachQuotationDocument"
+hide_title: true
+hide_table_of_contents: true
+api: eJydVE1v2kAQ/SvWqkeKoUduaUmlqFXTD3KiHIb1gDe1dze74zSR5f/eGa8DOCWpVCPB7ny+eW9wq5zHAGScvSrUQl0QgS6/NY5629LppkZLaqIC3jUY6b0rHtWiVdpZEgcfwfvK6D4+v43Oii3qEmuQEz165MJue4ta6vggHclgFO9HU+EXqPEkMlIwdq+6iTrAEGiv+VdY+woIX4j7DHbfwB6vojvrX/WGM47ERj3MOZ6k6x/hJXpnYxrn3WwmPwVGHYwXaJxw/YnH/k++hibjgi+LVCOVTnT0Tc81UMmXvACCfJ6/2TVWS0bMU4mTzIjhHgMPsW5VEyrOKol8XOQ5eDPFahfvGiimxg3FVLeZKEH//bgXlw/AOuBY1yc6n8l5xnyq4tE9Eu9oXo20eiaVUGbsLqltSCCp6yXjzn7wmEZjtnMhs4wveuDbEnfQVELDmOhVaWKWEuOQyIbKsXhYZEDZPziaKOE01ZpPZ9O5LJV3kWroVbeJoYQ9OxCRnegyAnTYDsIHypksY6Vir1c7qL1W0pwzpf1R8QNFh9qsX8lQJKNttxDxJlRdJ2YWNPCffM3HewgGtkLgesOdSoQCQ78kv5BD1Ie01m97OSS8agTfXyveTZ4yLrRGT6/Gbk4W+evNimO3w1undoWkBPgtbyT+Xqif/OGL82lMDurtraqGxeGYVFaeP6B7tN8=
+sidebar_class_name: "put api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  AttachQuotationDocument
+</h1>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/data/1/$functions/AttachDocument"}
+>
+  
+</MethodEndpoint>
+
+
+
+AttachQuotationDocument
+
+## Request
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"FileName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"QuotationId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"QuotationTemplateId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"LanguageIso"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"Type"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"Attachment"}
+          required={false}
+          schemaName={"object"}
+          qualifierMessage={undefined}
+          schema={{"type":"object"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <div
+                        style={{"marginTop":".5rem","marginBottom":".5rem","marginLeft":"1rem"}}
+                      >
+                        
+                        
+                        object
+                        
+                        
+                      </div>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

@@ -1,0 +1,524 @@
+---
+id: quotation-groups-quotation-group-get-quotation-group
+title: "Get entity from QuotationGroups by key"
+description: "Get entity from QuotationGroups by key"
+sidebar_label: "Get entity from QuotationGroups by key"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV8lu2zAQ/RWCyKEtJDtOgib1regS9FCkbYJeghRgpJHNViIZchjEMPTvHWqxJctpEHdJfbFmOHx8mo2jJUcxc3x6yT97jQKlVqdWe+P4VcS1AVupPqR8umkw6sujU8C+hkfcCCsKQLDhhCWXimCMwDktKVogaRYsCT7iKbjEShO2k/4HLKasWWQ6YwNoCzdeWiBiaD1E/C4uXJzqxMW0NcaFgQFl2uWSORSCT5e8sXBopZrRSqZtIZA03su0oo7EO1D5drkfvxJx9jp+f7U8KeOuePQYcXJQ7vGyjBpH3Hiwi7Un9hzkkODAE+eVmhkbooESHEPNroFZQG8VBK4OF3mACO9AItyZXKekyETuYMtLC2tFOFkiFC7oQfki5MA6GtXTmU3BtsLrQnuFrXQhkY6MeKJVJmd+lSZVzEHh6QqpZ/Em8Iro1Zu4VBZeSXx3l+SfrEygkT+otYxkXAvB6qvAni5Y1jrjbTIXDtp95LJM4kdhZ+TvvvgJbEIsxQzaF2r0FABK/H5ylPfHjFwt1DB731VqClEuEFJGJ8kQuT8ZqhdbeV6FwnBGKweV9cH+fvjrs/sCZA+3LbFFHSQkIdgKY3KZVNEZf3dhw7JLq4r7lspqqOjr73USr/M1bGsTix7/VaENvNNL6i4RqfDwgOwLcSeL4N2DydHx0cnhy6NjUkpVK+OV9mQFTTthRmhlv0b+DnhdcoPWVQ6L8Gm93G8AT8tl2Hy2+a/bjp6Wb78VdrmkkMhC5CGTfI7S5HCW8elkhUFt4bpOln773A1j2HJ/F6dt07vh9Fv7jhjd6+D3ITpXyG5gG9fOLiDVL1w+mSC7YacHa7V9THtfT1WXzearh1p7bbaxN6nv+QKcCw56ECS5rzRbhG1rSL4D3LqUAgqZu19dpP8P3SqGUimwK1/2w3gxB0bGPqGJD8I0jHPpWM2N0ZMDe0t1ETtDeZPJZHAdl+2vOyevpvt2Wl4pBvMMzfbNrMAyq4uNadyx6wWjqbuaZyjPHC3UA39QTu8/MuK3Ivf9o8MIQ58Mcx0+OYK/ovqLYcrHG6c+WzZTRfk8DFbkg/Y7w9uc7OeIxk3HY2HkCPLM3XiRjqQepwLFeFIdJFWmu1PN2VtaY+e1OxmVIwuDnjOCpLdNkW365iLEot7YxCGEJNdJNfoJZA/wICcQ7xprMtofEbPyJwvWmPs=
+sidebar_class_name: "get api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Get entity from QuotationGroups by key
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/QuotationGroups({groupId})"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get entity from QuotationGroups by key
+
+## Request
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"in":"path","name":"groupId","description":"key: groupId of QuotationGroup","required":true,"x-ms-docs-key-type":"QuotationGroup","schema":{"type":"string","format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Query Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"in":"query","name":"$select","description":"Select properties to be returned","style":"form","explode":false,"schema":{"type":"array","items":{"enum":["groupId","groupOrder","groupAmount","groupTitle","configurationId","parentGroupId","configurationCode","quotationId","unitExclPrice","unitInclPrice","totalPriceExclVat","totalPriceInclVat","purchasePrice","profitMargin","profitMarginPercentage","groupMarginPct"],"type":"string"}}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"in":"query","name":"$expand","description":"Expand related entities","style":"form","explode":false,"schema":{"type":"array","items":{"enum":["*"],"type":"string"}}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Retrieved entity
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"groupId"}
+                        required={false}
+                        schemaName={"uuid"}
+                        qualifierMessage={"**Possible values:** Value must match regular expression `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`"}
+                        schema={{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"groupOrder"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= -2147483648` and `<= 2147483647`"}
+                        schema={{"format":"int32","maximum":2147483647,"minimum":-2147483648,"type":"integer"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"groupAmount"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= -2147483648` and `<= 2147483647`"}
+                        schema={{"format":"int32","maximum":2147483647,"minimum":-2147483648,"type":"integer"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"groupTitle"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"configurationId"}
+                        required={false}
+                        schemaName={"uuid"}
+                        qualifierMessage={"**Possible values:** Value must match regular expression `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`"}
+                        schema={{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"parentGroupId"}
+                        required={false}
+                        schemaName={"uuid"}
+                        qualifierMessage={"**Possible values:** Value must match regular expression `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`"}
+                        schema={{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"configurationCode"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"quotationId"}
+                        required={false}
+                        schemaName={"uuid"}
+                        qualifierMessage={"**Possible values:** Value must match regular expression `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`"}
+                        schema={{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"unitExclPrice"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"unitInclPrice"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalPriceExclVat"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"totalPriceInclVat"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"purchasePrice"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"profitMargin"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"profitMarginPercentage"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"groupMarginPct"}
+                        required={false}
+                        schemaName={"decimal"}
+                        qualifierMessage={undefined}
+                        schema={{"format":"decimal","multipleOf":1,"type":"number"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"groupId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"groupOrder\": 0,\n  \"groupAmount\": 0,\n  \"groupTitle\": \"string\",\n  \"configurationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"parentGroupId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"configurationCode\": \"string\",\n  \"quotationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"unitExclPrice\": 0,\n  \"unitInclPrice\": 0,\n  \"totalPriceExclVat\": 0,\n  \"totalPriceInclVat\": 0,\n  \"purchasePrice\": 0,\n  \"profitMargin\": 0,\n  \"profitMarginPercentage\": 0,\n  \"groupMarginPct\": 0\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem><TabItem
+        label={"default"}
+        value={"default"}
+      >
+        <div>
+          
+          
+          error
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                error
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object
+                              </span><span
+                                className={"openapi-schema__divider"}
+                              >
+                                
+                              </span><span
+                                className={"openapi-schema__required"}
+                              >
+                                required
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <SchemaItem
+                              collapsible={false}
+                              name={"code"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"message"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"target"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      details
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object[]
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"code"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"message"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"target"}
+                                    required={false}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"innererror"}
+                              required={false}
+                              schemaName={"object"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"The structure of this object is service-specific","type":"object"}}
+                            >
+                              
+                            </SchemaItem>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"error\": {\n    \"code\": \"string\",\n    \"message\": \"string\",\n    \"target\": \"string\",\n    \"details\": [\n      {\n        \"code\": \"string\",\n        \"message\": \"string\",\n        \"target\": \"string\"\n      }\n    ],\n    \"innererror\": {}\n  }\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
