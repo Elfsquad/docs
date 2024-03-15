@@ -42,7 +42,7 @@ const FeatureList = [
     Svg: require('../../static/img/icons/Archer.svg').default,
     description: (
       <>
-        <p><a href="/docs/archer/Introduction">Archer modeling language</a> is a domain-specific language designed to model configuration models based on variables and constraints.</p>
+        <p><a href="/docs/archer">Archer modeling language</a> is a domain-specific language designed to model configuration models based on variables and constraints.</p>
       </>
     ),
   },
