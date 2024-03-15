@@ -20,7 +20,7 @@ const FeatureList = [
     description: (
       <>
         <p>
-          You will also be able to create a new interface from scratch using our <a href="apis/configurator">configuration endpoints.</a> Or check out our <a href="/blog/tutorial%20-%20custom%20configurator">tutorial on Custom Configurators.</a>
+          You will also be able to create a new interface from scratch using our <a href="/docs/apis/configurator-api">configuration endpoints.</a> Or check out our <a href="/blog/tutorial%20-%20custom%20configurator">tutorial on Custom Configurators.</a>
         </p>
       </>
     ),
