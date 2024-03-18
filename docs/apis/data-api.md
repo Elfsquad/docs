@@ -1,6 +1,6 @@
 ---
 title: Data API
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: Data API
 ---
 
