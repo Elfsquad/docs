@@ -1,6 +1,5 @@
 ---
 title: Getting started with custom scripts
-sidebar_position: 1
 sidebar_label: Getting Started
 slug: getting-started
 ---

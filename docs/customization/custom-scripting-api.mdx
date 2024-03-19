@@ -1,0 +1,104 @@
+---
+title: Custom scripting API
+sidebar_label: Custom scripting API
+slug: custom-scripting-api
+hide_table_of_contents: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import methods from './methods';
+
+import { useState } from 'react';
+
+
+export const MethodName = ({name, parameters}) => {
+  let paramString = "";
+  for (let i = 0; i < parameters.length; i++) {
+    paramString += parameters[i].name;
+    if (i < parameters.length - 1) {
+      paramString += ", ";
+    }
+  }
+  return <h3>{name}({paramString})</h3>
+}
+
+export const ChildParameters = ({parameters}) => {
+  const [show, setShow] = useState(false);
+
+  if (parameters === null || parameters.length === 0) {
+    return null;
+  }
+
+  return <div class="border border-solid border-gray-500 rounded p-2">
+    <p>Show child parameters</p>
+  </div>;
+}
+
+export const MethodParameter = ({name, type, description, required, parameters}) => {
+  if (parameters === undefined) {
+    parameters = [];
+  }
+  if (required === undefined) {
+    required = true;
+  }
+
+  const requiredComponent = required 
+    ? <small class="text-red-500 uppercase tracking-tighter">required</small>
+    : <small class="text-gray-500 tracking-tighter">optional</small>;
+
+  const typeComponent = <small class="text-gray-500 tracking-tighter">({type})</small>;
+
+  return <div>
+    <div class="flex items-baseline gap-2">
+      <strong>{name}</strong> {requiredComponent} {typeComponent}
+    </div>
+    <p class="text-sm">{description}</p>
+
+    <ChildParameters parameters={parameters} />
+  </div>
+}
+
+export const MethodParameters = ({parameters}) => {
+  if (parameters.length === 0) {
+    return null;
+  }
+
+  const p = parameters.map(p => <MethodParameter key={p.name} {...p} />);
+
+  return <div>
+    <h4>Method parameters</h4>
+    <hr class="bg-gray-600" />
+    {p}
+  </div>
+};
+
+
+export const MethodDocument = ({methodName, description, code, parameters}) => {
+  if (parameters === undefined) {
+    parameters = [];
+  }
+
+  return <div class="grid grid-cols-2 gap-16">
+    <div>
+      <MethodName name={methodName} parameters={parameters} />
+      <p>{description}</p>
+
+      <MethodParameters parameters={parameters} />
+    </div>
+
+    <div>
+      <CodeBlock language="javascript" showLineNumbers={true}>{code}</CodeBlock>
+    </div>
+  </div>
+}
+
+export const MethodList = () => {
+  return <div class="space-y-16">
+    {methods.map((method, i) => {
+      return <MethodDocument key={i} {...method} />
+    })}
+  </div>
+}
+
+<MethodList />
+
