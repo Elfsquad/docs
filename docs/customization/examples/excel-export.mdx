@@ -1,0 +1,84 @@
+---
+title: 📊 Quotation Excel Export
+sidebar_position: 2
+sidebar_label: Quotation Excel Export
+slug: ./quotation-excel-export
+hide_table_of_contents: true
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import { CodeDoc } from "../../../src/components/CodeDoc/CodeDoc";
+import { CodeDocSection } from "../../../src/components/CodeDoc/CodeDocSection";
+
+<CodeDoc>
+
+<CodeDocSection highlight="1-6">
+### 1. Load the ExcelJS library
+We start by loading the ExcelJS library from a CDN. ExcelJS is a library that allows us to create and manipulate Excel files in JavaScript. We use the `addEventListener` method to wait for the library to be loaded before we start using it. 
+
+For more information about ExcelJS, you can visit the [official documentation](https://github.com/exceljs/exceljs).
+</CodeDocSection>
+
+<CodeBlock language="js">
+{`const scriptTag = document.createElement('script');
+scriptTag.setAttribute('src', 'https://cdn.jsdelivr.net/npm/exceljs@4.3.0/dist/exceljs.min.js');
+scriptTag.addEventListener('load', () => { 
+    generateExcelSheet();
+});
+document.body.appendChild(scriptTag);
+
+async function generateExcelSheet() {
+    const quotation = await fetchQuotation();  
+
+    const quotationLines = quotation.lines;
+    const tableData = quotationLines
+        .map(l => [ l.articleCode, l.description, l.quantityAmount ]);
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Lines');
+
+    worksheet.addTable({
+        name: 'Lines',
+        ref: 'A1',
+        headerRow: true,
+        style: {
+        },
+        columns: ['Code', 'Description', 'Quantity'].map(n => ({name: n, filterButton: true})),
+        rows: tableData,
+    });
+
+    const name = \`$\{quotation.quotationNumber}v$\{quotation.versionNumber}.xlsx\`;
+    saveWorkbook(workbook, name);
+}
+
+async function fetchQuotation(){
+    return (await api.fetch(\`api/2/quotations/$\{parameters.quotationId}?include=Lines\`)).body;
+}
+
+async function fetchAll(url) {
+    let nextUrl = url;
+    let result = [ ];
+    while(nextUrl) {
+        let response = await api.fetch(nextUrl);
+        result.push(...response.body.value);
+        nextUrl = response.body['@odata.nextLink'];
+    }
+    return result;
+}
+
+function saveWorkbook(workbook, name){
+    workbook.xlsx.writeBuffer().then(function (data) {
+        var blob = new Blob([data], {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+        var url = window.URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.setAttribute("href", url);
+        a.setAttribute("download", name);
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        a.remove();
+    });
+}
+`}
+</CodeBlock>
+
+</CodeDoc>

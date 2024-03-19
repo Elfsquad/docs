@@ -1,10 +1,11 @@
 ---
 title: Custom Script Examples
+sidebar_position: 1
 sidebar_label: Examples
-slug: examples
+slug: ./
 ---
 
-import { Card } from '../components/Card';
+import { Card } from '../../components/Card';
 
 We have various examples available that show how real use-cases can be
 solved with the custom scripting functionality.
