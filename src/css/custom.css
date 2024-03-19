@@ -53,6 +53,14 @@
   --ifm-footer-padding-horizontal: 0px;
 
   --ifm-card-background-color: var(--adaptable-green);
+
+}
+
+.DocSearch-Modal {
+  --docsearch-modal-background: var(--adaptable-dark-green);
+  --docsearch-footer-background: var(--adaptable-dark-green);
+  --docsearch-modal-shadow: inset 1px 1px 0 0 var(--adaptable-dark-green), 0 3px 8px 0 #000309;
+  --docsearch-footer-shadow: inset 0 1px 0 0 var(--adaptable-dark-green), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 html[data-theme='dark'] {
