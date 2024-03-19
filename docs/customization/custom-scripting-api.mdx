@@ -107,7 +107,7 @@ export const MethodDocument = ({methodName, description, code, parameters}) => {
 }
 
 export const MethodList = () => {
-  return <div class="space-y-48 h-[calc(100vh-25rem)] overflow-y-scroll p-4">
+  return <div class="space-y-48 h-[calc(100vh-25rem)] overflow-y-scroll">
     {methods.map((method, i) => {
       return <MethodDocument key={i} {...method} />
     })}
