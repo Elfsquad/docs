@@ -5,6 +5,9 @@ sidebar_label: Overview
 hide_table_of_contents: true
 ---
 
+import Link from '@docusaurus/Link';
+
+
 # Get started with the Elfsquad APIs
 
 Elfsquad provides a suite of APIs for integrating and extending Elfsquad's capabilities within your environment. Whether you're looking to enhance your ERP, CRM, CAD systems, build custom interfaces, manage quotations, or handle user identities across domains, our APIs offer solutions tailored for your needs.
@@ -12,28 +15,29 @@ Elfsquad provides a suite of APIs for integrating and extending Elfsquad's capab
 See the [Authentication page](/docs/apis/authentication) for information about authentication.
 
 <div class="row p-h-12 gap-12">
-    <a class="col--6 card w-312" href="/docs/apis/data-api">
-        <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" />
+
+    <Link to="data-api" class="col--6 card w-312">
+    <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" />
         <h2 class="color-tech-savy-purple">Data API</h2>
         The Data API is your gateway to data within Elfsquad. It implements the OData specification, allowing for seamless querying and manipulation of all data. This API is perfect for integrating Elfsquad with your ERP, CRM, or CAD systems, ensuring that your data is always synchronized and up-to-date.
-    </a>
+    </Link>
 
-    <a class="col--6 card w-312" href="/docs/apis/configurator-api">
+    <Link to="configurator-api" class="col--6 card w-312">
         <img src="/img/visual-configurator_2.webp" class="background-trust-turquoise" />
         <h2 class="color-trust-turquoise">Configurator API</h2>
         Our Configurator API is designed to build custom user interfaces. This API provides possibilities for creating tailored configuration experiences that meet your unique business and product requirements.
-    </a>
+    </Link>
 
-    <a class="col--6 card w-312" href="/docs/apis/quotation-api">
+    <Link to="quotation-api" class="col--6 card w-312">
         <img src="/img/quote.svg" class="background-manufacturing-orange" />
         <h2 class="color-manufacturing-orange">Quotation API</h2>
         The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
-    </a>
+    </Link>
 
-    <a class="col--6 card w-312" href="/docs/apis/scim-api">
+    <Link to="scim-api" class="col--6 card w-312">
         <img src="/img/channel-management.webp" class="background-free-green" />
         <h2 class="color-free-green">SCIM API</h2>
         The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
-    </a>
+    </Link>
 </div>
 
