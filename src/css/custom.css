@@ -242,6 +242,13 @@ a.card {
   transition: all 100ms;
   color:var(--off-white);
   font-weight: normal;
+
+  backface-visibility: hidden;
+  perspective: 1000px; /* Adjusted value */
+  will-change: font-size;
+  transform: translate3d(0, 0, 0) translateZ(0) rotate(0.0001deg) scale3d(1, 1, 1);
+  transform-origin: left top; /* Adjust the origin of transformation */
+  -webkit-font-smoothing: antialiased; /* Font smoothing for Webkit browsers, adjust as needed */
 }
 
 a.card img {
@@ -250,7 +257,7 @@ a.card img {
 }
 
 a.card:hover {
-  transform: scale(1.02);
+  transform: scale3d(1.02, 1.02, 1);
   cursor:pointer;
   color:var(--off-white);
   text-decoration: none;
