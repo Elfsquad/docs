@@ -224,11 +224,6 @@ canvas {
     background-size: cover;
   }
 }
-
-.gap-12 {
-  gap:12px;
-}
-
 .p-12 {
   padding: 12px;
 }
