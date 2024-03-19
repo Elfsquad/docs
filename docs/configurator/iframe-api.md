@@ -1,7 +1,7 @@
 ---
-title: Embedding the showroom
+title: Showroom IFrame API
 sidebar_position: 2
-sidebar_label: Embedding the showroom
+sidebar_label: Showroom IFrame API
 slug: ./embed-showroom
 ---
 

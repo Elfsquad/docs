@@ -56,6 +56,8 @@
 
   --ifm-card-background-color: var(--adaptable-green);
 
+  --ifm-font-size-base: 90%;
+
 }
 
 .DocSearch-Modal {
@@ -208,13 +210,13 @@ canvas {
   background: var(--off-white);
 }
 
-.float-right {
+/* .float-right {
   float:right;
 }
 
 .float-left {
   float:left;
-}
+} */
 
 /** media greater than 1920 width */
 @media (min-width: 1920px) {
@@ -246,6 +248,7 @@ canvas {
 
 a.card > p {
   padding: 26px;
+  margin: unset;
 }
 
 a.card {
@@ -261,7 +264,7 @@ a.card {
   -webkit-font-smoothing: antialiased; /* Font smoothing for Webkit browsers, adjust as needed */
 }
 
-a.card img {
+a.card > img {
   height:200px;
   padding:26px;
 }

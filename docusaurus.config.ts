@@ -27,6 +27,11 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: '/docs/configurator',
+          label: 'Configurator',
+          position: 'left'
+        },
+        {
           to: '/docs/customization',
           label: 'Customization',
           position: 'left'
@@ -105,7 +110,9 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ['csharp', 'json', 'powershell'],
+
     },
     algolia: {
       appId: 'JOXJX624HB',

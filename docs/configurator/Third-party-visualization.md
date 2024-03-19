@@ -1,6 +1,6 @@
 ---
-title: Third party visualization
-sidebar_position: 4
+title: Visualization IFrame API
+sidebar_position: 3
 ---
 
 With third party visualization, you can easily integrate Elfsquad with

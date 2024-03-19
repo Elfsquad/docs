@@ -1,7 +1,7 @@
 ---
-title: Configurator API
+title: Configurator Web API
 sidebar_position: 2
-sidebar_label: Configurator API
+sidebar_label: Configurator Web API
 ---
 
 The Elfsquad Configurator API enables you to retrieve, create and update
