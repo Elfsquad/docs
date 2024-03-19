@@ -5,6 +5,9 @@ export const MethodName = ({name, parameters}) => {
   let paramString = "";
   for (let i = 0; i < parameters.length; i++) {
     paramString += parameters[i].name;
+    if (!parameters[i].required) {
+      paramString += "?";
+    }
     if (i < parameters.length - 1) {
       paramString += ", ";
     }
@@ -23,13 +26,13 @@ export const ChildParameters = ({parameters}) => {
   const plusStyle = "text-2xl transition-transform transform duration-200 ease-in-out " + (show ? "rotate-45" : "rotate-0");
   const p = parameters.map(p => <MethodParameter key={p.name} {...p} />);
 
-  return <div class="border border-solid border-gray-500 rounded p-2">
-    <button class="cursor-pointer border-none bg-transparent flex items-center gap-2" onClick={() => setShow(!show)}>
+  return <div className="border border-solid border-gray-500 rounded p-2">
+    <button className="cursor-pointer border-none bg-transparent flex items-center gap-2" onClick={() => setShow(!show)}>
       <span className={plusStyle}>+</span>
       <span>{show ? "Hide" : "Show"} child parameters</span>
     </button>
 
-    {show && <div class="p-4">
+    {show && <div className="p-4">
       {p}
     </div>}
   </div>;
@@ -44,16 +47,16 @@ export const MethodParameter = ({name, type, description, required, parameters})
   }
 
   const requiredComponent = required 
-    ? <small class="text-red-500 uppercase tracking-tighter">required</small>
-    : <small class="text-gray-500 tracking-tighter">optional</small>;
+    ? <small className="text-red-500 uppercase tracking-tighter">required</small>
+    : <small className="text-gray-500 tracking-tighter">optional</small>;
 
-  const typeComponent = <small class="text-gray-500 tracking-tighter">({type})</small>;
+  const typeComponent = <small className="text-gray-500 tracking-tighter">({type})</small>;
 
   return <div>
-    <div class="flex items-baseline gap-2">
+    <div className="flex items-baseline gap-2">
       <strong>{name}</strong> {requiredComponent} {typeComponent}
     </div>
-    <p class="text-sm">{description}</p>
+    <p className="text-sm">{description}</p>
 
     <ChildParameters parameters={parameters} />
   </div>
@@ -68,7 +71,7 @@ export const MethodParameters = ({parameters}) => {
 
   return <div>
     <h4>Method parameters</h4>
-    <hr class="bg-gray-600" />
+    <hr className="bg-gray-600" />
     {p}
   </div>
 };
@@ -80,7 +83,7 @@ export const MethodDocument = ({methodName, description, code, parameters}) => {
   }
 
   return <div>
-    <div class="grid grid-cols-2 gap-16 bg-adaptable-dark-green sticky top-0 z-10">
+    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green sticky top-0 z-10">
       <div>
         <MethodName name={methodName} parameters={parameters} />
         <p>{description}</p>
@@ -91,7 +94,7 @@ export const MethodDocument = ({methodName, description, code, parameters}) => {
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-16">
+    <div className="grid grid-cols-2 gap-16">
       <MethodParameters parameters={parameters} />
     </div>
   </div>;
