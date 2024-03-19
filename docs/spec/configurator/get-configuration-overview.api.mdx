@@ -1,0 +1,98 @@
+---
+id: get-configuration-overview
+title: "Get configuration overview"
+description: "This returns the configuration overview DTO."
+sidebar_label: "Get configuration overview"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU01P4zAQ/SvWnHalisIec1uxCPUE2i0n1INJJo1Faqfjcdkq8n9npqRQwjenOJPxmzfvvfTAdhmhuIbTBsvbkBgWE6gwluQ6dsFDAfPGRUPIiXw03KApg6/dMpHVBhM2SBuHd+bP/OIIJtBZsitkJIXtwcuLgDy7M6ukzyl2Z7mB8cBZhZ5d7ZBMqF9OlH7CdXKEFRRMCScQywZXFooeeNvpuMjk/FI660Ary1JJyVWQ8+SRkdCOD2iHTD6LnPNCm2MXfMSo338dH+vj+Sr/UllijDoYRJQmCDAskXc6ycACpk+7BZr2A6s8Ko/ky9O96jv6ddgRdNwqw7O2jutkK3N6AGF+X86kd7+0rH8CwqkLkVfW6/VBlnPkNwwe+9SrqSxWfT0jg5aM/3natVYMEC6JWgV90OUaDgWQK8WTX+MvL7P1SFlMamRFxev7GxvxitqctbxOSFupy3Fjydkb1U7yWrmoZ/Gptm3Ed3b+8XfIyk/zcWJf3XgoWr9Va2yb9E2Ot7h95ZfR7H6L3ffG7/XOi8Psnp/NJcz3HCF37A==
+sidebar_class_name: "get api-method"
+info_path: docs/spec/configurator/elfsquad-configurator-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Get configuration overview
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/configurator/{version}/configurator/{configurationId}/overview"}
+>
+  
+</MethodEndpoint>
+
+
+
+This returns the configuration overview DTO.
+
+## Request
+
+<details
+  style={{"marginBottom":"1rem"}}
+  className={"openapi-markdown__details"}
+  data-collapsed={false}
+  open={true}
+>
+  <summary
+    style={{}}
+  >
+    <h3
+      className={"openapi-markdown__details-summary-header-params"}
+    >
+      Path Parameters
+    </h3>
+  </summary><div>
+    <ul>
+      <ParamsItem
+        className={"paramsItem"}
+        param={{"name":"configurationId","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}}}
+      >
+        
+      </ParamsItem><ParamsItem
+        className={"paramsItem"}
+        param={{"name":"version","in":"path","required":true,"schema":{"type":"string"}}}
+      >
+        
+      </ParamsItem>
+    </ul>
+  </div>
+</details><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Success
+          
+          
+        </div><div>
+          
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
