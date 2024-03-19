@@ -39,7 +39,7 @@ client_id={CLIENT_ID}&client_secret={CLIENT_SECRET}&grant_type=client_credential
 
 <TabItem value="curl">
 
-``` bash
+```bash
 curl --location --request POST 'https://login.elfsquad.io/oauth2/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'client_id={CLIENT_ID}' \
