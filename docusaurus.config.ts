@@ -145,14 +145,14 @@ const config: Config = {
         docsPluginId: 'classic',
         config: {
           data: {
-            specPath: 'https://api.elfsquad.io/data/1/swagger/v2/swagger.json',
+            specPath: 'http://localhost:5104/data/1/swagger/v2/swagger.json',
             outputDir: 'docs/spec/data',
             sidebarOptions: {
               groupPathsBy: 'tag'
             }
           },
           configurator: {
-            specPath: 'https://api.elfsquad.io/configurator/v1/swagger.json',
+            specPath: 'http://api.elfsquad.io/configurator/v1/swagger.json',
             outputDir: 'docs/spec/configurator',
             sidebarOptions: {
               groupPathsBy: 'tag'
