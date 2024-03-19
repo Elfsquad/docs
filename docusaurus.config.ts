@@ -147,7 +147,7 @@ const config: Config = {
             }
           },
           configurator: {
-            specPath: 'http://localhost:5109/configurator/v1/swagger.json',
+            specPath: 'https://api.elfsquad.io/configurator/v1/swagger.json',
             outputDir: 'docs/spec/configurator',
             sidebarOptions: {
               groupPathsBy: 'tag'
