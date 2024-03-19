@@ -1,17 +1,17 @@
 export default [
   {
-    methodName: "window.parameters",
+    methodName: "parameters",
     description: "The parameters object contains context about the current page. This is available on all pages, but the properties will vary depending on the page.",
     code: `async function logParameters() {
-  console.log('The parameters object:', window.parameters);
+  console.log('The parameters object:', parameters);
 }`,
   parameters: [],
   },
   {
-    methodName: "window.api.fetch",
+    methodName: "api.fetch",
     description: "The fetch method is a wrapper around the native fetch method. The wrapper adds the necessary headers and authentication for the Elfsquad API to the request.",
     code: `async function fetchData() {
-  const response = await window.api.fetch('https://api.elfsquad.io/data/1/quotations/');
+  const response = await api.fetch('https://api.elfsquad.io/data/1/quotations/');
   const data = await response.json();
   console.log('The data:', data);
 }`,
@@ -31,10 +31,10 @@ export default [
     ],
   },
   {
-    methodName: "window.ui.openDialog",
+    methodName: "ui.openDialog",
     description: "The ui.openDialog function allows you to open a dialog and embed one or more scripts in that dialog. These scripts can be used to add your own custom behavior and content to the dialog.",
     code: `openDialog = () => {
-  window.ui.openDialog({
+  ui.openDialog({
     title: 'Dialog Title',
     width: '80vw',
     height: '80vh',
@@ -84,10 +84,18 @@ export default [
     ],
   },
   {
-    methodName: "window.ui.reload",
+    methodName: "ui.reload",
     description: "The ui.reload method allows you to reload the current page. Note: this method is only implemented on the quotation & order entry pages.",
     code: `reload = () => {
-  window.ui.reload();
+  ui.reload();
+}`,
+    parameters: [],
+  },
+  {
+    methodName: 'dialog.close',
+    description: 'The dialog.close method allows you to close the current dialog. This method is only available in dialogs.',
+    code: `closeDialog = () => {
+  dialog.close();
 }`,
     parameters: [],
   },
