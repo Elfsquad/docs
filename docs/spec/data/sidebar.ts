@@ -3078,60 +3078,6 @@ const sidebar: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: "category",
-      label: "Vats",
-      items: [
-        {
-          type: "doc",
-          id: "spec/data/vats-vat-list-vat",
-          label: "Get entities from Vats",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-vat-create-vat",
-          label: "Add new entity to Vats",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-vat-get-vat",
-          label: "Get entity from Vats by key",
-          className: "api-method get",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-vat-update-vat",
-          label: "Update entity in Vats",
-          className: "api-method patch",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-vat-delete-vat",
-          label: "Delete entity from Vats",
-          className: "api-method delete",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-bulk-delete",
-          label: "Invoke action BulkDelete",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-bulk-insert",
-          label: "Invoke action BulkInsert",
-          className: "api-method post",
-        },
-        {
-          type: "doc",
-          id: "spec/data/vats-bulk-update",
-          label: "Invoke action BulkUpdate",
-          className: "api-method post",
-        },
-      ],
-    },
   ],
 };
 
