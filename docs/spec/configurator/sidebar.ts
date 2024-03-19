@@ -24,8 +24,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "spec/configurator/",
-          label: "Missing summary",
+          id: "spec/configurator/request-quote",
+          label: "Request quote",
           className: "api-method post",
         },
       ],
