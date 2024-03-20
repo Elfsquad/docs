@@ -12,11 +12,21 @@ import { CodeDocSection } from "../../../src/components/CodeDoc/CodeDocSection";
 
 <CodeDoc>
 
-<CodeDocSection highlight="1-6">
+<CodeDocSection highlight="{1-6}">
 ### 1. Load the ExcelJS library
 We start by loading the ExcelJS library from a CDN. ExcelJS is a library that allows us to create and manipulate Excel files in JavaScript. We use the `addEventListener` method to wait for the library to be loaded before we start using it. 
 
+When the library is loaded, we call the `generateExcelSheet` function to create the Excel sheet.
+
 For more information about ExcelJS, you can visit the [official documentation](https://github.com/exceljs/exceljs).
+</CodeDocSection>
+
+<CodeDocSection highlight="{9}">
+### 2. Fetch quotation data
+
+From within our main `generateExcelSheet` function, we fetch the quotation data from the API. We use the `fetchQuotation` function to fetch the quotation data.
+
+
 </CodeDocSection>
 
 <CodeBlock language="js">
@@ -82,3 +92,4 @@ function saveWorkbook(workbook, name){
 </CodeBlock>
 
 </CodeDoc>
+
