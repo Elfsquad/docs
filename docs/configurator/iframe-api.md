@@ -2,7 +2,6 @@
 title: Showroom IFrame API
 sidebar_position: 2
 sidebar_label: Showroom IFrame API
-slug: ./embed-showroom
 ---
 
 The easiest way to embed the Elfsquad showroom application into your existing website, is to leverage the HTML iframe APIs.

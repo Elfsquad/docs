@@ -24,26 +24,26 @@ Example usage:
 ## APIs
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-    <Link to="/docs/spec/configurator/elfsquad-configurator-api" class="card">
+    <Card link="/docs/spec/configurator/elfsquad-configurator-api">
         <p>
-            ### Configurator Web API
+            ## 🛠️ Configurator Web
             Build your own configurator
         </p>
-    </Link>
+    </Card>
 
-    <Link to="/docs/configurator/embed-showroom" class="card">
+    <Card link="/docs/configurator/iframe-api">
         <p>
-            ### Showroom IFrame API
+            ## 🖥️ Showroom IFrame
             Embed the Elfsquad Showroom in your website
         </p>
-    </Link>
+    </Card>
 
-    <Link to="/docs/configurator/Third-party-visualization" class="card">
+    <Card link="/docs/configurator/Third-party-visualization">
         <p>
-            ### Visualization IFrame API
+            ## 🖼️ Visualization IFrame
             Bring your own visualization to the Elfsquad Showroom
         </p>
-    </Link>
+    </Card>
 
 </div>
 
@@ -52,7 +52,7 @@ Example usage:
 ## Libraries
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-    <Link to="https://github.com/Elfsquad/configurator" class="card">
+    <Card link="https://github.com/Elfsquad/configurator">
         <p>
             
             ### Configurator library (TS)
@@ -62,9 +62,9 @@ Example usage:
                 <small>WEB · TS</small>
             </p>
         </p>        
-    </Link>
+    </Card>
 
-    <Link to="https://github.com/Elfsquad/authentication" class="card">
+    <Card link="https://github.com/Elfsquad/authentication">
         <p>
             ### Authentication library
             <p class="row row--align-center gap-2">
@@ -72,5 +72,21 @@ Example usage:
                 <small>WEB · TS</small>
             </p>
         </p>        
-    </Link>
+    </Card>
+
+
+    <Card link="https://github.com/Elfsquad/forge-viewer">
+        <p>
+            ### Autodesk APS Viewer library
+            <p class="row row--align-center gap-2">
+                <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
+                <small>WEB · TS</small>
+            </p>
+        </p>        
+    </Card>
+
+    
 </div>
+
+
+import { Card } from "@site/docs/components/Card";
