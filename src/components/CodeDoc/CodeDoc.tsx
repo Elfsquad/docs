@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import MDXPre from '@docusaurus/theme-classic/lib/theme/MDXComponents/Pre'
 import CodeBlock from '@theme/CodeBlock';
-import { CodeDocSection } from './CodeDocSection';
-
+import { CodeDocSection } from '@site/src/components/CodeDoc/CodeDocSection';
+import { calculateNavbarHeight } from '@site/src/utils/themeUtils';
 
 export const CodeDoc = ({children}) => {
+    const [height, setHeight] = useState(null);
     const [metadataString, setMetadataString] = useState('');
     const [activeSection, setActiveSection] = useState(0);
+    
+    const navbarHeight = calculateNavbarHeight();
 
     const childElements = React.Children
         .toArray(children)
         .filter(child => React.isValidElement(child)) as React.ReactElement[];
-
     const codeBlock = childElements.find(child => child.type === CodeBlock || child.type === MDXPre);
     const sections = childElements.filter(child => child.type === CodeDocSection );
-    const sectionRefs = sections.map(() => React.useRef()) as React.RefObject<HTMLDivElement>[];
+    const codeBlockRef = React.useRef<HTMLDivElement>();
+    const sectionRefs = sections.map(() => React.useRef<HTMLDivElement>());
+
+    const calculateVisibleHeight = () => {
+        const rect = codeBlockRef.current.getBoundingClientRect();
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        const height = Math.floor(Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0)));
+        setHeight(height - 32);
+    };
 
     const activateSection = (index) => {
         if (index < 0 || index >= sections.length) return;
@@ -23,7 +33,8 @@ export const CodeDoc = ({children}) => {
     };
 
     const onScroll = () => {
-        const scrollY = window.scrollY;
+        const scrollY = window.scrollY + navbarHeight;
+        
         const sectionIndex = sectionRefs.findIndex(sectionRef => {
             return sectionRef.current.offsetTop > scrollY;
         });
@@ -31,6 +42,7 @@ export const CodeDoc = ({children}) => {
     };
         
     useEffect(() => {
+        calculateVisibleHeight();
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
@@ -43,14 +55,14 @@ export const CodeDoc = ({children}) => {
                     return <div 
                         key={index}
                         ref={sectionRefs[index]}
-                        className={`CodeBlockSection rounded p-4 hover:bg-adaptable-green cursor-pointer ${activeSection == index ? 'bg-adaptable-green': ''}`} 
+                        className={`CodeBlockSection rounded p-4 cursor-pointer ${activeSection == index ? 'bg-adaptable-green': ''}`} 
                         onClick={() => activateSection(index)}>
                         <CodeDocSection {...section.props}></CodeDocSection>
                     </div>
                 })            
             }
         </div>
-        <div>
+        <div ref={codeBlockRef} style={{height: `${height}px`, top: `${navbarHeight}px`}} className={`overflow-y-scroll sticky`}>
             <CodeBlock {...codeBlock.props} metastring={metadataString} key={metadataString}></CodeBlock>
         </div>
     </div>
