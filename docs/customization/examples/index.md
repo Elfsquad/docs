@@ -1,7 +1,7 @@
 ---
 title: Custom Script Examples
 sidebar_position: 1
-sidebar_label: Examples
+sidebar_label: Overview
 slug: ./
 ---
 
@@ -16,8 +16,8 @@ solved with the custom scripting functionality.
     <p class="mb-0">The margin calculator enables the user to see, inspect and update the margin of a quotation per product.</p>
   </Card>
 
-  <Card link="https://github.com/Elfsquad/custom-script-examples/tree/main/excel-export">
-    <h2>📊 Excel Export</h2>
+  <Card link="/docs/customization/examples/quotation-excel-export">
+    <h2>📊 Quotation Excel Export</h2>
     <p class="mb-0">Export your quotation data to an Excel file with the Excel Export script.</p>
   </Card>
 
