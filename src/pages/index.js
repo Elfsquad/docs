@@ -18,15 +18,12 @@ export default function Home() {
 
         <div class="grid grid-cols-4 gap-8">
 
-          <Card link="/docs/apis/data-api">
-            {/* <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" /> */}
+          <Card link="/docs/apis">
             <h2 class="color-tech-savy-purple">Integration</h2>
             The Data API is your gateway to data within Elfsquad. It implements the OData specification, allowing for seamless querying and manipulation of all data. This API is perfect for integrating Elfsquad with your ERP, CRM, or CAD systems, ensuring that your data is always synchronized and up-to-date.
           </Card>
 
-
           <Card link="/docs/configurator">
-            {/* <img src="/img/visual-configurator_2.webp" class="background-trust-turquoise" /> */}
             <h2 class="color-trust-turquoise">Configurator</h2>
             Our Configurator API is designed to build custom user interfaces. This API provides possibilities for creating tailored configuration experiences that meet your unique business and product requirements.
           </Card>
