@@ -23,7 +23,7 @@ const config: Config = {
       items: [        
         {
           to: '/docs/apis',
-          label: 'API',
+          label: 'Integration',
           position: 'left'
         },
         {
@@ -32,18 +32,23 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: '/docs/spec/quotation/elfsquad-web-quotationapi',
+          label: 'Quotations',
+          position: 'left'
+        },
+        {
           to: '/docs/customization',
           label: 'Customization',
           position: 'left'
         },
         {
-          to: '/docs/guides',
-          label: 'Guides',
+          to: '/docs/archer',
+          label: 'Archer',
           position: 'left'
         },
         {
-          to: '/docs/archer',
-          label: 'Archer',
+          to: '/docs/spec/scim/scim-api',
+          label: 'Identity',
           position: 'left'
         },
         {
@@ -64,10 +69,10 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Guides',
-              to: '/docs/guides',
-            },
+            // {
+            //   label: 'Guides',
+            //   to: '/docs/guides',
+            // },
             {
               label: 'Customization',
               to: '/docs/customization',

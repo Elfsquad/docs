@@ -1,20 +1,8 @@
-import React, { useEffect } from 'react';
-import clsx from 'clsx';
+import React from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import styles from './index.module.css';
-import HomepageFeatures from '../components/HomepageFeatures';
+import { Card }  from '@site/docs/components/Card';
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-      <div class="hero__left">
-          <h1 className="hero__title">Docs</h1>
-          <h1 className="hero__title">Elfsquad</h1>
-          <a className="primary" href="/docs/apis">Get started</a>
-      </div> 
-  );
-}
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -23,12 +11,63 @@ export default function Home() {
     <Layout
       title={`${siteConfig.title}`}
       description="Integrate your IT systems with Elfsquad CPQ">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <header class="container py-16">
+        <div>
+          <h1 className="hero__title">Elfsquad <span className="color-smart-neon">Docs</span></h1>
+        </div>
 
-        <HomepageHeader />
+        <div class="grid grid-cols-4 gap-8">
 
-        <HomepageFeatures />
-        </header>
+          <Card link="/docs/apis/data-api">
+            {/* <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" /> */}
+            <h2 class="color-tech-savy-purple">Integration</h2>
+            The Data API is your gateway to data within Elfsquad. It implements the OData specification, allowing for seamless querying and manipulation of all data. This API is perfect for integrating Elfsquad with your ERP, CRM, or CAD systems, ensuring that your data is always synchronized and up-to-date.
+          </Card>
+
+
+          <Card link="/docs/configurator">
+            {/* <img src="/img/visual-configurator_2.webp" class="background-trust-turquoise" /> */}
+            <h2 class="color-trust-turquoise">Configurator</h2>
+            Our Configurator API is designed to build custom user interfaces. This API provides possibilities for creating tailored configuration experiences that meet your unique business and product requirements.
+          </Card>
+
+          <Card link="/docs/customization">
+            <h2 class="color-manufacturing-orange">Customization</h2>
+            Custom scripts are snippets of JavaScript code that you can link link to custom buttons. When a user clicks the button, their browser executes the script.
+          </Card>
+
+          <Card link="/docs/spec/quotation/elfsquad-web-quotationapi">
+            <h2 class="color-free-green">Quotations</h2>
+            The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
+          </Card>
+
+          <Card link="/docs/archer">
+            <h2 class="color-creative-pink">Archer</h2>
+            Archer modeling language is a domain-specific language designed to model configuration models based on variables and constraints.
+          </Card>
+
+          <Card link="/docs/spec/scim/scim-api">
+            <h2 class="color-smart-neon">Identity</h2>
+            The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
+          </Card>
+
+          {/* <Link to="/docs/apis/quotation-api" class="col--6 card w-312">
+            <img src="/img/quote.svg" class="background-manufacturing-orange" />
+            <h2 class="color-manufacturing-orange">Quotation API</h2>
+            The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
+          </Link>
+
+          <Link to="/docs/apis/scim-api" class="col--6 card w-312">
+            <img src="/img/channel-management.webp" class="background-free-green" />
+            <h2 class="color-free-green">SCIM API</h2>
+            The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
+          </Link> */}
+
+
+        </div>
+
+      </header>
     </Layout>
   );
 }
+

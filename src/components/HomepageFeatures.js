@@ -1,73 +1,45 @@
 import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
 
-const FeatureList = [
-  {
-    title: 'API integration',
-    Svg: require('../../static/img/icons/API.svg').default,
-    description: (
-      <>
-        <p>
-          Integrating with our API gives more flexibility and control, but comes at the cost of being more complex to set up.
-        </p>
-      </>      
-    ),
-  },
-  {
-    title: 'Customization',
-    Svg: require('../../static/img/icons/Configure.svg').default,
-    description: (
-      <>
-        <p>
-          You will also be able to create a new interface from scratch using our <a href="/docs/apis/configurator-api">configuration endpoints.</a> Or check out our <a href="/blog/tutorial%20-%20custom%20configurator">tutorial on Custom Configurators.</a>
-        </p>
-      </>
-    ),
-  },
-  {
-    title: 'Guides',
-    Svg: require('../../static/img/icons/Blog.svg').default,
-    description: (
-      <>
-        <p>Some integrations can be more complex than others.</p>
-        <p>
-          Leverage <a href="/docs/guides/embed-showroom">our guides</a> to make building complex integrations easier.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: 'Archer',
-    Svg: require('../../static/img/icons/Archer.svg').default,
-    description: (
-      <>
-        <p><a href="/docs/archer">Archer modeling language</a> is a domain-specific language designed to model configuration models based on variables and constraints.</p>
-      </>
-    ),
-  },
-];
-
-function Feature({Svg, title, description}) {
-  return (
-    <div className={styles.feature}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      {FeatureList.map((props, idx) => (
-        <Feature key={idx} {...props} />
-      ))}
-    </section>
+    <div class="grid grid-cols-4 gap-8">
+
+      <Card link="/docs/apis/data-api">
+        <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" />
+        <h2 class="color-tech-savy-purple">Data API</h2>
+        The Data API is your gateway to data within Elfsquad. It implements the OData specification, allowing for seamless querying and manipulation of all data. This API is perfect for integrating Elfsquad with your ERP, CRM, or CAD systems, ensuring that your data is always synchronized and up-to-date.
+      </Card>
+
+
+      {/* <Link to="/docs/apis/data-api" class="col--6 card w-312">
+        <img src="/img/elfsquad-it-landscape.svg" class="background-tech-savy-purple" />
+        <h2 class="color-tech-savy-purple">Data API</h2>
+        The Data API is your gateway to data within Elfsquad. It implements the OData specification, allowing for seamless querying and manipulation of all data. This API is perfect for integrating Elfsquad with your ERP, CRM, or CAD systems, ensuring that your data is always synchronized and up-to-date.
+      </Link>
+
+      <Link to="/docs/configurator" class="col--6 card w-312">
+        <img src="/img/visual-configurator_2.webp" class="background-trust-turquoise" />
+        <h2 class="color-trust-turquoise">Configurator API</h2>
+        Our Configurator API is designed to build custom user interfaces. This API provides possibilities for creating tailored configuration experiences that meet your unique business and product requirements.
+      </Link>
+
+      <Link to="/docs/apis/quotation-api" class="col--6 card w-312">
+        <img src="/img/quote.svg" class="background-manufacturing-orange" />
+        <h2 class="color-manufacturing-orange">Quotation API</h2>
+        The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
+      </Link>
+
+      <Link to="/docs/apis/scim-api" class="col--6 card w-312">
+        <img src="/img/channel-management.webp" class="background-free-green" />
+        <h2 class="color-free-green">SCIM API</h2>
+        The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
+      </Link> */}
+    </div>
+
+
   );
 }
+
+import Link from '@docusaurus/Link';
+import { Card }  from '@site/docs/components/Card';
