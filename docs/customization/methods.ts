@@ -52,7 +52,7 @@ export default [
             name: "title",
             type: "string",
             description: "The title of the dialog.",
-            required: true,
+            required: false,
           },
           {
             name: "width",
