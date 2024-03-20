@@ -9,8 +9,6 @@ export const CodeDoc = ({children}) => {
     const [metadataString, setMetadataString] = useState('');
     const [activeSection, setActiveSection] = useState(-1);
     
-    const navbarHeight = calculateNavbarHeight();
-
     const childElements = React.Children
         .toArray(children)
         .filter(child => React.isValidElement(child)) as React.ReactElement[];
@@ -46,7 +44,7 @@ export const CodeDoc = ({children}) => {
     };
 
     const onScroll = () => {
-        const scrollY = window.scrollY + navbarHeight;
+        const scrollY = window.scrollY + calculateNavbarHeight();
         
         const sectionIndex = sectionRefs.findIndex(sectionRef => {
             return sectionRef.current.offsetTop > scrollY;
@@ -76,7 +74,7 @@ export const CodeDoc = ({children}) => {
                 })            
             }
         </div>
-        <div ref={codeBlockRef} style={{height: `${height}px`, top: `${navbarHeight}px`}} className={`overflow-y-scroll sticky scroll-smooth`}>
+        <div ref={codeBlockRef} style={{height: `${height}px`, top: `${calculateNavbarHeight()}px`}} className={`overflow-y-scroll sticky scroll-smooth`}>
             <CodeBlock {...codeBlock.props} metastring={metadataString} key={metadataString}></CodeBlock>
         </div>
     </div>
