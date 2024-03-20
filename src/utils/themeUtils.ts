@@ -1,6 +1,6 @@
 
 export const calculateNavbarHeight = () => {
-    const ifmNavbarHeight = getComputedStyle(document.documentElement)
+    const ifmNavbarHeight = window.getComputedStyle(document.documentElement)
         .getPropertyValue('--ifm-navbar-height');
     if (!ifmNavbarHeight) return 0;
     if (ifmNavbarHeight.includes('px')) return parseInt(ifmNavbarHeight.replace('px', ''));
