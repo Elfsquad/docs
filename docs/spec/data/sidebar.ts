@@ -3132,6 +3132,30 @@ const sidebar: SidebarsConfig = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "UNTAGGED",
+      items: [
+        {
+          type: "doc",
+          id: "spec/data/download",
+          label: "Download",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "spec/data/attach-quotation-document",
+          label: "AttachQuotationDocument",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "spec/data/generate-quotation-document",
+          label: "GenerateQuotationDocument",
+          className: "api-method put",
+        },
+      ],
+    },
   ],
 };
 

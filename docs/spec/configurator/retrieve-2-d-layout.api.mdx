@@ -1,11 +1,11 @@
 ---
-id: retrieve-2-d-image-layout
-title: "Retrieve 2D image layout"
-description: "Retrieve 2D image layout"
-sidebar_label: "Retrieve 2D image layout"
+id: retrieve-2-d-layout
+title: "Retrieve 2D layout"
+description: "Retrieve 2D layout"
+sidebar_label: "Retrieve 2D layout"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVztv2zAQ/isCpxZQ4cTdvAVN0GpIEaTpFHigxZPMlCIZkjKiCPrvvZNthX40VYKMXmSL/O59n33XssBLz2b37JvRhSxrx4NxbJ4yyx2vIICj25ZpfGEzJgVLmdT4zfKwxO8CfO6kDdLQ4YsSfE8yAjt4rKUDwWbB1ZAyny+h4mzWstBYUumDk7pEZGFcxQOe1DWa6bp0sOoD2Gyw/FiDaw5MZwJ0kIUEl5giCUtISIq9z+AKwya1u7GODaXr5gT21mgPnu6nZ2f0sevxrzrPwXtUnBsd0PteEzyFiVWc7LaHFrhznGKXASofnZvFA+QBL6wzFlyQa7sY1v/jTplxJdfyua9aNkIkZbpWii8UrFPRUbgFONA5HJM+QPsGkbGhhTEKuCZncgc8gLjEx6ueCAR8CRLrhUK1FW8X2rTVmAw9RSiJxSrBxTA8+jolXDMS9zwSt4a0DHRdIQ/P0vN5eii311eBa8GdSJNrXuqeEoe6UYsMVJEd4mcVL+GO1FNOnRpVzALrVTu4NgLUT3xkwo/o2C1XjiiU/ocUSOdj/YHXXAhJoXJ1EzV7wZWHV6JCUZK1Vsm8b/TJgzcnkp1IdiLZR5Os/w87sevErhO7PpxdPcF2k3UL6AesIJleJpJwieKNqYlKOMAvDbYHK6FnFs2xMzbJI82TdjPsdnvHUnSTqRhUSV2YPpqNd1eq8I81F0nsZnJxkyF2Oz7jIH1O6bHGh4r3ydgM2K/4vBPckL1oLn6p6zqeexY7jhpmL+P7/k3P/CEqbMQlukYq2nbBPfx2quvoeL1j0OIjpKfKiqE8e/4Ns/u/N5CjIfyBJt5sVlzVBGK0O6y4k+t2epMDn243C8rn5MgidtSLbYfrJvZh613/w/FOD95ncVu5bo7QJXCBxKckrG8vcGGyIZKLVc+jdv9+dYdk+QtPpBDS
+api: eJztV01v2zAM/SsGTxugIW12861Yiy2HDkXX7VLkwFi0o86WXIkKmhr674PsxHU+trlFjzkFkPjxHsXnkA0wFg7Se/ilnMdSPSMro2EuoEaLFTHZeN2AxoogBSVBgNKQQo28BAGSXGZV3XqlMJOkWeWKbGLyhJeUZEbnqvC2iyvA0qNXliSkbD0JcNmSKoS0AV7XMYNjq3QBAnJjK2RIwXslIQTRg3BM9awH8ujJrkcgiV7wtoQrsq6DP6Q+lkoI82jsaqMduXg/PTuLP7uIf/gsI+dAQGY0k+Y2Ej3xpC4x5m0OM6C1GLkrpsoNzs3igTIGAbU1NVlWXV4lR/AWYGyBetMKsxEuArQvS1yU1JUiRLo5WdIZHfM+sHZrndEw0cKYklBHMJklZJKXyEdj9UgkMn1iVVF08rV8vdOmrcZU6GlgpTRTQXZopjR/nka79Ui755F2nUkDpH0F6f2ZOJ+LQ7+9vmLUEq0UyTUWupXEYWwBrDi+CHzpBWvsrMKC7mL4WFNbjnrMnJC9pWsjqfxuJM2kG9GxW60cCajcNyUl6WP9EQSglCpSxfJm0Ow5lo7+wQpC61vXpcraRp88OHMS2UlkJ5G9t8ja/7CTuk7qOqnr3dXVCmy3WLfEVtGKkullUuLa+CiiinhpJKRQUKupOMGmMMkGMSfNZswNe8dKhslU9qGUzk3LY4Prqszdo0eZDAEmFzczEP3gnMLqPBamNo4rbMuwGa2Pot0h1FdsMAu/vGXH5B6GkEFA+jKy79+0au/5zAUsjeMYomkW6OinLUOIx91eEXcfqVx8Tdk/yR6+fl7/+9ZxlMJvWg+3mRWWPhpB3BdWaFXXQq8C8OF2s5R8TP6/ix0FtW1yvR5C2oJtvx1vBPS2jNuHDPMgYEkoybY16W4vsoxqHvgNQ88Hff/16g5C+ANn3Bij
 sidebar_class_name: "get api-method"
 info_path: docs/spec/configurator/elfsquad-configurator-api
 custom_edit_url: null
@@ -27,7 +27,7 @@ import TabItem from "@theme/TabItem";
 <h1
   className={"openapi__heading"}
 >
-  Retrieve 2D image layout
+  Retrieve 2D layout
 </h1>
 
 <MethodEndpoint
@@ -39,7 +39,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Retrieve 2D image layout
+Retrieve 2D layout
 
 ## Request
 
@@ -61,7 +61,7 @@ Retrieve 2D image layout
     <ul>
       <ParamsItem
         className={"paramsItem"}
-        param={{"name":"id","in":"path","description":"Configuration Id","required":true,"schema":{"type":"string","format":"uuid"}}}
+        param={{"name":"id","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}}}
       >
         
       </ParamsItem><ParamsItem
@@ -294,7 +294,7 @@ Retrieve 2D image layout
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-19T12:26:21.586Z\",\n    \"updatedDate\": \"2024-03-19T12:26:21.586Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
+                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-20T10:51:26.911Z\",\n    \"updatedDate\": \"2024-03-20T10:51:26.911Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
                     language={"json"}
                   >
                     
@@ -478,7 +478,7 @@ Retrieve 2D image layout
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-19T12:26:21.586Z\",\n    \"updatedDate\": \"2024-03-19T12:26:21.586Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
+                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-20T10:51:26.911Z\",\n    \"updatedDate\": \"2024-03-20T10:51:26.911Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
                     language={"json"}
                   >
                     
@@ -662,7 +662,7 @@ Retrieve 2D image layout
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-19T12:26:21.587Z\",\n    \"updatedDate\": \"2024-03-19T12:26:21.587Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
+                    responseExample={"[\n  {\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"organizationId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"reference\": \"string\",\n    \"synced\": true,\n    \"createdDate\": \"2024-03-20T10:51:26.911Z\",\n    \"updatedDate\": \"2024-03-20T10:51:26.912Z\",\n    \"stepId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n    \"x\": 0,\n    \"y\": 0,\n    \"z\": 0,\n    \"type\": 0,\n    \"url\": \"string\",\n    \"featureModelNodeIds\": [\n      \"string\"\n    ],\n    \"isHidden\": true\n  }\n]"}
                     language={"json"}
                   >
                     
