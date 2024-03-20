@@ -23,9 +23,7 @@ step image.
 ]
 ```
 
-You can retrieve the layout, by calling the
-[`2dlayout`)
-endpoint](/docs/spec/configurator/retrieve-2-d-image-layout).
+You can retrieve the layout, by calling the [2dlayout endpoint](/docs/spec/configurator/retrieve-2-d-layout).
 
 :::note 
 Since the image is based on a step, you will need to include the
