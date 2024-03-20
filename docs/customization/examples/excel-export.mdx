@@ -8,6 +8,15 @@ hide_table_of_contents: true
 
 <CodeDoc>
 
+<CodeDocSection>
+
+# Quotation Excel Export
+The quotation excel export script allows you to export quotation lines to an Excel file. The script fetches the quotation lines using the Data API and creates an Excel file with the lines. The file is then downloaded to the user's device when the link is clicked.
+
+<Link className="button button--primary" to="https://ems.elfsquad.io/?action=installScript&actionArgs=quotation.export,Download Excel,quotation,download,Quotation Excel Export,https://raw.githubusercontent.com/Elfsquad/custom-script-examples/main/excel-export/script.js">Install script</Link>
+
+</CodeDocSection>
+
 <CodeDocSection highlight="{1-6}">
 ### 1. Load the ExcelJS library
 We start by loading the ExcelJS library from a CDN. ExcelJS is a library that allows us to create and manipulate Excel files in JavaScript. We use the `addEventListener` method to wait for the library to be loaded before we start using it. 
@@ -117,7 +126,8 @@ function saveWorkbook(workbook, name){
 
 </CodeDoc>
 
-
+import Link from '@docusaurus/Link';
 import CodeBlock from '@theme/CodeBlock';
 import { CodeDoc } from "../../../src/components/CodeDoc/CodeDoc";
-import { CodeDocSection } from "../../../src/components/CodeDoc/CodeDocSection";
+import { CodeDocSection } from "@site/src/components/CodeDoc/CodeDocSection"
+
