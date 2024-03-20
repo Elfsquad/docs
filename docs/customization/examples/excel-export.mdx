@@ -6,10 +6,6 @@ slug: ./quotation-excel-export
 hide_table_of_contents: true
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import { CodeDoc } from "../../../src/components/CodeDoc/CodeDoc";
-import { CodeDocSection } from "../../../src/components/CodeDoc/CodeDocSection";
-
 <CodeDoc>
 
 <CodeDocSection highlight="{1-6}">
@@ -21,15 +17,43 @@ When the library is loaded, we call the `generateExcelSheet` function to create 
 For more information about ExcelJS, you can visit the [official documentation](https://github.com/exceljs/exceljs).
 </CodeDocSection>
 
-<CodeDocSection highlight="{9}">
+<CodeDocSection highlight="{9-10,28-30,32-34}">
 ### 2. Fetch quotation data
+From within our main `generateExcelSheet` function, we start with loading the quotation data.
 
-From within our main `generateExcelSheet` function, we fetch the quotation data from the API. We use the `fetchQuotation` function to fetch the quotation data.
+The `fetchQuotation` and `fetchQuotationLines` functions leverage the Data API to filter the quotation lines by the quotation ID. The Data API implements the [OData specification](https://www.odata.org/getting-started/), which allows us to filter data using the `$filter` query parameter.
 
+The `fetchQuotationLines` function uses a helper function `fetchAll` to fetch paginated results. By default the response is limited to 500 result items.
+
+For more information about the Data API, you can visit the [data integration page](/docs/apis/data-api).
+</CodeDocSection>
+
+<CodeDocSection highlight="{12-24}">
+### 3. Create the Excel sheet
+
+We create a new Excel workbook and add a worksheet named 'Lines'. We then add a table to the worksheet with the columns 'Code', 'Description', and 'Quantity'. 
+
+The table data is populated with the quotation lines fetched in the previous step.
+</CodeDocSection>
+
+<CodeDocSection highlight="{47-59}">
+### 4. Download the Excel file
+
+Finally, we save the workbook as an Excel file. We use the `writeBuffer` method to write the workbook to a buffer. We then create a Blob object from the buffer and create a download link. 
+
+When the link is clicked, the Excel file is downloaded to the user's device. We use the `revokeObjectURL` method to release the object URL and remove the download link from the DOM.
+</CodeDocSection>
+
+<CodeDocSection>
+
+### Result
+
+The code above will generate an Excel file with the quotation lines. The file will be downloaded to the user's device when the link is clicked.
+![Export to Excel](/img/tutorial/excel-export/excel-export.gif)
 
 </CodeDocSection>
 
-<CodeBlock language="js">
+<CodeBlock language="js" showLineNumbers>
 {`const scriptTag = document.createElement('script');
 scriptTag.setAttribute('src', 'https://cdn.jsdelivr.net/npm/exceljs@4.3.0/dist/exceljs.min.js');
 scriptTag.addEventListener('load', () => { 
@@ -39,13 +63,12 @@ document.body.appendChild(scriptTag);
 
 async function generateExcelSheet() {
     const quotation = await fetchQuotation();  
+    const quotationLines = await fetchQuotationLines();
 
-    const quotationLines = quotation.lines;
     const tableData = quotationLines
         .map(l => [ l.articleCode, l.description, l.quantityAmount ]);
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Lines');
-
     worksheet.addTable({
         name: 'Lines',
         ref: 'A1',
@@ -55,13 +78,15 @@ async function generateExcelSheet() {
         columns: ['Code', 'Description', 'Quantity'].map(n => ({name: n, filterButton: true})),
         rows: tableData,
     });
-
-    const name = \`$\{quotation.quotationNumber}v$\{quotation.versionNumber}.xlsx\`;
+    const name = \`$\{quotation.quotationNumber}v\${quotation.versionNumber}.xlsx\`;
     saveWorkbook(workbook, name);
 }
-
 async function fetchQuotation(){
-    return (await api.fetch(\`api/2/quotations/$\{parameters.quotationId}?include=Lines\`)).body;
+    return (await api.fetch(\`data/1/quotations/\${parameters.quotationId}\`)).body;
+}
+
+async function fetchQuotationLines() {
+    return await fetchAll(\`data/1/quotationlines?\\$filter=quotationId eq \${parameters.quotationId}\`);
 }
 
 async function fetchAll(url) {
@@ -87,9 +112,12 @@ function saveWorkbook(workbook, name){
         window.URL.revokeObjectURL(url);
         a.remove();
     });
-}
-`}
+}`}
 </CodeBlock>
 
 </CodeDoc>
 
+
+import CodeBlock from '@theme/CodeBlock';
+import { CodeDoc } from "../../../src/components/CodeDoc/CodeDoc";
+import { CodeDocSection } from "../../../src/components/CodeDoc/CodeDocSection";

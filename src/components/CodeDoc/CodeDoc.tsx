@@ -7,7 +7,7 @@ import { calculateNavbarHeight } from '@site/src/utils/themeUtils';
 export const CodeDoc = ({children}) => {
     const [height, setHeight] = useState(null);
     const [metadataString, setMetadataString] = useState('');
-    const [activeSection, setActiveSection] = useState(0);
+    const [activeSection, setActiveSection] = useState(-1);
     
     const navbarHeight = calculateNavbarHeight();
 
@@ -27,9 +27,22 @@ export const CodeDoc = ({children}) => {
     };
 
     const activateSection = (index) => {
+        if (!sections[index]?.props.highlight) return;
         if (index < 0 || index >= sections.length) return;
-        setActiveSection(index);
+        if (index == activeSection) return;
+
+        setActiveSection(index); 
         setMetadataString(sections[index].props.highlight);
+
+        if (!codeBlockRef.current) return;
+        const highlightedLines = codeBlockRef.current
+            .getElementsByClassName('theme-code-block-highlighted-line') as HTMLCollectionOf<HTMLSpanElement>;
+
+        if (highlightedLines.length > 0) {
+            setTimeout(() => {
+                codeBlockRef.current.scrollTop = highlightedLines[0].offsetTop - 24;
+            }, 200);            
+        }
     };
 
     const onScroll = () => {
@@ -38,13 +51,14 @@ export const CodeDoc = ({children}) => {
         const sectionIndex = sectionRefs.findIndex(sectionRef => {
             return sectionRef.current.offsetTop > scrollY;
         });
-        activateSection(sectionIndex);        
+        if (sectionIndex != activeSection) activateSection(sectionIndex);        
     };
         
     useEffect(() => {
         calculateVisibleHeight();
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
+        activateSection(0);
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
@@ -62,7 +76,7 @@ export const CodeDoc = ({children}) => {
                 })            
             }
         </div>
-        <div ref={codeBlockRef} style={{height: `${height}px`, top: `${navbarHeight}px`}} className={`overflow-y-scroll sticky`}>
+        <div ref={codeBlockRef} style={{height: `${height}px`, top: `${navbarHeight}px`}} className={`overflow-y-scroll sticky scroll-smooth`}>
             <CodeBlock {...codeBlock.props} metastring={metadataString} key={metadataString}></CodeBlock>
         </div>
     </div>
