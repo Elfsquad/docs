@@ -8,7 +8,21 @@ export default [
         "name": "options",
         "type": "ElfsquadShowroomOptions",
         "description": "The options used to initialize the showroom.",
-        "required": true
+        "required": true,
+        "parameters": [
+          {
+            "name": "container",
+            "type": "HTMLElement | string",
+            "description": "The container to render the iframe element in. Accepts either a HTMLElement or a query selector string.",
+            "required": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "The URL of the Elfsquad showroom, which could be a general showroom URL or a specific product URL.",
+            "required": true
+          }
+        ]
       }
     ],
     "returns": {
@@ -65,7 +79,8 @@ export default [
         "name": "callback",
         "type": "ScreenshotCallback",
         "description": "The callback function to be called upon screenshot capture.",
-        "required": true
+        "required": true,
+        "parameters": []
       }
     ],
     "returns": {
@@ -82,7 +97,8 @@ export default [
         "name": "callback",
         "type": "RequestQuoteCallback",
         "description": "The callback function to be called upon quote request.",
-        "required": true
+        "required": true,
+        "parameters": []
       }
     ],
     "returns": {
