@@ -14,7 +14,7 @@ export const MethodName = ({name, parameters}) => {
   }
 
   const id = name.replace(/\./g, "").toLowerCase();
-  return <h3 id={id} className="sticky bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)]">{name}({paramString})</h3>
+  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)]">{name}({paramString})</h3>
 }
 
 export const ChildParameters = ({parameters}) => {
@@ -39,6 +39,14 @@ export const ChildParameters = ({parameters}) => {
   </div>;
 }
 
+export const Type = ({type}) => {
+  if (type === undefined) {
+    return null;
+  }
+
+  return <small className="text-gray-400 ">({type})</small>;
+}
+
 export const MethodParameter = ({name, type, description, required, parameters}) => {
   if (parameters === undefined) {
     parameters = [];
@@ -51,11 +59,9 @@ export const MethodParameter = ({name, type, description, required, parameters})
     ? <small className="text-red-500 uppercase tracking-tighter">required</small>
     : <small className="text-gray-500 tracking-tighter">optional</small>;
 
-  const typeComponent = <small className="text-gray-500 tracking-tighter">({type})</small>;
-
   return <div>
     <div className="flex items-baseline gap-2">
-      <strong>{name}</strong> {requiredComponent} {typeComponent}
+      <strong>{name}</strong> {requiredComponent} <Type type={type} />
     </div>
     {typeof description === "string" ? <p className="text-sm">{description}</p> : description}
 
@@ -70,30 +76,44 @@ export const MethodParameters = ({parameters}) => {
 
   const p = parameters.map(p => <MethodParameter key={p.name} {...p} />);
 
-  return <div>
+  return <div className="mt-16">
     <h4>Method parameters</h4>
     <hr className="bg-gray-600" />
     {p}
   </div>
 };
 
+export const MethodReturns = ({returns}) => {
+  if (returns === undefined) {
+    return null;
+  }
 
-export const MethodDocument = ({methodName, description, code, parameters}) => {
+  return <div className="mt-16">
+    <h4 className="mb-0">Returns <Type type={returns.type} /></h4>
+    
+    <hr className="bg-gray-600" />
+    {typeof returns.description === "string" ? <p>{returns.description}</p> : returns.description}
+  </div>
+}
+
+
+export const MethodDocument = ({methodName, description, code, parameters, returns}) => {
   if (parameters === undefined) {
     parameters = [];
   }
 
   return <div>
-    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green z-10">
+    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green">
       <div>
         <MethodName name={methodName} parameters={parameters} />
         <p>{description}</p>
 
         <MethodParameters parameters={parameters} />
+        <MethodReturns returns={returns} />
       </div>
 
       <div className="row-span-2">
-        <CodeBlock className="sticky top-[var(--ifm-navbar-height)]" language="javascript" showLineNumbers={true}>{code}</CodeBlock>
+        <CodeBlock className="sticky z-10 top-[var(--ifm-navbar-height)]" language="javascript" showLineNumbers={true}>{code}</CodeBlock>
       </div>
 
     </div>
