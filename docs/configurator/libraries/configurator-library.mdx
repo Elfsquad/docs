@@ -1,0 +1,52 @@
+---
+title: elfsquad/configurator library
+sidebar_label: elfsquad/configurator
+slug: elfsquad-configurator-library
+---
+
+import { ConfiguratorContextMethods, ConfigurationMethods } from './methods';
+import { MethodDocument } from '../../components/MethodDocument';
+import { MethodCategory } from '../../components/MethodCategory';
+
+
+export const Content = () => {
+  const configuratorContextCategoryName = 'ConfiguratorContext';
+  const configuratorContextCategoryDescription = 'The ConfiguratorContext class is a wrapper around the Elfsquad configurator API. The class contains methods to start  visualize configurations.';
+
+  const configurationCategoryName = 'Configuration';
+  const configurationCategoryDescription = 'The Configuration class is returned by the ConfiguratorContext and is used for managing the configuration state  updating the configuration.';
+
+  return <div class="space-y-32">
+    <MethodCategory name={configuratorContextCategoryName} description={configuratorContextCategoryDescription} />
+    {ConfiguratorContextMethods.map(m => <MethodDocument {...m} />)}
+
+    <MethodCategory name={configurationCategoryName} description={configurationCategoryDescription} />
+    {ConfigurationMethods.map(m => <MethodDocument {...m} />)}
+  </div>
+}
+
+<Content />
+
+
+<div class="hidden">
+  ## ConfiguratorContext
+  ### constructor
+  ### getConfigurationModels
+  ### newConfiguration
+  ### openConfiguration
+  ### getLayout3d
+  ### getLayout2d
+  ### getSettings
+  ### getOverview
+  ### onUpdate
+  ### requestQuote
+
+  ## Configuration
+  ### updateRequirement
+  ### updateText
+  ### updateImage
+  ### changeLanguage
+  ### getStepImage
+  ### getPdf
+</div>
+

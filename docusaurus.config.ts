@@ -63,56 +63,6 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            // {
-            //   label: 'Guides',
-            //   to: '/docs/guides',
-            // },
-            {
-              label: 'Customization',
-              to: '/docs/customization',
-            },
-            {
-              label: 'APIs',
-              to: '/docs/apis',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/company/elfsquad',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/WeAreElfsquad',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/elfsquad',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-           
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://elfsquad.io">Elfsquad</a>`,
-    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
