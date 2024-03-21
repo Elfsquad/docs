@@ -48,23 +48,9 @@ export default function Home() {
             The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
           </Card>
 
-          {/* <Link to="/docs/apis/quotation-api" class="col--6 card w-312">
-            <img src="/img/quote.svg" class="background-manufacturing-orange" />
-            <h2 class="color-manufacturing-orange">Quotation API</h2>
-            The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
-          </Link>
-
-          <Link to="/docs/apis/scim-api" class="col--6 card w-312">
-            <img src="/img/channel-management.webp" class="background-free-green" />
-            <h2 class="color-free-green">SCIM API</h2>
-            The SCIM (System for Cross-domain Identity Management) API provides endpoints for managing user identities within Elfsquad. This API simplifies user management across different systems and domains, enhancing security and reducing administrative overhead.
-          </Link> */}
-
-
         </div>
 
       </header>
     </Layout>
   );
 }
-

@@ -196,7 +196,7 @@ const config: Config = {
           return postcssOptions;
         },
       };
-    },
+    }
   ],
   themes: [
     'docusaurus-theme-openapi-docs'

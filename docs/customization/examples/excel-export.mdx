@@ -18,6 +18,7 @@ The quotation excel export script allows you to export quotation lines to an Exc
 </CodeDocSection>
 
 <CodeDocSection highlight="{1-6}">
+
 ### 1. Load the ExcelJS library
 We start by loading the ExcelJS library from a CDN. ExcelJS is a library that allows us to create and manipulate Excel files in JavaScript. We use the `addEventListener` method to wait for the library to be loaded before we start using it. 
 
@@ -47,6 +48,7 @@ The table data is populated with the quotation lines fetched in the previous ste
 
 <CodeDocSection highlight="{47-59}">
 ### 4. Download the Excel file
+
 
 Finally, we save the workbook as an Excel file. We use the `writeBuffer` method to write the workbook to a buffer. We then create a Blob object from the buffer and create a download link. 
 
@@ -128,5 +130,4 @@ function saveWorkbook(workbook, name){
 
 import Link from '@docusaurus/Link';
 import CodeBlock from '@theme/CodeBlock';
-import { CodeDoc } from "@site/src/components/CodeDoc/CodeDoc";
-import { CodeDocSection } from "@site/src/components/CodeDoc/CodeDocSection"
+import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
