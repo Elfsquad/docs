@@ -14,7 +14,7 @@ export const MethodName = ({name, parameters}) => {
   }
 
   const id = name.replace(/\./g, "").toLowerCase();
-  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)]">{name}({paramString})</h3>
+  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)] border-solid border-0 border-b border-gray-400">{name}({paramString})</h3>
 }
 
 export const ChildParameters = ({parameters}) => {
