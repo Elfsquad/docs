@@ -16,7 +16,7 @@ export default function Home() {
           <h1 className="hero__title">Elfsquad <span className="color-smart-neon">Docs</span></h1>
         </div>
 
-        <div class="grid grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
 
           <Card link="/docs/apis">
             <h2 class="color-tech-savy-purple">Integration</h2>
