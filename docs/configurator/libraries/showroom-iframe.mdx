@@ -1,0 +1,37 @@
+---
+title: elfsquad/showroom-iframe library
+sidebar_label: elfsquad/showroom-iframe
+slug: elfsquad-showroom-iframe-library
+---
+
+import methods from './showroom-iframe-methods';
+import { MethodDocument } from '../../components/MethodDocument';
+import { MethodCategory } from '../../components/MethodCategory';
+
+
+export const Content = () => {
+  const name = 'ElfsquadShowroom';
+  const description = 'The ElfsquadShowroom class is the main entry point for the elfsquad/showroom-iframe library. It provides methods to embed & communicate with the Elfsquad showroom.';
+
+  return <div class="space-y-32">
+    <MethodCategory name={name} description={description} />
+    {methods.map(m => <MethodDocument {...m} />)}
+  </div>
+}
+
+<Content />
+
+
+<div class="hidden">
+  ## ElfsquadShowroom
+  ### constructor
+  ### getNativeElement
+  ### home
+  ### toggleFootprint
+  ### screenshot
+  ### onScreenshot
+  ### onRequestQuote
+  
+
+</div>
+

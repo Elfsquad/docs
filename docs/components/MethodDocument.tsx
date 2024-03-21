@@ -88,6 +88,9 @@ export const MethodReturns = ({returns}) => {
     return null;
   }
 
+  if (returns.type === "void")
+    return null
+
   return <div className="mt-16">
     <h4 className="mb-0">Returns <Type type={returns.type} /></h4>
     
