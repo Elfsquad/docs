@@ -1,0 +1,37 @@
+---
+title: elfsquad/authentication library
+sidebar_label: elfsquad/authentication
+slug: elfsquad-authentication-library
+---
+
+import methods from './authentication-methods';
+import { MethodDocument } from '../../components/MethodDocument';
+import { MethodCategory } from '../../components/MethodCategory';
+
+
+export const Content = () => {
+  const name = 'AuthenticationContext';
+  const description = 'The AuthenticationContext class allows you to easily authenticate with the Elfsquad API.';
+
+  return <div class="space-y-32">
+    <MethodCategory name={name} description={description} />
+    {methods.map(m => <MethodDocument {...m} />)}
+  </div>
+}
+
+<Content />
+
+
+<div class="hidden">
+  ## ElfsquadShowroom
+  ### constructor
+  ### getNativeElement
+  ### home
+  ### toggleFootprint
+  ### screenshot
+  ### onScreenshot
+  ### onRequestQuote
+  
+
+</div>
+
