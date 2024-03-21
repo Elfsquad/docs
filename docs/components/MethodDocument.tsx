@@ -13,7 +13,8 @@ export const MethodName = ({name, parameters}) => {
     }
   }
 
-  return <h3 id={name}>{name}({paramString})</h3>
+  const id = name.replace(/\./g, "").toLowerCase();
+  return <h3 id={id} className="sticky bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)]">{name}({paramString})</h3>
 }
 
 export const ChildParameters = ({parameters}) => {
@@ -56,7 +57,7 @@ export const MethodParameter = ({name, type, description, required, parameters})
     <div className="flex items-baseline gap-2">
       <strong>{name}</strong> {requiredComponent} {typeComponent}
     </div>
-    <p className="text-sm">{description}</p>
+    {typeof description === "string" ? <p className="text-sm">{description}</p> : description}
 
     <ChildParameters parameters={parameters} />
   </div>
@@ -83,20 +84,20 @@ export const MethodDocument = ({methodName, description, code, parameters}) => {
   }
 
   return <div>
-    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green sticky top-0 z-10">
+    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green z-10">
       <div>
         <MethodName name={methodName} parameters={parameters} />
         <p>{description}</p>
+
+        <MethodParameters parameters={parameters} />
       </div>
 
-      <div>
-        <CodeBlock language="javascript" showLineNumbers={true}>{code}</CodeBlock>
+      <div className="row-span-2">
+        <CodeBlock className="sticky top-[var(--ifm-navbar-height)]" language="javascript" showLineNumbers={true}>{code}</CodeBlock>
       </div>
+
     </div>
 
-    <div className="grid grid-cols-2 gap-16">
-      <MethodParameters parameters={parameters} />
-    </div>
   </div>;
 }
 
