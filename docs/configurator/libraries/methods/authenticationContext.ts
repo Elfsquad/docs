@@ -2,7 +2,10 @@ export default [
   {
     "methodName": "constructor",
     "description": "Creates an instance of AuthenticationContext & initializes with the provided authentication options.",
-    "code": "const authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "options",
@@ -43,6 +46,7 @@ export default [
         ]
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -51,8 +55,12 @@ export default [
   {
     "methodName": "onSignIn",
     "description": "This method can be used for executing logic after the user has signed in. For example, you can use this method to fetch & set the access token, change the UI, etc.",
-    "code": "const authenticationContext = new AuthenticationContext();\nasync function onSignIn() {\n  console.log('User has signed in');\n};\nauthenticationContext.onSignIn().then(onSignIn);\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nasync function onSignIn() {\n  console.log('User has signed in');\n};\nauthenticationContext.onSignIn().then(onSignIn);\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": "promise that resolves when the user has signed in. If the user is already signed in, the promise resolves immediately."
@@ -61,7 +69,10 @@ export default [
   {
     "methodName": "signIn",
     "description": "This method starts the login flow & redirects the user to the login page.",
-    "code": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.signIn();\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.signIn();\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "options",
@@ -120,6 +131,7 @@ export default [
         ]
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": ""
@@ -128,7 +140,10 @@ export default [
   {
     "methodName": "signOut",
     "description": "This method signs the user out & revokes the tokens. After signing out, the user will be redirected to the postLogoutRedirectUri. If no postLogoutRedirectUri is provided, the user will be redirected to the login page.",
-    "code": "const authenticationContext = new AuthenticationContext();\nconst postLogoutRedirectUri = 'https://example.com';\nauthenticationContext.signOut(postLogoutRedirectUri);\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nconst postLogoutRedirectUri = 'https://example.com';\nauthenticationContext.signOut(postLogoutRedirectUri);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "postLogoutRedirectUri",
@@ -138,6 +153,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -146,8 +162,12 @@ export default [
   {
     "methodName": "isSignedIn",
     "description": "This method can be used to check if the user is signed in, for example to show a login/logout button.",
-    "code": "const authenticationContext = new AuthenticationContext();\nasync function isSignedIn(value: boolean) {\n  console.log('User is signed in:', value);\n}\nauthenticationContext.isSignedIn().then(isSignedIn);\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nasync function isSignedIn(value: boolean) {\n  console.log('User is signed in:', value);\n}\nauthenticationContext.isSignedIn().then(isSignedIn);\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<boolean>",
       "description": "promise that resolves with a boolean indicating if the user is signed in."
@@ -156,8 +176,12 @@ export default [
   {
     "methodName": "getAccessToken",
     "description": "This method can be used to get the access token. This method will automatically refresh the access token if it has expired and a valid refresh token is available.",
-    "code": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.getAccessToken().then(accessToken => {\n  console.log('Access token:', accessToken);\n});\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.getAccessToken().then(accessToken => {\n  console.log('Access token:', accessToken);\n});\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<string>",
       "description": "promise that resolves with the access token."
@@ -166,8 +190,12 @@ export default [
   {
     "methodName": "getIdToken",
     "description": "This method can be used to get the id token. Similar to the getAccessToken method, this method will automatically refresh the id (and access) token if it has expired and a valid refresh token is available.",
-    "code": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.getIdToken().then(idToken => {\n  console.log('Id token:', idToken);\n});\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\nauthenticationContext.getIdToken().then(idToken => {\n  console.log('Id token:', idToken);\n});\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<string>",
       "description": "promise that resolves with the id token."
@@ -176,7 +204,10 @@ export default [
   {
     "methodName": "setState",
     "description": "This method can be used to persist date in local storage, which can be used to save data between sign in attempts. This can be useful, for example, to save the url the current url before the user is redirected to the login page.",
-    "code": "const authenticationContext = new AuthenticationContext();\n\nauthenticationContext.setState({ url: window.location.href });\nauthenticationContext.onSignIn().then(() => {\n  const { url } = authenticationContext.getState();\n  window.location.href = url;\n});\n\nauthenticationContext.signIn();\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\n\nauthenticationContext.setState({ url: window.location.href });\nauthenticationContext.onSignIn().then(() => {\n  const { url } = authenticationContext.getState();\n  window.location.href = url;\n});\n\nauthenticationContext.signIn();\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "data",
@@ -186,6 +217,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -194,8 +226,12 @@ export default [
   {
     "methodName": "getState",
     "description": "This method can be used to retrieve data that was persisted in local storage using the setState method.",
-    "code": "const authenticationContext = new AuthenticationContext();\n\nauthenticationContext.setState({ url: window.location.href });\nauthenticationContext.onSignIn().then(() => {\n  const { url } = authenticationContext.getState();\n  window.location.href = url;\n});\n\nauthenticationContext.signIn();\n",
+    "example": {
+      "content": "const authenticationContext = new AuthenticationContext();\n\nauthenticationContext.setState({ url: window.location.href });\nauthenticationContext.onSignIn().then(() => {\n  const { url } = authenticationContext.getState();\n  window.location.href = url;\n});\n\nauthenticationContext.signIn();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "any | null",
       "description": "the data that was persisted in local storage."
