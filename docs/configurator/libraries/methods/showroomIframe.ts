@@ -2,7 +2,10 @@ export default [
   {
     "methodName": "constructor",
     "description": "Initializes a new instance of the Elfsquad Showroom.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "options",
@@ -25,6 +28,7 @@ export default [
         ]
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": "A new instance of the Elfsquad Showroom."
@@ -33,8 +37,12 @@ export default [
   {
     "methodName": "getNativeElement",
     "description": "Retrieves the native iframe element.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nconst iframe = showroom.getNativeElement();\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nconst iframe = showroom.getNativeElement();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "HTMLIFrameElement",
       "description": "The native iframe element."
@@ -43,8 +51,12 @@ export default [
   {
     "methodName": "home",
     "description": "Resets the viewer to the home camera position.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.home();\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.home();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -53,8 +65,12 @@ export default [
   {
     "methodName": "toggleFootprint",
     "description": "Toggles the visibility of the footprint.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.toggleFootprint();\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.toggleFootprint();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -63,8 +79,12 @@ export default [
   {
     "methodName": "screenshot",
     "description": "Initiates a screenshot of the current view. The screenshot data is returned via the `onScreenshot` callback.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.screenshot();\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.screenshot();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -73,7 +93,10 @@ export default [
   {
     "methodName": "onScreenshot",
     "description": "Registers a callback function to be invoked when a screenshot is taken.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.onScreenshot(data => {\n console.log(data.image);\n});\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.onScreenshot(data => {\n console.log(data.image);\n});\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "callback",
@@ -83,6 +106,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -91,7 +115,10 @@ export default [
   {
     "methodName": "onRequestQuote",
     "description": "Registers a callback function to be invoked when a quote is requested.",
-    "code": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.onRequestQuote(data => {\n console.log(data.configurationId);\n});\n",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.onRequestQuote(data => {\n console.log(data.configurationId);\n});\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "callback",
@@ -101,6 +128,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
