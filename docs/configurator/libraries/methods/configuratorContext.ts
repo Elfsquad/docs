@@ -2,7 +2,10 @@ export default [
   {
     "methodName": "constructor",
     "description": "Initializes a new instance with the provided options.",
-    "code": "import { ConfiguratorContext, AuthenticationMethod } from '@elfsquad/configurator';\n\nconst context = new ConfiguratorContext({\n  authenticationMethod: AuthenticationMethod.ANONYMOUS,\n  tenantId: 'your-tenant-id',\n});\n",
+    "example": {
+      "content": "import { ConfiguratorContext, AuthenticationMethod } from '@elfsquad/configurator';\n\nconst context = new ConfiguratorContext({\n  authenticationMethod: AuthenticationMethod.ANONYMOUS,\n  tenantId: 'your-tenant-id',\n});\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "_options",
@@ -49,6 +52,7 @@ export default [
         ]
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -57,7 +61,10 @@ export default [
   {
     "methodName": "getConfigurationModels",
     "description": "Retrieve the available configuration models, categories & languages for the current showroom & user.",
-    "code": "const context = new ConfiguratorContext();\nconst configurationModels = await context.getConfigurationModels();\nconsole.log('Models: ', configurationModels.features);\nconsole.log('Categories: ', configurationModels.categories);\nconsole.log('Languages: ', configurationModels.languages);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst configurationModels = await context.getConfigurationModels();\nconsole.log('Models: ', configurationModels.features);\nconsole.log('Categories: ', configurationModels.categories);\nconsole.log('Languages: ', configurationModels.languages);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "languageIso",
@@ -67,6 +74,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<ConfigurationModels>",
       "description": "DTO containing the configuration models, categories & languages."
@@ -75,7 +83,10 @@ export default [
   {
     "methodName": "newConfiguration",
     "description": "Start a new configuration with the provided feature model id, feature model name or configuration code.",
-    "code": "const context = new ConfiguratorContext();\nconst feautureModelName = 'YourFeatureModelName';\nconst configuration = await context.newConfiguration(feautureModelName);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst feautureModelName = 'YourFeatureModelName';\nconst configuration = await context.newConfiguration(feautureModelName);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "name",
@@ -106,6 +117,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Configuration>",
       "description": "The new configuration."
@@ -114,7 +126,10 @@ export default [
   {
     "methodName": "openConfiguration",
     "description": "Open an existing configuration with the provided configuration id or configuration code.",
-    "code": "const context = new ConfiguratorContext();\nconst configurationId = 'YourConfigurationId';\nconst configuration = await context.openConfiguration(configurationId);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst configurationId = 'YourConfigurationId';\nconst configuration = await context.openConfiguration(configurationId);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "configurationId",
@@ -131,6 +146,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Configuration>",
       "description": "The opened configuration."
@@ -139,7 +155,10 @@ export default [
   {
     "methodName": "getSettings",
     "description": "Retrieve the settings for the current showroom.",
-    "code": "const context = new ConfiguratorContext();\nconst settings = await context.getSettings();\nconsole.log('Settings: ', settings);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst settings = await context.getSettings();\nconsole.log('Settings: ', settings);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "language",
@@ -149,6 +168,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Settings>",
       "description": "The settings for the current showroom & user."
@@ -157,7 +177,10 @@ export default [
   {
     "methodName": "getLayout2d",
     "description": "Retrieve the 2D layout for a coniguration. The 2dlayout can be used for visualizing the configuration in a 2D view.",
-    "code": "const context = new ConfiguratorContext();\nconst layout2d = await context.getLayout2d();\nconsole.log('Layout2d: ', layout2d);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst layout2d = await context.getLayout2d();\nconsole.log('Layout2d: ', layout2d);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "configurationId",
@@ -174,6 +197,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Layout2d[]>",
       "description": "The 2D layout for the configuration."
@@ -182,7 +206,10 @@ export default [
   {
     "methodName": "getLayout3d",
     "description": "Retrieve the 3D layout for a coniguration. The 3dlayout can be used for visualizing the configuration in a 3D view.",
-    "code": "const context = new ConfiguratorContext();\nconst layout3d = await context.getLayout3d();\nconsole.log('Layout3d: ', layout3d);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst layout3d = await context.getLayout3d();\nconsole.log('Layout3d: ', layout3d);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "configurationId",
@@ -192,6 +219,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Layout3d[]>",
       "description": "The 3D layout for the configuration."
@@ -200,8 +228,12 @@ export default [
   {
     "methodName": "getLinkedConfigurationOverview",
     "description": "Retrieve the linked configuration overview for the current root configuration. This overview can be used to display a navigator for the linked configurations.",
-    "code": "const context = new ConfiguratorContext();\nconst linkedConfigurationOverview = await context.getLinkedConfigurationOverview();\nconsole.log('LinkedConfigurationOverview: ', linkedConfigurationOverview);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst linkedConfigurationOverview = await context.getLinkedConfigurationOverview();\nconsole.log('LinkedConfigurationOverview: ', linkedConfigurationOverview);\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<LinkedConfigurationOverview>",
       "description": "The linked configuration overview for the current root configuration."
@@ -210,7 +242,10 @@ export default [
   {
     "methodName": "getOverview",
     "description": "Retrieve the overview for the current configuration. The overview can be used to display a summary of the configuration, for example on the checkout page.",
-    "code": "const context = new ConfiguratorContext();\nconst overview = await context.getOverview();\nconsole.log('Overview: ', overview);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst overview = await context.getOverview();\nconsole.log('Overview: ', overview);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "configurationId",
@@ -220,6 +255,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<OverviewGroups[]>",
       "description": "The overview for the configuration."
@@ -228,7 +264,10 @@ export default [
   {
     "methodName": "onUpdate",
     "description": "Registers a callback function that will be called whenever a configuration is updated.",
-    "code": "import { ConfiguratorContext, Configuration } from '@elfsquad/configurator';\nconst context = new ConfiguratorContext();\n\nconst callback = (evt: CustomEvent<Configuration>) => {\n console.log('Configuration updated: ', evt.detail);\n};\ncontext.onUpdate(callback);\n",
+    "example": {
+      "content": "import { ConfiguratorContext, Configuration } from '@elfsquad/configurator';\nconst context = new ConfiguratorContext();\n\nconst callback = (evt: CustomEvent<Configuration>) => {\n console.log('Configuration updated: ', evt.detail);\n};\ncontext.onUpdate(callback);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "f",
@@ -238,6 +277,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -246,7 +286,10 @@ export default [
   {
     "methodName": "requestQuote",
     "description": "Request a quote for the current root configuration. This endpoint should be used when anonymous users want to request a quote.",
-    "code": "const context = new ConfiguratorContext();\nconst quotationRequest = {\n  email: 'john.doe@gmail.com',\n  firstName: 'John',\n  lastName: 'Doe',\n}\nawait context.requestQuote(quotationRequest);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst quotationRequest = {\n  email: 'john.doe@gmail.com',\n  firstName: 'John',\n  lastName: 'Doe',\n}\nawait context.requestQuote(quotationRequest);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "quotationRequest",
@@ -449,6 +492,7 @@ export default [
         ]
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -457,7 +501,10 @@ export default [
   {
     "methodName": "addToQuotation",
     "description": "Add the current configuration to a quotation. This endpoint should be used when a user is logged in and wants to add a configuration to a quotation.",
-    "code": "const context = new ConfiguratorContext();\nconst quotationId = 'YourQuotationId';\nawait context.addToQuotation(quotationId);\n",
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst quotationId = 'YourQuotationId';\nawait context.addToQuotation(quotationId);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "quotationId",
@@ -474,6 +521,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -482,7 +530,7 @@ export default [
   {
     "methodName": "_get",
     "description": "",
-    "code": null,
+    "example": null,
     "parameters": [
       {
         "name": "url",
@@ -492,6 +540,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Response>",
       "description": ""
@@ -500,7 +549,7 @@ export default [
   {
     "methodName": "_put",
     "description": "",
-    "code": null,
+    "example": null,
     "parameters": [
       {
         "name": "url",
@@ -517,6 +566,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Response>",
       "description": ""
@@ -525,7 +575,7 @@ export default [
   {
     "methodName": "_updateConfiguration",
     "description": "",
-    "code": null,
+    "example": null,
     "parameters": [
       {
         "name": "configuration",
@@ -535,6 +585,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
