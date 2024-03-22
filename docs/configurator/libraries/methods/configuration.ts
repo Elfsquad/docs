@@ -2,7 +2,7 @@ export default [
   {
     "methodName": "constructor",
     "description": "",
-    "code": null,
+    "example": null,
     "parameters": [
       {
         "name": "configuratorContext",
@@ -19,6 +19,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "void",
       "description": ""
@@ -27,7 +28,10 @@ export default [
   {
     "methodName": "updateRequirement",
     "description": "Updates a requirement on the this configuration. This can be used to (de)select a feature or set a value on a feature.",
-    "code": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst value = 1;\nconst isSelection = true;\n\nawait configuration.updateRequirement(nodeId, isSelection, value);\n",
+    "example": {
+      "content": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst value = 1;\nconst isSelection = true;\n\nawait configuration.updateRequirement(nodeId, isSelection, value);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "featureModelNodeId",
@@ -65,6 +69,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": "A promise that resolves when the requirement has been updated"
@@ -73,7 +78,10 @@ export default [
   {
     "methodName": "updateText",
     "description": "Updates the text value of a feature on this configuration.",
-    "code": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst textValue = 'Hello World';\nawait configuration.updateText(nodeId, textValue);\n",
+    "example": {
+      "content": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst textValue = 'Hello World';\nawait configuration.updateText(nodeId, textValue);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "featureModelNodeId",
@@ -90,6 +98,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": "A promise that resolves when the text value has been updated"
@@ -98,7 +107,10 @@ export default [
   {
     "methodName": "updateImage",
     "description": "Updates the image value of a feature on this configuration.",
-    "code": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst textValue = 'https://example.com/image.png';\nawait configuration.updateImage(nodeId, textValue);\n",
+    "example": {
+      "content": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst textValue = 'https://example.com/image.png';\nawait configuration.updateImage(nodeId, textValue);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "featureModelNodeId",
@@ -115,6 +127,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": "A promise that resolves when the image value has been updated"
@@ -123,7 +136,10 @@ export default [
   {
     "methodName": "changeLanguage",
     "description": "Changes the language of this configuration.",
-    "code": "const languageIso = 'en';\nawait configuration.changeLanguage(languageIso);\n",
+    "example": {
+      "content": "const languageIso = 'en';\nawait configuration.changeLanguage(languageIso);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "languageIso",
@@ -133,6 +149,7 @@ export default [
         "parameters": []
       }
     ],
+    "deprecated": null,
     "returns": {
       "type": "Promise<void>",
       "description": "A promise that resolves when the language has been changed successfully"
@@ -140,41 +157,49 @@ export default [
   },
   {
     "methodName": "getStepImage",
-    "description": "",
-    "code": null,
+    "description": "Retrieves a rendered image of a step in this configuration.",
+    "example": {
+      "content": "const stepId = '00000000-0000-0000-0000-000000000000';\nconst size = 1080;\nconst background = true;\nconst image = await configuration.getStepImage(stepId, size, background);\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "stepId",
         "type": "string",
-        "description": "",
+        "description": "The id of the step to render",
         "required": true,
         "parameters": []
       },
       {
         "name": "size",
         "type": "number",
-        "description": "",
+        "description": "The size of the image to render",
         "required": true,
         "parameters": []
       },
       {
         "name": "background",
         "type": "boolean",
-        "description": "",
+        "description": "Whether to render the background or not",
         "required": true,
         "parameters": []
       }
     ],
+    "deprecated": "use getLayout2d on the ConfiguratorContext instead",
     "returns": {
       "type": "Promise<Blob>",
-      "description": ""
+      "description": "A promise that resolves with the rendered image"
     }
   },
   {
     "methodName": "getPdf",
     "description": "Retrieves the PDF document for this configuration.",
-    "code": null,
+    "example": {
+      "content": "const context = new ConfiguratorContext();\nconst pdf = await configuration.getPdf();\n",
+      "language": "typescript"
+    },
     "parameters": [],
+    "deprecated": null,
     "returns": {
       "type": "Promise<Blob>",
       "description": "A promise that resolves with the PDF document"
