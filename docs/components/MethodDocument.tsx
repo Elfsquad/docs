@@ -100,7 +100,7 @@ export const MethodReturns = ({returns}) => {
 }
 
 
-export const MethodDocument = ({methodName, description, code, parameters, returns}) => {
+export const MethodDocument = ({methodName, description, example, parameters, returns}) => {
   if (parameters === undefined) {
     parameters = [];
   }
@@ -115,9 +115,9 @@ export const MethodDocument = ({methodName, description, code, parameters, retur
         <MethodReturns returns={returns} />
       </div>
 
-      <div className="row-span-2">
-        <CodeBlock className="sticky z-10 top-[var(--ifm-navbar-height)]" language="javascript" showLineNumbers={true}>{code}</CodeBlock>
-      </div>
+      {example ? <div className="row-span-2">
+        <CodeBlock className="sticky z-10 top-[var(--ifm-navbar-height)]" language={example.language} showLineNumbers={true}>{example.content}</CodeBlock>
+      </div> : null}
 
     </div>
 
