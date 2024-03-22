@@ -1,5 +1,4 @@
 ---
-title: elfsquad/authentication library
 sidebar_label: elfsquad/authentication
 slug: elfsquad-authentication-library
 ---
@@ -7,19 +6,30 @@ slug: elfsquad-authentication-library
 import methods from './methods/authenticationContext';
 import { MethodDocument } from '../../components/MethodDocument';
 import { MethodCategory } from '../../components/MethodCategory';
+import Link from '@docusaurus/Link';
 
-
-export const Content = () => {
+export const Content = ({children}) => {
   const name = 'AuthenticationContext';
   const description = 'The AuthenticationContext class allows you to easily authenticate with the Elfsquad API.';
 
   return <div class="space-y-32">
+    <div class="flex justify-between items-center">
+      {children}
+      <Link to="https://github.com/elfsquad/authentication">
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-md flex items-center gap-2 mt-[-18px]">
+          <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
+          View on GitHub
+        </button>
+      </Link>
+    </div>
     <MethodCategory name={name} description={description} />
     {methods.map(m => <MethodDocument {...m} />)}
   </div>
 }
 
-<Content />
+<Content>
+  # @elfsquad/authentication
+</Content>
 
 
 <div class="hidden">

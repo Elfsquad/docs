@@ -1,5 +1,4 @@
 ---
-title: elfsquad/showroom-iframe library
 sidebar_label: elfsquad/showroom-iframe
 slug: elfsquad-showroom-iframe-library
 ---
@@ -7,20 +6,31 @@ slug: elfsquad-showroom-iframe-library
 import methods from './methods/showroomIframe';
 import { MethodDocument } from '../../components/MethodDocument';
 import { MethodCategory } from '../../components/MethodCategory';
+import Link from '@docusaurus/Link';
 
 
-export const Content = () => {
+export const Content = ({ children }) => {
   const name = 'ElfsquadShowroom';
   const description = 'The ElfsquadShowroom class is the main entry point for the elfsquad/showroom-iframe library. It provides methods to embed & communicate with the Elfsquad showroom.';
 
   return <div class="space-y-32">
+    <div class="flex justify-between items-center">
+      {children}
+      <Link to="https://github.com/elfsquad/showroom-iframe">
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-md flex items-center gap-2 mt-[-18px]">
+          <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
+          View on GitHub
+        </button>
+      </Link>
+    </div>
     <MethodCategory name={name} description={description} />
     {methods.map(m => <MethodDocument {...m} />)}
   </div>
 }
 
-<Content />
-
+<Content>
+  # @elfsquad/showroom-iframe
+</Content>
 
 <div class="hidden">
   ## ElfsquadShowroom
