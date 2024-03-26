@@ -100,7 +100,7 @@ export const MethodReturns = ({returns}) => {
 }
 
 
-export const MethodDocument = ({methodName, description, example, parameters, returns}) => {
+export const MethodDocument = ({methodName, description, example, parameters, returns, deprecated}) => {
   if (parameters === undefined) {
     parameters = [];
   }
@@ -109,6 +109,7 @@ export const MethodDocument = ({methodName, description, example, parameters, re
     <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green">
       <div>
         <MethodName name={methodName} parameters={parameters} />
+        {deprecated ? <div className="bg-red-500 text-white p-2">Deprecated: {deprecated}</div> : null}
         <p>{description}</p>
 
         <MethodParameters parameters={parameters} />
