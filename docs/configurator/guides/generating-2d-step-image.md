@@ -1,67 +1,70 @@
 ---
-title: Generating 2d step images
+title: 📊 Generating 2D Step Images
 sidebar_position: 3
-sidebar_label: Generating 2d step images
+sidebar_label: Generating 2D Step Images
 slug: ./generating-2d-step-images
+hide_table_of_contents: true
 ---
 
-Once you've set up the 2d visualization in the EMS, you need to  use the
-API to retrieve metadata about the step image. This information can then
-be used to build the step image.
+<CodeDoc>
+
+<CodeDocSection>
+
+# Generating 2D Step Images
+This guide covers the process of setting up and generating 2D step images within the EMS. You will learn how to use the API to retrieve metadata and construct the step image effectively.
+
+</CodeDocSection>
+
+<CodeDocSection highlight="{1-3}">
 
 ### 1. Retrieve the `2dlayout`
-The first step, is to retrieve what we call the `2dlayout`. This
-endpoint will return an array that looks something like the one below.
-It contains all the necessary information for constructing the final
-step image.
+To begin, you must retrieve the `2dlayout` from the designated endpoint.
+This data structure contains URLs and z-index values essential for
+constructing the step image. Ensure to include the `stepId` in your
+query to retrieve the correct layout.
 
-```json
-[
-  {"url": "https://picsum.photos/210", "z": 0},
-  {"url": "https://picsum.photos/130", "z": 1},
-  {"url": "https://picsum.photos/280", "z": 2}
-]
-```
+</CodeDocSection>
 
-You can retrieve the layout, by calling the [2dlayout endpoint](/docs/spec/configurator/retrieve-2-d-layout).
-
-:::note 
-Since the image is based on a step, you will need to include the
-relevant `stepId`. This should be done by including a query parameter
-called `stepId`.
-:::
-
-:::tip
-To ensure the image is always up-to-date, you need to call this endpoint
-everytime the configuration updates.
-:::
+<CodeDocSection highlight="{8-15}">
 
 ### 2. Construct the step image
-With the information retrieved in the previous step, it is possible to
-construct the step image. The image is constructed by stacking the images
-on top of each other, in the order of the `z` value.
+With the `2dlayout` retrieved, you can now stack the images based on
+their z-values to construct the final step image. The example below
+demonstrates how to use the HTML canvas element to achieve this.
 
-In the example below, the image is constructed by making use of the [HTML
-canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial)
-element.
+</CodeDocSection>
 
-```js
-const layout = [
-  {"url": "https://picsum.photos/500", "z": 0},
-  {"url": "https://picsum.photos/200", "z": 1},
-  {"url": "https://picsum.photos/100", "z": 2}
-].sort((a, b) => a.z - b.z);
+<CodeDocSection highlight="{5-6,16}">
+
+### 3. Result
+
+Following the steps above, you will be able to generate a 2D step image
+that dynamically updates based on the configuration. This method ensures
+that your visualizations are always current and accurate.
+
+</CodeDocSection>
+
+<CodeBlock language="js">
+{`const configuratorContext = new ConfiguratorContext();
+const layout2d = configuratorContext.getLayout2d();
+const sortedLayout = layout2d.sort((a, b) => a.z - b.z);
 
 const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d')
+const ctx = canvas.getContext('2d');
 
 for(const item of layout) {
-  const img = new Image()
-  img.src = item.url
+  const img = new Image();
+  img.src = item.url;
   img.onload = () => {
-    ctx.drawImage(img, 0, 0)
-  }
+    ctx.drawImage(img, 0, 0);
+  };
 }
 
-const stepImage = canvas.toDataURL()
-```
+const stepImage = canvas.toDataURL();`}
+</CodeBlock>
+
+</CodeDoc>
+
+import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
+import CodeBlock from '@theme/CodeBlock';
+

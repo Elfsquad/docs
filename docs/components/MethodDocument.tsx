@@ -14,7 +14,7 @@ export const MethodName = ({name, parameters}) => {
   }
 
   const id = name.replace(/\./g, "").toLowerCase();
-  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)]">{name}({paramString})</h3>
+  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)] border-solid border-0 border-b border-gray-400">{name}({paramString})</h3>
 }
 
 export const ChildParameters = ({parameters}) => {
@@ -88,6 +88,9 @@ export const MethodReturns = ({returns}) => {
     return null;
   }
 
+  if (returns.type === "void")
+    return null
+
   return <div className="mt-16">
     <h4 className="mb-0">Returns <Type type={returns.type} /></h4>
     
@@ -97,7 +100,7 @@ export const MethodReturns = ({returns}) => {
 }
 
 
-export const MethodDocument = ({methodName, description, code, parameters, returns}) => {
+export const MethodDocument = ({methodName, description, example, parameters, returns, deprecated}) => {
   if (parameters === undefined) {
     parameters = [];
   }
@@ -106,15 +109,16 @@ export const MethodDocument = ({methodName, description, code, parameters, retur
     <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green">
       <div>
         <MethodName name={methodName} parameters={parameters} />
+        {deprecated ? <div className="bg-red-500 text-white p-2">Deprecated: {deprecated}</div> : null}
         <p>{description}</p>
 
         <MethodParameters parameters={parameters} />
         <MethodReturns returns={returns} />
       </div>
 
-      <div className="row-span-2">
-        <CodeBlock className="sticky z-10 top-[var(--ifm-navbar-height)]" language="javascript" showLineNumbers={true}>{code}</CodeBlock>
-      </div>
+      {example ? <div className="row-span-2">
+        <CodeBlock className="sticky z-10 top-[var(--ifm-navbar-height)]" language={example.language} showLineNumbers={true}>{example.content}</CodeBlock>
+      </div> : null}
 
     </div>
 

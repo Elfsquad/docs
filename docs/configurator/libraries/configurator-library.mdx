@@ -1,15 +1,16 @@
 ---
-title: elfsquad/configurator library
 sidebar_label: elfsquad/configurator
 slug: elfsquad-configurator-library
 ---
 
-import { ConfiguratorContextMethods, ConfigurationMethods } from './methods';
+import ConfiguratorContextMethods from './methods/configuratorContext';
+import ConfigurationMethods from './methods/configuration';
 import { MethodDocument } from '../../components/MethodDocument';
 import { MethodCategory } from '../../components/MethodCategory';
+import Link from '@docusaurus/Link';
 
 
-export const Content = () => {
+export const Content = ({ children }) => {
   const configuratorContextCategoryName = 'ConfiguratorContext';
   const configuratorContextCategoryDescription = 'The ConfiguratorContext class is a wrapper around the Elfsquad configurator API. The class contains methods to start  visualize configurations.';
 
@@ -17,6 +18,15 @@ export const Content = () => {
   const configurationCategoryDescription = 'The Configuration class is returned by the ConfiguratorContext and is used for managing the configuration state  updating the configuration.';
 
   return <div class="space-y-32">
+    <div class="flex justify-between items-center">
+      {children}
+      <Link to="https://github.com/elfsquad/configurator">
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-md flex items-center gap-2 mt-[-18px]">
+          <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
+          View on GitHub
+        </button>
+      </Link>
+    </div>
     <MethodCategory name={configuratorContextCategoryName} description={configuratorContextCategoryDescription} />
     {ConfiguratorContextMethods.map(m => <MethodDocument {...m} />)}
 
@@ -25,7 +35,9 @@ export const Content = () => {
   </div>
 }
 
-<Content />
+<Content>
+  # @elfsquad/configurator
+</Content>
 
 
 <div class="hidden">

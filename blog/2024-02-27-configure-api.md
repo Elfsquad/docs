@@ -36,7 +36,7 @@ The response will look something like the following:
 }
 ```
 
-The featureModelId property, which uniquely identifies the configuration model, is essential for the next step. For more information about the response object, refer to the provided api documentation. https://docs.elfsquad.io/apis/configurator/#tag/ConfigurationModels.
+The featureModelId property, which uniquely identifies the configuration model, is essential for the next step. For more information about the response object, refer to the provided api documentation. https://docs.elfsquad.io/docs/spec/configurator/get-configuration-models.
 
 ## 2. Start a new configuration
 
@@ -78,7 +78,7 @@ Property explanation:
   3.  **Text**(2): When using a text type requirement, the specified node will have it's textValue changed to the provided value. Only string values are supported.
 
 The response body will contain the id of the newly created configuration. This id is needed for the other steps.
-For more information about the request and response bodies, refer to the provided api documentation. https://docs.elfsquad.io/apis/configurator/#tag/NewConfiguration.
+For more information about the request and response bodies, refer to the provided api documentation. https://docs.elfsquad.io/docs/spec/configurator/start-configuration-session.
 
 ## 3. Updating the configuration
 
@@ -134,7 +134,7 @@ Property explanation:
 - **featureModelNodeId**: The id of the node that has to be updated.
 - **textValue**: The text value that has to be assigned to the specified node. Only string values are supported.
 
-For more information regarding the request and response bodies, refer to the provided api documentation. https://docs.elfsquad.io/apis/configurator#tag/Configurator.
+For more information regarding the request and response bodies, refer to the provided api documentation. https://docs.elfsquad.io/docs/spec/configurator/update-requirement.
 
 ## 4. Creating a new quotation
 

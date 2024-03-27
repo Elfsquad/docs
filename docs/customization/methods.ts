@@ -2,19 +2,25 @@ export default [
   {
     methodName: "parameters",
     description: "The parameters object contains context about the current page. This is available on all pages, but the properties will vary depending on the page.",
-    code: `async function logParameters() {
+    exampleCode: {
+      content: `async function logParameters() {
   console.log('The parameters object:', parameters);
 }`,
-  parameters: [],
+      language: "javascript"
+    },
+    parameters: [],
   },
   {
     methodName: "api.fetch",
     description: "The fetch method is a wrapper around the native fetch method. The wrapper adds the necessary headers and authentication for the Elfsquad API to the request.",
-    code: `async function fetchData() {
+    exampleCode: {
+      content: `async function fetchData() {
   const response = await api.fetch('https://api.elfsquad.io/data/1/quotations/');
   const data = await response.json();
   console.log('The data:', data);
 }`,
+      language: "javascript"
+    },
     parameters: [
       {
         name: "url",
@@ -33,7 +39,8 @@ export default [
   {
     methodName: "ui.openDialog",
     description: "The ui.openDialog function allows you to open a dialog and embed one or more scripts in that dialog. These scripts can be used to add your own custom behavior and content to the dialog.",
-    code: `openDialog = () => {
+    exampleCode: {
+      content: `openDialog = () => {
   ui.openDialog({
     title: 'Dialog Title',
     width: '80vw',
@@ -42,6 +49,8 @@ export default [
     parameters: {param1: 'value1', param2: 'value2'},
   });
 }`,
+      language: "javascript"
+    },
     parameters: [
       {
         name: "options",
@@ -86,18 +95,23 @@ export default [
   {
     methodName: "ui.reload",
     description: "The ui.reload method allows you to reload the current page. Note: this method is only implemented on the quotation & order entry pages.",
-    code: `reload = () => {
+    exampleCode: {
+      content: `reload = () => {
   ui.reload();
 }`,
+      language: "javascript"
+    },
     parameters: [],
   },
   {
     methodName: 'dialog.close',
     description: 'The dialog.close method allows you to close the current dialog. This method is only available in dialogs.',
-    code: `closeDialog = () => {
+    exampleCode: {
+      content: `closeDialog = () => {
   dialog.close();
 }`,
+      language: "javascript"
+    },
     parameters: [],
   },
 ]
-
