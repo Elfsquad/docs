@@ -73,6 +73,7 @@ const config: Config = {
       appId: 'JOXJX624HB',
       apiKey: 'dd0c7c7caceac6e1a85a1fc13142ec34',
       indexName: 'elfsquad',
+      contextualSearch: false,
     }
   } satisfies Preset.ThemeConfig,
   presets: [
