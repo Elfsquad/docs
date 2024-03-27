@@ -12,6 +12,7 @@ const config: Config = {
   favicon: 'img/favicon.png',
   organizationName: 'Elfsquad', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
+  trailingSlash: false,
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
