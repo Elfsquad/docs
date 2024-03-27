@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[24676],{92730:e=>{e.exports=JSON.parse('{"label":"editor","permalink":"/blog/tags/editor","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[20672],{64348:s=>{s.exports=JSON.parse('{"label":"showroom","permalink":"/blog/tags/showroom","allTagsPath":"/blog/tags","count":2,"unlisted":false}')}}]);

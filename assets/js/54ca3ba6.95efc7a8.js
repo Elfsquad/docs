@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[36154],{67075:s=>{s.exports=JSON.parse('{"label":"sketchfab","permalink":"/blog/tags/sketchfab","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

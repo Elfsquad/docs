@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[11920],{19635:a=>{a.exports=JSON.parse('{"label":"configurator","permalink":"/blog/tags/configurator","allTagsPath":"/blog/tags","count":3,"unlisted":false}')}}]);

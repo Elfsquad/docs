@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkelfsquad=self.webpackChunkelfsquad||[]).push([[34919],{69994:e=>{e.exports=JSON.parse('{"label":"model","permalink":"/blog/tags/model","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
