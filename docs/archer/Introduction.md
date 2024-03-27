@@ -139,7 +139,7 @@ Archer modeling language supports function expressions, which allow you to perfo
 
 
 ## Integrating with Python
-Archer allows direct integration with any Python script. For more information see [Python Integration with Archer](python).
+Archer allows direct integration with any Python script. For more information see [Python Integration with Archer](/docs/archer/python).
 
 ## Common Mistakes
 
