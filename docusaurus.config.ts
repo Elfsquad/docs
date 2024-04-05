@@ -48,11 +48,6 @@ const config: Config = {
           position: 'left'
         },
         {
-          to: '/docs/apis/scim-api',
-          label: 'Identity',
-          position: 'left'
-        },
-        {
           to: '/blog', 
           label: 'Blog', 
           position: 'left'
