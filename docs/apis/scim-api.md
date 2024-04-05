@@ -37,10 +37,10 @@ we've created extension properties.
 |`UserName` | `userName` |
 |`SSOIdentifier` | `externalId` |
 |`Culture` | `locale` |
+|`Active` | `active` |
 |`CurrencyIso` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:currencyIso` | 
 |`LanguageIso` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:languageIso` | 
 |`CrmAccountId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:crmAccountId` |  
 |`CrmContactId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:crmContactId` |  
 |`IsAdmin` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:isAdmin` |  
 |`OrganizationId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:organizationId` |  
-
