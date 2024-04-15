@@ -3,13 +3,13 @@ export default [
     "methodName": "constructor",
     "description": "Initializes a new instance of the the third-party visualization.",
     "example": {
-      "content": "const visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\n",
+      "content": "const visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\n",
       "language": "typescript"
     },
     "parameters": [
       {
         "name": "options",
-        "type": "ElfsquadThirdPartyVisualizationOptions",
+        "type": "VisualizationFrameOptions",
         "description": "The options used to initialize the showroom.",
         "required": true,
         "parameters": [
@@ -31,14 +31,14 @@ export default [
     "deprecated": null,
     "returns": {
       "type": "void",
-      "description": "A new instance of the ElfsquadThirdPartyVisualization class."
+      "description": "A new instance of the VisualizationFrame  class."
     }
   },
   {
     "methodName": "getNativeElement",
     "description": "Retrieves the native iframe element.",
     "example": {
-      "content": "const visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nconst iframe = visualization.getNativeElement();\n",
+      "content": "const visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nconst iframe = visualization.getNativeElement();\n",
       "language": "typescript"
     },
     "parameters": [],
@@ -52,7 +52,7 @@ export default [
     "methodName": "onTriggerConfigurationUpdate",
     "description": "Registers a callback function to be invoked when a configuration update is triggered.",
     "example": {
-      "content": "const visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nvisualization.onTriggerConfigurationUpdate(data => {\n console.log('Update triggered. Please re-send the configuration');\n});\n",
+      "content": "const visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nvisualization.onTriggerConfigurationUpdate(data => {\n console.log('Update triggered. Please re-send the configuration');\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -74,7 +74,7 @@ export default [
     "methodName": "onUpdateRequirement",
     "description": "Registers a callback function to be invoked when a requirement should be updated.",
     "example": {
-      "content": "const updateRequirement = (data) => {\n  // your update requirement logic here\n};\n\n\nconst visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateRequirement(data => {\n  updateRequirement(data);\n});\n\n",
+      "content": "const updateRequirement = (data) => {\n  // your update requirement logic here\n};\n\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateRequirement(data => {\n  updateRequirement(data);\n});\n\n",
       "language": "typescript"
     },
     "parameters": [
@@ -96,7 +96,7 @@ export default [
     "methodName": "onUpdateRequirements",
     "description": "Registers a callback function to be invoked when multiple requirements should be updated.",
     "example": {
-      "content": "const updateRequirements = (data) => {\n  // your update requirements logic here\n};\n\nconst visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateRequirements(data => {\n  updateRequirements(data);\n});\n",
+      "content": "const updateRequirements = (data) => {\n  // your update requirements logic here\n};\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateRequirements(data => {\n  updateRequirements(data);\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -118,7 +118,7 @@ export default [
     "methodName": "onUpdateImageValue",
     "description": "Registers a callback function to be invoked when an image value should be updated.",
     "example": {
-      "content": "const updateImageValue = (data) => {\n  // your update image value logic here\n};\n\nconst visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateImageValue(data => {\n  updateImageValue(data);\n});\n",
+      "content": "const updateImageValue = (data) => {\n  // your update image value logic here\n};\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateImageValue(data => {\n  updateImageValue(data);\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -140,7 +140,7 @@ export default [
     "methodName": "onUpdateTextValue",
     "description": "Registers a callback function to be invoked when a text value should be updated.",
     "example": {
-      "content": "const updateTextValue = (data) => {\n  // your update text value logic here\n};\n\nconst visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateTextValue(data => {\n  updateTextValue(data);\n});\n",
+      "content": "const updateTextValue = (data) => {\n  // your update text value logic here\n};\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\nvisualization.onUpdateTextValue(data => {\n  updateTextValue(data);\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -162,7 +162,7 @@ export default [
     "methodName": "triggerConfigurationUpdate",
     "description": "Trigger a configuration update in the third-party visualization.",
     "example": {
-      "content": "import { ConfiguratorContext, Configuration } from '@elfsquad/configurator';\nconst context = new ConfiguratorContext({ ... });\n\nconst visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\n\ncontext.onUpdate((evt: CustomEvent<Configuration>) => {\n  visualization.triggerConfigurationUpdate(evt.detail);\n});\n",
+      "content": "import { ConfiguratorContext, Configuration } from '@elfsquad/configurator';\nconst context = new ConfiguratorContext({ ... });\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\n\ncontext.onUpdate((evt: CustomEvent<Configuration>) => {\n  visualization.triggerConfigurationUpdate(evt.detail);\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -184,7 +184,7 @@ export default [
     "methodName": "triggerStepChanged",
     "description": "Trigger a step changed event in the third-party visualization.",
     "example": {
-      "content": "const visualization = new ElfsquadThirdPartyVisualization({ container: '#showroom', url: 'https://...' });\n\nconst step = { ... };\n\nvisualization.triggerStepChanged(step);\n",
+      "content": "const visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\n\nconst step = { ... };\n\nvisualization.triggerStepChanged(step);\n",
       "language": "typescript"
     },
     "parameters": [
