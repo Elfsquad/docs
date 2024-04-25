@@ -159,7 +159,7 @@ export default [
     }
   },
   {
-    "methodName": "triggerConfigurationUpdate",
+    "methodName": "sendConfigurationUpdated",
     "description": "Trigger a configuration update in the third-party visualization.",
     "example": {
       "content": "import { ConfiguratorContext, Configuration } from '@elfsquad/configurator';\nconst context = new ConfiguratorContext({ ... });\n\nconst visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\n\ncontext.onUpdate((evt: CustomEvent<Configuration>) => {\n  visualization.triggerConfigurationUpdate(evt.detail);\n});\n",
@@ -181,7 +181,7 @@ export default [
     }
   },
   {
-    "methodName": "triggerStepChanged",
+    "methodName": "sendStepChanged",
     "description": "Trigger a step changed event in the third-party visualization.",
     "example": {
       "content": "const visualization = new VisualizationFrame ({ container: '#showroom', url: 'https://...' });\n\nconst step = { ... };\n\nvisualization.triggerStepChanged(step);\n",
