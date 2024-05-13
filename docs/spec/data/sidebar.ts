@@ -3462,18 +3462,6 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "spec/data/",
-          label: "Missing summary",
-          className: "api-method x-ms-docs-grouped-path",
-        },
-        {
-          type: "doc",
-          id: "spec/data/",
-          label: "Missing summary",
-          className: "api-method x-ms-docs-grouped-path",
-        },
-        {
-          type: "doc",
           id: "spec/data/download",
           label: "Download",
           className: "api-method put",
