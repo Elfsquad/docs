@@ -133,5 +133,27 @@ export default [
       "type": "void",
       "description": ""
     }
+  },
+  {
+    "methodName": "navigateTo",
+    "description": "Navigates to the specified URL within the showroom iframe.",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.navigateTo('/products');\nshowroom.navigateTo('/configure/featureModelName');\nshowroom.navigateTo('/checkout');\n",
+      "language": "typescript"
+    },
+    "parameters": [
+      {
+        "name": "url",
+        "type": "string",
+        "description": "The URL to navigate to within the showroom iframe.",
+        "required": true,
+        "parameters": []
+      }
+    ],
+    "deprecated": null,
+    "returns": {
+      "type": "void",
+      "description": ""
+    }
   }
 ]
