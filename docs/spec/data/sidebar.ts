@@ -836,6 +836,66 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "EnvironmentSecrets",
+      items: [
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-environment-secret-list-environment-secret",
+          label: "Get entities from EnvironmentSecrets",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-environment-secret-create-environment-secret",
+          label: "Add new entity to EnvironmentSecrets",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-environment-secret-get-environment-secret",
+          label: "Get entity from EnvironmentSecrets by key",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-environment-secret-update-environment-secret",
+          label: "Update entity in EnvironmentSecrets",
+          className: "api-method patch",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-environment-secret-delete-environment-secret",
+          label: "Delete entity from EnvironmentSecrets",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-bulk-delete",
+          label: "Invoke action BulkDelete",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-bulk-insert",
+          label: "Invoke action BulkInsert",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-bulk-update",
+          label: "Invoke action BulkUpdate",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/environment-secrets-bulk-upsert",
+          label: "Invoke action BulkUpsert",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "ExchangeRates",
       items: [
         {
@@ -1707,6 +1767,66 @@ const sidebar: SidebarsConfig = {
           id: "spec/data/languages-language-delete-language",
           label: "Delete entity from Languages",
           className: "api-method delete",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "LinkedFeatureModelConstraints",
+      items: [
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-linked-feature-model-constraint-list-linked-feature-model-constraint",
+          label: "Get entities from LinkedFeatureModelConstraints",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-linked-feature-model-constraint-create-linked-feature-model-constraint",
+          label: "Add new entity to LinkedFeatureModelConstraints",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-linked-feature-model-constraint-get-linked-feature-model-constraint",
+          label: "Get entity from LinkedFeatureModelConstraints by key",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-linked-feature-model-constraint-update-linked-feature-model-constraint",
+          label: "Update entity in LinkedFeatureModelConstraints",
+          className: "api-method patch",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-linked-feature-model-constraint-delete-linked-feature-model-constraint",
+          label: "Delete entity from LinkedFeatureModelConstraints",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-bulk-delete",
+          label: "Invoke action BulkDelete",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-bulk-insert",
+          label: "Invoke action BulkInsert",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-bulk-update",
+          label: "Invoke action BulkUpdate",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/linked-feature-model-constraints-bulk-upsert",
+          label: "Invoke action BulkUpsert",
+          className: "api-method post",
         },
       ],
     },
@@ -2840,6 +2960,66 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "RequiredFields",
+      items: [
+        {
+          type: "doc",
+          id: "spec/data/required-fields-required-fields-list-required-fields",
+          label: "Get entities from RequiredFields",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-required-fields-create-required-fields",
+          label: "Add new entity to RequiredFields",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-required-fields-get-required-fields",
+          label: "Get entity from RequiredFields by key",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-required-fields-update-required-fields",
+          label: "Update entity in RequiredFields",
+          className: "api-method patch",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-required-fields-delete-required-fields",
+          label: "Delete entity from RequiredFields",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-bulk-delete",
+          label: "Invoke action BulkDelete",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-bulk-insert",
+          label: "Invoke action BulkInsert",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-bulk-update",
+          label: "Invoke action BulkUpdate",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/required-fields-bulk-upsert",
+          label: "Invoke action BulkUpsert",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "Roles",
       items: [
         {
@@ -3460,6 +3640,18 @@ const sidebar: SidebarsConfig = {
       type: "category",
       label: "UNTAGGED",
       items: [
+        {
+          type: "doc",
+          id: "spec/data/",
+          label: "Missing summary",
+          className: "api-method x-ms-docs-grouped-path",
+        },
+        {
+          type: "doc",
+          id: "spec/data/",
+          label: "Missing summary",
+          className: "api-method x-ms-docs-grouped-path",
+        },
         {
           type: "doc",
           id: "spec/data/download",

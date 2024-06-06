@@ -88,6 +88,12 @@ const sidebar: SidebarsConfig = {
           label: "Change language",
           className: "api-method put",
         },
+        {
+          type: "doc",
+          id: "spec/configurator/change-currency",
+          label: "Change currency",
+          className: "api-method put",
+        },
       ],
     },
     {
