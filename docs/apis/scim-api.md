@@ -44,3 +44,55 @@ we've created extension properties.
 |`CrmContactId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:crmContactId` |  
 |`IsAdmin` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:isAdmin` |  
 |`OrganizationId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User:organizationId` |  
+
+### Assigning roles with JSON Patch
+
+You can manage user roles by sending JSON Patch operations to add or
+remove roles. Below are the guidelines for adding and removing roles:
+
+#### Adding a Role
+
+To add a new role, use the `add` operation. The JSON Patch should look
+like this:
+
+```json
+[
+    {
+        "op": "add",
+        "path": "roles",
+        "value": [
+            {
+                "value": "role:{roleId}"
+            }
+        ]
+    }
+]
+```
+
+- `"op": "add"` specifies the operation to add a role.
+- `"path": "roles"` indicates the target field for the operation.
+- `"value"` contains an array with the role object to be added.
+
+#### Removing a Role
+
+To remove an existing role, use the `remove` operation. The JSON Patch
+should look like this:
+
+```json
+[
+    {
+        "op": "remove",
+        "path": "roles",
+        "value": [
+            {
+                "value": "role:{roleId}"
+            }
+        ]
+    }
+]
+```
+
+- `"op": "remove"` specifies the operation to remove a role.
+- `"path": "roles"` indicates the target field for the operation.
+- `"value"` contains an array with the role object to be removed.
+
