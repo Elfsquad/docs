@@ -1,0 +1,40 @@
+---
+title: Scaffold an extension
+sidebar_position: 1
+sidebar_label: Scaffold an extension
+slug: ./scaffold-an-extension
+---
+
+You're ready to create a new extension. You want to set up your
+development environment so you can start coding.
+
+In this tutorial, you create an extension that adds a calculation 
+to the Elfsquad quotation page. You'll generate starter code and 
+use the [Elfsquad CLI](https://github.com/elfsquad/elfsquad-cli)
+to develop the extension.
+
+## Requirements
+* You've installed the [Elfsquad CLI](https://github.com/elfsquad/elfsquad-cli)
+
+<hr />
+
+## Create a new extension
+You can create a new Elfsquad extension using the [Elfsquad CLI](https://github.com/elfsquad/elfsquad-cli). 
+
+1. Navigate to the directory where you want to create the extension. The
+   extension will be scaffolded in a new subdirectory.
+2. Run the following command to initialize a new extensions:
+```bash
+elfsquad extension init <name> --template action
+```
+3. Navigate to the extension and use your package manager of choice to
+   install the required dependencies:
+```bash
+cd <name>
+npm i
+```
+4. Build the extension
+```bash
+npm run build
+```
+
