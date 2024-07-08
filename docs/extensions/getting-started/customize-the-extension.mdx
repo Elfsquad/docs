@@ -9,8 +9,8 @@ import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
 import CodeBlock from '@theme/CodeBlock';
 
 In the previous steps you've created a new extension and learned how 
-an Elfsquad extension is structured. The default extension code however,
-is not super useful.
+an Elfsquad extension is structured. The default extension code however, it not 
+that useful.
 
 In this step, you'll learn how to customize the extension and extend your
 Elfsquad environment with your own functionality. In the example, you'll make 
@@ -33,8 +33,8 @@ will be displayed in an iframe in the dialog.
     placeholder values. The actual values will be calculated with JavaScript.
     </CodeDocSection>
 
-    <CodeBlock language="html">
-{`<!-- src/index.html -->
+    <CodeBlock language="html" title="src/index.html">
+{`
 <html>
   <head>
     <script src="index.js"></script>
@@ -88,10 +88,9 @@ of this file can be removed.
   
   </CodeDocSection>
 
-  <CodeBlock language="typescript">
+  <CodeBlock language="typescript" title="src/index.ts">
 
-{`// src/index.ts
-import { api, context } from '@elfsquad/custom-scripting';
+{`import { api, context } from '@elfsquad/custom-scripting';
 
 const { quotationId } = context;
 
@@ -144,7 +143,7 @@ to disable a dialog.
     The entrypoint has been changed from `index.js` to `index.html`.
   </CodeDocSection>
 
-  <CodeBlock language="yml">
+  <CodeBlock language="yml" title="elfsquadrc.yml">
 {`identifier: "example-extension"
 page_extensions:
   quotation:
@@ -171,7 +170,7 @@ page_extensions:
       The build script has been updated to copy the `index.html` file to the `dist` folder.
     </CodeDocSection>
   
-    <CodeBlock language="json">
+    <CodeBlock language="json" title="package.json">
   {`{
   "name": "example-extension",
   "scripts": {

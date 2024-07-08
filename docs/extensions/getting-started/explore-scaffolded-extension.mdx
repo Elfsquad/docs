@@ -37,9 +37,8 @@ you get started. All of these can be removed or replaced with tools of your choi
       src/index.ts file into dist/index.js.
     </CodeDocSection>
 
-    <CodeBlock language="js">
-{`// package.json
-{
+    <CodeBlock language="js" title="package.json">
+{`{
   "name": "example-extension",
   "scripts": {
     "build": "tsc src/*.ts -noEmit && esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
@@ -57,13 +56,14 @@ you get started. All of these can be removed or replaced with tools of your choi
 
 <hr />
 ## elfsquadrc.yml
-The elfsquadrc.yml file contains the configuration for the extension. It 
+The elfsquadrc.yml file contains the configuration for the extension. It defines
+which actions and components should be added and where they should be placed.
 
 <CodeDoc>
   <CodeDocSection highlight="{2-2}">
     #### Identifier
     This is the unique identifier for the extension. Once you've published
-    the extension, the identifier should not be changed, or it will be
+    the extension, the identifier should not be changed, otherwise it will be
     considered a new extension.
   </CodeDocSection>
 
@@ -86,9 +86,8 @@ The elfsquadrc.yml file contains the configuration for the extension. It
     the background, or `dialog`, for scripts that should open in a dialog.
   </CodeDocSection>
 
-  <CodeBlock language="yaml">
-{`# elfsquadrc.yml
-identifier: "example-extension"
+  <CodeBlock language="yaml" title="elfsquadrc.yml">
+{`identifier: "example-extension"
 page_extensions:
   quotation:
     actions:
