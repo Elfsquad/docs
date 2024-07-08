@@ -77,6 +77,28 @@ export default [
     }
   },
   {
+    "methodName": "changeLanguage",
+    "description": "Change the language of the showroom & configuration to the specified language ISO code.",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.changeLanguage('en');\n",
+      "language": "typescript"
+    },
+    "parameters": [
+      {
+        "name": "languageIso",
+        "type": "string",
+        "description": "The ISO code of the language to change to.",
+        "required": true,
+        "parameters": []
+      }
+    ],
+    "deprecated": null,
+    "returns": {
+      "type": "void",
+      "description": ""
+    }
+  },
+  {
     "methodName": "screenshot",
     "description": "Initiates a screenshot of the current view. The screenshot data is returned via the `onScreenshot` callback.",
     "example": {
@@ -138,7 +160,7 @@ export default [
     "methodName": "navigateTo",
     "description": "Navigates to the specified URL within the showroom iframe.",
     "example": {
-      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.navigateTo('/products');\nshowroom.navigateTo('/configure/featureModelName');\nshowroom.navigateTo('/checkout');\n",
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.navigateTo('products');\nshowroom.navigateTo('configure/featureModelName');\nshowroom.navigateTo('checkout');\n",
       "language": "typescript"
     },
     "parameters": [
