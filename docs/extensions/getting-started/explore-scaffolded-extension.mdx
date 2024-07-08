@@ -1,0 +1,105 @@
+---
+title: Explore the scaffolded extension
+sidebar_position: 2
+sidebar_label: Explore the scaffolded extension
+slug: ./explore-scaffolded-extension
+---
+
+import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
+import CodeBlock from '@theme/CodeBlock';
+
+In the previous step, you used the [Elfsquad CLI](https://github.com/elfsquad/elfsquad-cli). 
+to scaffold a new extension. Some files were automatically generated for you.
+
+<hr />
+
+## package.json
+The package.json files comes with some (dev) dependencies by default, to help 
+you get started. All of these can be removed or replaced with tools of your choice.
+
+<CodeDoc>
+    <CodeDocSection highlight="{11-12}">
+      #### Dependencies
+      [@elfsquad/custom-scripting](https://github.com/elfsquad/custom-scripting) 
+       is installed by default. You can use  this package to interact 
+       with the Elfsquad UI & API.
+    </CodeDocSection>
+
+    <CodeDocSection highlight="{7-10}">
+      #### Dev dependencies
+      esbuild and TypeScript are installed by default for building and 
+      bundling the extension.
+    </CodeDocSection>
+
+    <CodeDocSection highlight="{5-5}">
+      #### Build script
+      The build script runs the TypeScript checker and bundles the 
+      src/index.ts file into dist/index.js.
+    </CodeDocSection>
+
+    <CodeBlock language="js" title="package.json">
+{`{
+  "name": "example-extension",
+  "scripts": {
+    "build": "tsc src/*.ts -noEmit && esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@elfsquad/custom-scripting": "^0.0.4"
+  }
+}`}
+    </CodeBlock>
+</CodeDoc>
+
+<hr />
+## elfsquadrc.yml
+The elfsquadrc.yml file contains the configuration for the extension. It defines
+which actions and components should be added and where they should be placed.
+
+<CodeDoc>
+  <CodeDocSection highlight="{2-2}">
+    #### Identifier
+    This is the unique identifier for the extension. Once you've published
+    the extension, the identifier should not be changed, otherwise it will be
+    considered a new extension.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{3-4}">
+    #### Page extensions
+    This page extensions section is used to add extensions to the existing
+    Elfsquad pages, like the quotation page.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{5-10}">
+    #### Actions
+    The actions section is used to add action buttons to the page. Each action
+    contains metadata, like the position and color.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{12-15}">
+    #### Executable
+    This is where you point to the entrypoint of the action, usually a JavaScript
+    file. The type can either be `action`, for scripts that should be executed in 
+    the background, or `dialog`, for scripts that should open in a dialog.
+  </CodeDocSection>
+
+  <CodeBlock language="yaml" title="elfsquadrc.yml">
+{`identifier: "example-extension"
+page_extensions:
+  quotation:
+    actions:
+    - position: right
+      color: primary
+
+      names:
+        en: Execute
+
+      executable: 
+        type: "action"
+        entrypoint: "index.js"
+`}
+  </CodeBlock>
+</CodeDoc>

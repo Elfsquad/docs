@@ -1,0 +1,189 @@
+---
+title: Customize the extension
+sidebar_position: 3
+sidebar_label: Customize the extension
+slug: ./customize-the-extension
+---
+
+import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
+import CodeBlock from '@theme/CodeBlock';
+
+In the previous steps you've created a new extension and learned how 
+an Elfsquad extension is structured. The default extension code however, it not 
+that useful.
+
+In this step, you'll learn how to customize the extension and extend your
+Elfsquad environment with your own functionality. In the example, you'll make 
+a simple dialog that displays information about your quotation.
+
+<hr />
+## Step 1: Create an index.html
+Create a new file in the `src` folder and name it `index.html`. This file 
+will be displayed in an iframe in the dialog.
+
+<CodeDoc>
+    <CodeDocSection highlight="{4-4}">
+    #### import index.js
+    Import the `index.js` file. This file will contain the business logic.
+    </CodeDocSection>
+
+    <CodeDocSection highlight="{8-20}">
+    #### Display information
+    This renders the average configuration value and margin, and includes
+    placeholder values. The actual values will be calculated with JavaScript.
+    </CodeDocSection>
+
+    <CodeBlock language="html" title="src/index.html">
+{`
+<html>
+  <head>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <table>
+      <tbody id="table-body">
+        <tr>
+          <td>Average configuration value</td>
+          <td id="average-configuration-value">...</td>
+        </tr>
+
+        <tr>
+          <td>Average configuration margin</td>
+          <td id="average-configuration-margin">...</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+`}
+    </CodeBlock>
+</CodeDoc>
+
+<hr />
+
+## Step 2: Update the index.ts
+You already have an `index.ts` file in the `src` folder. The current contents
+of this file can be removed.
+
+<CodeDoc>
+
+  <CodeDocSection highlight="{2-2}">
+  #### imports
+  Import the `api` and `context` object from the @elfsquad/custom-scripting package.
+  The API is an abstraction around the JavaScript fetch API, and can be used for interacting
+  with the Elfsquad API.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{4-4}">
+  #### Context
+  The context object contains information about the context in which the dialog or action 
+  is executed, such as the identifier of the viewed entity.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{25-32}">
+  #### Calling the Elfsquad API
+  This uses the previously imported `api` object to fetch the quotation groups for the quotation
+  with the id, which you've previously retrieved from the `context` object.
+  
+  </CodeDocSection>
+
+  <CodeBlock language="typescript" title="src/index.ts">
+
+{`import { api, context } from '@elfsquad/custom-scripting';
+
+const { quotationId } = context;
+
+const processQuotationGroups = (quotationGroups: any) => {
+  const averageConfigurationValue = document.getElementById('average-configuration-value');
+  const averageConfigurationMargin = document.getElementById('average-configuration-margin');
+
+  const totalValue = quotationGroups.reduce((acc: number, group: any) => acc + group.value, 0);
+  const totalMargin = quotationGroups.reduce((acc: number, group: any) => acc + group.profitMargin, 0);
+
+  if (totalValue > 0) {
+    averageConfigurationValue!.innerText = (totalValue / quotationGroups.length).toFixed(2);
+  } else {
+    averageConfigurationValue!.innerText = '0.00';
+  }
+  if (totalMargin > 0) {
+    averageConfigurationMargin!.innerText = (totalMargin / quotationGroups.length).toFixed(2);
+  } else {
+    averageConfigurationMargin!.innerText = '0.00';
+  }
+}
+
+const qp = {
+  '$filter': \`quotationId eq $\{quotationId\}\`,
+};
+
+api.fetch('/data/1/quotationgroups?' + new URLSearchParams(qp))
+    .then((r: any) => return r.body['value'])
+    .then(processQuotationGroups)
+    .catch((e: any) => console.error('Error fetching quotation groups:', e));
+`}
+  </CodeBlock>
+</CodeDoc>
+
+<hr />
+
+## Step 3. Update the elfsquadrc.yml
+The `elfsquadrc.yml` file contains a background action by default. We'll have to change this
+to disable a dialog.
+
+<CodeDoc>
+
+  <CodeDocSection highlight="{12-12}">
+    #### Executable type
+    The type of the executable has been changed from `action` to `dialog`.
+  </CodeDocSection>
+
+  <CodeDocSection highlight="{13-13}">
+    #### Entrypoint
+    The entrypoint has been changed from `index.js` to `index.html`.
+  </CodeDocSection>
+
+  <CodeBlock language="yml" title="elfsquadrc.yml">
+{`identifier: "example-extension"
+page_extensions:
+  quotation:
+    actions:
+    - position: right
+      color: primary
+
+      names:
+        en: Execute
+
+      executable: 
+        type: "dialog"
+        entrypoint: "index.html"`}
+  </CodeBlock>
+</CodeDoc>
+
+<hr />
+
+## Step 4. Update the package.json
+
+<CodeDoc>
+    <CodeDocSection highlight="{4-4}">
+      #### Build script
+      The build script has been updated to copy the `index.html` file to the `dist` folder.
+    </CodeDocSection>
+  
+    <CodeBlock language="json" title="package.json">
+  {`{
+  "name": "example-extension",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js && cp src/index.html dist/index.html" 
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@elfsquad/custom-scripting": "^0.0.5"
+  }
+}`}
+    </CodeBlock>
+</CodeDoc>
+
