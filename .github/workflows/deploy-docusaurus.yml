@@ -11,6 +11,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-20.04
+    permissions: read-all
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Check out repo
@@ -35,4 +36,4 @@ jobs:
           build_dir: build
           fqdn: docs.elfsquad.io
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
