@@ -1,0 +1,38 @@
+---
+title: "@elfsquad/custom-scripting"
+sidebar_position: 1
+sidebar_label: "@elfsquad/custom-scripting"
+slug: ./custom-scripting-sdk
+---
+
+import apiMethods from './methods/api';
+import { MethodDocument } from '../../components/MethodDocument';
+import { MethodCategory } from '../../components/MethodCategory';
+import Link from '@docusaurus/Link';
+
+export const Content = ({children, name, description}) => {
+  return <div class="space-y-32">
+    <div class="flex justify-between items-center">
+      {children}
+      <Link to="https://github.com/elfsquad/custom-scripting">
+        <button class="bg-gray-700 text-white px-4 py-2 rounded-md flex items-center gap-2 mt-[-18px]">
+          <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
+          View on GitHub
+        </button>
+      </Link>
+    </div>
+    <MethodCategory name={name} description={description} />
+    {apiMethods.map(m => <MethodDocument {...m} />)}
+  </div>
+}
+
+<Content name="Api" description="The Api class allows you to interact with the Elfsquad API.">
+  # @elfsquad/custom-scripting
+</Content>
+
+
+<div class="hidden">
+  ## Api
+  ### api.fetch
+</div>
+
