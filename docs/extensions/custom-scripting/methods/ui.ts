@@ -16,13 +16,13 @@ export default [
           {
             "name": "title",
             "type": "string",
-            "description": "",
+            "description": "The title of the dialog.",
             "required": true
           },
           {
             "name": "src",
             "type": "string",
-            "description": "",
+            "description": "The source URL of the dialog.",
             "required": true
           }
         ]
