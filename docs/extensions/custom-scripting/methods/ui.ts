@@ -1,13 +1,16 @@
 export default [
   {
     "methodName": "openDialog",
-    "description": "",
-    "example": null,
+    "description": "Open a dialog with a specific title and source URL.",
+    "example": {
+      "content": "import { ui } from '@elfsquad/custom-scripting';\nui.openDialog({\n  title: 'My dialog',\n  src: 'https://your-website.com/dialog.html'\n});\n",
+      "language": "typescript"
+    },
     "parameters": [
       {
         "name": "parameters",
         "type": "OpenDialogParameters",
-        "description": "",
+        "description": "The parameters to open the dialog with.",
         "required": true,
         "parameters": [
           {
@@ -33,8 +36,11 @@ export default [
   },
   {
     "methodName": "reload",
-    "description": "",
-    "example": null,
+    "description": "Reload the data in the current view.",
+    "example": {
+      "content": "import { ui } from '@elfsquad/custom-scripting';\nui.reload();\n",
+      "language": "typescript"
+    },
     "parameters": [],
     "deprecated": null,
     "returns": {

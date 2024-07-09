@@ -3,7 +3,7 @@ export default [
     "methodName": "fetch",
     "description": "Send an API request to the Elfsquad API. The url parameter is always prefixed with the base URL of the Elfsquad API.",
     "example": {
-      "content": "const { status, body } = await api.fetch('/api/2/features');\n",
+      "content": "import { api } from '@elfsquad/custom-scripting';\nconst { status, body } = await api.fetch('/api/2/features');\n",
       "language": "typescript"
     },
     "parameters": [
