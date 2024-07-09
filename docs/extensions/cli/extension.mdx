@@ -1,0 +1,44 @@
+---
+title: Extension
+sidebar_position: 2
+sidebar_label: extension
+slug: ./extension
+---
+
+import CodeBlock from '@theme/CodeBlock';
+
+<div class="flex gap-16">
+  <div style={{ width: '50%' }}>
+    ## `init`
+    This initializes a new extension. It will create a new directory with
+    the name of the extension in the current working directory. It will also
+    generate a basic extension structure with the given template.
+  </div>
+
+  <div class="flex-1">
+    <CodeBlock language="bash" title="bash">
+      {`elfsquad extension init <name> --template [dialog|action]`}
+    </CodeBlock>
+
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="flex gap-16">
+  <div style={{ width: '50%' }}>
+    ## `publish`
+    This command will publish the built extension to your Elfsquad environment.
+    Once ran, it will zip the dist folder and upload it to Elfsquad.
+  </div>
+
+  <div class="flex-1">
+    <CodeBlock language="bash" title="bash">
+      {`npm run build
+elfsquad extension publish`}
+    </CodeBlock>
+  </div>
+</div>
+

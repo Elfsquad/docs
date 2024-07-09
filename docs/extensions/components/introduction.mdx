@@ -1,0 +1,32 @@
+---
+title: Page actions
+sidebar_position: 1
+sidebar_label: Page actions
+slug: ./page-actions
+---
+
+You can extend the functionality of existing pages in Elfsquad, by adding
+custom actions. These actions will appear as action buttons in the page-toolbar.
+
+## `elfsquadrc.yml` structure
+Each action is defined in the `page_extensions` section of the `elfsquadrc` file.
+
+The entrypoint of the action refers to a file in the build (`dist`) directory of 
+the extension. This should either be a `.js` file for an action or a `.html` file 
+for a dialog.
+
+### Example
+```yaml
+page_extensions:
+  <page_name>:
+    actions:
+    - position: [left|right]
+      color: [primary|accent]
+
+      names:
+        <language_iso>: <button_name>
+
+      executable: 
+        type: [action|dialog]
+        entrypoint: <file_path>
+```

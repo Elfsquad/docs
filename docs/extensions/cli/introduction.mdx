@@ -1,0 +1,69 @@
+---
+title: elfsquad/cli Introduction
+sidebar_position: 1
+sidebar_label: Introduction
+slug: ./introduction
+---
+
+import CodeBlock from '@theme/CodeBlock';
+
+The `elfsquad/cli` is a command-line interface that helps you develop and
+manage Elfsquad extensions. It provides a number of commands to create, 
+update and publish extensions.
+
+## Requirements
+- [Node.js](https://nodejs.org/en/): version 20 or higher
+
+<hr />
+<br />
+
+<div class="flex gap-16">
+  <div style={{ width: '50%' }}>
+    ## Installation
+    This installs the Elfsquad CLI globally on your system, so you can run 
+    `elfsquad` commands from any directory.
+  </div>
+
+  <div class="flex-1">
+    <CodeBlock language="bash" title="bash">
+      {`npm i -g @elfsquad/cli`}
+    </CodeBlock>
+
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="flex gap-16">
+  <div style={{ width: '50%' }}>
+    ## Authentication
+    Before you can use the CLI, you need to authenticate with your Elfsquad
+    environment. You can do this by running the login command.
+  </div>
+
+  <div class="flex-1">
+    <CodeBlock language="bash" title="bash">
+      {`elfsquad login
+elfsquad logout`}
+    </CodeBlock>
+  </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="flex gap-16">
+  <div style={{ width: '50%' }}>
+    ## Help
+    You can get a list of all available commands by running the help command.
+  </div>
+
+  <div class="flex-1">
+    <CodeBlock language="bash" title="bash">
+      {`elfsquad help`}
+    </CodeBlock>
+  </div>
+</div>
