@@ -6,27 +6,45 @@ slug: ./custom-scripting-sdk
 ---
 
 import apiMethods from './methods/api';
+import uiMethods from './methods/ui';
+import dialogMethods from './methods/dialog';
+
 import { MethodDocument } from '../../components/MethodDocument';
 import { MethodCategory } from '../../components/MethodCategory';
 import Link from '@docusaurus/Link';
 
-export const Content = ({children, name, description}) => {
+export const Content = ({ children }) => {
+  const apiCategoryName = 'Api';
+  const apiCategoryDescription = 'The Api class allows you to interact with the Elfsquad API.';
+
+  const uiCategoryName = 'Ui';
+  const uiCategoryDescription = 'The Ui class allows you to interact with the Elfsquad UI.';
+
+  const dialogCategoryName = 'Dialog';
+  const dialogCategoryDescription = 'The Dialog class allows you to interact your dialog';
+
   return <div class="space-y-32">
     <div class="flex justify-between items-center">
       {children}
-      <Link to="https://github.com/elfsquad/custom-scripting">
+      <Link to="https://github.com/elfsquad/configurator">
         <button class="bg-gray-700 text-white px-4 py-2 rounded-md flex items-center gap-2 mt-[-18px]">
           <img src="/img/github-mark-white.svg" style={{height:24, padding: 0}} />
           View on GitHub
         </button>
       </Link>
     </div>
-    <MethodCategory name={name} description={description} />
+    <MethodCategory name={apiCategoryName} description={apiCategoryDescription} />
     {apiMethods.map(m => <MethodDocument {...m} />)}
+
+    <MethodCategory name={uiCategoryName} description={uiCategoryDescription} />
+    {uiMethods.map(m => <MethodDocument {...m} />)}
+
+    <MethodCategory name={dialogCategoryName} description={dialogCategoryDescription} />
+    {dialogMethods.map(m => <MethodDocument {...m} />)}
   </div>
 }
 
-<Content name="Api" description="The Api class allows you to interact with the Elfsquad API.">
+<Content>
   # @elfsquad/custom-scripting
 </Content>
 
@@ -34,5 +52,12 @@ export const Content = ({children, name, description}) => {
 <div class="hidden">
   ## Api
   ### api.fetch
+
+  ## Ui
+  ### Ui.openDialog
+  ### Ui.reload
+
+  ## Dialog
+  ### Dialog.close
 </div>
 
