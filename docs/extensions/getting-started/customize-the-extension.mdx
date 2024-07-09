@@ -22,12 +22,12 @@ Create a new file in the `src` folder and name it `index.html`. This file
 will be displayed in an iframe in the dialog.
 
 <CodeDoc>
-    <CodeDocSection highlight="{4-4}">
+    <CodeDocSection highlight="{3-3}">
     #### import index.js
     Import the `index.js` file. This file will contain the business logic.
     </CodeDocSection>
 
-    <CodeDocSection highlight="{8-20}">
+    <CodeDocSection highlight="{7-19}">
     #### Display information
     This renders the average configuration value and margin, and includes
     placeholder values. The actual values will be calculated with JavaScript.
@@ -67,20 +67,20 @@ of this file can be removed.
 
 <CodeDoc>
 
-  <CodeDocSection highlight="{2-2}">
+  <CodeDocSection highlight="{1-1}">
   #### imports
   Import the `api` and `context` object from the @elfsquad/custom-scripting package.
   The API is an abstraction around the JavaScript fetch API, and can be used for interacting
   with the Elfsquad API.
   </CodeDocSection>
 
-  <CodeDocSection highlight="{4-4}">
+  <CodeDocSection highlight="{3-3}">
   #### Context
   The context object contains information about the context in which the dialog or action 
   is executed, such as the identifier of the viewed entity.
   </CodeDocSection>
 
-  <CodeDocSection highlight="{25-32}">
+  <CodeDocSection highlight="{24-31}">
   #### Calling the Elfsquad API
   This uses the previously imported `api` object to fetch the quotation groups for the quotation
   with the id, which you've previously retrieved from the `context` object.

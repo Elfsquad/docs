@@ -18,20 +18,20 @@ The package.json files comes with some (dev) dependencies by default, to help
 you get started. All of these can be removed or replaced with tools of your choice.
 
 <CodeDoc>
-    <CodeDocSection highlight="{11-12}">
+    <CodeDocSection highlight="{11-11}">
       #### Dependencies
       [@elfsquad/custom-scripting](https://github.com/elfsquad/custom-scripting) 
        is installed by default. You can use  this package to interact 
        with the Elfsquad UI & API.
     </CodeDocSection>
 
-    <CodeDocSection highlight="{7-10}">
+    <CodeDocSection highlight="{6-9}">
       #### Dev dependencies
       esbuild and TypeScript are installed by default for building and 
       bundling the extension.
     </CodeDocSection>
 
-    <CodeDocSection highlight="{5-5}">
+    <CodeDocSection highlight="{4-4}">
       #### Build script
       The build script runs the TypeScript checker and bundles the 
       src/index.ts file into dist/index.js.
@@ -60,26 +60,26 @@ The elfsquadrc.yml file contains the configuration for the extension. It defines
 which actions and components should be added and where they should be placed.
 
 <CodeDoc>
-  <CodeDocSection highlight="{2-2}">
+  <CodeDocSection highlight="{1-1}">
     #### Identifier
     This is the unique identifier for the extension. Once you've published
     the extension, the identifier should not be changed, otherwise it will be
     considered a new extension.
   </CodeDocSection>
 
-  <CodeDocSection highlight="{3-4}">
+  <CodeDocSection highlight="{2-3}">
     #### Page extensions
     This page extensions section is used to add extensions to the existing
     Elfsquad pages, like the quotation page.
   </CodeDocSection>
 
-  <CodeDocSection highlight="{5-10}">
+  <CodeDocSection highlight="{4-9}">
     #### Actions
     The actions section is used to add action buttons to the page. Each action
     contains metadata, like the position and color.
   </CodeDocSection>
 
-  <CodeDocSection highlight="{12-15}">
+  <CodeDocSection highlight="{11-14}">
     #### Executable
     This is where you point to the entrypoint of the action, usually a JavaScript
     file. The type can either be `action`, for scripts that should be executed in 
