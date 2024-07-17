@@ -64,6 +64,11 @@ It is also possible to send a body containing startup requirements when starting
       "nodeId": "123e4567-e89b-12d3-a456-426614174002",
       "type": 2,
       "value": "Some text"
+    },
+     {
+      "nodeId": "123e4567-e89b-12d3-a456-426614174003",
+      "type": 3,
+      "value": 5
     }
   ]
 }
@@ -76,6 +81,7 @@ Property explanation:
   1.  **Selection**(0): When using a selection type requirement, sending a value of 0 will turn the specified node off. Any other value will turn the node on and change the value to the provided value. Only numeric values are supported.
   2.  **Value**(1): When using a value type requirement, the specified node will turn on (if not on already) and will have it's value changed to the provided value. Even when the value is 0. Only numeric values are supported.
   3.  **Text**(2): When using a text type requirement, the specified node will have it's textValue changed to the provided value. Only string values are supported.
+  4. **Cardinality**(3): When using a cardinality requirement, the specified linkedmodel node will have the specified amount off instances.
 
 The response body will contain the id of the newly created configuration. This id is needed for the other steps.
 For more information about the request and response bodies, refer to the provided api documentation. https://docs.elfsquad.io/docs/spec/configurator/start-configuration-session.
