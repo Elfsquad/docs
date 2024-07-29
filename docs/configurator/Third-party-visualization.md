@@ -13,6 +13,19 @@ To embed a third party viewer in Elfsquad, an iframe is used.
 Communication between Elfsquad and the viewer is accomplished using the
 iframe postmessage API.
 
+## URL parameters
+
+When Elfsquad loads the iframe, it allows you to pass parameters when creating the final URL.
+
+Example URL: `https://example.com/viewer?configurationId=${CONFIGURATION_ID}&lang=${LANGUAGE}`
+
+| Parameter | Description |
+| --- | --- |
+| `CONFIGURATION_ID` | The ID of the configuration that is being viewed |
+| `LANGUAGE` | Selected language for the configuration |
+| `CURRENCY` | Selected currency for the configuration |
+| `MODEL_NAME` | The name of the model that is being viewed |
+
 ## Events
 
 Elfsquad sends several events to the embedded iframe, such as when a
