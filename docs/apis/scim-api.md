@@ -56,17 +56,17 @@ To add a new role, use the `add` operation. The JSON Patch should look
 like this:
 
 ```json
-[
-    {
-        "op": "add",
-        "path": "roles",
-        "value": [
-            {
-                "value": "role:{roleId}"
-            }
-        ]
-    }
-]
+{
+   "operations":[
+      {
+         "op":"add",
+         "path":"roles",
+         "value": [{
+             "value": "{\"value\": \"{roleId}\"}"
+         }]
+      }
+   ]
+}
 ```
 
 - `"op": "add"` specifies the operation to add a role.
@@ -83,11 +83,9 @@ should look like this:
     {
         "op": "remove",
         "path": "roles",
-        "value": [
-            {
-                "value": "role:{roleId}"
-            }
-        ]
+         "value": [{
+             "value": "{\"value\": \"{roleId}\"}"
+         }]
     }
 ]
 ```
