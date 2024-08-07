@@ -134,6 +134,64 @@ export default [
     }
   },
   {
+    "methodName": "updateName",
+    "description": "Updates the name of this or a linked configuration.",
+    "example": {
+      "content": "const name = 'My new configuration name';\nawait configuration.updateName(name);\n",
+      "language": "typescript"
+    },
+    "parameters": [
+      {
+        "name": "name",
+        "type": "string",
+        "description": "The new name of the configuration",
+        "required": true,
+        "parameters": []
+      },
+      {
+        "name": "linkedConfigurationId",
+        "type": "string | null",
+        "description": "The id of the linked configuration to update",
+        "required": true,
+        "parameters": []
+      }
+    ],
+    "deprecated": null,
+    "returns": {
+      "type": "Promise<void>",
+      "description": "A promise that resolves when the name has been updated"
+    }
+  },
+  {
+    "methodName": "updateCardinality",
+    "description": "Updates the cardinality of a linked configuration.",
+    "example": {
+      "content": "const parentNodeId = '00000000-0000-0000-0000-000000000000';\nconst newCardinality = 2;\nawait configuration.updateCardinality(parentNodeId, newCardinality);\n",
+      "language": "typescript"
+    },
+    "parameters": [
+      {
+        "name": "parentNodeId",
+        "type": "string",
+        "description": "The id of the parent node of the linked configuration",
+        "required": true,
+        "parameters": []
+      },
+      {
+        "name": "cardinality",
+        "type": "number",
+        "description": "The new cardinality of the linked configuration",
+        "required": true,
+        "parameters": []
+      }
+    ],
+    "deprecated": null,
+    "returns": {
+      "type": "Promise<void>",
+      "description": "A promise that resolves when the cardinality has been updated"
+    }
+  },
+  {
     "methodName": "changeLanguage",
     "description": "Changes the language of this configuration.",
     "example": {
