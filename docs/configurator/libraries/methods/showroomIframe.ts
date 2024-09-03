@@ -157,6 +157,56 @@ export default [
     }
   },
   {
+    "methodName": "enableConfigurationUpdates",
+    "description": "Enables receiving real-time configuration updates, whenever the configuration is changed in the showroom.",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.enableConfigurationUpdates();\nshowroom.onConfigurationUpdate(data => {\n   console.log('updated configuration:', data);\n});\n",
+      "language": "typescript"
+    },
+    "parameters": [],
+    "deprecated": null,
+    "returns": {
+      "type": "void",
+      "description": ""
+    }
+  },
+  {
+    "methodName": "disableConfigurationUpdates",
+    "description": "Disables receiving real-time configuration updates.",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.disableConfigurationUpdates();\n",
+      "language": "typescript"
+    },
+    "parameters": [],
+    "deprecated": null,
+    "returns": {
+      "type": "void",
+      "description": ""
+    }
+  },
+  {
+    "methodName": "onConfigurationUpdate",
+    "description": "Registers a callback function to be invoked when the configuration is updated.",
+    "example": {
+      "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.enableConfigurationUpdates();\nshowroom.onConfigurationUpdate(data => {\n   console.log('updated configuration:', data);\n});\n",
+      "language": "typescript"
+    },
+    "parameters": [
+      {
+        "name": "callback",
+        "type": "ConfigurationUpdateCallback",
+        "description": "The callback function to be called upon configuration update.",
+        "required": true,
+        "parameters": []
+      }
+    ],
+    "deprecated": null,
+    "returns": {
+      "type": "void",
+      "description": ""
+    }
+  },
+  {
     "methodName": "navigateTo",
     "description": "Navigates to the specified URL within the showroom iframe.",
     "example": {
