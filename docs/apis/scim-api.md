@@ -44,6 +44,7 @@ we've created extension properties.
 |`CrmContactId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User/crmContactId` |  
 |`IsAdmin` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User/isAdmin` |  
 |`OrganizationId` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User/organizationId` |  
+|`TwoFactorAuthenticationStatus` | `urn:ietf:params:scim:schemas:extension:elfsquad:2.0:User/twoFactorAuthenticationStatus` |
 
 ### Assigning roles with JSON Patch
 
