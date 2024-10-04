@@ -30,7 +30,7 @@ export default function Home() {
 
           <Card link="/docs/customization">
             <h2 class="color-manufacturing-orange">Customization</h2>
-            Custom scripts are snippets of JavaScript code that you can link link to custom buttons. When a user clicks the button, their browser executes the script.
+            Custom scripts are snippets of JavaScript code that you can link to custom buttons. When a user clicks the button, their browser executes the script.
           </Card>
 
           <Card link="/docs/spec/quotation/elfsquad-web-quotationapi">
