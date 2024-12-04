@@ -138,6 +138,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "spec/configurator/update-multiple-configurations",
+          label: "Update multiple configurations",
+          className: "api-method put",
+        },   
+        {
+          type: "doc",
           id: "spec/configurator/update-multiple-requirements",
           label: "Update multiple requirements",
           className: "api-method put",

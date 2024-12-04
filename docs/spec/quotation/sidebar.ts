@@ -16,6 +16,12 @@ const sidebar: SidebarsConfig = {
           label: "Creates a new quotation. The quotation number & status will be automatically filled.",
           className: "api-method post",
         },
+      ],
+    },
+    {
+      type: "category",
+      label: "UpdateQuotationCrm",
+      items: [
         {
           type: "doc",
           id: "spec/quotation/updates-debtor-for-a-quotation",
