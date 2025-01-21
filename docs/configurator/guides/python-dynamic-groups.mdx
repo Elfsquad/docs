@@ -1,0 +1,143 @@
+---
+title: 📊 Dynamic groups with Python
+sidebar_position: 2
+sidebar_label: Dynamic groups with Python
+slug: ./python-dynamic-groups
+---
+
+Dynamic groups in the EMS allow you to create programmatically populated groups based on custom criteria. 
+
+This guide demonstrates how to use Python to create dynamic groups that fetch and integrate data from external APIs.
+
+## Prerequisites
+* Access to EMS
+* Basic Python knowledge
+* Understanding of REST APIs
+
+## 1. Create a Python dynamic group
+In this example, we will create a dynamic group that retrieves the latest exchange rates from https://api.frankfurter.dev/
+and adds the rates to the group. 
+
+In the screenshot below, you can see that we created 2 groups: Currency and Rates. The
+Currency group contains the currency codes. 
+
+<img src="/img/configurator/guides/python-dynamic-groups/1.png" style={{maxWidth: 600}} />
+
+Next, we create a Python dynamic group that retrieves the exchange rates for
+the currencies in the Currency group and adds them to the Rates group.
+
+Creating a Python dynamic group works the same way as creating a regular dynamic group in the EMS. Instead of adding 
+property filters, you add a Python script that defines the group's criteria and results.
+
+To create a dynamic group, we click on the Plus icon next to the Rates group. In the filters section, we click on the
+`Open Python editor` button. This opens the Python editor where we can write the Python script.
+
+## 2. Write the Python script
+First, we add a variable reference to the Currency group. This allows us to access the currency codes in the Currency group.
+Click on the `+ Add variable` button and select the Currency group. Ensure the `Children` option is selected. This will 
+create a variable that contains a list of all the children in the Currency group.
+
+<img src="/img/configurator/guides/python-dynamic-groups/2.png" style={{maxWidth: 600}} />
+
+
+Next, we write the Python script that retrieves the exchange rates for the currency codes in the Currency group. The script
+uses the `requests` library to make a GET request to the API and retrieve the exchange rates. The exchange rates are then
+added to the Rates group.
+
+
+<CodeDoc>
+
+<CodeDocSection highlight="{3-3}">
+The `def invoke(args):` function is the entry point for the Python script. The `args` parameter contains the variables
+you defined in the Python editor. In this example, we have a variable called `@Currency` that contains the currency codes.
+</CodeDocSection>
+
+<CodeDocSection highlight="{6-6}">
+
+To get the selected currency, we use a list comprehension to find the currency code that has the `selected` property set.
+
+The `args['@Currency']` variable contains a list of dictionaries with the currency codes. The object corresponds to the features
+in the model. 
+
+The standard properties on a variable are `id`, `name`, `selected` and `value`. 
+
+If the corresponding feature has custom properties, these will be added to the dictionary as well, and can be accessed by their name.
+
+</CodeDocSection>
+
+<CodeDocSection highlight="{16-17}">
+
+After querying the API, we check if the response status code is 200. If it is, we extract the exchange rates from the response and return them as a list of dictionaries.
+
+The result of the `invoke` function should be a list of dictionaries, where each dictionary represents an item in the dynamic group.
+
+There are 2 required properties for each item in the result: `id` and `name`. The `id` property is used to uniquely identify the item, and the `name` property is displayed in the group.
+
+Additionality you can add custom properties to the dictionary, which can be used in formulas and conditions.
+</CodeDocSection>
+
+<CodeBlock language="python">
+{`import requests
+
+def invoke(args):
+	
+    # Get the selected currency
+    currency = next((c['name'] for c in args['@Currency'] if c['selected']), None)
+
+    # If no currency is selected, return an empty list
+    if currency is None:
+        return []
+
+    # Get the exchange rates 
+    response = requests.get(f'https://api.frankfurter.dev/v1/latest?base={currency}')
+    if response.status_code == 200:
+        rates = response.json()['rates']
+        result = [{'id': name, 'name': f'{name} = {rate}'} for name, rate in rates.items()]
+        return result
+    
+    # If the request fails, return an empty list
+    return []
+`}
+</CodeBlock>
+
+
+</CodeDoc>
+
+## 3. Result
+After saving the Python script, the dynamic group will retrieve the exchange rates for the selected currency codes in the
+Currency group. The rates will be displayed in the Rates group.
+
+<img src="/img/configurator/guides/python-dynamic-groups/3.png" style={{maxWidth: 600}} />
+
+## 4. Important concepts
+### Script Entry Point
+* The `invoke(args)` function serves as the entry point
+* `args` contains all defined variables (e.g., args['@Currency'])
+
+### Variable Properties
+Each variable object includes these standard properties:
+
+* `id`: Unique identifier
+* `name`: Display name
+* `selected`: Selection state
+* `value`: Associated value
+* Custom properties (if defined on the feature)
+
+### Return Format
+The script must return a list of dictionaries with:
+
+* Required fields:
+    * `id`: Unique identifier for the item
+    * `name`: Display text in the group
+* Optional: Additional custom properties for use in formulas/conditions
+
+### Error Handling
+* Return an empty list [] when:
+    * No source data is available
+    * API requests fail
+    * Invalid or missing data
+
+
+import { CodeDoc, CodeDocSection } from "@elfsquad/docusaurus-plugin-codedoc";
+import CodeBlock from '@theme/CodeBlock';
+

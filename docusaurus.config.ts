@@ -42,11 +42,11 @@ const config: Config = {
           label: 'Customization',
           position: 'left'
         },
-        {
-          to: '/docs/archer',
-          label: 'Archer',
-          position: 'left'
-        },
+        // {
+        //   to: '/docs/archer',
+        //   label: 'Archer',
+        //   position: 'left'
+        // },
         {
           to: '/blog', 
           label: 'Blog', 

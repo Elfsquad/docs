@@ -38,10 +38,10 @@ export default function Home() {
             The Quotation API offers specialized endpoints for creating, managing, and retrieving quotation data within Elfsquad. This API streamlines the quotation process, making it easier to generate, update, and track quotations directly through your applications.
           </Card>
 
-          <Card link="/docs/archer">
+          {/* <Card link="/docs/archer">
             <h2 class="color-creative-pink">Archer</h2>
             Archer modeling language is a domain-specific language designed to model configuration models based on variables and constraints.
-          </Card>
+          </Card> */}
 
           <Card link="/docs/spec/scim/scim-api">
             <h2 class="color-smart-neon">Identity</h2>

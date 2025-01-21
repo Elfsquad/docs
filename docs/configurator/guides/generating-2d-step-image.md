@@ -1,6 +1,6 @@
 ---
 title: 📊 Generating 2D Step Images
-sidebar_position: 3
+sidebar_position: 1
 sidebar_label: Generating 2D Step Images
 slug: ./generating-2d-step-images
 hide_table_of_contents: true
