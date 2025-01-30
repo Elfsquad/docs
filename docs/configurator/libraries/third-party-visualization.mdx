@@ -3,15 +3,16 @@ sidebar_label: elfsquad/third-party-visualization
 slug: elfsquad-third-party-visualization-library
 ---
 
-import methods from './methods/thirdPartyVisualization';
+import visualizationFrameMethods from './methods/visualizationFrame';
+import eventSenderMethods from './methods/eventSender';
 import { MethodDocument } from '../../components/MethodDocument';
 import { MethodCategory } from '../../components/MethodCategory';
 import Link from '@docusaurus/Link';
 
 
 export const Content = ({ children }) => {
-  const name = 'VisualizationFrame';
-  const description = 'The VisualizationFrame class is the main entry point for the elfsquad/third-party-visualization library. It provides methods to embed & communicate with custom visualization.';
+  const visualizationFrameName = 'VisualizationFrame';
+  const visualizationFrameDescription = 'The VisualizationFrame class is the main entry point for the elfsquad/third-party-visualization library. It provides methods to embed & communicate with custom visualization.';
 
   return <div class="space-y-32">
     <div class="flex justify-between items-center">
@@ -23,8 +24,11 @@ export const Content = ({ children }) => {
         </button>
       </Link>
     </div>
-    <MethodCategory name={name} description={description} />
-    {methods.map(m => <MethodDocument {...m} />)}
+    <MethodCategory name={visualizationFrameName} description={visualizationFrameDescription} />
+    {visualizationFrameMethods.map(m => <MethodDocument {...m} />)}
+
+    <MethodCategory name="EventSender" description="The EventSender class provides methods to send events to the parent window." />
+    {eventSenderMethods.map(m => <MethodDocument {...m} />)}
   </div>
 }
 
@@ -41,7 +45,20 @@ export const Content = ({ children }) => {
   ### onUpdateRequirements
   ### onUpdateImageValue
   ### onUpdateTextValue
-  ### triggerConfigurationUpdate
-  ### triggerStepChanged
+  ### onUpdateLinkedConfigurationCardinality
+  ### onDragStarted
+  ### onRemoveLinkedConfiguration
+  ### sendConfigurationUpdated
+  ### sendStepChanged
+
+  ## EventSender
+  ### constructor
+  ### sendUpdateRequirement
+  ### sendDragStarted
+  ### sendUpdateRequirements
+  ### sendUpdateImageValue
+  ### sendUpdateTextValue
+  ### sendUpdateLinkedConfigurationCardinality
+  ### sendRemoveLinkedConfiguration
 </div>
 
