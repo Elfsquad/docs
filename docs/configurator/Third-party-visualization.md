@@ -57,6 +57,18 @@ window.parent.addEventListener('message', function(e) {
 });
 ```
 
+### `elfsquad.dragStarted`
+This event is sent whenever a user starts dragging a feature from the
+UI.
+
+```ts
+window.parent.addEventListener('message', function(e) {
+    if (e.data && e.data.name === 'elfsquad.dragStarted') {
+        const feature = e.data.args;
+    }
+});
+```
+
 ## Commands
 
 You can also instruct Elfsquad from within the viewer by sending
@@ -86,6 +98,7 @@ This executes an update requirement API call.
 window.top.postMessage({                    
     name: 'elfsquad.updateRequirement',
     args: {
+        configurationId: '00000000-0000-0000-0000-000000000000', // optional, defaults to the root configuration
         nodeId: {nodeId},
         value: {value}, 
         isSelection: false
@@ -101,6 +114,7 @@ This executes an API call to update multiple requirements.
 window.top.postMessage({                    
     name: 'elfsquad.updateRequirements',
     args: {
+        configurationId: '00000000-0000-0000-0000-000000000000', // optional, defaults to the root configuration
         ignoreConflicts: false,
         includeSearchbarResults: false,
         requirements: [
@@ -137,4 +151,34 @@ window.top.postMessage({                   
         textValue: 'text_value',
     },
 }, '*');
+```
 
+### `elfsquad.updateLinkedConfigurationCardinality`
+This command updates the cardinality of a linked configuration.
+
+
+```ts
+window.top.postMessage({                    
+    name: 'elfsquad.updateLinkedConfigurationCardinality',
+    args: {
+        configurationId: '00000000-0000-0000-0000-000000000000', // optional, defaults to the root configuration
+        parentNodeId: '00000000-0000-0000-0000-000000000000',
+        cardinality: 2, // the new total count of configurations
+        configurationCode: 'XYAZIQWP' // optional
+    },
+}, '*');
+```
+
+### `elfsquad.removeLinkedConfiguration`
+This command removes a specific linked configuration from the parent
+configuration.
+
+```ts
+window.top.postMessage({                    
+    name: 'elfsquad.removeLinkedConfiguration',
+    args: {
+        configurationId: '00000000-0000-0000-0000-000000000000', // parent configuration id
+        linkedConfigurationId: '00000000-0000-0000-0000-000000000000', // the id of the child configuration
+    },
+}, '*');
+```
