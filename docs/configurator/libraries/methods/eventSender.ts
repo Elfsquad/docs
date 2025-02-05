@@ -45,7 +45,38 @@ export default [
         "type": "UpdateRequirement",
         "description": "The UpdateRequirement payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "nodeId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "isSelection",
+            "type": "boolean",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "ignoreConflicts",
+            "type": "boolean",
+            "description": "",
+            "required": false
+          }
+        ]
       }
     ],
     "deprecated": null,
@@ -89,7 +120,32 @@ export default [
         "type": "UpdateRequirements",
         "description": "The UpdateRequirements payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "ignoreConflicts",
+            "type": "boolean",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "includeSearchbarResults",
+            "type": "boolean",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "requirements",
+            "type": "UpdateRequirement[]",
+            "description": "",
+            "required": true
+          }
+        ]
       }
     ],
     "deprecated": null,
@@ -111,7 +167,26 @@ export default [
         "type": "UpdateImageValue",
         "description": "The UpdateImageValue payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "nodeId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "image",
+            "type": "string",
+            "description": "",
+            "required": true
+          }
+        ]
       }
     ],
     "deprecated": null,
@@ -133,7 +208,26 @@ export default [
         "type": "UpdateTextValue",
         "description": "The UpdateTextValue payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "nodeId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "value",
+            "type": "string",
+            "description": "",
+            "required": true
+          }
+        ]
       }
     ],
     "deprecated": null,
@@ -155,7 +249,32 @@ export default [
         "type": "UpdateLinkedConfigurationCardinality",
         "description": "The UpdateLinkedConfigurationCardinality payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "parentNodeId",
+            "type": "string",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "cardinality",
+            "type": "number",
+            "description": "",
+            "required": true
+          },
+          {
+            "name": "configurationCode",
+            "type": "string",
+            "description": "",
+            "required": false
+          }
+        ]
       }
     ],
     "deprecated": null,
@@ -177,7 +296,20 @@ export default [
         "type": "RemoveLinkedConfiguration",
         "description": "The RemoveLinkedConfiguration payload.",
         "required": true,
-        "parameters": []
+        "parameters": [
+          {
+            "name": "configurationId",
+            "type": "string",
+            "description": "",
+            "required": false
+          },
+          {
+            "name": "linkedConfigurationId",
+            "type": "string",
+            "description": "",
+            "required": true
+          }
+        ]
       }
     ],
     "deprecated": null,
