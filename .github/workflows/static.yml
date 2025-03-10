@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: "20"
       - name: Install dependencies
-        run: npm install 
+        run: npm install --force
       - name: Generate API docs
         run: npm run generate-api-docs
       - name: Build
