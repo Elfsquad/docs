@@ -24,7 +24,7 @@ jobs:
 
       - name: Run generate script
         run: |
-          npm i
+          npm i --force
           chmod +x ./scripts/generate.sh
           ./scripts/generate.sh
 
