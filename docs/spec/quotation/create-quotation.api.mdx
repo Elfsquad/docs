@@ -1,0 +1,71 @@
+---
+id: create-quotation
+title: "Create quotation"
+description: "Create quotation"
+sidebar_label: "Create quotation"
+hide_title: true
+hide_table_of_contents: true
+api: eJztW0tz2zYQ/iscHFs9rGdS3hLXncmlTWW3OTieDkQuJcQgQAOgFFXj/94FKFGkRHco13EnM9DBkla72Aew+32kpS0xdKFJeEt+z6WhhklB7jpEwUMO2ryX8YaEWxJJYUAY+5JmGWeRU+x/0aiNMh0tIaX2ldlkQEIi518gMqRDMiUzUIaBtp+yuKKjjWJigTqJVCnFtUmeo8Jjh0S5NjL9hQGPB00GIueczjnKjMqhbjA812B0rsH4XINJKwOpFlSwv11hPzTWKQYdKZa5LQrJzRICFuOmsISBCmQSGJRUV0EBNcGS6kCuBSi9ZNle7WG/173gQxLYWDp1ecAKqziYbz6rz8J+iCeACtM72bEnswc1gwQUiAhalUDnxbFpo1tGep4LhedU3etWujHMjVRt9qKMITAyoMGlSt9FkcyFaVOrws0ldhiNzPO87YzbeNPAOXz7pAo3r5YUHu0b+e2Tcm5eLSk837lu48a2sDQBztoVToTYtjK275pxHswh0GCse9vBCVPaVJq8cBEw4T5dS3WfcLlu1eHlIr/m6RxUJUiGULFAyRlRxpDQnJdhCvhqArqizLmsxCucr1p86G06bgpwhRPv5cMbHDsfDU+do3cax8wuTPnHCgImlGvoEMOM1T0g7qUCauBnI4m1NZi+h1YPrR5aPbR6aPXQ6qH1xaC1evH6w48eYz3Geoz1GOsx1mOsx9iXwdhHN6V0JoUuQHN4cWGf6tFe51EEWqPvyp1ld92bcco8KHtQ9qDsQdmD8v8HyjU3tlPLaX/t1miasW1A9Qj5WiHdiwPWDGjcdEnoLwg99njs8djjscdjz2tgj/9PnwcdDzoedDzoeNB5JdCxtuOmW3LvaRzMim99vsRtOVBKKt2k1xx5qUeVohtUYwbShhFj439mNf6knMWuHFc2uBnonJv/fA34XSX6LMLxHWXojnf9XBc3pw+gjPGkYJYSRwLJpDvsGTVLfNcvdfqDw2vb+BqUbVoS3m5JrjjqLo3JdNjv04z1gCf6Iadxj2GD3VntKFfMbJy6pLlZDu33qzEZ4YYUVjdhmEaHYPkZx2eZJJwJ+Ivu74pf4ZL30vTeZYzcVde8tntWFHm/8mFbCgGODy7XTiXiDJsYK+AoDpbQact7EH/UsuBywUQ1j36xVt/p2gJEGL2zrkYW1t65zUMrqXbU6VLGjk/UhC0d721slY4CdmYR5UvcvHCMj6eD3ZU8PK19eLIL4VO7Ef779hwXwR1B22Kzw1for77SNOOwZ+9klNC3k2Q67k7eDN50x5PpsDsfJVF3GP00HSXTKU3olBxT+ANw1Zl6o3z0hHz8hHxSlR+z6PPirRHWw6IlLz2Imujn4dOSZVYRe08m24Z0wgvbGh4o3nkWz3FVEq/zLJ7jqqRDbS1OKM7FCYG5wAPPRCLdcNkN6Kt9S3+Cea+kIbZDSnPUWg0sH7JTOKUOkgRNoXlm14Z6OfIq3AQXcqN5uxvnt6RqPqimou0vXOz4sFrb7ZxqwPHy+GjF2LPKTm58uaKKFdh0e4erL5FD2XRxqN/DxkZZcKTujY3FqvPcod4xmXjs7C2QJkNmKrrV+O8qwPTxt+sbVJvvfn6TuklKFF3bvsC/IbFtmhXJoIKTbQmnYpHThdUtPNvHP7xyEhk=
+sidebar_class_name: "post api-method"
+info_path: docs/spec/quotation/elfsquad-web-quotationapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create quotation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/quotation/1/quotations"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create quotation
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"If not provided, this will be set to the first quotation status in the workflow.","format":"uuid","nullable":true},"quotationNumber":{"type":"integer","description":"If not provided, this will default to the next available quotation number.","format":"int64","nullable":true},"versionNumber":{"type":"integer","description":"If not provided, this will default to 1.","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationCreateDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"If not provided, this will be set to the first quotation status in the workflow.","format":"uuid","nullable":true},"quotationNumber":{"type":"integer","description":"If not provided, this will default to the next available quotation number.","format":"int64","nullable":true},"versionNumber":{"type":"integer","description":"If not provided, this will default to 1.","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationCreateDto"}},"application/*+json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"If not provided, this will be set to the first quotation status in the workflow.","format":"uuid","nullable":true},"quotationNumber":{"type":"integer","description":"If not provided, this will default to the next available quotation number.","format":"int64","nullable":true},"versionNumber":{"type":"integer","description":"If not provided, this will default to 1.","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationCreateDto"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success","content":{"text/plain":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"Reference to the QuotationStatus","format":"uuid"},"quotationNumber":{"type":"integer","format":"int64"},"versionNumber":{"type":"integer","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationReadDto"}},"application/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"Reference to the QuotationStatus","format":"uuid"},"quotationNumber":{"type":"integer","format":"int64"},"versionNumber":{"type":"integer","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationReadDto"}},"text/json":{"schema":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"customField1":{"type":"string","nullable":true},"customField2":{"type":"string","nullable":true},"customField3":{"type":"string","nullable":true},"customField4":{"type":"string","nullable":true},"customField5":{"type":"string","nullable":true},"organizationId":{"type":"string","description":"The identifier of the organization that has ownership of the quotation. If null, the quotation is owned by\r\nthe tenant.","format":"uuid","nullable":true},"customerReference":{"type":"string","nullable":true},"subject":{"type":"string","nullable":true},"quotationReference":{"type":"string","nullable":true},"remarks":{"type":"string","nullable":true},"debtorId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"debtorContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"sellerId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"sellerContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"shipToId":{"type":"string","description":"Reference to a CrmAccount","format":"uuid","nullable":true},"shipToContactId":{"type":"string","description":"Reference to a CrmContact","format":"uuid","nullable":true},"statusId":{"type":"string","description":"Reference to the QuotationStatus","format":"uuid"},"quotationNumber":{"type":"integer","format":"int64"},"versionNumber":{"type":"integer","format":"int32","nullable":true}},"additionalProperties":false,"title":"QuotationReadDto"}}}},"400":{"description":"Bad Request","content":{"text/plain":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"application/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"text/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,73 @@
+---
+id: apply-bulk-vat
+title: "Apply bulk VAT"
+description: "This will set the `VatId` field for all lines that are"
+sidebar_label: "Apply bulk VAT"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zgQ/isET/uQ7ebl7uqWBMEihwXaNM0eUiMdiyOLDS0qJJXUNfzfd4aSY/mRwNjTtqgONkXN85sHh3MZYOJleivf1zZA0LYUE2frSo4SqdBnTle8KVN5XWgvnrQxwmMQoUDx+QbCpfosco1Gidw6AfTV6BI9fYcgwOEn96nMauewDGYmdBkZH9Z19UWUrSzxlZbY8hyz0Ahi/qUsAUqhEneQB3R3IiNtupyQRGLGUlVWl6EvE1mBgykSDTs2lyW9kP3PSi8V0Wh2qYJQyG0/UWhF9mryywmbb5ic2TKALhvN2KKVSIcPtXaoZBpcjYn0WYFTkOlchlnF+n1wxEOUBNQUAu3UtVZysRg1zOjDmVUz5mAVZAAvoaqMzqLmwRfPBs47oldKb1f+/cUWXSrPIWx12/EXQpShcbZCFzR6Zn/k+O0ycR9Ebk6vRbCCDZxteZXIsjYGxgYbPBbJDvtWisE5YCE64NTvgdnrFvrtoMUotVnpC1tTvo5jbtaVgoAchkRSemmmBvOuA1MOxlM8gw7sjDyrzf37NVdiFfxtFZooJeDX8DNU30WousX12+8/Y/b/jxnLcegrW/oG48M3b/hv3d4PdZah9+zI8a7vZ6DEVdNyyflOt421WxnQG4nwepzROev8LrrdLu8bF3Z2I877wngDRquI4QUbd4W+NmEr57cz/gdy9IU+/MN4GGuBxpzCKh5l6ugMDzSpHDxX5uBgtfaDeWcGWgxia4mVS42KmD26x+XMVDtDcooQKp8OiFL30eT+oQbV11byyOKRxjodZpHcQh2KQ26T5EYZGxThmmtyIJEEvDb0b/OcR7o7aIozkRck8t6G/mml5agr8wNHq4F3KXkVkGaDepaxT5EkM5rK95z6NHcoAi9S23ssP655YexEl10/Bo2sQaRlADKyPnJ3LUvX3mLYiMs6/S0ieU6dKQ5q3c09FS95GKUNgyMbTbiF9SE9pudlY1vI023s060opC9FI309PJsgxOTj4rpaTa4XX2FaGeycfPIohz9O8uFx7+Ttwdve8cnwsDc+yrPeYfbn8CgfDiGHodx5dt3uxzta8Cif2xjytmAulkD/g+P+81nCdieSE7w5Ax4P+HioCN4pxBbRXhNOuSrEmI4hPoI3D+vObP4dXYja0umcbuR6LPF52zI68w3RH3RjwqmQrl+e1jsHFS5nKQuZz8fgkbJ4seBtSg3HDYKWj+B00/yoXSjtea2ee92LGP9y1Y5gv4r/eC/b6fuyaZfcsh/B1PxGy3ucbdwUF5xhBYJCF01vKM4bA3vXLGclYetsXSRLjlOqqip0aLsGjTqN/N1HTrpxexOcxu4iHTzxFZN+o5m2agLDIyrvzaWBclLDhGkbxfz8CxUUlsg=
+sidebar_class_name: "put api-method"
+info_path: docs/spec/quotation/elfsquad-web-quotationapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Apply bulk VAT"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/quotation/1/quotations/{quotationId}/applygroupvat"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+This will set the `VatId` field for all lines that are
+currently in the quotation group. This does not affect lines
+that are added _after_ calling this endpoint.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"quotationId","in":"path","description":"The identifier of the quotation containing the group","required":true,"schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["quotationGroupIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationGroupIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationGroupVatIdModel"}},"text/json":{"schema":{"required":["quotationGroupIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationGroupIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationGroupVatIdModel"}},"application/*+json":{"schema":{"required":["quotationGroupIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationGroupIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationGroupVatIdModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success"},"400":{"description":"Bad Request","content":{"text/plain":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"application/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"text/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

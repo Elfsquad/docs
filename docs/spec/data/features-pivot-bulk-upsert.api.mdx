@@ -1,0 +1,71 @@
+---
+id: features-pivot-bulk-upsert
+title: "Invoke action BulkUpsert"
+description: "Invoke action BulkUpsert"
+sidebar_label: "Invoke action BulkUpsert"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV01z4jgQ/Ssu1Z6mMBgCJOGWSTZVOWwlNSF7WIrdEnIbNLEtjSRnkqX837dlQfyBw0fmshwoW+puya3u957WxNClJpMZuQVqMgX6gb8IQ+YdIiQoarhI70IyqU93v2bx85PUoAzpEAU/MtDmqwjfyGRNmEgNpMY+Uiljzoogve9apHZMsxUk1D6ZNwkYWSy+A7NxpLJLGg7azmIIvn3eWFKl6BsacgOJG+cmhnJzOLU/ZkoTqMTTRvF0SfIORjacxXAtwvZ5N7DGJ01jTILirDCMhEoofioJgfGExrhiksWGyxjuIzLpv28ozZIFKBsq5BgiFj9vuGYic3naGC2EiIGm1irh6Z80zj67SEJff8VdG5C/4i8pe8bMPaXcfDICFg0shXqztVcJkGU8LE+5PJ+EqiVPH9jnl1PhXUKX8KTi1gJ4oebIrWT40ffRH0A1VmSCVXykn+vDPbVed0CPf3S2KPO017m5uqTGgMJ+JH/PAv+S+tGVfztfX+R+9XV4ymt/kP+2+124Ta6/ARMJpiIskKC94PlxWWIKWx3CG/yrHzUO+IYn0HokMjzdSaglTfm/7wh4xOYURKAgZe0YUmxdqCNjsUwbkdxyiMN+e7jSYHDI4OyQwfCQwajdYFN9DhqrGbMjeV50pmGraxFnSdoaojJ/Yvkz5zQVT8XxnuLsthaCZopLt11yxeyDJ6lCksDm0Btm4wrwxIzKoDhhLUWqHZsMgiJt9TCPGWOgdYH0EFHEnV0bUEoo0qky5Zfelzo5lkvPNvbzQ+zmzBq+zFIaphn3hPB2OAj7iAK3EVrpEeEXTOtUCIbyeO/R/n+2W5QFT1Ps4m0u6yc3XYGHxhmzcsMTkWdWXHtubx4+oSJ6QWnga4nUE3G2o0jy7a9DXv1E+6Fg2n9XWv42RUUtkmaJ3qUv4hk8N+vVNBi8YiVpHLZabk2eAXvy4xUsnxXsvl0pn9uMmZWwUk8KbRxHrPCtV1N+vRtX1HUFaD/bdoxdOrMMSlbGSD3p9ajkXYgj/SOjYZeLHnYq7fWL9awg/FZKx99faSJjqEu/2VazbY+oIdXK4XaFFrTpLdvLVYUVVPVSUFM/QUPLBHVlQs4iejGKxkN/dN4/94ej8cBfnEXMH7DL8Vk0HtOIjklNngRNsVF+wkZjHBu0VWgc67xV/ZvF5y1qYnZcrHkbw7sU8xM2VCN2hNbB0A/O/cHltD+ajPqTwUU3OO//RRpkvs+wSeDH7qTC4uXZVMj76C+qMXglVI24W8fPPhgffjA+qo3vJ+V5g5NLxzoVV2tjh2rLyQIwI1G9jd3j2VDv0UGhh0rHsz2ssZHA28DHDrRNLY46xw2GWjiNhf2Y0KPGOwAo2D0IQC5Wvxt0+8U1BIEsoWl589uHoLX9vDODQWDtyZjyQqRm7nbgkLF5Ze6QFmzE5K0snKL1er2g2vZ8ntthBD57RrO5bXzF6cLmbmbzuQIa4rWkxPFrpxP8aQO7m7frvLP1uEIRIk3F1uqLGsg/3D9OcX6xubQnDk4V/Wk7AP8nxLZQkQ5H0nZsTWKaLrOCV4lb0v7+A+vsd9M=
+sidebar_class_name: "post api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invoke action BulkUpsert"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/FeaturesPivot/Default.BulkUpsert"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invoke action BulkUpsert
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entities":{"type":"array","items":{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}}},"matchColumn":{"type":"string"},"matchColumns":{"type":"array","items":{"type":"string"}},"columnsToUpdate":{"type":"array","items":{"type":"string"}}}}}},"description":"Action parameters","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Success"},"default":{"description":"error","content":{"*/*":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

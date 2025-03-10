@@ -1,0 +1,71 @@
+---
+id: features-pivot-features-pivot-delete-features-pivot
+title: "Delete entity from FeaturesPivot"
+description: "Delete entity from FeaturesPivot"
+sidebar_label: "Delete entity from FeaturesPivot"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVEtv2zAM/iuCsMNWxHFS9LDlNiAr0MOwAc0tyABWomNttuVKVNAg8H8fZTsPx92K3eaLTPH1ieTHgyTYerlYy3sECg79d7OzJDcTaWt0QMZWD1ouhurpUFpigYTDABNZg4OS710Mf5Cm4ig1UM6qihUsGc3/Gr1ypo6J+OoX7hfCaGEzcR3P4XMwDhkMuYAT+ZKUPtFW+YSdEtrXeA2TnbzKsQS5OMjewJMz1ZY1mXUlEN+E0OJgaIw1YvixniWfIMk+J/ebw8cmuRTv/kWc3zbvZNNM+sfnCBrd+fkPWfIVSOWjInxZwfYv2JtmE6vha1t59FF/O7uLxzDKY1AKvZdNDJ9BKGhsg87ZiEjZirBqDW7Sm3ick5/rvu7tOX2PyD79RNU228VxIdPh6cyufJXVyJYlY4Itvh2ktR8//hzhNR2B2yK9qtJIYAp/oQPnYM95DWHp/y+4/DGuqkJ3quWwc6scBRsHFcc90oVy40WHTfCfR7czChNfozKZUfIaf3P8Lpl04vyRT6eL0ZB2pBc8NYb2InO2HDEWX3ioPJt3G4Bpyn5/TDaROyjCMGmcdN4huY0rSLcZO6rmLKeDfO8PRjcfIm345celE1wRiUdU+0WaQm2mWGT+OYCeGptqIEjnbRJTZbZtg6EiQvi2ZJ147IooeFeISFpfA0vLnk3XFVnFDnSOffVjIwqrgFALIPEGDi4A4+5izaezKSNrfgNtC+1D
+sidebar_class_name: "delete api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete entity from FeaturesPivot"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/FeaturesPivot({id})"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete entity from FeaturesPivot
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"id","description":"key: id of FeaturesPivot","required":true,"x-ms-docs-key-type":"FeaturesPivot","schema":{"type":"string","format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}},{"in":"header","name":"If-Match","description":"ETag","schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Success"},"default":{"description":"error","content":{"*/*":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -1,0 +1,71 @@
+---
+id: delete-quotation
+title: "Delete quotation"
+description: "Delete quotation"
+sidebar_label: "Delete quotation"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVN9r2zAQ/leMnjYIcVPypLfSpjAYg60teyhhqPa5vkWRVEnOlhn/77tTHNdpmrEEgq3Tfffju8/Xiqieg5CP4mtjo4pojVhOhFNerSGC56tWGDoIKV72Lp9KMRFokgn8lg4lhMKjS3gp7mvIsAQTsULwma2ySJYBnkWblaApPiFDUcNaCdmKuHWcJUSP5pluKuvXKpKlabAUXTcZCsEhv1OxpncPLw16KIWMvoHTQbtuyc7BWRMg8P3lxQU/Duu/a4oCQqDAhTWR+kiR4HfMnVactz2nbKGc01ik1vOfwZ6NT5nPBzJ0fjE7bu/BqCbW1uMfYiw5zY+dvtiY3drG7Eo4vLtJw3sdKCUntdSW+BfDYNNopMgHr3z2+h7yFsuOxw9+s5dZ4zUB6hhdkHmuHE5BV+GlUeUUreDRBSgaj3Gb3C13ccnatQ5M0oTztkLN2Ykj1PS0VaXRwA+1n+iCQq5snF45FMtxzDsmdieKfeSB495AHGv7K7kUGkkX16Q5lrnSyRjtCszDQRfaPqMZ95HvYuXJN+mfqk/ocWXy4JRE1I8s0XdtS2DIgfE/Ew+zp+RvCk6wQunahijn9DtdbE+5POZeHk1BnpqG/Pd43pKQFI2msolrjCnZYt/hd3iaDkuMARPBytopdjNjoTvqa63SZ9RvkneUfCD1QQGjr58CJaW2vcQfxRg+o/+rzOkgiR2SGXPKvm37pAIQ513H5t0CZTmXGNST5h1WkZzgqJBhFZ21Xt8tfwXbo3W+Ubphz/SdbZRHLubMwj586/fwx+xU6t6ozHacc18S760ledWgSvAp++7iivTh4ggyjrocrZ+bxefF/YLE8hdxi1vD
+sidebar_class_name: "delete api-method"
+info_path: docs/spec/quotation/elfsquad-web-quotationapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete quotation"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/quotation/1/quotations/{id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete quotation
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"quotationId","in":"query","description":"The identifier of the quotation to delete","schema":{"type":"string","format":"uuid"}},{"name":"id","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success","content":{"text/plain":{"schema":{"type":"string","format":"uuid"}},"application/json":{"schema":{"type":"string","format":"uuid"}},"text/json":{"schema":{"type":"string","format":"uuid"}}}},"401":{"description":"Unauthorized"},"404":{"description":"Not Found"}}}
+>
+  
+</StatusCodes>
+
+
+      

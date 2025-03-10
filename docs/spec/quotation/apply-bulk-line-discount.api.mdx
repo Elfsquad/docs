@@ -1,0 +1,71 @@
+---
+id: apply-bulk-line-discount
+title: "Apply bulk line discount"
+description: "Apply bulk line discount"
+sidebar_label: "Apply bulk line discount"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tz2zYQ/iscnJpUD8sPpeXNdnzITDvjKE57cDwZkABFxCAA4+FE4ei/dxcUJehhjw+9JBMdbBDYXex+H3axaImnc0fyW/I+aE+90CqTQnFyNyCGWtpwzy2ut0TBB8nJQy/3jpEBEQqmDPU1jBl3pRUG12DypuaZYFx5UQluM11lHmbW2vBFfVZq5alQLq7hvpnXWTCMeg4GLX8IwnJGcm8DHxBX1ryhJG+JXxj0xXkr1BwkK20b6mEmBMHIcnnXKXPnLzRboAbuBM7gkBojRRm9GH9x6GybmN5seruJ9S9w7R1ziMpqa1184aWHrY3VhlsvuENtJlypg/LXpU/8VKEpuD0IUa+QgZESHKTziAH6uBhlM6rm3GWV1U02GU6OjtJYmQ6F5GQ52PdzszW1li6QKM8b9wLonqfR7fM4tzoY19Hpah0kywr+yX5SHY3IxoBQxgRKU3mdwFVR6YBWL7xEly6CvH+fRvJ2hc3fmnEZ7Xj+zf/i7MfiLE2317//Iu8HIg8tWe6MVq5D+xgAQdC3PP4QypI7h6GcHlq/oCybddUYwk8KccxmI6nYORHPM86t1dYdkjsc9EuZwWBVkJIix/HGeTGQ/1ApWETxCp2bcRek3zv8+0f/Jwr0icr800QYc2H7XJ9jycgKSKKudekrC/gFbVOtGbZGIUaNDVJOxuskHk82Yzduk55qOY6VCA0m9hy3j30fFqwEW7X3xuVjkBYjLiv3ECgbCU2w9XG8DFb4RRTXNPj6GIsrxKwE60iohMQOC1gSEv7rqsIdP9MukwfkCkzeaz86N4LcpTY/ILUdF73lDXvdBJQ4qb9GkVIKyPVLqO5Y0ADpKK3vufq4FYXUc6HSOMadrXGURQBK8D5qp57lW1+RY9DSVnyPaF5CGYsNXzr5wo17HURpx+GoVlJZa+fzU/g97ewK8nwf+3yPhfwpNvLn6dkFIZ5UzMTZpgO++kYbI/nehXl06Cq7JScV/eOsmp4Oz95M3gxPz6bHw+KkKofH5Z/Tk2o6pRWdwrHA9r/SkdJV9lz1QP7Li9H6akG/BgQPcJc4jxO8KwzA19BYL1ZPi2cSaivz1gcuuUDAYEyMdpVsSS8B6hOSBIoA5tvPmP2cgyOP/KKhti2o48D/conTAKrF1ILhI7WiqzG3EVgcs3VJ2fF5ffGR32arludV9j+8kg5i0ddJhVXykcqAXzC854udN9wSeaw5ZdAvYRidxGXn7PAG7Wws7F1ny0GvcQ5n0/hENnXoLimJ1x9vQKpYvcuamKPE0q/44IO/0U1tOqKwPcS5lkhozAL0arDebYy//wAkwzKQ
+sidebar_class_name: "put api-method"
+info_path: docs/spec/quotation/elfsquad-web-quotationapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Apply bulk line discount"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/quotation/1/quotations/{quotationId}/applylinediscount"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Apply bulk line discount
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"quotationId","in":"path","description":"The identifier of the quotation that contains the line to update","required":true,"schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"discountPct":{"type":"number","description":"The discount percentage to apply. Ranges from 1-100","format":"double"},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineDiscountModel"}},"text/json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"discountPct":{"type":"number","description":"The discount percentage to apply. Ranges from 1-100","format":"double"},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineDiscountModel"}},"application/*+json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"discountPct":{"type":"number","description":"The discount percentage to apply. Ranges from 1-100","format":"double"},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineDiscountModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success"},"400":{"description":"Bad Request","content":{"text/plain":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"application/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"text/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

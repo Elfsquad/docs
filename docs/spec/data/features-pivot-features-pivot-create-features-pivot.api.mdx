@@ -1,0 +1,71 @@
+---
+id: features-pivot-features-pivot-create-features-pivot
+title: "Add new entity to FeaturesPivot"
+description: "Add new entity to FeaturesPivot"
+sidebar_label: "Add new entity to FeaturesPivot"
+hide_title: true
+hide_table_of_contents: true
+api: eJztWEtz2zgM/isazh4jW3ZsJ/Etm2xmethNpk33UI+7A1OQzVYSVZLKox7/9wVF2XpEiZ30sjMbH2wJAkAQBL4P8poZWGo2nbErBJMr1DfiTho2P2IyQwVGyPRDyKbNx73m3YWiW2w6OGIKf+Soze8yfGTTNeMyNZgaewlZFgte+O5/0zK1Ms1XmEDxNI6vI4pozYwwMVZrk0/zmFmBXHxDbtfIlI3SCNTWMoUE7W+ppY0S6ZJtjhiQCo/xQobdz51gTVcaYtqBErxQjKRKgEJmIXKRQEwrJnlsRBajDXGwCyjNkwUq6yoU5CKW95dCc5m7/ZZKCyljhNRqJSL9G+L8rYsk8PAr5tpg9iv2GfDvlLnPqTBv9ECHj0upHm1p1RzkuQirU67OJwG1FOkNf/tyKvyQwBI/q7izAO7AHBhKTpu+jv5E0FSRCRX0gXauzXZLg1LwSHrCYKI7QiKLf3S+qPL0onF79QyMQUV9xb7OAv8M/Ojcv5qvTzd+/Xb0mtvBcPPb031RmEJ/RC4TSkVYdHR3wYvDssQLJAkv6at51CTwjUiw80iy8PVGUi0hFT93AHdAcAojVJjybgwpQpfqQF8810YmVwLjcNDtrlIY7lM43qcw2qcw7lYoq89BYz1jVkKH/wSid+DfBOrN3GpTw2quROYcsL/w3qP+EeaxJAuhkJJnVI5FsnUmU+2AfRgUSWraO9YJKx/vDPPOMO8M884w7wzzP2WYgmIioFZ9yhaolFSvIYmKkWal8XwfOzi1li23lEAAgloTPOx3wp+jkK2HTnoh+ELT+ShEAyJ+sbn/O+EWZyjSlLpgm8vmMd6u0CPlnNta8GTkmZXQnovNoyuN6o6o1dcZQXck+NNC2X6O2IOfaD+UXPu7V11/q7wVsPbUch6GXrqbXDwjvXZh4gMVmCZtXYwY35Gq+/m1LDMUPFlbczO36TMraV+8M6mNA9wV3fXbq9kNo3JL5ZZ72MqYTE/7fchED+NI/8gh7AnZJ7CC/qBwbqv9Y/V6/scDJFmM1YCzPY/WXFOJu8eZoGs4sfNcfRwJ6sNF0BgVghbxB00aZ8cRnI6jycgfnwxO/NF4MvQXxxH3h/xschxNJhDBhDW4PGgzc7WFkpAPddrJyocab/9jKRefd1Dv7DBf8y46dCkWrwiowYI0Xg9HfnDiD89uB+PpeDAdnvaCk8EX1mK+lxTbbHdoJDXKq86mxnQH76hBdzVXDZbrlB8/Ix89Ix835C8zmEWzSBZIV/LYNeUSvE8Opzyicc/2nKbCR++yZK826NxakHOGJcBZrIslL16AwHh7ep6qnTDC+Rr0gt6gmLEJWBJIa12/H9saYe3Q2xDk9bMYRDGI5W4CdoDV8b/iygIaPVivF6BtV242VkxoZLM4m9vWVAIWNluzOTlcIYQ0ZVdgeuE43L9tAugTPrfjg7M45xwz86JuHXNvrj/dkvKi/Osycein4N4WLH1Pma34Ig2OQK1szWJIl3nBecz5tJ9/AQjcNaY=
+sidebar_class_name: "post api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Add new entity to FeaturesPivot"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/FeaturesPivot"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Add new entity to FeaturesPivot
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"allOf":[{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}},{"title":"FeaturesPivot","type":"object"}]}}},"description":"New entity","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Created entity","content":{"application/json":{"schema":{"allOf":[{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}},{"title":"FeaturesPivot","type":"object"}]}}}},"default":{"description":"error","content":{"application/json":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

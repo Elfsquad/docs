@@ -1,0 +1,71 @@
+---
+id: features-pivot-bulk-delete
+title: "Invoke action BulkDelete"
+description: "Invoke action BulkDelete"
+sidebar_label: "Invoke action BulkDelete"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNVU1P4zAQ/SuRtSeUNLSUAr3BskicWC3dU9WVps6kMSSxsZ0uKMp/35mkpU1hQXvbHFp/jGfG780818LDyonpXNwg+Mqi+67W2otFKLRBC17p8jYR0/724KrKH68xR48iFBafKnT+SicvYloLqUuPpechGJMr2TqJH5wuec3JDAvgkX8xSJ718gGlJz/Gckiv0PGuSsiJShVat2cM1sIL2SqPRbuealsABRNVpRJ2At6jpUji1/w4uoAovYxuFvV5E+1Px/8yHY6aL+R5k4HzVpUr0bRfKBJ00irDV6TNS8mDwICFgsCh1Dt4lEUC0dsKG15wRpeuu+boeMx/fTf3lZTonGj9p1Dl/q0NWqstud+D+yg+6iO8Cz3f2C/CT2DvzA7OSp0w0QXlBCv83ElrvyNtC9nOw3t7HuwK/btbCXpQ+Yd18P+k25aFKku0r1j2mZtlGJBxJbmhAp0GPlMu6HILaOTQrpXEyBmU1ABSHObfbL9QPEeFixItXfTartEWorYWxWGJ3pZr/YhBtxv0GhmfqZIcLbMg1OIRqZ//HiEUa8irvUjNghHzmWa9MNr5rh0zmsU9+Yivu6Luywhfu212Cl3ZnE5l3hs3jWMwaoB56p4qSAZKxwl4iIdtPFaVHzv9+fYMhcnxjX7MxUkK56fpZBydng3PovHpZBQtT1IZjeTF5CSdTCCFiVi0zKW6ZVV5diTurilacN9xEpDcBCX1tjNAs8093mA8Y0K7gxsymddckxRiEoAPPrkZQUtpd76Gg+PBkAuOES2g1VDO4GMqe/m8lqgnhmOTgyrZYQtyvaHo8AEIxTskEeAZ80rWdb0Ehz9t3jS8TAxYqpb5gqvCKlgydnPGM0NI0O4V1NdOsKLZQREdvhVNuD1xSWpo/J4tC12v2r7f3c9of7l5goq2oYWF36y/9DsVgh8039V23a3VIodyVbUNLrqQ/P0Bhd9qYA==
+sidebar_class_name: "post api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invoke action BulkDelete"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/FeaturesPivot/Default.BulkDelete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invoke action BulkDelete
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"identifiers":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}}}}}},"description":"Action parameters","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Success"},"default":{"description":"error","content":{"*/*":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

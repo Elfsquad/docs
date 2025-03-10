@@ -1,0 +1,71 @@
+---
+id: features-pivot-features-pivot-update-features-pivot
+title: "Update entity in FeaturesPivot"
+description: "Update entity in FeaturesPivot"
+sidebar_label: "Update entity in FeaturesPivot"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV1tv2zYU/iuCsIeuiGzJtyR+25YF6MOWok320MAbjskjm60kqiSVxjX833coydbFSqykwLA8BBJ1bjw8/L7PW9fASrvze/cawWQK9XvxII27OHNligqMkMk77s6bnwfNt7uUg8FmgDM3BQUxGlQ2/NYVCUVJwazpU0If6E1weuaomRKpTURLX3AzdwR3ZOi04yn8mgmFVIxRGZ65j16sPS6Z9sjJM5sU22WSk2ZrjMGdb93SQBslkhV9CaWKwdBKluV1UGlUq63h73vfuwQv/MW7Xmwvdl79dfKS12C0+8nd7RZF7ajNr5JvbC1MJgYTYx8hTSPB8j4PP2vbg22taIiimzBvnxEmqm2QCi43JJefkeX9VvbEjEBtPYsWt7e9O3OBTFiEv0ne/b1Y2NKThogaqQTLDQ/94shEDBFljLPIiDRCW2JwKCjJ4iUqG4oLChHJb1dCM5kV+y2NllJGCIm1ikXyF0TZa5PE8Pgj7tpg+iP+KbAv1Lm7RJhXRqDDx5VUG3vNtkdjeXQ+MaiVSN6z16dT/F0MK7xTUecAPIDpWUpGm74J/0DQNJExDXRPvwJyDqlBKdiQnTAY646SyOMfnS2rPj3r/F/d66N9UZlCf0AmY2oFhwLQugZe9OsSU3TVkV/Rv+ZR04JnRIydR5JD8QudpFpBIr4fwL5HcQpDVJiwbgzJS5eqZyyWaSPja4ERD7rDVQajUwbjUwaTUwbTboNy+gporHfMrtDhH0H0gYOaQL1bWOsW7f2J35wSvzfOg4UjfcR4edd1KhNdIPzIz7fSDPQxYwy1ztEXQyAsOLZBpaSi8DUWejt82ySeKvV9ab84xTiFWcuXWZohUKKaCHJOB2FP0dI+QidlESSi6fzE0YCIngWM/0+5+WCIJKGbte9l8+Ru1+iQccbsfFmNZNZCO0VtDj1pVA9E155OiQ5CwY6Hb/9Xl08HobcXUYeFI3lWKD2HpkbQoIrkSKThI42UJuNC9JEyI68nU1myyam3ltLKJZKNa8kLvcjWBYiv6XXYSPdmK/juZyvyaNt7mZlZVnPXxqR6PhxCKgYYhfprBnwg5JCqh2GQ57Bi60Mly35/hDiNsJJOlVJsKKZquVso+V2ypxCsldDx67LFb4gQvyUp/KZAcMchXEzD2cSbngfn3mQ6G3nLcci8EbucjcPZDEKYuQ2V4Lc5v9pCSfV9g3byfV/n/e+MMvmig9Tv+8VadBFt0WLxgoIa/EpoOpp4/rk3urwNpvNpMB9dDPzz4JPb4tTnDNs82reSGplWZ1Pj0N47ahBpLVSDPzvXx0+sT55YnzbWn+dGi2mhzPGuZMgb6iU4Hwu0ckggOPbOaRp8dK5K2mpDz62FusKxhDmLeJG0ybkDxjlx52naCSOKWMHAHxAK7P4FREwD2A==
+sidebar_class_name: "patch api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update entity in FeaturesPivot"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"patch"}
+  path={"/FeaturesPivot({id})"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update entity in FeaturesPivot
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"id","description":"key: id of FeaturesPivot","required":true,"x-ms-docs-key-type":"FeaturesPivot","schema":{"type":"string","format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"allOf":[{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}},{"title":"FeaturesPivot","type":"object"}]}}},"description":"New property values","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Success"},"default":{"description":"error","content":{"*/*":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

@@ -44,6 +44,18 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Default",
+      items: [
+        {
+          type: "doc",
+          id: "spec/configurator/get-the-configuration-name",
+          label: "Get the configuration name",
+          className: "api-method get",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "Linked configuration",
       items: [
         {
@@ -132,16 +144,16 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "spec/configurator/update-requirement",
-          label: "Update requirement",
+          id: "spec/configurator/update-multiple-configurations",
+          label: "Update multiple configurations",
           className: "api-method put",
         },
         {
           type: "doc",
-          id: "spec/configurator/update-multiple-configurations",
-          label: "Update multiple configurations",
+          id: "spec/configurator/update-requirement",
+          label: "Update requirement",
           className: "api-method put",
-        },   
+        },
         {
           type: "doc",
           id: "spec/configurator/update-multiple-requirements",
@@ -162,8 +174,26 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "spec/configurator/upload-a-file-for-a-file-picker-node",
+          label: "Upload a file for a file picker node",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/configurator/remove-the-uploaded-file-from-a-node",
+          label: "Remove the uploaded file from a node.",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "spec/configurator/update-image-value",
           label: "Update image value",
+          className: "api-method put",
+        },
+        {
+          type: "doc",
+          id: "spec/configurator/update-configuration-name",
+          label: "Update configuration name",
           className: "api-method put",
         },
       ],

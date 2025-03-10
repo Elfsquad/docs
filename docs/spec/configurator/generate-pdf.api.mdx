@@ -5,34 +5,31 @@ description: "Generate PDF"
 sidebar_label: "Generate PDF"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVE1v2zAM/SvGO22A0HQ76jZsXZFbsa9LkQNr07YwW3IkKlhm6L8PStPEcTM0yMmQqEe+x0d6hFAToB/xy4RInflLYpzFSmEgTz0L+xweYalnaJTO1qaJfvdsWUHBWGgMJC0UKg6lN8MuhcayYiumNuwLVxfScnGChoLndTSeK2jxkRVC2XJP0CNkO+RyQbyxDRRq53sSaMRoKqSkDoyE+6Ej4SOZdWS/xXXZyug923K7DO7SdFN4R7aJ1PCVcBKhsu3Zypto8p5ywAj34RKNkzIb9uHZgKl5l5qR0io/DoOzgXelP97e5s+p+99jWXIIWd8scs+WPQkXD1++QqFnaV0FjYaz7B0bjcVxVpxfjHvKaXY9G8e0GKo6d4v95mVwo++g0YoMQS8WNJgb7uqwjlTdGIesxdja7WQa6bLOu328+DypVXx6WEIdWqex+YCkMLggPdkM3zd3pu5E+qGVwn9kMXRkbE6yozjulT9iKhEK+mjXPPJ6G7P+lULrguRU4/hEgX/6LqV8/TxNuSuVCfTUZbNr6gIr/ObtfJk21MVMFnl0/gM43ZdLEKcrcgniZCuOgFU+eJMR5yXNWl86KzmHxrtv+1F/X7z9jzrr2MsS2u2U0qEpM1vOaruE3XXlX+YlrdJku+7vfiClf8YWBxc=
+api: eJydVctu2zAQ/BWBpxYwojToibcgdQPfgqbtJTAKRlpJhGmS4SOtK+jfu0vLtqQkjWBfJJE7+5rZdcuCqD3jD+yn9FEo+VcEaTRbL5gVTmwhgKPrlmn8YJwVRleyji6ZrUq2YFLjsRWhwfcSfOGkTS44W5Wgg6wkuMxUWWggG6HR3sFTlA5KxoOLsGC+aGArGG9Z2FkK54OTukbLyritCHgSoyxZ1y2OGQXYWiUCnJJ5iuB27DxvRXQOdLFbeTPX3RCuhK6jqOFMuAhBFM0W2/YuWjgn6EJi/X5OjYMwz0jqnoAheXPJ6Lo1GXtrtIcU+urykh5j9u9jUYD3VN/k5hY0oAQgu/vyFeOiyBqDUVkNVHbKhrP8pBXj8rZPuZscT+TY5basqFvgng/CjU6huyYE63meCysvQFX+KYryQhpGtXhA1mXYJXMjYmiuaCKMBS1JVNaZSirAN+yHVPg0VaWkhl9iX+KCLdHlxoSLayvZeujznpq479LB87Gf/QFSpczvZFIoidzfIAk0OULtiTUb0D9GVShTSz2sI9/7ypNtkgtmn9DDzPjoi4ghlHH91N+YEggyOpwZ+IChLk0STrBCqMb4wD/j7+1k+5bzl73nL1jgb7HB/0/PtAk0GTgHlUm9liEFW/YVZjcDuWXXdyt0dpgenKNPDLEW69oKTfB+viYCH6n/yH6APyHHzYUjiE6SStte/A9sqHL0wE8TO715uZBpBFCB1G5y1baPwgPS0XV0vF8opPRSevGoaN4rVBoO/AZ20336LFSkZBltjzcA45U5BzHeknMQo8V4Aqzpw0lCvF7SpPXYrEA+OPvwrd92H7P3/6ZeZeywh/VumNKxKRNaXq1tTnbnhT/opVt3gwV7u/yOgv8HNNC7pw==
 sidebar_class_name: "get api-method"
 info_path: docs/spec/configurator/elfsquad-configurator-api
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Markdown from "@theme/Markdown";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
-<h1
+<Heading
+  as={"h1"}
   className={"openapi__heading"}
+  children={"Generate PDF"}
 >
-  Generate PDF
-</h1>
+</Heading>
 
 <MethodEndpoint
   method={"get"}
   path={"/configurator/{version}/configurator/{configurationId}/pdf"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
@@ -41,97 +38,34 @@ import TabItem from "@theme/TabItem";
 
 Generate PDF
 
-## Request
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
 
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+<ParamsDetails
+  parameters={[{"name":"configurationId","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}},{"name":"templateId","in":"query","schema":{"type":"string","format":"uuid"}},{"name":"currencyIso","in":"query","schema":{"type":"string"}},{"name":"languageIso","in":"query","schema":{"type":"string"}},{"name":"attachment","in":"query","schema":{"type":"array","items":{"type":"string","format":"uuid"}}},{"name":"version","in":"path","required":true,"schema":{"type":"string"}}]}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"configurationId","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}}}
-      >
-        
-      </ParamsItem><ParamsItem
-        className={"paramsItem"}
-        param={{"name":"version","in":"path","required":true,"schema":{"type":"string"}}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Query Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"templateId","in":"query","schema":{"type":"string","format":"uuid"}}}
-      >
-        
-      </ParamsItem><ParamsItem
-        className={"paramsItem"}
-        param={{"name":"currencyIso","in":"query","schema":{"type":"string"}}}
-      >
-        
-      </ParamsItem><ParamsItem
-        className={"paramsItem"}
-        param={{"name":"languageIso","in":"query","schema":{"type":"string"}}}
-      >
-        
-      </ParamsItem><ParamsItem
-        className={"paramsItem"}
-        param={{"name":"attachment","in":"query","schema":{"type":"array","items":{"type":"string","format":"uuid"}}}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          Success
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success"}}}
+>
+  
+</StatusCodes>
+
+
       

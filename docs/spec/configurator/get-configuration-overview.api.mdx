@@ -5,34 +5,31 @@ description: "This returns the configuration overview DTO."
 sidebar_label: "Get configuration overview"
 hide_title: true
 hide_table_of_contents: true
-api: eJydU8tu2zAQ/BVhTi1AWEmPvBVpEPjUoHVPhg+MtLKISKS8XKo1BP57QVd2HCd95SRpl9x57GiCmG2AXuOmperRR8FGoaZQsR3EegeNVWtDwSSRXSikpaLyrrHbyCYfKPxIPFr6XnxafV5AYTBsehLiPHaCMz1B49mdZQ0Fm2cPRlpcAi5rcmIbS1z45iUiFJh20TLV0MKRFELVUm+gJ8h+yHBB2LotFBrPvRFoxGhrpKROjEbi8GvaOZN/nZzSJh8Og3eBQu5/uLrKj+dSvsaqohAyMHqS1tfQ2JIcfJIWGuWTNs/lNLNKF+UL+1J5dB0KgXg8uh25g0YrMgRdlmawC+qasIumXliPzNm6xh/kWOmyntu5X9ycARYf75dQJ4s0xmskhcEH6Y3L12cT70h+E4fLrU45AkJO/j9Rs/NCP6QcOmNd5nJQOs0urnFuFxT003YvOy+TeKK8UWh9kDxvmh5MoG/cpZTLu0i8h15vFEbD1jxk79YTahvyew3dmC7QHzS/+zIn633x93y/qnguGrfPqzFdzF9QeKT9Kz9YTvqb2L0N/uh32pwn/e52hZR+An6+h/M=
+api: eJydVE1v2zAM/SuGThsQxF2xk25FVhQ5bVizUxEMqk3HRBzJkah0meH/PtJxWsfp1+qLZZp8JN8T2Sgyq6D0nZqVkK1dJLWcqBxC5rEmdFZptSgxJB4oehsSKiHJnC1wFb0Rh8TtwO8QHpJvi+9TNVG18WYDBF5gG2X5g0FOYuY5+6Fg14ZKNU44z8ESFgg+ccV5Rvb3sI3oIVeafISJClkJG6N0o2hfS7pAHu2KPQvnN4bYEiPmqm0njxVx2eGANqzkvchtuxTnUDsbIMj/y4sLeZ22chuzDEKQxIpJKR0DqxVQxxMn1Cp96s35tOmrakfmEX1temSdgQKfjmxHXzFmSVQHnaamxilURdhGk0/RKak5QBY90r5zdyZSeSnyuxosiiy1dwVWwCfuGyt+u6Ko0MJvc2hloq4Zcu1oelWjWg4xb4WsAxtH5EfeegMrUrmHziWrkHWeMdkit6k6I7k12F8nXVRuhXbYR3rASjtfISDj6rvoYWX65EsEkCjn8W9H4szlICEnxncmPsYIS6OCu7DMVKULpL/y83KxPeX6nHt9poJ+SQ39ujxjElrhAW3hOq6RumTXfYfJbHDnkqsfcwY7TgnPyxfFsTX3tTFWwvs5ugF6YSOMB7uRLUAs9v8vlf4SEfyhtK4MTyzX0l32ph+kOzWcGA7RTwM+/nO+jB5L5tss0gle09ybACxt24p5G8HL1PBxZzyae+GOZyjHIGcWsuA7DK/0/Olnv1w+J2+vuGc77o3G7kUaU0X54uMa9s/sWFl2H6ruY+mPfLfL4bK7uV7wvfsH2so8kg==
 sidebar_class_name: "get api-method"
 info_path: docs/spec/configurator/elfsquad-configurator-api
 custom_edit_url: null
 ---
 
-import ApiTabs from "@theme/ApiTabs";
-import DiscriminatorTabs from "@theme/DiscriminatorTabs";
 import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
-import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
-import MimeTabs from "@theme/MimeTabs";
-import ParamsItem from "@theme/ParamsItem";
-import ResponseSamples from "@theme/ResponseSamples";
-import SchemaItem from "@theme/SchemaItem";
-import SchemaTabs from "@theme/SchemaTabs";
-import Markdown from "@theme/Markdown";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
 import OperationTabs from "@theme/OperationTabs";
 import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
 
-<h1
+<Heading
+  as={"h1"}
   className={"openapi__heading"}
+  children={"Get configuration overview"}
 >
-  Get configuration overview
-</h1>
+</Heading>
 
 <MethodEndpoint
   method={"get"}
   path={"/configurator/{version}/configurator/{configurationId}/overview"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
@@ -41,58 +38,34 @@ import TabItem from "@theme/TabItem";
 
 This returns the configuration overview DTO.
 
-## Request
-
-<details
-  style={{"marginBottom":"1rem"}}
-  className={"openapi-markdown__details"}
-  data-collapsed={false}
-  open={true}
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
 >
-  <summary
-    style={{}}
-  >
-    <h3
-      className={"openapi-markdown__details-summary-header-params"}
-    >
-      Path Parameters
-    </h3>
-  </summary><div>
-    <ul>
-      <ParamsItem
-        className={"paramsItem"}
-        param={{"name":"configurationId","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}}}
-      >
-        
-      </ParamsItem><ParamsItem
-        className={"paramsItem"}
-        param={{"name":"version","in":"path","required":true,"schema":{"type":"string"}}}
-      >
-        
-      </ParamsItem>
-    </ul>
-  </div>
-</details><div>
-  <div>
-    <ApiTabs
-      label={undefined}
-      id={undefined}
-    >
-      <TabItem
-        label={"200"}
-        value={"200"}
-      >
-        <div>
-          
-          
-          Success
-          
-          
-        </div><div>
-          
-        </div>
-      </TabItem>
-    </ApiTabs>
-  </div>
-</div>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"configurationId","in":"path","description":"Identifier of the configuration","required":true,"schema":{"type":"string","format":"uuid"}},{"name":"version","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success"}}}
+>
+  
+</StatusCodes>
+
+
       

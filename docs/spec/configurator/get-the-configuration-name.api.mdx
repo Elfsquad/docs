@@ -1,0 +1,71 @@
+---
+id: get-the-configuration-name
+title: "Get the configuration name"
+description: "Get the configuration name"
+sidebar_label: "Get the configuration name"
+hide_title: true
+hide_table_of_contents: true
+api: eJzdVUtv2zAM/iuBThsQxF2xk25FFhQ9bCjW7VQEg2rTsVpFUvXIlhn+7yNlO7Hjvk471BfbFPmR/EiKNQti4xm/ZV+gFFEFtp4zK5zYQgBHBzXT+MM4y40u5SY6EaTRVwWbM6lRbEWo8LsAnztp6QyFKHDwGKWDgvHgIsyZzyvYCsZrFvaW8HxwUm9QszRuKwJKYpQFa5r5weUOQyDAsau3IjfNmpS9NdqDp/PzszN6jWO9iXkO3iMwZhhAh4QEf0JmlSC/9dSDubuHPKCJdcaCC7LFb8OeZqijUuJOQRtxM59w+SorEwwEEUUhyV6o60EUpVAeSQkykC5bDj19w/i+mgIUS/bWKpmng+zem3ecaarme06xIYhxW19CmIUKZqPoZimpOcPprgxGyjaQEqfB4iw76hqX1d30NSfik3SbDDE6WA9u198a0SmErEKwnmeZsHIBqvSPURQLaRiNpoc8Ohn2Sd2IGKpzuogwe51IwnKUUhEu1ksqfJuyVFLDL9FP7AohH0xYXFjJ1kPMGypyW8ce+VjvVoBVUeZ3UsmVxLlf4p2CL4mcJ23zAPrnKAtlNlIP88harCzpEgE5Rp+sh5Hx0V+qNloZJ/8mDpdYRDIZCd/ouLchlk4CTma5UJXxgX/G5/lgO8r5lHs+qQJ/rhr85fKckpBaVurSJK67Bl91Gc6Wg5abXVxfIVi/DHAtfGJoazGvrdDHUX255UfTceiFwT2PkKln624cbtmw7xGBH9fR6cl0N/ZDgT1JBSC4ur4THrBATUPixwiOeh8/d8LJ9jrASSikp+/iMP0nkR+2FPvwvduEH2dU/qcy6oRC74lBoSK02/kB9k+sdFq9/9F9z2ezRtUKRAEuMdCeXmAX2TCwG0KvB3fY5eoH9tM/TE0RRw==
+sidebar_class_name: "get api-method"
+info_path: docs/spec/configurator/elfsquad-configurator-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get the configuration name"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/configurator/{version}/configurator/{configurationId}/getname"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get the configuration name
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"configurationId","in":"path","description":"","required":true,"schema":{"type":"string","format":"uuid"}},{"name":"version","in":"path","required":true,"schema":{"type":"string"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success","content":{"text/plain":{"schema":{"type":"object","properties":{"name":{"type":"string","nullable":true},"configurationId":{"type":"string","format":"uuid","nullable":true}},"additionalProperties":false,"title":"ConfigurationNameModel"}},"application/json":{"schema":{"type":"object","properties":{"name":{"type":"string","nullable":true},"configurationId":{"type":"string","format":"uuid","nullable":true}},"additionalProperties":false,"title":"ConfigurationNameModel"}},"text/json":{"schema":{"type":"object","properties":{"name":{"type":"string","nullable":true},"configurationId":{"type":"string","format":"uuid","nullable":true}},"additionalProperties":false,"title":"ConfigurationNameModel"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

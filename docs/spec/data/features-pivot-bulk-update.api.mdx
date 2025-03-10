@@ -1,0 +1,71 @@
+---
+id: features-pivot-bulk-update
+title: "Invoke action BulkUpdate"
+description: "Invoke action BulkUpdate"
+sidebar_label: "Invoke action BulkUpdate"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV01T4zgQ/Ssu1Z6mcOKEJEBuzLBUcdiCGmAPm8pMdeR2osG2PJLMwKby37dlOfgDkwTmshwop9Xqbrda7z2vmYGlZtMZu0QwuUJ9Ix6lYfMjJjNUYIRMr0I2bS73Pufxw30WgkF2xBT+zFGbzzJ8ZtM14zI1mBr7CFkWC14E6f/QMrU2zVeYgH0yzxlSZLn4gdxQnEzZlEagtqsUQmyfS09QCp7JURhMnF2YGKviaGl3zBQSrMXTRol0yTZHFNkIHuMXGXavO8OanjTE1AQleOEYSZUAvSoLkYsEYsqY5LERWYzXEZsOXgpK82SByoYKBYWI5a8LobnMXZ9Kp4WUMUJqvRKR/g1x/tEkCTz9znZtMPud/RnwB+rcfSrMByPQ0OBSqmc7e7UAeS7C6pSr80lALUV6wz+eToVXCSzxXsWdA/AI5sBScnrp6+gvBE0TmdAUH7jP3cMds97cQDu+63xR9Wnn5nb2DIxBRfeRfZsF/hn40bl/OV+fbvz6z9F7fg6Gmz9evxeVKfRX5DKhVoQFEnQPvDisS1zRVcfwwiJP46jJ4BuRYOeRFEj1zk1SLSEV/74g4AHFKYxQYcq7MaQoXaoDY/FcG5lcCozDQXe4ymG4z+F4n8Non8O426GcPgeN9Y5ZS/lHkIeaK5E5Ozvn9sHLQBEa0xTqkkKEQmqNUTkWrdSZTLWD7WFQ1NcMc5tzjloXkIoR0AV/7YNKSUXha5T0qf+pyUJV6lnpP99HI86ttZdb7iCkoZoIR/YH4W9xzTZCJw8RzqHpXArRgIh3osD/p9xiLESa0nXZ9rJ5cncr9Mg555bXPRl5ZiW052rz6EmjeiQO9nVGGB8J/or6N9X4PfmJ9kPJtf8iafxti4pZZO0RvUof5QN6btVriB18oknSZLaiac0ekIb/7QyWOAoa3WbazG3HzEpaTZVJbRwYr+hXvyGx+hduqJtSy762vTE2dW6piq2MyfS034dM9DCO9M8cwp6QfdoA/UGRzyqvr5VG+/MJkizGpsaabcXR9ohamqgyd0uhoEvY2LtclzJBXZgEDZkRtERD0JQA7DiC03E0Gfnjk8GJPxpPhv7iOOL+kJ9NjqPJBCKYsIYOCNqsXr1CSeaHBu1k9EM3b+V1mXzeQduzw2LNu6jUtVi8o6AGgxK0Dkd+cOIPz+4G4+l4MB2e9oKTwT+sxZq7HNtMeWglNbqszqbGkge/UYMqa6EaDNlpP37DPnrDPm7Yd7PfvIC4SNY/VK6pm+DdOvDySAR49tZpGn30ygv/CozuLPK5jSXqWQCMpU0femC8PRBA806Q4WINekFvUCh0gp4E0uqjaBfmNep5wXJDUNjPYhCFfsudcHZY1v6aPGIdaEbzvLIASN7r9QK0vaWbjTUTVNmuzub2qioBC9u7me3nCiEkxV4h7xfH7P5dC23bH56bo+2Oc5INman5WkXQgOWb69s7Wl+U37OJA0AFv+zM0v8ps0NftMPRqrWtWQzpMi+YkLmU9u8/EFonDw==
+sidebar_class_name: "post api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invoke action BulkUpdate"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/FeaturesPivot/Default.BulkUpdate"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invoke action BulkUpdate
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"type":"object","properties":{"entities":{"type":"array","items":{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}}}}}}},"description":"Action parameters","required":true}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Success"},"default":{"description":"error","content":{"*/*":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

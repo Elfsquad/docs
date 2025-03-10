@@ -1,0 +1,71 @@
+---
+id: features-pivot-features-pivot-get-features-pivot
+title: "Get entity from FeaturesPivot by key"
+description: "Get entity from FeaturesPivot by key"
+sidebar_label: "Get entity from FeaturesPivot by key"
+hide_title: true
+hide_table_of_contents: true
+api: eJzNV91v4zYM/1cE4x62IU6aXg/Y5W1Y16EPQw/3sZciOygynehOllxJ7poL/L+PlOP4s5c0GIb1ITUpkqIo8kdqF3m+dtHiProB7gsL7p18ND5aTiKTg+VeGn2bRIvu8rRL/Q6+qz2Jcm55Bh4s2d5FUqOJnPsNLmlcQEom+J2AE1bmtAuyvsJ2wWTCTMr69iw8FNICeuJtAZPoKc5cnBjhYlSK/TaHvo+o5MQGMh4tdtFewHkr9RpXUmMz7pFTFMEPdA19JR/+ur+I3/I4/SW+We5+LuM2efUScn5ZvorKcrI//EMBdtuc/pUDBcIPQvAhsFluKfpegmPesBUwC3gyDeSr81tFJugMSMJTrkyCjJQrByOH5tZy2ll6yBzxQRcZ3XhwZYLrXgoFv5KRSaWEVrjCOFopiEgkksr8fS2dMIUmrzOp/+SqoNWMP9WfzkNef+dcfMVgf9KS5AX3sDZ2e5sEDbuW+p2oFmxym/E1fLIKyUfug0iBanfpH8AdXmgGuuKGXJ1En12xagwSR7r3IEyGgklIWWKRgrCYEpBc4w8ZzZMWZeyaa/mtTnHKsRQs6HDkoGhs4IvCeZPdSFDJvEtedsnXXfKqS75phaG3PZVbN0XL5zMHL5zrYfH8FtiYKIrOyDBkkvLn30yYn154giXF1OVGOwh2Li8u6F/X7/eA8vBYu0yGhdEeCZLlea6kCFvMvjhS2LUcxqy8SwPAoKZqQUB08MasvlR11pQUaVbB7AND2a2GsfWKsSs7JYKCB0RJQMiMUy5nhfIyV0Auzg8OYSxXYMnUoKya/VbGKOCapA6Vdt4mh+o8T72p6PP02yhwnoUWcrQN7IF7cD8Ntpy7XQuPxhKgQqhTXBnDsFP0qo78fDn262wIiN9R/q863xAORlB6NOHlaVFqQ3vnqpERe5nB6JW0OsDJSr1GcYpzTSsZS6GmuZx00Hb7GTXXbkhHBF4fE7g6JvBmXKBuCwEaO50BOaGZ9SD6MKV1gbpcliSOFZtyLNVhvwBrjX1Jk2hGx/u98vJYd6jEerqiGpAycA7h4bgR8VwLqS2MtheEL/CjSwl4LtV3i/v/4264Q6k1VkEdy+41ftwAQ+FCUC7QxO830rHKN4ZfDuwjttbY5QjdqRTDRKn/2o+Bw5ulfhIcGIN5CR8t+4mDpdZk3RcHW20ZPizCtIRZ5lClesgQc/H8htQeQrNsbUxjED6FNoaeURStSfUSWkSzzp4/7GRS/kjzGh69fjgV1IWijfe5W8xmPJdTUKl7KHgylWaGsMVn87CD1KkJ97CvsjvEOM4+VFFkCDKMRh6H/RjY9b62+iH5SFdQKe7DTzehjAgTJffsiB94evS7sjWfXkzRs/Ifjc/sJA==
+sidebar_class_name: "get api-method"
+info_path: docs/spec/data/odata-service-for-namespace-default
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get entity from FeaturesPivot by key"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/FeaturesPivot({id})"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Get entity from FeaturesPivot by key
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"id","description":"key: id of FeaturesPivot","required":true,"x-ms-docs-key-type":"FeaturesPivot","schema":{"type":"string","format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"}},{"in":"query","name":"$select","description":"Select properties to be returned","style":"form","explode":false,"schema":{"type":"array","items":{"enum":["name","articleCode","type","salesPrice","disallowDiscount","minValue","maxValue","stepValue","packingUnit","categoryId","marginPct","cardImageUrl","vatId","unitOfMeasurementId","tags","_subcategoryIds","isRecommendation","id","createdDate","updatedDate","organizationId","reference","creatorId","customField1","customField2","customField3","customField4","customField5","category","organization"],"type":"string"}}},{"in":"query","name":"$expand","description":"Expand related entities","style":"form","explode":false,"schema":{"type":"array","items":{"enum":["*","category","organization"],"type":"string"}}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Retrieved entity","content":{"application/json":{"schema":{"allOf":[{"title":"Feature","type":"object","properties":{"name":{"type":"string"},"articleCode":{"type":"string"},"type":{},"salesPrice":{"format":"decimal","multipleOf":1,"type":"number"},"disallowDiscount":{"type":"boolean"},"minValue":{"format":"decimal","multipleOf":1,"type":"number"},"maxValue":{"format":"decimal","multipleOf":1,"type":"number"},"stepValue":{"format":"decimal","multipleOf":1,"type":"number"},"packingUnit":{"format":"decimal","multipleOf":1,"type":"number"},"categoryId":{"format":"uuid","type":"string"},"marginPct":{"format":"decimal","multipleOf":1,"type":"number"},"cardImageUrl":{"type":"string"},"vatId":{"format":"uuid","type":"string"},"unitOfMeasurementId":{"format":"uuid","type":"string"},"tags":{"type":"array","items":{"type":"string"}},"_subcategoryIds":{"type":"array","items":{"format":"uuid","pattern":"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$","type":"string"}},"isRecommendation":{"type":"boolean"},"id":{"format":"uuid","type":"string"},"createdDate":{"format":"date-time","type":"string"},"updatedDate":{"format":"date-time","type":"string"},"organizationId":{"format":"uuid","type":"string"},"reference":{"type":"string"},"creatorId":{"format":"uuid","type":"string"},"customField1":{"type":"string"},"customField2":{"type":"string"},"customField3":{"type":"string"},"customField4":{"type":"string"},"customField5":{"type":"string"},"category":{},"organization":{}}},{"title":"FeaturesPivot","type":"object"}]}}}},"default":{"description":"error","content":{"application/json":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

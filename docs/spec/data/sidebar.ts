@@ -1616,6 +1616,66 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "FeaturesPivot",
+      items: [
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-features-pivot-list-features-pivot",
+          label: "Get entities from FeaturesPivot",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-features-pivot-create-features-pivot",
+          label: "Add new entity to FeaturesPivot",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-features-pivot-get-features-pivot",
+          label: "Get entity from FeaturesPivot by key",
+          className: "api-method get",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-features-pivot-update-features-pivot",
+          label: "Update entity in FeaturesPivot",
+          className: "api-method patch",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-features-pivot-delete-features-pivot",
+          label: "Delete entity from FeaturesPivot",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-bulk-delete",
+          label: "Invoke action BulkDelete",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-bulk-insert",
+          label: "Invoke action BulkInsert",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-bulk-update",
+          label: "Invoke action BulkUpdate",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "spec/data/features-pivot-bulk-upsert",
+          label: "Invoke action BulkUpsert",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "FeatureTexts",
       items: [
         {
@@ -3638,7 +3698,7 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
-      label: "UNTAGGED",
+      label: "Functions",
       items: [
         {
           type: "doc",
@@ -3660,6 +3720,7 @@ const sidebar: SidebarsConfig = {
         },
       ],
     },
+
   ],
 };
 

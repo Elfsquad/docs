@@ -1,0 +1,71 @@
+---
+id: apply-bulk-line-vat
+title: "Apply bulk line VAT"
+description: "Apply bulk line VAT"
+sidebar_label: "Apply bulk line VAT"
+hide_title: true
+hide_table_of_contents: true
+api: eJztV0tv2zAM/iuGTns4zfrKNt/aoocBG7B1XXfogoGx5FirYql6ZM0M//eRch7Oo0UOOwzDfEhkmaTI7xMpqmYexo5lt+xT0B681FWiZCXYMGUGLEyEF5a+16zCF5ax+4XcO85SJiucMuBLHHPhcisNfcPJ61IkkovKy0IKm+gi8Tiz1MY38EmuKw+ycvEbrZt4nQTDwQs0aMV9kFZwlnkbRMpcXooJsKxmfmbIF+etrMYoWWg7AY8zIUjOmmbYKgvnzzWfkQathM7QEIxRMo9e9H84crbumF4teruK9T269o47QmW+tB79ELnHpY3VRlgvhSPtKXjEZYeH+4Bzc3ZN8ZN/s62gUlYFpWCkRAtHk267t1oXrAWyIb2YuD0Qe9pBt03f2OpgXMuiK3VQPBmJb/Zb1bJHJKQMOJckDepjB6UClEM2vfQUCzsP6u5TN5IbwvCD5kJFI148+P88/f08ddPqxcv/hP3lhJEZK5zRlWsRPnr1iv7W3f0c8lw4R3Gc7Pp+Djy5aistxt4psjFrjQK5sQueZllYq63bJbc74n1poWA3WN4XxRtQkkcIL8m5K+GC8lsbfnu7/0OBPlKB/5kIYy6s7+szKhXJCDOobUuwgqBL2A2VmlPHE2LA1PdkrL9M3v7hauz6dadVavqx+JAtrGSo64SdLjqrYBWaKb03LuujoDwQqnD3AfiB1IyaGSfyYKWfRXENwZdHVEYx0ipWMIS+kIp6JuRGKvzXRUGLfYc2f1N2iSbvtD84M5INuzY/E6EtAwvLK87aCaxqSv+MIrmSmOEXWMephiG+UVrfierLWhRKj2XVjaPf2upHWQIgR++jdtezbO0tMota2spfEcgLLF6xhetO7rnwQodQ2nA4quWgSu18doLP487OIc+2sc+2WMgeYyN7mp5NEOL+pPy7WvW0lw8wMUp0jkZ2XMCb02Jw0jt9ffi6d3I6OOqNjou8d5S/HRwXgwEUMGC7Drfb/VSHDfX7hY6Mz1PqcoHzVzE6WB425HbKaH+32TQ9pAPEILoTiEVkfpfYnWVrmbjcip0DBW3FlKnnGdjpJ1D9sBsjQZutX1nWEhHzgEgnG3U9AidwUzQNTSPSlvINh1Owsi03mH1cOhrzZXXZcHd5BrJnV/OO53nyBy5DO2FYlMyKCuYUVKA3HN6J2cZVrSH2SgFc2BhGK3HROtu7JjsrC1snW5MuNM5wwxrfke06NOyUyI9fiMvR/Po1iYnLLPykex3+Rje1aTmi7pDmaqagGgcYk2y7MD2/Ad4MIfs=
+sidebar_class_name: "put api-method"
+info_path: docs/spec/quotation/elfsquad-web-quotationapi
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Apply bulk line VAT"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/quotation/1/quotations/{quotationId}/applylinevat"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Apply bulk line VAT
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"quotationId","in":"path","description":"The identifier of the quotation that contains the line to update","required":true,"schema":{"type":"string","format":"uuid"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"application/json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineVatIdModel"}},"text/json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineVatIdModel"}},"application/*+json":{"schema":{"required":["quotationLineIds"],"type":"object","properties":{"vatId":{"type":"string","description":"The identifier of the VAT to apply","format":"uuid","nullable":true},"quotationLineIds":{"type":"array","items":{"type":"string","format":"uuid"},"description":"The identifiers of the quotation groups that should be\r\nupdated"}},"additionalProperties":false,"title":"BulkQuotationLineVatIdModel"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Success"},"400":{"description":"Bad Request","content":{"text/plain":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"application/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}},"text/json":{"schema":{"type":"object","properties":{"errors":{"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}},"nullable":true}},"additionalProperties":false,"title":"ValidationErrorResult"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
