@@ -136,7 +136,7 @@ export default [
   },
   {
     "methodName": "onRequestQuote",
-    "description": "Registers a callback function to be invoked when a quote is requested.",
+    "description": "Registers a callback function to be invoked when a quote is requested.\n\nThe callback is only executed when the showroom loads with the ?orderentry=true parameter, overriding the default "add to quotation" action.",
     "example": {
       "content": "const showroom = new ElfsquadShowroom({ container: '#showroom', url: 'https://automotive.elfsquad.io' });\nshowroom.onRequestQuote(data => {\n console.log(data.configurationId);\n});\n",
       "language": "typescript"
