@@ -13,6 +13,7 @@
 }
 
  :root {
+  --black: #181818;
   --adaptable-dark-green: #00221F;   
   --adaptable-green: #004B48;
   --smart-neon: #00FF81;
@@ -46,7 +47,7 @@
 
   
   --ifm-background-color: var(--off-white);
-  --ifm-navbar-background-color: var(--secondary);
+  --ifm-navbar-background-color: var(--black);
   --ifm-footer-background-color: var(--secondary);
   
   --ifm-color-emphasis-200: var(--ifm-color-gray-800);
@@ -54,27 +55,27 @@
 
   --ifm-footer-padding-horizontal: 0px;
 
-  --ifm-card-background-color: var(--adaptable-green);
+  --ifm-card-background-color: var(--black);
 
   --ifm-font-size-base: 90%;
 
 }
 
 .DocSearch-Modal {
-  --docsearch-modal-background: var(--adaptable-dark-green);
-  --docsearch-footer-background: var(--adaptable-dark-green);
-  --docsearch-modal-shadow: inset 1px 1px 0 0 var(--adaptable-dark-green), 0 3px 8px 0 #000309;
-  --docsearch-footer-shadow: inset 0 1px 0 0 var(--adaptable-dark-green), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+  --docsearch-modal-background: var(--black);
+  --docsearch-footer-background: var(--black);
+  --docsearch-modal-shadow: inset 1px 1px 0 0 var(--black), 0 3px 8px 0 #000309;
+  --docsearch-footer-shadow: inset 0 1px 0 0 var(--black), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: var(--adaptable-dark-green);
+  --ifm-background-color: var(--black);
   --ifm-heading-color: var(--off-white);  
   --ifm-font-color-base: var(--off-white);
 }
 
 html[data-theme='dark'] .hero--primary {
-  --ifm-hero-background-color: var(--adaptable-dark-green);
+  --ifm-hero-background-color: var(--black);
 }
 
 .hero--primary {
@@ -251,6 +252,7 @@ a.card {
   color:var(--off-white);
   font-weight: normal;
   backface-visibility: hidden;
+  border:solid 1px rgba(255, 255, 255, 0.7);
 }
 
 a.card > img {

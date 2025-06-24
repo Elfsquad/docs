@@ -14,7 +14,7 @@ export const MethodName = ({name, parameters}) => {
   }
 
   const id = name.replace(/\./g, "").toLowerCase();
-  return <h3 id={id} className="sticky z-10 bg-adaptable-dark-green py-4 top-[var(--ifm-navbar-height)] border-solid border-0 border-b border-gray-400">{name}({paramString})</h3>
+  return <h3 id={id} className="sticky z-10 py-4 top-[var(--ifm-navbar-height)] border-solid border-0 border-b border-gray-400">{name}({paramString})</h3>
 }
 
 export const ChildParameters = ({parameters}) => {
@@ -106,7 +106,7 @@ export const MethodDocument = ({methodName, description, example, parameters, re
   }
 
   return <div>
-    <div className="grid grid-cols-2 gap-16 bg-adaptable-dark-green">
+    <div className="grid grid-cols-2 gap-16">
       <div>
         <MethodName name={methodName} parameters={parameters} />
         {deprecated ? <div className="bg-red-500 text-white p-2">Deprecated: {deprecated}</div> : null}
