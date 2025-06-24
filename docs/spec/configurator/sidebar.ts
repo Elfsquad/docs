@@ -51,7 +51,7 @@ const sidebar: SidebarsConfig = {
           id: "spec/configurator/get-the-configuration-name",
           label: "Get the configuration name",
           className: "api-method get",
-        },
+        }
       ],
     },
     {

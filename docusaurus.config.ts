@@ -13,6 +13,10 @@ const config: Config = {
   organizationName: 'Elfsquad', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false,
+  future:{
+    v4: true,
+    experimental_faster: true
+  },
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',

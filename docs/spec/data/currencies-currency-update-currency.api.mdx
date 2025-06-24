@@ -5,7 +5,7 @@ description: "Update entity in Currencies"
 sidebar_label: "Update entity in Currencies"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNlE1v2zAMhv+KoNNWJHEy7OTjmh12WYe1OxU5KDIdq7MllaK7BEH++yh/xfkoAuw0XxKZ5EuKpJ+9JLUJMn2W9zUiWG0gyNVEOg+oyDj7LZPpyDbr/u5mv3ymCPqjnEivUFVAgFFuL43lQK+oYJNlA59McHzIIGg0Porzu9+wSwUbhMvFSAzhtTYInJywhoncTqswzZwOUw6Y0s7DsazoH3QBlZLpXna2QGjsRh4Oq1YMAn1x2S56aGcJLMW/yvvS6OaiyUuIBe3HUobKszydulu/gKZ4aYydotg1DogXvCyhv/8VQ9hVa1deNWWgTaXKpdkYasRzh5XiqnsLZ6/qkowv4SGX6WIoztbVGjBqoKttFvX+LTyW/aOsUV2rMD7nw/wOf0TXkZ14UyV3/WKWsSwI3tnQ9uzT/HP8ORV6rLWGENo+5IrrvPQBRIcsPxrnXXJ3OsFj6ufOf3Vrhq3bWax2GcSGcU1qA7dFGv9rU+0VrtlI4QbonWUgZcowsilEFRfSEFTh/yq3WQxjLeDQy9PJPRUg2LnWVCPED58KE0RbG7NABMA3o2EaPK9qbvTFd3fonzEYBmT1eBheXECnZZfgrTG8qMaKEfwmEra8T4E9W5AxcDjk3TwT2Sz6Sb4IHUZh4bKWgbpo+MgsTGVyzPVhz8A4fIz44hv34KyRPzdZEPmQJonyZgZlHl5rlc2MS7hwlSyaDBFYP49o+7pVlS9h4FA/jwG/w7mnzvHNGWzmY3TMT0Ew2gBjczfm5MOSixOP7fQEA0fEwOAVn5bdZ3w+iqc4+jawG3vcgNIxlCETisSNRnD7uXGt1mI2n3FrDn8BhHFesg==
+api: eJzNVDtv2zAQ/ivETW0gW07RiWOTDl3aokmnIMOFOllMJJLhndIIhv97QT1s+RGkY7lI5B2/e3zHbwOCawZ9B1dtjOSMJYb7DHygiGK9+1aAntmW42+3/B0KFJq2kEHAiA0JxQS3AetAQ0CpIAOHDYEGyx4yKIhNtCGBg4Yn6rSy7JUv1Qws0nNrIxWgJbaUweui4UXhDS+eqFtIF2ifVvJnU1GDoDcw2liidWvYbu8HMGL54osueRjvhJykXwyhtqYvNH/klNBmDmWlPoozovuHRzKSio6pU5K6pjd9gacpTPWfMXDXPPj6rKkgYxusr+3aSg9e+tiggJ4s+2xc2zxQTJeib12RAP7RPyX2s24jnsshrWO6vtMfNdbcqResW+ITtlIexME7HrryafU5fQ6BblpjiHmotMS2llMfitFHyOaEXeQXhxztQ9+N/vfvsTS4Hd01viDIoCFmXNP7IL3/Od4mhHM2wbgmeYNuQVvzzIYxYho5K9Tw/5VuPxjWOYq7Xh4yd1uRYomtkTZSetpSWVZDbsqyYoov1tCCAxlbWnPysrbTmj/9nShNArA7OJGVQZ0UObHSKevUTN4yoFchx9a7QaqeqAP9dpwM+kE/iJdkpSGpfDGonKl6BZQKNOT7WB82lv32YxIoii+TNLaxBg2VSGCd5xjskuqSn1ssltbnBQrml32EJEm/9uL19RWbUNNOaSY+dgK720+6sj85kpPVXCtWh0IwmwDrSj9Xwh/XKKhuBvZU6aNKFzmgIXU9PuNjKm4T9cPFkfY0AbU3KFQoFPVOIzJIjRuwLper5SVst38BHzZUug==
 sidebar_class_name: "patch api-method"
 info_path: docs/spec/data/odata-service-for-namespace-default
 custom_edit_url: null
@@ -54,7 +54,7 @@ Update entity in Currencies
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","multipleOf":1,"type":"number"},"rounding":{"format":"decimal","multipleOf":1,"type":"number"},"namePlural":{"type":"string"}}}}},"description":"New property values","required":true}}
+  body={{"content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","type":"number"},"rounding":{"format":"decimal","type":"number"},"namePlural":{"type":"string"}}}}},"description":"New property values","required":true}}
 >
   
 </RequestSchema>

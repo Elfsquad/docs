@@ -3719,8 +3719,7 @@ const sidebar: SidebarsConfig = {
           className: "api-method put",
         },
       ],
-    },
-
+    }
   ],
 };
 

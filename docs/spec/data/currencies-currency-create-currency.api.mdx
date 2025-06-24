@@ -5,7 +5,7 @@ description: "Add new entity to Currencies"
 sidebar_label: "Add new entity to Currencies"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVj1z2zAM/Ss6zv7s6C1NOnRpco07+TzAFGwxpUiGhNL4dP7vBSTLsh2nvvY6dKgGmx8ACL0HPKpWBJukZgt1W8WIThtMajlQPmAEMt59ztXsaG+0H25HtxGBsJuqgYr4XGGijz7fqlmttHeEjmQIIVijm3Djp+SdrCVdYAkyIkMW+0MkFG2DrPjVE2rieYiSD0lu7GCSb/xao0TRuI3aDZSDEi9upG258vbiVo7alGDvzMZQE3ztYwmcdbfDp5eVJRMs3q/VbHpIzlXlCqPEiL5yucT7M3dJ+8FWES5lKI9kmXQ0QQDkvS/4I2NkDXWom4jMEsUKJRtMwbvUQvVhMpW/U/+WubyP8Z+qv0VVk+YaOMxb2DFGH38H7Z7axd55eQ3v1uzMV/sc5eUwJdjg9SCN/SUGugiX9gjiBukd4giMTUd7ECNI8RjCMv1b6TYcGucwHrA8pXFeYMbGlaYqYubXGRUmZW1uGY8SxhejcZgCl9Xa6Dc9suuegXodlmmYe52GB70ddsbdgjpv/5s8z9xBAjLy2ZF0DxS+cnUlNhVVr9V3ZDV+/6CBegFbnR64Wwp2VHiR/uBTAzlQwbPxyVHyqhjbc6rIPaEKopBm4zEEM0K7Ts8V5CPjxzkQjKdNZKnzr/1V8ekVymDxIBYdEZ1G9PNOGvqVM0WYHPf35LRbj6g3bu2Pxez+jpPLHlvaMlaFTBxTAJ7d7Zv5nIO5cN467vkW6q3XjbACZVeAYNgZuDbWdDQZTSUxgbqERgT2736F6pOcDpVMXAHjYME4CdrwUu/5O7/lCyGXV+t6BQm/RbvbyTKTE7lqFkupjmhgJTgtlhytQMhZCvvCum3FbDg/LaY3wrYbdB43WmOgX9oe19/D/eOcjVf7r4qyaXYV4Yfcffw7U0q+Vqgt+Lpdq5UFt6ma5ldtTHl+AliIFvA=
+api: eJztVj1z2kAQ/SuarQWYlOocO0Wa2BOTiqFYTgu65HQn761sGA3/PbMSAoFxcLoUuUbSfuu93ZUaEFxHyOZwVzOTN5YiLFIIFTGKDf5rDtlAN97fbsd3TCjUP0IKTM81Rfkc8i1kDZjghbzoLVaVs6YNN/kZg1dZNAWVqHdixdExiYaSbaWSsPxJRiCFirUe0dqyBmwMrV9nFIWtX8MuBY8lXVTEbbkM7qIqJ2NLdPd2baUNvgpcokDWa47V+LpcEqsTh9rnGuCD9lrYo6sZL9WgR+uIhm2lEEEG3+g1IS9WelwtUw6ZcE2anmIVfOzA+HQz1cupf8dNfozxn4yPk9EWssLayVtgiTnw3+B5JG++d15cQ7QzO/M1ISdIoaQYcU3Xg7T2lzDuI1zSCfKa5B1qBK2LAx0yo7aHFSrjv1Vuy6H1nviA5SmNs4KSKFwbqZmSsEqksDHpaktsTCLxizU0ihUZu7LmzRTs+pPCZlTGUR5MHB125qg37gVwPuC3eZ74w5AnEpLB+k2BNkI+2uB1Mzfwi7aQvZ8ohRd09WnC3UKxkyLo+q5CbCFHKSCDyUkqfVXiLk/NDjIoRKqYTSZY2TG5VXyuMR/bMMlRcDJtI2uffz+u+y8bLCtHh3XQE9FvgeNzP/xHydnM3wwH+uZ0WgfUW78Kw3X1cI+CyVNHW7IKnKhjrNBQcr8f5nMOZsp557jnW6l3wbSrEyW5AkQKClwXazq+GU+1MIW6xHYJ7N/9CtUnNR06WWgjk8qh9Rq05aXZ83f+pS6U3GwOTbPESD/Y7XYqfq6Jt5DNF9odbHGpOM0XuxQKwpx40Fh33TIbzU6b6c1i26W9x60xVMkfbYf99/jwNIMUlvs/g7IddmB81a8bvkIGoH8c0jV808kacOjXdTv80MXU8xubWgMA
 sidebar_class_name: "post api-method"
 info_path: docs/spec/data/odata-service-for-namespace-default
 custom_edit_url: null
@@ -54,7 +54,7 @@ Add new entity to Currencies
 
 <RequestSchema
   title={"Body"}
-  body={{"content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","multipleOf":1,"type":"number"},"rounding":{"format":"decimal","multipleOf":1,"type":"number"},"namePlural":{"type":"string"}}}}},"description":"New entity","required":true}}
+  body={{"content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","type":"number"},"rounding":{"format":"decimal","type":"number"},"namePlural":{"type":"string"}}}}},"description":"New entity","required":true}}
 >
   
 </RequestSchema>
@@ -62,7 +62,7 @@ Add new entity to Currencies
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{"201":{"description":"Created entity","content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","multipleOf":1,"type":"number"},"rounding":{"format":"decimal","multipleOf":1,"type":"number"},"namePlural":{"type":"string"}}}}}},"default":{"description":"error","content":{"application/json":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
+  responses={{"201":{"description":"Created entity","content":{"application/json":{"schema":{"title":"Currency","type":"object","properties":{"iso":{"type":"string"},"name":{"type":"string"},"symbol":{"type":"string"},"decimalDigits":{"format":"decimal","type":"number"},"rounding":{"format":"decimal","type":"number"},"namePlural":{"type":"string"}}}}}},"default":{"description":"error","content":{"application/json":{"schema":{"required":["error"],"type":"object","properties":{"error":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"},"details":{"type":"array","items":{"required":["code","message"],"type":"object","properties":{"code":{"type":"string"},"message":{"type":"string"},"target":{"type":"string"}}}},"innererror":{"description":"The structure of this object is service-specific","type":"object"}}}}}}}}}}
 >
   
 </StatusCodes>
