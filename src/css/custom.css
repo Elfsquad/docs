@@ -59,6 +59,8 @@
 
   --ifm-font-size-base: 90%;
 
+  --ifm-hr-background-color: var(--ifm-toc-border-color);
+
 }
 
 .DocSearch-Modal {
