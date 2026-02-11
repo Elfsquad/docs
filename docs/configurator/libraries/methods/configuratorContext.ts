@@ -1,16 +1,13 @@
 export default [
   {
     "methodName": "constructor",
-    "description": "Initializes a new instance with the provided options.",
-    "example": {
-      "content": "import { ConfiguratorContext, AuthenticationMethod } from '@elfsquad/configurator';\n\nconst context = new ConfiguratorContext({\n  authenticationMethod: AuthenticationMethod.ANONYMOUS,\n  tenantId: 'your-tenant-id',\n});\n",
-      "language": "typescript"
-    },
+    "description": "",
+    "example": null,
     "parameters": [
       {
         "name": "_options",
         "type": "IConfiguratorOptions",
-        "description": "The options that are used to configure the context.",
+        "description": "",
         "required": true,
         "parameters": [
           {
@@ -99,7 +96,7 @@ export default [
         "name": "language",
         "type": "string",
         "description": "The language to start the configuration in.",
-        "required": true,
+        "required": false,
         "parameters": []
       },
       {
@@ -164,7 +161,7 @@ export default [
         "name": "language",
         "type": "string",
         "description": "The language is used for retrieving localized texts.",
-        "required": true,
+        "required": false,
         "parameters": []
       }
     ],
@@ -517,7 +514,7 @@ export default [
         "name": "configurationIds",
         "type": "string[]",
         "description": "The configuration ids. If not provided, the root configuration id will be used.",
-        "required": true,
+        "required": false,
         "parameters": []
       }
     ],
@@ -560,7 +557,7 @@ export default [
       },
       {
         "name": "object",
-        "type": "any",
+        "type": "unknown",
         "description": "",
         "required": true,
         "parameters": []
