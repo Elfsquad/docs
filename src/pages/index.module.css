@@ -9,7 +9,6 @@
 .hero {
   padding: 7rem 0 3rem;
   position: relative;
-  overflow: hidden;
 }
 
 /* Animated gradient orbs */
@@ -104,7 +103,7 @@
   animation: fadeInUp 0.6s var(--ease-out-expo) 0.3s both;
 }
 
-/* Decorative geometric triangle */
+/* Decorative geometric triangle — clip to page width */
 .heroDecor {
   position: absolute;
   top: -80px;
@@ -114,6 +113,7 @@
   opacity: 0.03;
   pointer-events: none;
   z-index: 0;
+  clip-path: inset(0 0 0 -100vw);
 }
 
 /* ----------------------------------------
