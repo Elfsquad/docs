@@ -1,79 +1,376 @@
+/* ============================================
+   Homepage — AI-Native Aesthetic
+   ============================================ */
+
+/* ----------------------------------------
+   Hero Section
+   ---------------------------------------- */
+
 .hero {
-  padding: 5rem 0 2rem;
+  padding: 7rem 0 3rem;
   position: relative;
   overflow: hidden;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--smart-neon);
-  border: 1px solid var(--smart-neon);
-  border-radius: 4px;
-  padding: 0.25rem 0.625rem;
-  margin-bottom: 1.5rem;
+/* Animated gradient orbs */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: -30%;
+  width: 160%;
+  height: 180%;
+  background:
+    radial-gradient(ellipse 600px 500px at 25% 40%, rgba(0, 255, 129, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 400px at 75% 30%, rgba(113, 213, 216, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 350px at 50% 80%, rgba(127, 96, 222, 0.04) 0%, transparent 70%);
+  animation: heroFloat 20s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
+/* Dot grid pattern */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(245, 246, 240, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes heroFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-1.5%, 1%) scale(1.01); }
+  66% { transform: translate(1%, -1.5%) scale(0.99); }
+  100% { transform: translate(-0.5%, 0.5%) scale(1.005); }
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--smart-neon);
+  border: 1px solid rgba(0, 255, 129, 0.3);
+  border-radius: 9999px;
+  padding: 0.3rem 0.875rem;
+  margin-bottom: 1.5rem;
+  background: rgba(0, 255, 129, 0.06);
+  animation: fadeInUp 0.6s var(--ease-out-expo) both;
+}
+
+/* Hero title */
 .heroTitle {
   font-family: 'Roobert', 'Instrument Sans', sans-serif;
-  font-size: 3.5rem;
+  font-size: 3.75rem;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.05;
   color: var(--ifm-heading-color);
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.025em;
+  animation: fadeInUp 0.6s var(--ease-out-expo) 0.1s both;
 }
 
 .accent {
   color: var(--smart-neon);
+  position: relative;
+}
+
+/* Subtitle */
+.heroSubtitle {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 0 2rem;
+  animation: fadeInUp 0.6s var(--ease-out-expo) 0.2s both;
+}
+
+/* CTA row */
+.heroCta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeInUp 0.6s var(--ease-out-expo) 0.3s both;
+}
+
+/* Decorative geometric triangle */
+.heroDecor {
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 500px;
+  height: 500px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ----------------------------------------
+   Card Grid
+   ---------------------------------------- */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding-bottom: 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------------------------------
+   Card — Glass Morphism
+   ---------------------------------------- */
+
+.cardItem {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 1.75rem;
+  color: var(--off-white);
+  text-decoration: none !important;
+  transition: all 0.3s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardItem:hover {
+  color: var(--off-white);
+  text-decoration: none;
+  border-color: rgba(0, 255, 129, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 34, 31, 0.5), 0 0 20px rgba(0, 255, 129, 0.06);
+  background: var(--glass-bg-hover);
+}
+
+.cardItem:hover::before {
+  opacity: 1;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 129, 0.2), transparent);
+}
+
+/* Card icon */
+.cardIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.cardIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Icon backgrounds per category */
+.iconIntegration {
+  background: rgba(127, 96, 222, 0.15);
+  color: var(--tech-savy-purple);
+}
+
+.iconConfigurator {
+  background: rgba(113, 213, 216, 0.15);
+  color: var(--trust-turquoise);
+}
+
+.iconCustomization {
+  background: rgba(255, 105, 17, 0.15);
+  color: var(--manufacturing-orange);
+}
+
+.iconQuotations {
+  background: rgba(174, 255, 203, 0.12);
+  color: var(--free-green);
+}
+
+.iconIdentity {
+  background: rgba(0, 255, 129, 0.1);
+  color: var(--smart-neon);
+}
+
+.iconExtensions {
+  background: rgba(232, 136, 255, 0.12);
+  color: var(--creative-pink);
+}
+
+/* Card title */
+.cardTitle {
+  font-family: 'Roobert', 'Instrument Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+/* Card description */
+.cardDescription {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: rgba(245, 246, 240, 0.6);
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Card arrow indicator */
+.cardArrow {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.25s var(--ease-out-expo);
+}
+
+.cardArrow svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s var(--ease-out-expo);
+}
+
+.cardItem:hover .cardArrow {
+  color: var(--smart-neon);
+}
+
+.cardItem:hover .cardArrow svg {
+  transform: translateX(3px);
+}
+
+/* Staggered fade-in animation */
+.cardItem:nth-child(1) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.15s both; }
+.cardItem:nth-child(2) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.22s both; }
+.cardItem:nth-child(3) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.29s both; }
+.cardItem:nth-child(4) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.36s both; }
+.cardItem:nth-child(5) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.43s both; }
+.cardItem:nth-child(6) { animation: fadeInUp 0.5s var(--ease-out-expo) 0.50s both; }
+
+/* ----------------------------------------
+   Light Mode Overrides
+   ---------------------------------------- */
+
+:global(html[data-theme='light']) .hero::before {
+  background:
+    radial-gradient(ellipse 600px 500px at 25% 40%, rgba(0, 75, 72, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 400px at 75% 30%, rgba(113, 213, 216, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 350px at 50% 80%, rgba(127, 96, 222, 0.03) 0%, transparent 70%);
+}
+
+:global(html[data-theme='light']) .hero::after {
+  background-image: radial-gradient(rgba(0, 34, 31, 0.05) 1px, transparent 1px);
 }
 
 :global(html[data-theme='light']) .eyebrow {
   color: var(--adaptable-green);
-  border-color: var(--adaptable-green);
+  border-color: rgba(0, 75, 72, 0.25);
+  background: rgba(0, 75, 72, 0.06);
 }
 
 :global(html[data-theme='light']) .accent {
   color: var(--adaptable-green);
 }
 
-.heroSubtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 32rem;
-  margin: 0;
+:global(html[data-theme='light']) .cardItem {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 34, 31, 0.06);
+  color: var(--adaptable-dark-green);
+  box-shadow: 0 1px 3px rgba(0, 34, 31, 0.04);
 }
 
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding-bottom: 6rem;
+:global(html[data-theme='light']) .cardItem:hover {
+  color: var(--adaptable-dark-green);
+  border-color: rgba(0, 75, 72, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 34, 31, 0.08);
+  background: rgba(255, 255, 255, 0.95);
 }
+
+:global(html[data-theme='light']) .cardItem:hover::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 75, 72, 0.15), transparent);
+}
+
+:global(html[data-theme='light']) .cardDescription {
+  color: rgba(0, 34, 31, 0.55);
+}
+
+:global(html[data-theme='light']) .cardArrow {
+  color: rgba(0, 34, 31, 0.4);
+}
+
+:global(html[data-theme='light']) .cardItem:hover .cardArrow {
+  color: var(--adaptable-green);
+}
+
+:global(html[data-theme='light']) .heroDecor {
+  opacity: 0.04;
+}
+
+/* ----------------------------------------
+   Responsive
+   ---------------------------------------- */
 
 @media (max-width: 996px) {
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .cardGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .heroDecor {
+    display: none;
+  }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: 3rem 0 1.5rem;
+    padding: 4rem 0 2rem;
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: 2.25rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
   }
 
   .cardGrid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardItem {
+    padding: 1.25rem;
   }
 }
