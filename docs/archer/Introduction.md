@@ -138,8 +138,8 @@ Archer modeling language supports function expressions, which allow you to perfo
 | `distinct` \| `alldiff` | Returns true if all arguments are distinct, otherwise returns false. |
 
 
-## Integrating with Python
-Archer allows direct integration with any Python script. For more information see [Python Integration with Archer](/docs/archer/python).
+## Python scripting
+Archer supports Python scripting for value expressions, model scripts, text expressions, and dynamic groups. For more information see [Python Scripting](/docs/archer/python).
 
 ## Common Mistakes
 
