@@ -1,54 +1,79 @@
-/* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-
-
-
-.heroBanner {
-  padding: 4rem 4rem;
+.hero {
+  padding: 5rem 0 2rem;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex:1;
 }
 
-.heroBanner h1:first-child {
-  color:var(--primary);
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--smart-neon);
+  border: 1px solid var(--smart-neon);
+  border-radius: 4px;
+  padding: 0.25rem 0.625rem;
+  margin-bottom: 1.5rem;
 }
 
-.heroBanner h1 {
+.heroTitle {
+  font-family: 'Roobert', 'Instrument Sans', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--ifm-heading-color);
+  margin: 0 0 1rem;
+}
+
+.accent {
+  color: var(--smart-neon);
+}
+
+:global(html[data-theme='light']) .eyebrow {
+  color: var(--adaptable-green);
+  border-color: var(--adaptable-green);
+}
+
+:global(html[data-theme='light']) .accent {
+  color: var(--adaptable-green);
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 32rem;
   margin: 0;
-  line-height:48px;
 }
 
-.heroBanner > * {
-  font-family: 'Roobert';
-
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-bottom: 6rem;
 }
 
-.heroBanner > div:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.heroBanner a {
-  text-decoration: none;
-}
-
-
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-    flex-direction: column;
+@media (max-width: 996px) {
+  .heroTitle {
+    font-size: 2.5rem;
   }
 
-
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 0 1.5rem;
+  }
 
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
