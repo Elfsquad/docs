@@ -3,7 +3,7 @@ export default [
     "methodName": "constructor",
     "description": "Creates an instance of AuthenticationContext & initializes with the provided authentication options.",
     "example": {
-      "content": "const authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n",
+      "content": "// Basic usage\nconst authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n\n// With BFF callbacks for secure refresh token storage\nconst authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  storeRefreshToken: (token) => fetch('/auth/store-token', { method: 'POST', body: JSON.stringify({ token }) }).then(() => {}),\n  refreshAccessToken: () => fetch('/auth/refresh').then(r => r.json()),\n  revokeRefreshToken: () => fetch('/auth/revoke', { method: 'POST' }).then(() => {}),\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -41,6 +41,24 @@ export default [
             "name": "responseMode",
             "type": "'query' | 'fragment' | undefined",
             "description": "The response mode to use, defaults to 'fragment'.",
+            "required": false
+          },
+          {
+            "name": "storeRefreshToken",
+            "type": "((refreshToken: string) => Promise<void>) | undefined",
+            "description": "Optional callback to securely store the refresh token server-side. When provided, the library calls this instead of saving the refresh token to localStorage. After the callback resolves, the token is removed from localStorage. Must be provided together with refreshAccessToken and revokeRefreshToken. Available from v3.0.0.",
+            "required": false
+          },
+          {
+            "name": "refreshAccessToken",
+            "type": "(() => Promise<{ accessToken: string; expiresIn: number; idToken?: string }>) | undefined",
+            "description": "Optional callback for refreshing the access token. When provided, the library calls this instead of using the built-in refresh token flow from localStorage. Use this to implement secure refresh flows, e.g. via an HttpOnly-cookie-backed backend endpoint. Must be provided together with storeRefreshToken and revokeRefreshToken. Available from v3.0.0.",
+            "required": false
+          },
+          {
+            "name": "revokeRefreshToken",
+            "type": "(() => Promise<void>) | undefined",
+            "description": "Optional callback to revoke the server-side refresh token during sign-out. When provided, the library calls this instead of the built-in revocation flow. Must be provided together with storeRefreshToken and refreshAccessToken. Available from v3.0.0.",
             "required": false
           }
         ]
