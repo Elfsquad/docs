@@ -3,7 +3,7 @@ export default [
     "methodName": "constructor",
     "description": "Creates an instance of AuthenticationContext & initializes with the provided authentication options.",
     "example": {
-      "content": "// Basic usage\nconst authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n\n// With BFF callbacks for secure refresh token storage\nconst authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  storeRefreshToken: (token) => fetch('/auth/store-token', { method: 'POST', body: JSON.stringify({ token }) }).then(() => {}),\n  refreshAccessToken: () => fetch('/auth/refresh').then(r => r.json()),\n  revokeRefreshToken: () => fetch('/auth/revoke', { method: 'POST' }).then(() => {}),\n});\n",
+      "content": "const authenticationContext = new AuthenticationContext({\n  clientId: 'your-client-id',\n  redirectUri: 'https://example.com',\n  scope: 'Elfskot.Api offline_access',\n  responseMode: 'fragment',\n  loginUrl: 'https://login.elfsquad.io'\n});\n",
       "language": "typescript"
     },
     "parameters": [
@@ -44,21 +44,27 @@ export default [
             "required": false
           },
           {
-            "name": "storeRefreshToken",
-            "type": "((refreshToken: string) => Promise<void>) | undefined",
-            "description": "Optional callback to securely store the refresh token server-side. When provided, the library calls this instead of saving the refresh token to localStorage. After the callback resolves, the token is removed from localStorage. Must be provided together with refreshAccessToken and revokeRefreshToken. Available from v3.0.0.",
+            "name": "refreshAccessToken",
+            "type": "() => Promise",
+            "description": "Optional custom implementation for refreshing the access token. When provided, the library calls this instead of using the built-in refresh token flow (which reads from localStorage). Use this to implement secure refresh flows, e.g. via an HttpOnly-cookie-backed backend endpoint.",
             "required": false
           },
           {
-            "name": "refreshAccessToken",
-            "type": "(() => Promise<{ accessToken: string; expiresIn: number; idToken?: string }>) | undefined",
-            "description": "Optional callback for refreshing the access token. When provided, the library calls this instead of using the built-in refresh token flow from localStorage. Use this to implement secure refresh flows, e.g. via an HttpOnly-cookie-backed backend endpoint. Must be provided together with storeRefreshToken and revokeRefreshToken. Available from v3.0.0.",
+            "name": "storeRefreshToken",
+            "type": "(refreshToken: string) => Promise",
+            "description": "Optional callback to securely store the refresh token server-side. When provided, the library calls this instead of saving the refresh token to localStorage — both on initial login and when migrating an existing localStorage token on the next page load. After the callback resolves, the token is removed from localStorage.",
             "required": false
           },
           {
             "name": "revokeRefreshToken",
-            "type": "(() => Promise<void>) | undefined",
-            "description": "Optional callback to revoke the server-side refresh token during sign-out. When provided, the library calls this instead of the built-in revocation flow. Must be provided together with storeRefreshToken and refreshAccessToken. Available from v3.0.0.",
+            "type": "() => Promise",
+            "description": "Optional callback to revoke the server-side refresh token during sign-out. When provided, the library calls this instead of the built-in revocation flow (which reads from localStorage). Use this to revoke the server-side session and clear the HttpOnly cookie set by storeRefreshToken.",
+            "required": false
+          },
+          {
+            "name": "fetchServiceConfiguration",
+            "type": "() => Promise",
+            "description": "Optional factory that returns the OpenID Connect service configuration. When provided, the library calls this instead of fetching the OIDC discovery document from the issuer URL. Useful for testing and for environments where the discovery endpoint is unavailable.",
             "required": false
           }
         ]
@@ -166,7 +172,7 @@ export default [
       {
         "name": "postLogoutRedirectUri",
         "type": "string | null",
-        "description": "the uri where the user will be redirected to after signing out.",
+        "description": "the uri string where the user will be redirected to after signing out.",
         "required": true,
         "parameters": []
       }
@@ -221,7 +227,7 @@ export default [
   },
   {
     "methodName": "setState",
-    "description": "This method can be used to persist date in local storage, which can be used to save data between sign in attempts. This can be useful, for example, to save the url the current url before the user is redirected to the login page.",
+    "description": "This method can be used to persist data in local storage, which can be used to save data between sign in attempts. This can be useful, for example, to save the current url before the user is redirected to the login page.",
     "example": {
       "content": "const authenticationContext = new AuthenticationContext();\n\nauthenticationContext.setState({ url: window.location.href });\nauthenticationContext.onSignIn().then(() => {\n  const { url } = authenticationContext.getState();\n  window.location.href = url;\n});\n\nauthenticationContext.signIn();\n",
       "language": "typescript"
