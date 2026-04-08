@@ -27,7 +27,7 @@ export default [
   },
   {
     "methodName": "updateRequirement",
-    "description": "Updates a requirement on the this configuration. This can be used to (de)select a feature or set a value on a feature.",
+    "description": "Updates a requirement on this configuration. This can be used to (de)select a feature or set a value on a feature.",
     "example": {
       "content": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst value = 1;\nconst isSelection = true;\n\nawait configuration.updateRequirement(nodeId, isSelection, value);\n",
       "language": "typescript"
