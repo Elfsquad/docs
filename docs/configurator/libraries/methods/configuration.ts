@@ -27,7 +27,7 @@ export default [
   },
   {
     "methodName": "updateRequirement",
-    "description": "Updates a requirement on the this configuration. This can be used to (de)select a feature or set a value on a feature.",
+    "description": "Updates a requirement on this configuration. This can be used to (de)select a feature or set a value on a feature.",
     "example": {
       "content": "const nodeId = '00000000-0000-0000-0000-000000000000';\nconst value = 1;\nconst isSelection = true;\n\nawait configuration.updateRequirement(nodeId, isSelection, value);\n",
       "language": "typescript"
@@ -96,6 +96,13 @@ export default [
         "description": "The text value to set on the feature",
         "required": true,
         "parameters": []
+      },
+      {
+        "name": "configurationId",
+        "type": "string",
+        "description": "Optional id of the linked configuration that owns the node, when it lives in a linked model rather than this one. Must be within this configuration's linked-configuration subtree; the backend validates it and falls back to resolving the owner itself when omitted or invalid.",
+        "required": false,
+        "parameters": []
       }
     ],
     "deprecated": null,
@@ -124,6 +131,13 @@ export default [
         "type": "string",
         "description": "The image value to set on the feature",
         "required": true,
+        "parameters": []
+      },
+      {
+        "name": "configurationId",
+        "type": "string",
+        "description": "Optional id of the linked configuration that owns the node, when it lives in a linked model rather than this one. Must be within this configuration's linked-configuration subtree; the backend validates it and falls back to resolving the owner itself when omitted or invalid.",
+        "required": false,
         "parameters": []
       }
     ],
